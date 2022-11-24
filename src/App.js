@@ -1,12 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Series from "./pages/Series";
+import Header from "./pages/Header";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <h1>Sports Daddy</h1>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="series" element={<Series />} />
+      </Routes>
+
+    </BrowserRouter>
   );
 }
-
-export default App;

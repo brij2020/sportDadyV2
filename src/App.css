@@ -1,3 +1,8 @@
+body {
+  /* background: linear-gradient(to right, #EEF8FF, #323d94); */
+  font-family: cursive;
+}
+
 .App {
   text-align: center;
 }
@@ -32,7 +37,112 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+/* start from here  */
+
+.App {
+  color: aqua;
+}
+
+.header-section {
+  height: 70px;
+  width: '100%';
+  background: linear-gradient(to right, #EEF8FF, #323d94);
+  /* background: rgba(0, 0, 0, 0.2); */
+  /* -webkit-transform: matrix('60%'); */
+  /* opacity: 0.7; */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.8;
+  position: sticky;
+  top: 0;
+  z-index: 4;
+}
+
+.header-text {
+  color: #fff;
+  font-weight: 500;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.header-text:hover {
+  color: #323d94;
+  font-weight: 500;
+  padding: 12px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.icon {
+  font-size: 22px;
+}
+
+.banner-card {
+  height: 144px;
+  width: 193px;
+  background: linear-gradient(to right, #EEF8FF, #323d94);
+  border-radius: 15px;
+  margin: 3px;
+  text-align: center;
+  padding: 38px;
+  color: #fff;
+}
+
+.card {
+  height: 184px;
+  width: 254px;
+  border: 2px solid  #323d94;
+  margin: 12px;
+  border-radius: 10px;
+  box-shadow: 5px 10px 8px #888888;
+  animation-name: example;
+  animation-duration: 1s;
+}
+
+.second-section {
+  background: #EEF8FF;
+  width: '100%';
+  height: 360px;
+  margin-top: 100px;
+}
+.third-section{
+  justify-content: center;
+display: flex;
+bottom: 20px;
+}
+.card-container {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+
+div.polaroid {
+  width: 284px;
+  padding: 10px 10px 20px 10px;
+  border: 1px solid #BFBFBF;
+  /* background-color: white; */
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+div.rotate_right {
+  float: left;
+  -ms-transform: rotate(7deg); /* IE 9 */
+  -webkit-transform: rotate(7deg); /* Safari */
+  transform: rotate(7deg);
+  background: linear-gradient(to right, #000, #323d94);
+}
+div.rotate_left {
+  float: left;
+  -ms-transform: rotate(-8deg); /* IE 9 */
+  -webkit-transform: rotate(-8deg); /* Safari */
+  transform: rotate(-8deg);
+  background: linear-gradient(to right, #fff, #323d94);
+
 }
