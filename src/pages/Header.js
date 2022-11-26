@@ -62,6 +62,8 @@ function Header() {
                         <Link className='header-text'>Archives</Link>
                         <Link className='header-text'>News</Link>
                         <Link className='header-text'>Series</Link>
+                        <Link to='video' className='header-text'>Videos</Link>
+
                         <Nav
                         >
                             <NavDropdown
@@ -70,7 +72,7 @@ function Header() {
                                 menuVariant="white"
                                 className='header-text navteam bd-dark'
                                 style={{ zIndex: 5, }}
-                                >
+                            >
                                 <div style={{ display: 'flex' }}>
                                     <NavDropdown.Item className='dropdown-heading' href="#action/3.1">TEST TEAMS</NavDropdown.Item>
                                     <NavDropdown.Item className='dropdown-heading' href="#action/3.2">ASSOCIATE</NavDropdown.Item>
@@ -160,8 +162,40 @@ function Header() {
                             </NavDropdown>
 
                         </Nav>
-                        <Link to='video' className='header-text'>Videos</Link>
-                        <Link className='header-text'>More</Link>
+                        <Nav
+                        >
+                            <NavDropdown
+                                id="nav-dropdown-dark-example"
+                                title="Ranking"
+                                menuVariant="white"
+                                className='header-text navteam bd-dark'
+                                style={{ zIndex: 5, }}
+                            >
+                                <NavDropdown.Item className='dropdown-text' href="#action/3.4">ICC Ranking - Men</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">ICC Ranking - Women</NavDropdown.Item>
+                            </NavDropdown>
+
+                        </Nav>
+
+                        <Nav
+                        >
+                            <NavDropdown
+                                id="nav-dropdown-dark-example"
+                                title="More"
+                                menuVariant="white"
+                                className='header-text navteam bd-dark'
+                                style={{ zIndex: 5, }}
+                            >
+                                <NavDropdown.Item className='dropdown-text' href="#action/3.4">World Test Championship</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">World Cup Super League</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Quiz</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Photos</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Mobile App</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Careers</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Contact Us</NavDropdown.Item>
+                            </NavDropdown>
+
+                        </Nav>
 
                     </Navbar.Collapse>
                 </Container>
