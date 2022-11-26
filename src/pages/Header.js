@@ -1,45 +1,4 @@
 import { Link } from 'react-router-dom';
-// import '../App.css';
-// import img from './logo.png';
-// import Dropdown from 'react-bootstrap/Dropdown';
-
-// function Header() {
-//     return (
-//         <div className="header-section">
-//             {/* <Link> */}
-//            
-//             {/* </Link> */}
-//             <div style={{ alignSelf: "center", paddingRight: '5px' }}>
-//                 <Link to='/' className='header-text'>Home</Link>
-//                 <Link className='header-text'>Live Scores</Link>
-//                 <Link className='header-text'>Schedule</Link>
-//                 <Link className='header-text'>Archives</Link>
-//                 <Link className='header-text'>News</Link>
-//                 <Link className='header-text'>Series</Link>
-//                 <Link className='header-text'>
-//                     <Dropdown className='header-text'>
-//                         <Dropdown.Toggle id="dropdown-basic">
-//                             Teams
-//                         </Dropdown.Toggle>
-
-//                         <Dropdown.Menu>
-//                             <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-//                             <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-//                             <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-//                         </Dropdown.Menu>
-//                     </Dropdown>
-//                 </Link>
-//                 <Link to='video' className='header-text'>Videos</Link>
-//                 <Link className='header-text'>More</Link>
-//                 <Link className='header-text'><i class="fa fa-search icon" aria-hidden="true"></i></Link>
-//                 <Link className='header-text'><i class="fa fa-user-circle-o icon"></i></Link>
-//             </div>
-//         </div>
-//     );
-// }
-
-// export default Header;
-
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -78,6 +37,7 @@ function Header() {
                                     <NavDropdown.Item className='dropdown-heading' href="#action/3.2">ASSOCIATE</NavDropdown.Item>
                                 </div>
                                 <NavDropdown.Divider />
+
                                 <div style={{ display: 'flex' }}>
                                     <NavDropdown.Item className='dropdown-text' href="#action/3.1"><Link to='team'>India</Link></NavDropdown.Item>
                                     <NavDropdown.Item className='dropdown-text' href="#action/3.2">Afghanistan</NavDropdown.Item>
@@ -207,5 +167,4 @@ function Header() {
         </Navbar>
     );
 }
-
 export default Header;
