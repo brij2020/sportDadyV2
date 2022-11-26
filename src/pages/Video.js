@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import '../App.css';
-
-function Video() {
-  return (
-    <div className="App">
-      <h1>Video</h1>
-    </div>
-  );
-}
-
-export default Video;
-=======
 import '../App.css';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
@@ -260,4 +247,3 @@ function Video() {
 }
 
 export default Video;
->>>>>>> 36178bd7d218144db45e4822eae74f0de5aec68c
