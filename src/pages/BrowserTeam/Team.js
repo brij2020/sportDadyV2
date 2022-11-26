@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import cricketimg1 from '../../assets/images/cricketimg1.jpg';
 import cricketimg2 from '../../assets/images/cricketimg2.jpeg';
 import cricketimg3 from '../../assets/images/cricketimg3.jpeg';
-function Video() {
+function Team() {
     return (
         <div className="App">
             <Container>
@@ -101,4 +101,4 @@ function Video() {
     );
 }
 
-export default Video;
+export default Team;

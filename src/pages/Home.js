@@ -14,7 +14,7 @@ function Home() {
 
   return (
     <div>
-      <div>
+      <div >
         <SimpleImageSlider
           width={'100%'}
           height={280}
@@ -22,10 +22,9 @@ function Home() {
           showBullets={false}
           showNavs={false}
           autoPlay={true}
+          style={{marginTop: -21, zIndex: 2}}
         />
-        <div>
-          <h2 style={{ padding: 10, paddingTop: 25, position: 'absolute', top: 45, right: 25, }}>Welcome to the Sport Daddy</h2>
-        </div>
+        <h2 className='banner-heading'>Welcome to the Sport Daddy</h2>
         <div style={{ display: 'flex', position: 'absolute', bottom: 220, left: 120, }}>
           <div className='banner-card'>
             See Schedule & Players Details of Every Match
@@ -35,7 +34,6 @@ function Home() {
           </div>
         </div>
       </div>
-
       <div className='bg-section' style={{ marginTop: 120 }}>
         <h2 style={{ textAlign: 'center' }}>Video Hub</h2>
         <div className='card-container'>
@@ -59,35 +57,35 @@ function Home() {
           </div>
         </div>
         <Link to='video'>
-        <h3 className='see-more'>See More</h3>
+          <h3 className='see-more'>See More</h3>
         </Link>
       </div>
 
       <div className='plain-section'>
-        <h2 style={{ textAlign: 'center' }}>Video Hub</h2>
+        <h2 style={{ textAlign: 'center' }}>Quiz</h2>
         <div className='quiz-section'>
           <div class="polaroid rotate_right">
             <i className='fa fa-group'> {" "} 60k + Participants</i>
-            <h4>T20 Match 2022  Final Quiz.</h4>
+            <h4 className='h4'>T20 Match 2022  Final Quiz.</h4>
             <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
           </div>
 
           <div class="polaroid rotate_left">
-            <i className='fa fa-group'>{" "} 60k + Participants</i>
-            <h4>TATA IPL 2022  Final Quiz.</h4>
-            <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
+            <i className='fa fa-group text-dark'>{" "} 60k + Participants</i>
+            <h4 className='light-h4'>TATA IPL 2022  Final Quiz.</h4>
+            <p class="light-caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
           </div>
 
           <div class="polaroid rotate_right">
             <i className='fa fa-group'> {" "} 60k + Participants</i>
-            <h4>T20 Match 2022  Final Quiz.</h4>
+            <h4 className='h4'>T20 Match 2022  Final Quiz.</h4>
             <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
           </div>
 
           <div class="polaroid rotate_left">
-            <i className='fa fa-group'>{" "} 60k + Participants</i>
-            <h4>TATA IPL 2022  Final Quiz.</h4>
-            <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
+            <i className='fa fa-group text-dark'>{" "} 60k + Participants</i>
+            <h4 className='light-h4'>TATA IPL 2022  Final Quiz.</h4>
+            <p class="light-caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
           </div>
         </div>
       </div>
@@ -116,7 +114,6 @@ function Home() {
         </div>
         <h3 style={{ textAlign: 'right' }}>See More</h3>
       </div>
-      <Link to="/series">ajhgjag</Link>
     </div>
   );
 }

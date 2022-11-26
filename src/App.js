@@ -8,6 +8,7 @@ import PlayerInfo from "./pages/BrowserPlayer/PlayerInfo";
 import BrowserTeam from "./pages/BrowserTeam/Team"
 import Schedule from "./pages/Schedule";
 import LiveScore from "./pages/Live/LiveScore";
+import BrowserTeam from "./pages/BrowserTeam/Team";
 
 export default function App() {
   return (
@@ -24,6 +25,8 @@ export default function App() {
         <Route path="livescore" element={<LiveScore />} />
 
 
+        <Route path="player-info" element={<PlayerInfo />} />
+        <Route path="team" element={<BrowserTeam />} />
       </Routes>
 
     </BrowserRouter>
