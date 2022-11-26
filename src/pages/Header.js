@@ -19,7 +19,29 @@ function Header() {
                         <Link to='livescore' className='header-text'>Live Scores</Link>
                         <Link to='schedule' className='header-text'>Schedule</Link>
                         <Link className='header-text'>Archives</Link>
-                        <Link className='header-text'>News</Link>
+
+                        <Nav
+                        >
+                            <NavDropdown
+                                id="nav-dropdown-dark-example"
+                                title="News"
+                                menuVariant="white"
+                                className='header-text navteam bd-dark'
+                                style={{ zIndex: 5, }}
+                            >
+                                <NavDropdown.Item className='dropdown-text' href="#action/3.2"><Link to="news">All Stories</Link></NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">News</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Topic</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Spotlight</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Opinion</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Special</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Stats & Analysis</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Interview</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Live Blogs</NavDropdown.Item>
+                            </NavDropdown>
+
+                        </Nav>
+
                         <Link className='header-text'>Series</Link>
                         <Link to='video' className='header-text'>Videos</Link>
 
