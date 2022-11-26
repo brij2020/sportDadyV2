@@ -24,9 +24,9 @@ function Home() {
           autoPlay={true}
         />
         <div>
-          <h2 style={{ padding: 10, paddingTop: 25, position: 'absolute', top: 45, right: 25 }}>Welcome to the Sport Daddy</h2>
+          <h2 style={{ padding: 10, paddingTop: 25, position: 'absolute', top: 45, right: 25, }}>Welcome to the Sport Daddy</h2>
         </div>
-        <div style={{ display: 'flex', position: 'absolute', bottom: 220, left: 120 }}>
+        <div style={{ display: 'flex', position: 'absolute', bottom: 220, left: 120, }}>
           <div className='banner-card'>
             See Schedule & Players Details of Every Match
           </div>
@@ -36,29 +36,31 @@ function Home() {
         </div>
       </div>
 
-      <div className='bg-section'>
+      <div className='bg-section' style={{ marginTop: 120 }}>
         <h2 style={{ textAlign: 'center' }}>Video Hub</h2>
         <div className='card-container'>
-          <div className='card'>
+          <div className='home-card'>
             <iframe width="340" height="220" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" className='video'>
             </iframe>
             <p className='w-text'>2022- The Year of the Cricket World Cup</p>
             <p className='p-text'>01 Jan 2022</p>
           </div>
-          <div className='card'>
+          <div className='home-card'>
             <iframe width="340" height="220" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" className='video'>
             </iframe>
             <p className='w-text'>2022- The Year of the Cricket World Cup</p>
             <p className='p-text'>01 Jan 2022</p>
           </div>
-          <div className='card'>
+          <div className='home-card'>
             <iframe width="340" height="220" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" className='video'>
             </iframe>
             <p className='w-text'>2022- The Year of the Cricket World Cup</p>
             <p className='p-text'>01 Jan 2022</p>
           </div>
         </div>
-        <h3 style={{ textAlign: 'right' }}>See More</h3>
+        <Link to='video'>
+        <h3 className='see-more'>See More</h3>
+        </Link>
       </div>
 
       <div className='plain-section'>
@@ -88,6 +90,31 @@ function Home() {
             <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
           </div>
         </div>
+      </div>
+
+      <div className='bg-section'>
+        <h2 style={{ textAlign: 'center' }}>Video Hub</h2>
+        <div className='card-container'>
+          <div className='card'>
+            <iframe width="340" height="220" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" className='video'>
+            </iframe>
+            <p className='w-text'>2022- The Year of the Cricket World Cup</p>
+            <p className='p-text'>01 Jan 2022</p>
+          </div>
+          <div className='card'>
+            <iframe width="340" height="220" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" className='video'>
+            </iframe>
+            <p className='w-text'>2022- The Year of the Cricket World Cup</p>
+            <p className='p-text'>01 Jan 2022</p>
+          </div>
+          <div className='card'>
+            <iframe width="340" height="220" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" className='video'>
+            </iframe>
+            <p className='w-text'>2022- The Year of the Cricket World Cup</p>
+            <p className='p-text'>01 Jan 2022</p>
+          </div>
+        </div>
+        <h3 style={{ textAlign: 'right' }}>See More</h3>
       </div>
       <Link to="/series">ajhgjag</Link>
     </div>
