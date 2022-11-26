@@ -25,9 +25,8 @@ function Home() {
         />
         <div>
           <h2 style={{ padding: 10, paddingTop: 25, position: 'absolute', top: 45, right: 25 }}>Welcome to the Sport Daddy</h2>
-
         </div>
-        <div style={{ display: 'flex', position: 'absolute', bottom: 160, left: 120 }}>
+        <div style={{ display: 'flex', position: 'absolute', bottom: 220, left: 120 }}>
           <div className='banner-card'>
             See Schedule & Players Details of Every Match
           </div>
@@ -37,48 +36,57 @@ function Home() {
         </div>
       </div>
 
-      <div className='second-section'>
-        <h2 style={{ padding: 10, textAlign: 'center', paddingTop: 25 }}>Video Hub</h2>
+      <div className='bg-section'>
+        <h2 style={{ textAlign: 'center' }}>Video Hub</h2>
         <div className='card-container'>
-
           <div className='card'>
-            <iframe width="250" height="180" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" style={{ borderRadius: 10, }}>
+            <iframe width="340" height="220" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" className='video'>
             </iframe>
+            <p className='w-text'>2022- The Year of the Cricket World Cup</p>
+            <p className='p-text'>01 Jan 2022</p>
           </div>
           <div className='card'>
-            <iframe width="250" height="180" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" style={{ borderRadius: 10, }}>
+            <iframe width="340" height="220" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" className='video'>
             </iframe>
+            <p className='w-text'>2022- The Year of the Cricket World Cup</p>
+            <p className='p-text'>01 Jan 2022</p>
           </div>
           <div className='card'>
-            <iframe width="250" height="180" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" style={{ borderRadius: 10, }}>
+            <iframe width="340" height="220" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" className='video'>
             </iframe>
+            <p className='w-text'>2022- The Year of the Cricket World Cup</p>
+            <p className='p-text'>01 Jan 2022</p>
           </div>
         </div>
+        <h3 style={{ textAlign: 'right' }}>See More</h3>
       </div>
 
-      <div className='third-section'>
-        <div class="polaroid rotate_right">
-          <i className='fa fa-group'> {" "} 60k + Participants</i>
-          <h4>T20 Match 2022  Final Quiz.</h4>
-          <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
-        </div>
+      <div className='plain-section'>
+        <h2 style={{ textAlign: 'center' }}>Video Hub</h2>
+        <div className='quiz-section'>
+          <div class="polaroid rotate_right">
+            <i className='fa fa-group'> {" "} 60k + Participants</i>
+            <h4>T20 Match 2022  Final Quiz.</h4>
+            <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
+          </div>
 
-        <div class="polaroid rotate_left">
-          <i className='fa fa-group'>{" "} 60k + Participants</i>
-          <h4>TATA IPL 2022  Final Quiz.</h4>
-          <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
-        </div>
+          <div class="polaroid rotate_left">
+            <i className='fa fa-group'>{" "} 60k + Participants</i>
+            <h4>TATA IPL 2022  Final Quiz.</h4>
+            <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
+          </div>
 
-        <div class="polaroid rotate_right">
-          <i className='fa fa-group'> {" "} 60k + Participants</i>
-          <h4>T20 Match 2022  Final Quiz.</h4>
-          <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
-        </div>
+          <div class="polaroid rotate_right">
+            <i className='fa fa-group'> {" "} 60k + Participants</i>
+            <h4>T20 Match 2022  Final Quiz.</h4>
+            <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
+          </div>
 
-        <div class="polaroid rotate_left">
-          <i className='fa fa-group'>{" "} 60k + Participants</i>
-          <h4>TATA IPL 2022  Final Quiz.</h4>
-          <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
+          <div class="polaroid rotate_left">
+            <i className='fa fa-group'>{" "} 60k + Participants</i>
+            <h4>TATA IPL 2022  Final Quiz.</h4>
+            <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
+          </div>
         </div>
       </div>
       <Link to="/series">ajhgjag</Link>

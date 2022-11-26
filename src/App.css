@@ -96,29 +96,47 @@ body {
 }
 
 .card {
-  height: 184px;
-  width: 254px;
-  border: 2px solid  #323d94;
+  /* height: 184px; */
+  /* width: 254px; */
+  background: #323d94;
   margin: 12px;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 5px 10px 8px #888888;
   animation-name: example;
   animation-duration: 1s;
+  padding-bottom: 7px;
+  border-bottom-left-radius: 70px;
 }
 
-.second-section {
+.video {
+  border-radius: 20px;
+  border-bottom-left-radius: 65px;
+}
+
+.bg-section {
   background: #EEF8FF;
   width: '100%';
-  height: 360px;
-  margin-top: 100px;
+  margin-top: 110px;
+  padding-bottom: 50px;
+  padding-top: 20px;
 }
-.third-section{
+
+.plain-section {
+  background: #fff;
+  width: '100%';
+  padding-bottom: 50px;
+  padding-top: 20px;
+
+}
+
+.quiz-section {
   justify-content: center;
-display: flex;
-bottom: 20px;
+  display: flex;
+  margin-top: 45px;
+  /* padding-top: 40px; */
 }
+
 .card-container {
-  flex-direction: row;
   display: flex;
   justify-content: center;
 }
@@ -133,16 +151,38 @@ div.polaroid {
 
 div.rotate_right {
   float: left;
-  -ms-transform: rotate(7deg); /* IE 9 */
-  -webkit-transform: rotate(7deg); /* Safari */
+  -ms-transform: rotate(7deg);
+  /* IE 9 */
+  -webkit-transform: rotate(7deg);
+  /* Safari */
   transform: rotate(7deg);
   background: linear-gradient(to right, #000, #323d94);
 }
+
 div.rotate_left {
   float: left;
-  -ms-transform: rotate(-8deg); /* IE 9 */
-  -webkit-transform: rotate(-8deg); /* Safari */
+  -ms-transform: rotate(-8deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-8deg);
+  /* Safari */
   transform: rotate(-8deg);
   background: linear-gradient(to right, #fff, #323d94);
+
+}
+
+.w-text {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 12px;
+}
+
+.p-text {
+  color: #FB4570;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: -7px;
 
 }
