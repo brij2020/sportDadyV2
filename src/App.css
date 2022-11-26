@@ -1,6 +1,6 @@
 body {
   /* background: linear-gradient(to right, #EEF8FF, #323d94); */
-  font-family: cursive;
+  font-family: cursive !important;
 }
 
 .App {
@@ -171,7 +171,6 @@ div.rotate_left {
   background: linear-gradient(to right, #fff, #323d94);
   border-radius: 15px;
 }
-
 .w-text {
   color: #fff;
   font-size: 14px;
@@ -179,7 +178,6 @@ div.rotate_left {
   text-align: center;
   padding-top: 12px;
 }
-
 .p-text {
   color: #FB4570;
   font-size: 15px;
@@ -187,6 +185,13 @@ div.rotate_left {
   text-align: center;
   margin-top: -7px;
 
+}
+.see-more {
+  text-align: 'right';
+  padding-right: 190px;
+  font-size: 16px;
+  color: linear-gradient(to right, #EEF8FF, #323d94) !important;
+  text-decoration: 'underline'
 }
 .d-flew{
   display: flex;

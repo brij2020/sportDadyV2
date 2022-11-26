@@ -1,6 +1,6 @@
 import '../../App.css';
 
-function Video() {
+function Player() {
   return (
     <div className="App">
       <h1>Player</h1>
@@ -8,4 +8,4 @@ function Video() {
   );
 }
 
-export default Video;
+export default Player;
