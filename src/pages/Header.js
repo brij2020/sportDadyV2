@@ -57,8 +57,8 @@ function Header() {
                 <Container fluid>
                     <Navbar.Collapse id="navbar-dark-example">
                         <Link to='/' className='header-text'> <Nav>Home</Nav></Link>
-                        <Link className='header-text'>Live Scores</Link>
-                        <Link className='header-text'>Schedule</Link>
+                        <Link to='livescore' className='header-text'>Live Scores</Link>
+                        <Link to='schedule' className='header-text'>Schedule</Link>
                         <Link className='header-text'>Archives</Link>
                         <Link className='header-text'>News</Link>
                         <Link className='header-text'>Series</Link>
@@ -79,7 +79,7 @@ function Header() {
                                 </div>
                                 <NavDropdown.Divider />
                                 <div style={{ display: 'flex' }}>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.1">India</NavDropdown.Item>
+                                    <NavDropdown.Item className='dropdown-text' href="#action/3.1"><Link to='team'>India</Link></NavDropdown.Item>
                                     <NavDropdown.Item className='dropdown-text' href="#action/3.2">Afghanistan</NavDropdown.Item>
                                 </div>
                                 <div style={{ display: 'flex' }}>
