@@ -46,7 +46,7 @@ function Schedule() {
             date_2: '01:30 AM GMT / 02:30 PM LOCAL',
             date: '7:00 AM',
         },
-        
+
     ]
 
     return (
@@ -77,13 +77,21 @@ function Schedule() {
                         {Data2.map((item2) => (
                             <div>
                                 <Row className='ml-3' style={{ marginLeft: "8px" }}>
-                                    <Col >{item2.matches}
+                                    <Col >
+                                        <p className='text'>
+                                            {item2.matches}
+                                        </p >
                                     </Col>
-                                    <Col>New Zealand vs India, 2nd ODI
-                                        <p style={{ color: "grey" }}>{item2.player}</p>
+                                    <Col>
+                                        <p className='text'>
+                                            New Zealand vs India, 2nd ODI
+                                        </p >
+                                        <p className='sub-text'>{item2.player}</p>
                                     </Col>
-                                    <Col>{item2.date}
-                                        <p style={{ color: "grey" }}>
+                                    <Col>
+                                        <p className='text'>{item2.date}
+                                        </p >
+                                        <p className='sub-text'>
                                             {item2.date_2}</p>
                                     </Col>
                                 </Row>

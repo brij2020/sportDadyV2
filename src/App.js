@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Series from "./pages/Series";
+import Series from "./pages/BrowserSeries/Series";
 import Header from "./pages/Header";
 import Video from "./pages/Video";
 import Player from "./pages/BrowserPlayer/Player";
@@ -9,6 +9,7 @@ import BrowserTeam from "./pages/BrowserTeam/Team"
 import Schedule from "./pages/Schedule";
 import LiveScore from "./pages/Live/LiveScore";
 import News from "./pages/News/News";
+import Archives from "./pages/Archives/Archives";
 
 export default function App() {
   return (
@@ -25,6 +26,8 @@ export default function App() {
         <Route path="livescore" element={<LiveScore />} />
         <Route path="team" element={<BrowserTeam />} />
         <Route path="news" element={<News />} />
+        <Route path="archives" element={<Archives />} />
+        
       </Routes>
 
     </BrowserRouter>

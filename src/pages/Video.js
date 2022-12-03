@@ -7,7 +7,7 @@ import Carousel from 'react-bootstrap/Carousel';
 function Video() {
   return (
     <Container>
-      <h1 className='heading'>India National Cricket Team</h1>
+      <h1>India National Cricket Team</h1>
       <Nav justify variant="tabs" defaultActiveKey="/">
         <Nav.Item>
           <Nav.Link >ALL VIDEOS</Nav.Link>

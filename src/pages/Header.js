@@ -12,13 +12,13 @@ function Header() {
             <div style={{}}>
                 <img src={img} width="60" height="60"></img>
             </div>
-            <div style={{ marginLeft: 170 }}>
+            <div style={{ marginLeft: 170 }} >
                 <Container fluid>
                     <Navbar.Collapse id="navbar-dark-example">
                         <Link to='/' className='header-text'> <Nav>Home</Nav></Link>
                         <Link to='livescore' className='header-text'>Live Scores</Link>
                         <Link to='schedule' className='header-text'>Schedule</Link>
-                        <Link className='header-text'>Archives</Link>
+                        <Link to='archives' className='header-text'>Archives</Link>
 
                         <Nav
                         >
@@ -29,20 +29,41 @@ function Header() {
                                 className='header-text navteam bd-dark'
                                 style={{ zIndex: 5, }}
                             >
-                                <NavDropdown.Item className='dropdown-text' href="#action/3.2"><Link to="news">All Stories</Link></NavDropdown.Item>
-                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">News</NavDropdown.Item>
-                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Topic</NavDropdown.Item>
-                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Spotlight</NavDropdown.Item>
-                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Opinion</NavDropdown.Item>
-                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Special</NavDropdown.Item>
-                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Stats & Analysis</NavDropdown.Item>
-                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Interview</NavDropdown.Item>
-                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Live Blogs</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text'><Link to="news">All Stories</Link></NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text'>News</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text'>Topic</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text'>Spotlight</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text'>Opinion</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text'>Special</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text'>Stats & Analysis</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text'>Interview</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text'>Live Blogs</NavDropdown.Item>
                             </NavDropdown>
 
                         </Nav>
 
-                        <Link className='header-text'>Series</Link>
+                        <Nav
+                        >
+                            <NavDropdown
+                                id="nav-dropdown-dark-example"
+                                title="Series"
+                                menuVariant="white"
+                                className='header-text navteam bd-dark'
+                                style={{ zIndex: 5, }}
+                            >
+                                <NavDropdown.Item className='d-text'>India tour of New Zealand, 2022</NavDropdown.Item>
+                                <NavDropdown.Item className='d-text'>England tour of Pakistan, 2022</NavDropdown.Item>
+                                <NavDropdown.Item className='d-text'>West Indies tour of Australia, 2022</NavDropdown.Item>
+                                <NavDropdown.Item className='d-text'>Afghanistan tour of Sri Lanka, 2022</NavDropdown.Item>
+                                <NavDropdown.Item className='d-text'>India A tour of Sri Lanka, 2022</NavDropdown.Item>
+                                <NavDropdown.Item className='d-text'>Vijay Hazare Trophy 2022</NavDropdown.Item>
+                                <NavDropdown.Item className='d-text'>T10 League 2022</NavDropdown.Item>
+                                <NavDropdown.Item className='d-text'>Women Big Bash League 2022</NavDropdown.Item>
+                                <NavDropdown.Item className='d-text'><Link to="series">All Series</Link></NavDropdown.Item>
+                            </NavDropdown>
+
+                        </Nav>
+
                         <Link to='video' className='header-text'>Videos</Link>
 
                         <Nav
@@ -55,88 +76,88 @@ function Header() {
                                 style={{ zIndex: 5, }}
                             >
                                 <div style={{ display: 'flex' }}>
-                                    <NavDropdown.Item className='dropdown-heading' href="#action/3.1">TEST TEAMS</NavDropdown.Item>
-                                    <NavDropdown.Item className='dropdown-heading' href="#action/3.2">ASSOCIATE</NavDropdown.Item>
+                                    <h6 className='dropdown-heading'>TEST TEAMS</h6>
+                                    <h6 className='dropdown-heading'>ASSOCIATE</h6>
                                 </div>
                                 <NavDropdown.Divider />
 
                                 <div style={{ display: 'flex' }}>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.1"><Link to='team'>India</Link></NavDropdown.Item>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.2">Afghanistan</NavDropdown.Item>
+                                    <NavDropdown.Item className='dropdown-text'><Link to='team'>India</Link></NavDropdown.Item>
+                                    <NavDropdown.Item className='dropdown-text'>Afghanistan</NavDropdown.Item>
                                 </div>
                                 <div style={{ display: 'flex' }}>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.2">Afghanistan</NavDropdown.Item>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.2">Nepal</NavDropdown.Item>
+                                    <NavDropdown.Item className='dropdown-text'>Afghanistan</NavDropdown.Item>
+                                    <NavDropdown.Item className='dropdown-text'>Nepal</NavDropdown.Item>
                                 </div>
                                 <div style={{ display: 'flex' }}>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.3">Ireland</NavDropdown.Item>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.2">Germany</NavDropdown.Item>
+                                    <NavDropdown.Item className='dropdown-text'>Ireland</NavDropdown.Item>
+                                    <NavDropdown.Item className='dropdown-text'>Germany</NavDropdown.Item>
                                 </div>
                                 <div style={{ display: 'flex' }}>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.4">Pakistan</NavDropdown.Item>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.2">Namibia</NavDropdown.Item>
+                                    <NavDropdown.Item className='dropdown-text'>Pakistan</NavDropdown.Item>
+                                    <NavDropdown.Item className='dropdown-text'>Namibia</NavDropdown.Item>
                                 </div>
                                 <div style={{ display: 'flex' }}>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.4">
+                                    <NavDropdown.Item className='dropdown-text'>
                                         Australia
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.2">
+                                    <NavDropdown.Item className='dropdown-text'>
                                         Denmark
                                     </NavDropdown.Item>
                                 </div>
                                 <div style={{ display: 'flex' }}>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.4">
+                                    <NavDropdown.Item className='dropdown-text'>
                                         Sri Lanka
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.2">
+                                    <NavDropdown.Item className='dropdown-text'>
                                         Singapore
                                     </NavDropdown.Item>
                                 </div>
                                 <div style={{ display: 'flex' }}>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.4">
+                                    <NavDropdown.Item className='dropdown-text'>
                                         Bangladesh
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.2">
+                                    <NavDropdown.Item className='dropdown-text'>
                                         Papua New Guinea
                                     </NavDropdown.Item>
                                 </div>
                                 <div style={{ display: 'flex' }}>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.4">
+                                    <NavDropdown.Item className='dropdown-text'>
                                         England
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.2">
+                                    <NavDropdown.Item className='dropdown-text'>
                                         Kuwait
                                     </NavDropdown.Item>
                                 </div>
                                 <div style={{ display: 'flex' }}>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.4">
+                                    <NavDropdown.Item className='dropdown-text'>
                                         West Indies
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.2">
+                                    <NavDropdown.Item className='dropdown-text'>
                                         Vanuatu
                                     </NavDropdown.Item>
                                 </div>
                                 <div style={{ display: 'flex' }}>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.4">
+                                    <NavDropdown.Item className='dropdown-text'>
                                         South Africa
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.2">
+                                    <NavDropdown.Item className='dropdown-text'>
                                         Jersey
                                     </NavDropdown.Item>
                                 </div>
                                 <div style={{ display: 'flex' }}>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.4">
+                                    <NavDropdown.Item className='dropdown-text'>
                                         Zimbabwe
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.2">
+                                    <NavDropdown.Item className='dropdown-text'>
                                         Oman
                                     </NavDropdown.Item>
                                 </div>
                                 <div style={{ display: 'flex' }}>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.4">
+                                    <NavDropdown.Item className='dropdown-text'>
                                         New Zealand
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item className='dropdown-text' href="#action/3.2">
+                                    <NavDropdown.Item className='dropdown-text'>
                                         Fiji
                                     </NavDropdown.Item>
                                 </div>
@@ -144,6 +165,7 @@ function Header() {
                             </NavDropdown>
 
                         </Nav>
+
                         <Nav
                         >
                             <NavDropdown
@@ -153,8 +175,8 @@ function Header() {
                                 className='header-text navteam bd-dark'
                                 style={{ zIndex: 5, }}
                             >
-                                <NavDropdown.Item className='dropdown-text' href="#action/3.4">ICC Ranking - Men</NavDropdown.Item>
-                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">ICC Ranking - Women</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text'>ICC Ranking - Men</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text'>ICC Ranking - Women</NavDropdown.Item>
                             </NavDropdown>
 
                         </Nav>
@@ -168,13 +190,13 @@ function Header() {
                                 className='header-text navteam bd-dark'
                                 style={{ zIndex: 5, }}
                             >
-                                <NavDropdown.Item className='dropdown-text' href="#action/3.4">World Test Championship</NavDropdown.Item>
-                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">World Cup Super League</NavDropdown.Item>
-                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Quiz</NavDropdown.Item>
-                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Photos</NavDropdown.Item>
-                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Mobile App</NavDropdown.Item>
-                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Careers</NavDropdown.Item>
-                                <NavDropdown.Item className='dropdown-text' href="#action/3.2">Contact Us</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text'>World Test Championship</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text'>World Cup Super League</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text'>Quiz</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text'>Photos</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text'>Mobile App</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text'>Careers</NavDropdown.Item>
+                                <NavDropdown.Item className='dropdown-text'>Contact Us</NavDropdown.Item>
                             </NavDropdown>
 
                         </Nav>

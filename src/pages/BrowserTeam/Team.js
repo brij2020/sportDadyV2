@@ -6,11 +6,13 @@ import Col from 'react-bootstrap/Col';
 import cricketimg1 from '../../assets/images/cricketimg1.jpg';
 import cricketimg2 from '../../assets/images/cricketimg2.jpeg';
 import cricketimg3 from '../../assets/images/cricketimg3.jpeg';
+import { Link, redirect } from 'react-router-dom';
+
 function Team() {
     return (
         <div className="App">
             <Container>
-                
+
                 <div>
                     <h1 style={{ textAlign: "start", color: "black" }}>India National Cricket Team
                     </h1>
@@ -39,8 +41,12 @@ function Team() {
                         <Col xs={8}><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
                             <p style={{ textAlign: "start", color: "grey" }}>
                                 Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
-                                <br></br>Nov 26 2022
                             </p>
+                            <br /> <br /> <br /> <br /> <br /> <br /> <br />
+                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                <p className='p-gray'>Nov 26 2022</p>
+                                <p className='see-more'><Link>See More</Link></p>
+                            </div>
                         </Col>
                     </Row>
                 </div>
@@ -52,8 +58,12 @@ function Team() {
                     <Col xs={8}><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
                         <p style={{ textAlign: "start", color: "grey" }}>
                             Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
-                            <br></br>Nov 26 2022
                         </p>
+                        <br /> <br /> <br /> <br /> <br /> <br /> <br />
+                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                            <p className='p-gray'>Nov 26 2022</p>
+                            <p className='see-more'><Link>See More</Link></p>
+                        </div>
                     </Col>
                 </Row>
                 <hr></hr>
@@ -63,8 +73,12 @@ function Team() {
                     <Col xs={8}><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
                         <p style={{ textAlign: "start", color: "grey" }}>
                             Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
-                            <br></br>Nov 26 2022
                         </p>
+                        <br /> <br /> <br /> <br /> <br /> <br /> <br />
+                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                            <p className='p-gray'>Nov 26 2022</p>
+                            <p className='see-more'><Link>See More</Link></p>
+                        </div>
                     </Col>
                 </Row>
                 <hr></hr>
@@ -74,8 +88,12 @@ function Team() {
                     <Col xs={8}><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
                         <p style={{ textAlign: "start", color: "grey" }}>
                             Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
-                            <br></br>Nov 26 2022
                         </p>
+                        <br /> <br /> <br /> <br /> <br /> <br /> <br />
+                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                            <p className='p-gray'>Nov 26 2022</p>
+                            <p className='see-more'><Link>See More</Link></p>
+                        </div>
                     </Col>
                 </Row>
                 <hr></hr>
@@ -85,8 +103,12 @@ function Team() {
                     <Col xs={8}><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
                         <p style={{ textAlign: "start", color: "grey" }}>
                             Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
-                            <br></br>Nov 26 2022
                         </p>
+                        <br /> <br /> <br /> <br /> <br /> <br /> <br />
+                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                            <p className='p-gray'>Nov 26 2022</p>
+                            <p className='see-more'><Link>See More</Link></p>
+                        </div>
                     </Col>
                 </Row>
                 <hr></hr>
@@ -96,8 +118,12 @@ function Team() {
                     <Col xs={8}><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
                         <p style={{ textAlign: "start", color: "grey" }}>
                             Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
-                            <br></br>Nov 26 2022
                         </p>
+                        <br /> <br /> <br /> <br /> <br /> <br /> <br />
+                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                            <p className='p-gray'>Nov 26 2022</p>
+                            <p className='see-more'><Link>See More</Link></p>
+                        </div>
                     </Col>
                 </Row>
             </Container>

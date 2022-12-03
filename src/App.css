@@ -52,14 +52,14 @@ body {
 .header-section {
   height: 70px;
   width: '100%';
-  background: linear-gradient(to right, #EEF8FF, #323d94);
+  background: linear-gradient(to bottom, #EEF8FF, #323d94);
   /* background: rgba(0, 0, 0, 0.2); */
   /* -webkit-transform: matrix('60%'); */
   /* opacity: 0.7; */
   /* padding: 20px; */
   display: flex;
   justify-content: space-between;
-  opacity: 0.8;
+  opacity: 1;
   position: sticky;
   top: 0;
   z-index: 4;
@@ -119,15 +119,15 @@ body {
   background: #e6e9f3;
   width: '100%';
   margin-top: 15px;
-  padding-bottom: 40px;
-  padding-top: 20px;
+  padding: 45px 130px 45px 130px;
 }
 
 .plain-section {
   background: #fff;
   width: '100%';
-  padding-bottom: 50px;
-  padding-top: 20px;
+  padding: 45px 130px 55px 130px;
+  margin: 15px 65px 0 65px;
+  border-radius: 20px;
 }
 
 .quiz-section {
@@ -148,6 +148,13 @@ div.polaroid {
   border: 1px solid #BFBFBF;
   /* background-color: white; */
   box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+div.polaroid:hover {
+  border: 1px solid #323d94;
+  box-shadow: 5px 5px 5px 5px #323d94;
+  z-index: 10;
+  cursor: pointer;
 }
 
 div.rotate_right {
@@ -171,6 +178,7 @@ div.rotate_left {
   background: linear-gradient(to right, #fff, #323d94);
   border-radius: 15px;
 }
+
 .w-text {
   color: #fff;
   font-size: 14px;
@@ -178,6 +186,7 @@ div.rotate_left {
   text-align: center;
   padding-top: 12px;
 }
+
 .p-text {
   color: #FB4570;
   font-size: 15px;
@@ -186,29 +195,55 @@ div.rotate_left {
   margin-top: -7px;
 
 }
-.see-more {
-  text-align: 'right';
+
+.see-more-home {
   padding-right: 190px;
-  font-size: 16px;
-  color: linear-gradient(to right, #EEF8FF, #323d94) !important;
-  text-decoration: 'underline'
+  font-size: 14px;
+  color: #323d94;
+  text-align: right;
+  text-decoration: underline;
+  font-weight: '800';
 }
-.d-flew{
+
+.d-flew {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.live-section {
   display: flex;
-  justify-content: space-between;
+  margin: 10px;
+  width: '100%';
+  margin-top: 20px;
 }
+
 .see-more {
-  padding-right: 190px;
-  font-size: 16px;
-  color: blue;
+  font-size: 14px;
+  color: #323d94;
   text-align: right;
+  text-decoration: underline;
+  font-weight: '800';
 }
+
+.see-more:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.view-all:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .view-all {
-  font-size: 15px;
-  color: blue;
-  text-align: right;
   padding-right: 20px;
+  font-size: 14px;
+  color: #323d94;
+  text-align: right;
+  text-decoration: underline;
+  font-weight: '800';
 }
+
 a#nav-dropdown-dark-example {
   background: none !important;
   color: #fff;
@@ -254,38 +289,79 @@ a#nav-dropdown-dark-example {
 }
 
 .dropdown-text {
-  width: 150px;
+  width: 175px;
+  font-size: 13px;
+}
+
+.dropdown-text:hover {
+  text-decoration: none;
 }
 
 .dropdown-heading {
-  width: 120px;
-  font-weight: 500;
+  width: 175px;
+  font-weight: '800';
   font-size: 12px;
+  color: #323d94;
+  padding-top: 5px;
+  padding-left: 7px;
 }
-.heading{
-  text-align: start;
+
+.heading {
+  text-align: center;
+  color: #282c34;
+  margin-bottom: 25px;
+  font-size: 25px;
+  text-shadow: 1px 1px 2px #fff, 0 0 25px blue, 0 0 5px #323d94;
+}
+
+h1 {
   color: black;
-  margin-bottom: 20px;
+  text-align: start;
+  padding-bottom: 10px;
 }
-.mg-top{
+
+.mg-top {
   margin-top: 25px;
 }
+
+.p-gray {
+  color: gray;
+  font-size: 12px;
+}
+
+Col {
+  font-size: 20px !important;
+}
+
 /* start css shashi */
 .nav-tabs .nav-link {
-margin-bottom: calc(-1 * var(--bs-nav-tabs-border-width));
-background: 0 0;
-border: none !important;
-border-top-left-radius: var(--bs-nav-tabs-border-radius);
-border-top-right-radius: var(--bs-nav-tabs-border-radius);
+  margin-bottom: calc(-1 * var(--bs-nav-tabs-border-width));
+  background: 0 0;
+  border: none !important;
+  border-top-left-radius: var(--bs-nav-tabs-border-radius);
+  border-top-right-radius: var(--bs-nav-tabs-border-radius);
 }
 
-.nav-fill .nav-item .nav-link, .nav-justified .nav-item .nav-link {
-width: 74%;
-} 
+.nav-fill .nav-item .nav-link,
+.nav-justified .nav-item .nav-link {
+  width: 74%;
+}
+
 a.nav-link {
-background: linear-gradient(to right, #fff, #323d94) !important;
-border-radius: 24px !important;
-color: white !important;
-border: none !important;
+  background: linear-gradient(to right, #fff, #323d94) !important;
+  border-radius: 24px !important;
+  color: white !important;
+  border: none !important;
 }
 
+.d-text{
+  font-size: 13px;
+}
+.d-text:hover {
+  text-decoration: none;
+}
+.month{
+  font-size: 15px;
+  font-weight: bold;
+  color: #000;
+}
