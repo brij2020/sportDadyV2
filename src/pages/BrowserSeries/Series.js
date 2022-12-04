@@ -165,7 +165,7 @@ function Series() {
 
     return (
         <>
-            <Container>
+            <Container style={{ marginBottom: 20 }}>
                 <h1 style={{ textAlign: "start", color: "black" }}>Cricket Schedule All Series
                 </h1>
                 <Nav justify variant="tabs" defaultActiveKey="/home">
@@ -184,8 +184,8 @@ function Series() {
                 </Nav>
                 <hr></hr>
 
-                <div>
-                    <h4 style={{ backgroundColor: "GhostWhite", padding: "15px", fontWeight: "bold", }}>Month <span style={{marginLeft: 385}}>Series Name</span>
+                <div style={{ boxShadow: '1px 2px 9px #c93a3e', marginTop: 25, borderRadius: 40, padding: 10 }}>
+                    <h4 style={{ backgroundColor: "GhostWhite", padding: "18px", fontWeight: "bold", borderRadius: 30, margin: 5 }}>Month <span style={{marginLeft: 385}}>Series Name</span>
                     </h4>
                     {Data2.map((item2) => (
                         <div>

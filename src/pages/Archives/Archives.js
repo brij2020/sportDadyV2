@@ -77,7 +77,7 @@ function Archives() {
 
     return (
         <>
-            <Container>
+            <Container style={{ marginBottom: 20 }}>
                 <h1 style={{ textAlign: "start", color: "black" }}>Cricket Match Archives
                 </h1>
                 <Nav justify variant="tabs" defaultActiveKey="/home">
@@ -96,43 +96,42 @@ function Archives() {
                 </Nav>
                 <hr></hr>
 
-                <div
+                <div style={{ boxShadow: '1px 2px 9px #c93a3e', marginTop: 25, borderRadius: 40, padding: 10 }}
                     id="internation">
-                    <Row className="mt-5" style={{}}>
-                        <Col xs={9}>
-                            <h4 style={{ backgroundColor: "GhostWhite", padding: "16px", fontWeight: "bold", }}>
+                    <Row className="" style={{}}>
+                        <Col xs={12}>
+                            <h4 style={{ backgroundColor: "GhostWhite", padding: "18px", fontWeight: "bold", borderRadius: 30, margin: 5 }}>
                                 INTERNATIONAL  </h4>
-
                         </Col>
-                        <Col xs={3}>
-                            <Dropdown >
-                                <Dropdown.Toggle variant="GhostWhite" id="dropdown-basic">
-                                    Dropdown Button
-                                </Dropdown.Toggle>
 
-                                <Dropdown.Menu style={{
-                                    width: 200,
-                                }}>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">2021 - 2022</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">2011 - 2020</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">2001 - 2010</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1991 - 2000</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1981 - 1990</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1971 - 1980</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1961 - 1970</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1951 - 1960</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1941 - 1950</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1931 - 1940</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1921 - 1930</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1911 - 1920</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1901 - 1910</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1891 - 1900</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1881 - 1890</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </Col>
                         <div style={{ padding: 15 }}>
-                            <h2 className="time-period">2001-2005</h2>
+                            <div className='d-flex justify-content-between'>
+                                <h2 className="time-period">2001-2005</h2>
+                                <Dropdown >
+                                    <Dropdown.Toggle variant="GhostWhite" id="dropdown-basic">
+                                        Dropdown Button
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu style={{
+                                        width: 200,
+                                    }}>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">2021 - 2022</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">2011 - 2020</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">2001 - 2010</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1991 - 2000</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1981 - 1990</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1971 - 1980</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1961 - 1970</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1951 - 1960</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1941 - 1950</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1931 - 1940</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1921 - 1930</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1911 - 1920</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1901 - 1910</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1891 - 1900</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1881 - 1890</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </div>
                             {Data.map((item) => (
                                 <Row className="mt-5 list-section">
                                     <Col xs={9}>
@@ -148,45 +147,46 @@ function Archives() {
                                 </Row>
                             ))}
                         </div>
+
                     </Row>
                 </div>
 
-                <div id="leagues">
-                    <Row className="mt-5" style={{}}>
-                        <Col xs={9}>
-                            <h4 style={{ backgroundColor: "GhostWhite", padding: "16px", fontWeight: "bold", }}>
-                                T20 LEAGUES </h4>
-
+                <div style={{ boxShadow: '1px 2px 9px #c93a3e', marginTop: 25, borderRadius: 40, padding: 10 }}
+                    id="leagues">
+                    <Row className="" style={{}}>
+                        <Col xs={12}>
+                            <h4 style={{ backgroundColor: "GhostWhite", padding: "18px", fontWeight: "bold", borderRadius: 30, margin: 5 }}>
+                                Cricket Leagues  </h4>
                         </Col>
-                        <Col xs={3}>
-                            <Dropdown >
-                                <Dropdown.Toggle variant="GhostWhite" id="dropdown-basic">
-                                    Dropdown Button
-                                </Dropdown.Toggle>
 
-                                <Dropdown.Menu style={{
-                                    width: 200,
-                                }}>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">2021 - 2022</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">2011 - 2020</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">2001 - 2010</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1991 - 2000</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1981 - 1990</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1971 - 1980</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1961 - 1970</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1951 - 1960</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1941 - 1950</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1931 - 1940</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1921 - 1930</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1911 - 1920</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1901 - 1910</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1891 - 1900</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1881 - 1890</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </Col>
                         <div style={{ padding: 15 }}>
-                            <h2 className="time-period">2001-2005</h2>
+                            <div className='d-flex justify-content-between'>
+                                <h2 className="time-period">2001-2005</h2>
+                                <Dropdown >
+                                    <Dropdown.Toggle variant="GhostWhite" id="dropdown-basic">
+                                        Dropdown Button
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu style={{
+                                        width: 200,
+                                    }}>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">2021 - 2022</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">2011 - 2020</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">2001 - 2010</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1991 - 2000</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1981 - 1990</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1971 - 1980</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1961 - 1970</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1951 - 1960</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1941 - 1950</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1931 - 1940</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1921 - 1930</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1911 - 1920</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1901 - 1910</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1891 - 1900</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1881 - 1890</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </div>
                             {Data.map((item) => (
                                 <Row className="mt-5 list-section">
                                     <Col xs={9}>
@@ -202,45 +202,46 @@ function Archives() {
                                 </Row>
                             ))}
                         </div>
+
                     </Row>
                 </div>
 
-                <div id="domestic">
-                    <Row className="mt-5" style={{}} id="domestic">
-                        <Col xs={9}>
-                            <h4 style={{ backgroundColor: "GhostWhite", padding: "16px", fontWeight: "bold", }}>
-                                DOMESTIC  </h4>
-
+                <div style={{ boxShadow: '1px 2px 9px #c93a3e', marginTop: 25, borderRadius: 40, padding: 10 }}
+                    id="domestic">
+                    <Row className="" style={{}}>
+                        <Col xs={12}>
+                            <h4 style={{ backgroundColor: "GhostWhite", padding: "18px", fontWeight: "bold", borderRadius: 30, margin: 5 }}>
+                                Domestic  </h4>
                         </Col>
-                        <Col xs={3}>
-                            <Dropdown >
-                                <Dropdown.Toggle variant="GhostWhite" id="dropdown-basic">
-                                    Dropdown Button
-                                </Dropdown.Toggle>
 
-                                <Dropdown.Menu style={{
-                                    width: 200,
-                                }}>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">2021 - 2022</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">2011 - 2020</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">2001 - 2010</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1991 - 2000</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1981 - 1990</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1971 - 1980</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1961 - 1970</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1951 - 1960</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1941 - 1950</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1931 - 1940</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1921 - 1930</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1911 - 1920</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1901 - 1910</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1891 - 1900</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1881 - 1890</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </Col>
                         <div style={{ padding: 15 }}>
-                            <h2 className="time-period">2001-2005</h2>
+                            <div className='d-flex justify-content-between'>
+                                <h2 className="time-period">2001-2005</h2>
+                                <Dropdown >
+                                    <Dropdown.Toggle variant="GhostWhite" id="dropdown-basic">
+                                        Dropdown Button
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu style={{
+                                        width: 200,
+                                    }}>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">2021 - 2022</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">2011 - 2020</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">2001 - 2010</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1991 - 2000</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1981 - 1990</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1971 - 1980</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1961 - 1970</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1951 - 1960</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1941 - 1950</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1931 - 1940</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1921 - 1930</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1911 - 1920</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1901 - 1910</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1891 - 1900</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1881 - 1890</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </div>
                             {Data.map((item) => (
                                 <Row className="mt-5 list-section">
                                     <Col xs={9}>
@@ -256,45 +257,46 @@ function Archives() {
                                 </Row>
                             ))}
                         </div>
+
                     </Row>
                 </div>
 
-                <div id="women">
-                    <Row className="mt-5" style={{}}>
-                        <Col xs={9}>
-                            <h4 style={{ backgroundColor: "GhostWhite", padding: "16px", fontWeight: "bold", }}>
-                                WOMEN  </h4>
-
+                <div style={{ boxShadow: '1px 2px 9px #c93a3e', marginTop: 25, borderRadius: 40, padding: 10 }}
+                    id="women">
+                    <Row className="" style={{}}>
+                        <Col xs={12}>
+                            <h4 style={{ backgroundColor: "GhostWhite", padding: "18px", fontWeight: "bold", borderRadius: 30, margin: 5 }}>
+                                Women  </h4>
                         </Col>
-                        <Col xs={3}>
-                            <Dropdown >
-                                <Dropdown.Toggle variant="GhostWhite" id="dropdown-basic">
-                                    Dropdown Button
-                                </Dropdown.Toggle>
 
-                                <Dropdown.Menu style={{
-                                    width: 200,
-                                }}>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">2021 - 2022</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">2011 - 2020</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">2001 - 2010</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1991 - 2000</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1981 - 1990</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1971 - 1980</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1961 - 1970</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1951 - 1960</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1941 - 1950</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1931 - 1940</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1921 - 1930</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1911 - 1920</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1901 - 1910</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1891 - 1900</Dropdown.Item>
-                                    <Dropdown.Item className='dropdown-text' href="#/action-1">1881 - 1890</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown>
-                        </Col>
                         <div style={{ padding: 15 }}>
-                            <h2 className="time-period">2001-2005</h2>
+                            <div className='d-flex justify-content-between'>
+                                <h2 className="time-period">2001-2005</h2>
+                                <Dropdown >
+                                    <Dropdown.Toggle variant="GhostWhite" id="dropdown-basic">
+                                        Dropdown Button
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu style={{
+                                        width: 200,
+                                    }}>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">2021 - 2022</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">2011 - 2020</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">2001 - 2010</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1991 - 2000</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1981 - 1990</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1971 - 1980</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1961 - 1970</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1951 - 1960</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1941 - 1950</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1931 - 1940</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1921 - 1930</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1911 - 1920</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1901 - 1910</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1891 - 1900</Dropdown.Item>
+                                        <Dropdown.Item className='dropdown-text' href="#/action-1">1881 - 1890</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
+                            </div>
                             {Data.map((item) => (
                                 <Row className="mt-5 list-section">
                                     <Col xs={9}>
@@ -310,6 +312,7 @@ function Archives() {
                                 </Row>
                             ))}
                         </div>
+
                     </Row>
                 </div>
 

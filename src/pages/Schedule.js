@@ -71,8 +71,8 @@ function Schedule() {
                 <hr></hr>
 
                 {Data.map((item) => (
-                    <div>
-                        <h4 style={{ backgroundColor: "GhostWhite", padding: "15px", fontWeight: "bold" }}>{item.heading}
+                    <div style={{ boxShadow: '1px 2px 9px #c93a3e', marginTop: 30, borderRadius: 40, paddingTop: 1 }}>
+                        <h4 style={{ backgroundColor: "GhostWhite", padding: "18px", fontWeight: "bold", borderRadius: 30, margin: 10 }}>{item.heading}
                         </h4>
                         {Data2.map((item2) => (
                             <div>
