@@ -7,6 +7,16 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import cricketimg1 from '../assets/images/cricketimg1.jpg';
 import cricketimg2 from '../assets/images/cricketimg2.jpeg';
+import flag1 from '../assets/icons/us.png';
+import flag2 from '../assets/icons/nami.png';
+import flag3 from '../assets/icons/flag1.png';
+import flag4 from '../assets/icons/flag2.png';
+import newzteam from '../assets/images/teams/newzteam.jpeg';
+import usteam from '../assets/images/teams/usteam.jpg';
+import abdev from '../assets/images/players/abdev.png';
+import chris from '../assets/images/players/chris.png';
+import david from '../assets/images/players/david.png';
+
 
 function Home() {
 
@@ -69,46 +79,54 @@ function Home() {
 
       <div className='bg-section' style={{ marginTop: 125 }}>
         <h2 className='heading'>Live Cricket Score</h2>
-        <div className='live-section'>
-          <div style={{ marginRight: 40, width: '50%' }}>
-            <h4 style={{ backgroundColor: "GhostWhite", padding: "15px", fontWeight: "bold", }}>
-              ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
-            </h4>
-            <h3 style={{ fontWeight: "bold", marginLeft: "10px", }}>
-              United States vs Namibia,
-            </h3>
-            <p style={{ color: "grey", marginLeft: "10px", }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
-            <Card style={{ width: '26rem', background: "#f5f5f5" }}>
-              <Card.Body>
-                {/* <Card.Title>USA211-7 (50 Ovs)</Card.Title> */}
-                <Card.Subtitle className="mb-2 text-muted">USA211-7 (50 Ovs)</Card.Subtitle>
-                <Card.Text style={{ fontWeight: "bold" }}>
-                  USA211-7 (50 Ovs)
-                </Card.Text>
-                <Card.Link href="#">Morrisville Samp Army won by 8 wkts</Card.Link>
-
-              </Card.Body>
-            </Card>
+        <div className='d-flex'>
+          <div className='live-section'>
+            <div className='live-card'>
+              <h4 style={{ fontWeight: "bold", color: 'GhostWhite', }}>
+                ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
+              </h4>
+              <h3 style={{ fontWeight: "bold", color: 'GhostWhite', marginTop: 20 }}>
+                United States vs Namibia,
+              </h3>
+              <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
+              <div className='flag-contain'>
+                <img src={flag1} width="15%" height="15%"></img>
+                <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
+                <img src={flag2} style={{ paddingTop: 3 }} width="13%" height="13%"></img>
+              </div>
+            </div>
           </div>
-          <div style={{ width: '50%' }}>
-            <h4 style={{ backgroundColor: "GhostWhite", padding: "15px", fontWeight: "bold", }}>
-              ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
-            </h4>
-            <h3 style={{ fontWeight: "bold", marginLeft: "10px", }}>
-              United States vs Namibia,
-            </h3>
-            <p style={{ color: "grey", marginLeft: "10px", }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
-            <Card style={{ width: '26rem', background: "#f5f5f5" }}>
-              <Card.Body>
-                {/* <Card.Title>USA211-7 (50 Ovs)</Card.Title> */}
-                <Card.Subtitle className="mb-2 text-muted">USA211-7 (50 Ovs)</Card.Subtitle>
-                <Card.Text style={{ fontWeight: "bold" }}>
-                  USA211-7 (50 Ovs)
-                </Card.Text>
-                <Card.Link href="#">Morrisville Samp Army won by 8 wkts</Card.Link>
-
-              </Card.Body>
-            </Card>
+          <div className='live-section'>
+            <div className='live-card'>
+              <h4 style={{ fontWeight: "bold", color: 'GhostWhite', }}>
+                ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
+              </h4>
+              <h3 style={{ fontWeight: "bold", color: 'GhostWhite', marginTop: 20 }}>
+                India vs Pakistan,
+              </h3>
+              <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
+              <div className='flag-contain'>
+                <img src={flag3} width="15.7%" height="15.7%"></img>
+                <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
+                <img src={flag4} width="15.7%" height="15.7%"></img>
+              </div>
+            </div>
+          </div>
+          <div className='live-section'>
+            <div className='live-card'>
+              <h4 style={{ fontWeight: "bold", color: 'GhostWhite', }}>
+                ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
+              </h4>
+              <h3 style={{ fontWeight: "bold", color: 'GhostWhite', marginTop: 20 }}>
+                United States vs Namibia,
+              </h3>
+              <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
+              <div className='flag-contain'>
+                <img src={flag1} width="15%" height="15%"></img>
+                <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
+                <img src={flag2} style={{ paddingTop: 3 }} width="13%" height="13%"></img>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -205,28 +223,59 @@ function Home() {
 
       <div className='bg-section'>
         <h2 className='heading'>Cricket News and Editorials</h2>
-        <Row>
-          <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
-          </Col>
-          <Col xs={7}><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
-            <p style={{ textAlign: "start", color: "grey", }}>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-              standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-              a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-              remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-              Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-              of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-              classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-              Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-              Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-              <br /> <br /> <br /> <br /> <br />
-            </p>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <p className='p-gray'>Nov 26 2022</p>
-              <p className='see-more'><Link to='news'>View More</Link></p>
-            </div>
-          </Col>
-        </Row>
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={cricketimg2} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
       </div>
 
       <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
@@ -237,14 +286,960 @@ function Home() {
           <Col xs={8}><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
             <p style={{ textAlign: "start", color: "grey" }}>
               Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
+              Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
+              Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
+              Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
             </p>
-            <br /> <br /> <br /> <br /> <br /> <br /> <br />
+            <br /> <br /> <br />
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <p className='p-gray'>Nov 26 2022</p>
               <p className='see-more'><Link to='team'>View More</Link></p>
             </div>
           </Col>
         </Row>
+      </div>
+
+      <div className='bg-section'>
+        <h2 className='heading'>Our Cricket Teams</h2>
+        <div className='d-flex justify-content-around'>
+          <div style={{ width: '100%', height: '100%', margin: 20 }}>
+            <img src={cricketimg1} width="100%" height="100%"></img>
+            <h3 style={{ color: '#000', padding: 5, textAlign: 'center' }}>Indian Cricket Team Players</h3>
+          </div>
+
+          <div style={{ width: '100%', height: '100%', margin: 20 }}>
+            <img src={usteam} width="100%" height="100%"></img>
+            <h3 style={{ color: '#000', padding: 5, textAlign: 'center' }}>Us Cricket Team Players</h3>
+          </div>
+          <div style={{ width: '100%', height: '100%', margin: 20 }}>
+            <img src={newzteam} width="100%" height="100%"></img>
+            <h3 style={{ color: '#000', padding: 5, textAlign: 'center' }}>NewZeland Cricket Team Players</h3>
+          </div>
+
+        </div>
+      </div>
+
+      <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
+        <h2 className='heading'>Cricket Players (Our Heroes)</h2>
+        <Row className="mt-5" style={{ marginTop: 10 }}>
+          <Col xs={4}>
+            <div className='player-card'>
+              <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
+              <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Ab de villiers</h3>
+            </div>
+            <div className='player-card'>
+              <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
+              <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Ab de villiers</h3>
+            </div>
+            <div className='player-card'>
+              <img src={david} width="75%" height="100%" style={{ alignSelf: 'center' }}></img>
+              <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>David warner</h3>
+            </div>
+
+          </Col>
+          <Col xs={4}>
+            <div className='player-card'>
+              <img src={chris} width="70%" height="100%" style={{ alignSelf: 'center' }}></img>
+              <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Chris Jordanr</h3>
+            </div>
+            <div className='player-card'>
+              <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
+              <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Ab de villiers</h3>
+            </div>
+            <div className='player-card'>
+              <img src={david} width="75%" height="100%" style={{ alignSelf: 'center' }}></img>
+              <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>David warner</h3>
+            </div>
+
+          </Col>
+          <Col xs={4}>
+            <div className='player-card'>
+              <img src={david} width="75%" height="100%" style={{ alignSelf: 'center' }}></img>
+              <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>David warner</h3>
+            </div>
+            <div className='player-card'>
+              <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
+              <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Ab de villiers</h3>
+            </div>
+            <div className='player-card'>
+              <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
+              <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Ab de villiers</h3>
+            </div>
+
+          </Col>
+        </Row>
+      </div>
+
+      <div className='bg-section'>
+        <h2 className='heading'>Latest News and Articles</h2>
+        
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={cricketimg2} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={newzteam} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={usteam} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={cricketimg2} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={newzteam} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={usteam} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={cricketimg2} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={newzteam} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={usteam} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={newzteam} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={usteam} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={newzteam} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={usteam} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={newzteam} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={usteam} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={newzteam} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={usteam} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+        <hr />
+
+        <div className='new-part'>
+          <Row>
+            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={7}>
+              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+              </Link>
+              <p style={{ textAlign: "start", color: "grey", }}>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                <br /> <br /> <br /> <br /> <br />
+              </p>
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
+
       </div>
     </div>
   );

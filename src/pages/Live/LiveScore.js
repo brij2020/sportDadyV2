@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Nav from 'react-bootstrap/Nav';
 import { Link, redirect } from 'react-router-dom';
+import ball1 from '../../assets/icons/ball2.png';
 
 function LiveScore() {
 
@@ -27,7 +28,7 @@ function LiveScore() {
                         }}>
                             <Card.Body>
                                 {/* <Card.Title>USA211-7 (50 Ovs)</Card.Title> */}
-                                <Card.Subtitle className="mb-2 text-muted" style={{fontSize: 12}}>USA211-7 (50 Ovs)</Card.Subtitle>
+                                <Card.Subtitle className="mb-2 text-muted" style={{ fontSize: 12 }}>USA211-7 (50 Ovs)</Card.Subtitle>
                                 <Card.Text style={{ fontWeight: "bold", fontSize: 12 }}>
                                     USA211-7 (50 Ovs)
                                 </Card.Text>
@@ -53,7 +54,7 @@ function LiveScore() {
                         }}>
                             <Card.Body>
                                 {/* <Card.Title>USA211-7 (50 Ovs)</Card.Title> */}
-                                <Card.Subtitle className="mb-2 text-muted" style={{fontSize: 12}}>USA211-7 (50 Ovs)</Card.Subtitle>
+                                <Card.Subtitle className="mb-2 text-muted" style={{ fontSize: 12 }}>USA211-7 (50 Ovs)</Card.Subtitle>
                                 <Card.Text style={{ fontWeight: "bold", fontSize: 12 }}>
                                     USA211-7 (50 Ovs)
                                 </Card.Text>
@@ -74,7 +75,9 @@ function LiveScore() {
                 </h1>
                 <Nav justify variant="tabs" defaultActiveKey="/home">
                     <Nav.Item>
-                        <Nav.Link href="/home">INTERNATIONAL</Nav.Link>
+                        <Nav.Link href="/home">INTERNATIONAL
+                        <img src={ball1} width="40%" height="100%"></img>
+                        </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link eventKey="link-2">DOMESTIC</Nav.Link>

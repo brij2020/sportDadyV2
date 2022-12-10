@@ -353,7 +353,11 @@ a.nav-link {
   color: white !important;
   border: none !important;
 }
-
+a.nav-link.active {
+  height: 75%;
+  /* display: flex; */
+    /* justify-content: flex-end; */
+}
 .d-text{
   font-size: 13px;
 }
