@@ -8,13 +8,13 @@ import img from './logo.png';
 
 function Header() {
     return (
-        <Navbar className="header-section">
+        <Navbar className="header-section" style={{marginBottom: "0"}}>
             <div style={{}}>
                 <img src={img} width="60" height="60"></img>
             </div>
             <div style={{ marginLeft: 170 }} >
                 <Container fluid>
-                    <Navbar.Collapse id="navbar-dark-example">
+                    <Navbar.Collapse id="navbar-dark-example"> 
                         <Link to='/' className='header-text'> <Nav>Home</Nav></Link>
                         <Link to='livescore' className='header-text'>Live Scores</Link>
                         <Link to='schedule' className='header-text'>Schedule</Link>

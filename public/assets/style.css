@@ -68,12 +68,17 @@ p.plain-list {
 }
 
 .live-card {
-    height: 230px;
+  
     width: 430px;
-    background: linear-gradient(to right, #000, #323d94);
+    background: linear-gradient(to right, #000, #fb0f0f);
     border-radius: 20px;
     padding: 22px;
     padding-top: 40px;
+    rotate: 1deg;
+    -webkit-box-reflect: below 7px linear-gradient(transparent, transparent, #0004);
+    transform-origin: center;
+    transform: perspective(761px) rotateY(21deg);
+    transition: 0.5s;
 }
 
 .flag-contain {

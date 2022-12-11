@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { Link, redirect } from 'react-router-dom';
 import '../App.css';
 import SimpleImageSlider from "react-simple-image-slider";
@@ -16,14 +17,20 @@ import usteam from '../assets/images/teams/usteam.jpg';
 import abdev from '../assets/images/players/abdev.png';
 import chris from '../assets/images/players/chris.png';
 import david from '../assets/images/players/david.png';
-
+import ResponsiveSlider from '../Components/Slider'
+import ONE from  '../assets/images/slides/one.jpg'
+import TWO from  '../assets/images/slides/two.jpg'
 
 function Home() {
 
   const images = [
-    { url: 'https://resources.pulse.icc-cricket.com/ICC/photo/2017/01/30/44780aa2-2b6d-4048-897c-6606762b3d38/GettyImages-463485384_Cropped.jpg' },
-    { url: "https://static.vecteezy.com/system/resources/previews/002/155/018/non_2x/cricket-championship-background-or-banner-free-vector.jpg" },
-    { url: "https://images.thequint.com/thequint%2F2022-02%2F3dadaf2c-d7e1-4fa8-a5e2-e4f3406df5f5%2FFK5hP_FaIAUwOX9.jpg" },
+    { url: ONE},
+    { url: TWO},
+     { url: TWO},
+     { url: TWO},
+     { url: TWO},
+     { url: TWO},
+     { url: TWO},
   ];
 
   const Data = [
@@ -57,15 +64,8 @@ function Home() {
   return (
     <div style={{ marginBottom: 20 }}>
       <div id='top'>
-        <SimpleImageSlider
-          width={'100%'}
-          height={280}
-          images={images}
-          showBullets={false}
-          showNavs={false}
-          autoPlay={true}
-          style={{ marginTop: -21, zIndex: 2 }}
-        />
+       
+       <ResponsiveSlider slides={images} />
         <h2 className='banner-heading'>Welcome to the Sport Daddy</h2>
         <div style={{ display: 'flex', position: 'absolute', bottom: 300, left: 120, }}>
           <div className='banner-card'>
@@ -77,7 +77,7 @@ function Home() {
         </div>
       </div>
 
-      <div className='bg-section' style={{ marginTop: 125 }}>
+      <div className='bg-section' style={{ marginTop: "30px" }}>
         <h2 className='heading'>Live Cricket Score</h2>
         <div className='d-flex'>
           <div className='live-section'>
@@ -202,7 +202,7 @@ function Home() {
           </div>
 
           <div class="polaroid rotate_left">
-            <i className='fa fa-group text-dark'>{" "} 60k + Participants</i>
+            <i className='fa fa-group '>{" "} 60k + Participants</i>
             <h4 className='light-h4'>TATA IPL 2022  Final Quiz.</h4>
             <p class="light-caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
           </div>
@@ -214,7 +214,7 @@ function Home() {
           </div>
 
           <div class="polaroid rotate_left">
-            <i className='fa fa-group text-dark'>{" "} 60k + Participants</i>
+            <i className='fa fa-group '>{" "} 60k + Participants</i>
             <h4 className='light-h4'>TATA IPL 2022  Final Quiz.</h4>
             <p class="light-caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
           </div>
