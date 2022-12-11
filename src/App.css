@@ -49,10 +49,11 @@ body {
   color: aqua;
 }
 
+/*linear-gradient(to bottom, #EEF8FF, #323d94)*/
 .header-section {
   height: 70px;
   width: '100%';
-  background: linear-gradient(to bottom, #EEF8FF, #323d94);
+  background: linear-gradient(180deg,#3d0602f7,#ff0000);
   /* background: rgba(0, 0, 0, 0.2); */
   /* -webkit-transform: matrix('60%'); */
   /* opacity: 0.7; */
@@ -88,12 +89,13 @@ body {
 .banner-card {
   height: 144px;
   width: 193px;
-  background: linear-gradient(to right, #EEF8FF, #323d94);
+  background: linear-gradient(92deg,#00121d,#ff0000);
   border-radius: 15px;
   margin: 3px;
   text-align: center;
   padding: 38px;
   color: #fff;
+  display: none;
 }
 
 .home-card {
