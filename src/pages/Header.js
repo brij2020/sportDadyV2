@@ -201,6 +201,8 @@ function Header() {
 
                         </Nav>
 
+                        <Link to='archives' className='header-text'>Download the Mobile App</Link>
+
                     </Navbar.Collapse>
                 </Container>
             </div>

@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Series from "./pages/BrowserSeries/Series";
 import Header from "./pages/Header";
+import Footer from "./pages/Footer";
 import Video from "./pages/Video";
 import Player from "./pages/BrowserPlayer/Player";
 import PlayerInfo from "./pages/BrowserPlayer/PlayerInfo";
@@ -27,9 +28,8 @@ export default function App() {
         <Route path="team" element={<BrowserTeam />} />
         <Route path="news" element={<News />} />
         <Route path="archives" element={<Archives />} />
-        
       </Routes>
-
+      <Footer />
     </BrowserRouter>
   );
 }

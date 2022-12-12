@@ -18,19 +18,19 @@ import abdev from '../assets/images/players/abdev.png';
 import chris from '../assets/images/players/chris.png';
 import david from '../assets/images/players/david.png';
 import ResponsiveSlider from '../Components/Slider'
-import ONE from  '../assets/images/slides/one.jpg'
-import TWO from  '../assets/images/slides/two.jpg'
+import ONE from '../assets/images/slides/one.jpg'
+import TWO from '../assets/images/slides/two.jpg'
 
 function Home() {
 
   const images = [
-    { url: ONE},
-    { url: TWO},
-     { url: TWO},
-     { url: TWO},
-     { url: TWO},
-     { url: TWO},
-     { url: TWO},
+    { url: ONE },
+    { url: TWO },
+    { url: TWO },
+    { url: TWO },
+    { url: TWO },
+    { url: TWO },
+    { url: TWO },
   ];
 
   const Data = [
@@ -64,9 +64,9 @@ function Home() {
   return (
     <div style={{ marginBottom: 20 }}>
       <div id='top'>
-       
-       <ResponsiveSlider slides={images} />
-        <h2 className='banner-heading'>Welcome to the Sport Daddy</h2>
+
+        <ResponsiveSlider slides={images} />
+        <marquee className='banner-heading'>Welcome to the Sport Daddy</marquee>
         <div style={{ display: 'flex', position: 'absolute', bottom: 300, left: 120, }}>
           <div className='banner-card'>
             See Schedule & Players Details of Every Match
@@ -79,56 +79,90 @@ function Home() {
 
       <div className='bg-section' style={{ marginTop: "30px" }}>
         <h2 className='heading'>Live Cricket Score</h2>
-        <div className='d-flex'>
-          <div className='live-section'>
-            <div className='live-card'>
-              <h4 style={{ fontWeight: "bold", color: 'GhostWhite', }}>
-                ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
-              </h4>
-              <h3 style={{ fontWeight: "bold", color: 'GhostWhite', marginTop: 20 }}>
-                United States vs Namibia,
-              </h3>
-              <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
-              <div className='flag-contain'>
-                <img src={flag1} width="15%" height="15%"></img>
-                <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
-                <img src={flag2} style={{ paddingTop: 3 }} width="13%" height="13%"></img>
+        <marquee behavior="alternate">
+          <div className='d-flex hello'>
+            <div className='live-section'>
+              <div className='live-card'>
+                <h4 style={{ fontWeight: "bold", color: 'GhostWhite', }}>
+                  ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
+                </h4>
+                <h3 style={{ fontWeight: "bold", color: 'GhostWhite', marginTop: 20 }}>
+                  United States vs Namibia,
+                </h3>
+                <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
+                <div className='flag-contain'>
+                  <img src={flag1} width="15%" height="15%"></img>
+                  <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
+                  <img src={flag2} style={{ paddingTop: 3 }} width="13%" height="13%"></img>
+                </div>
+              </div>
+            </div>
+            <div className='live-section'>
+              <div className='live-card'>
+                <h4 style={{ fontWeight: "bold", color: 'GhostWhite', }}>
+                  ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
+                </h4>
+                <h3 style={{ fontWeight: "bold", color: 'GhostWhite', marginTop: 20 }}>
+                  India vs Pakistan,
+                </h3>
+                <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
+                <div className='flag-contain'>
+                  <img src={flag3} width="15.7%" height="15.7%"></img>
+                  <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
+                  <img src={flag4} width="15.7%" height="15.7%"></img>
+                </div>
+              </div>
+            </div>
+            <div className='live-section'>
+              <div className='live-card'>
+                <h4 style={{ fontWeight: "bold", color: 'GhostWhite', }}>
+                  ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
+                </h4>
+                <h3 style={{ fontWeight: "bold", color: 'GhostWhite', marginTop: 20 }}>
+                  United States vs Namibia,
+                </h3>
+                <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
+                <div className='flag-contain'>
+                  <img src={flag1} width="15%" height="15%"></img>
+                  <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
+                  <img src={flag2} style={{ paddingTop: 3 }} width="13%" height="13%"></img>
+                </div>
+              </div>
+            </div>
+            <div className='live-section'>
+              <div className='live-card'>
+                <h4 style={{ fontWeight: "bold", color: 'GhostWhite', }}>
+                  ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
+                </h4>
+                <h3 style={{ fontWeight: "bold", color: 'GhostWhite', marginTop: 20 }}>
+                  United States vs Namibia,
+                </h3>
+                <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
+                <div className='flag-contain'>
+                  <img src={flag1} width="15%" height="15%"></img>
+                  <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
+                  <img src={flag2} style={{ paddingTop: 3 }} width="13%" height="13%"></img>
+                </div>
+              </div>
+            </div>
+            <div className='live-section'>
+              <div className='live-card'>
+                <h4 style={{ fontWeight: "bold", color: 'GhostWhite', }}>
+                  ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
+                </h4>
+                <h3 style={{ fontWeight: "bold", color: 'GhostWhite', marginTop: 20 }}>
+                  United States vs Namibia,
+                </h3>
+                <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
+                <div className='flag-contain'>
+                  <img src={flag1} width="15%" height="15%"></img>
+                  <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
+                  <img src={flag2} style={{ paddingTop: 3 }} width="13%" height="13%"></img>
+                </div>
               </div>
             </div>
           </div>
-          <div className='live-section'>
-            <div className='live-card'>
-              <h4 style={{ fontWeight: "bold", color: 'GhostWhite', }}>
-                ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
-              </h4>
-              <h3 style={{ fontWeight: "bold", color: 'GhostWhite', marginTop: 20 }}>
-                India vs Pakistan,
-              </h3>
-              <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
-              <div className='flag-contain'>
-                <img src={flag3} width="15.7%" height="15.7%"></img>
-                <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
-                <img src={flag4} width="15.7%" height="15.7%"></img>
-              </div>
-            </div>
-          </div>
-          <div className='live-section'>
-            <div className='live-card'>
-              <h4 style={{ fontWeight: "bold", color: 'GhostWhite', }}>
-                ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
-              </h4>
-              <h3 style={{ fontWeight: "bold", color: 'GhostWhite', marginTop: 20 }}>
-                United States vs Namibia,
-              </h3>
-              <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
-              <div className='flag-contain'>
-                <img src={flag1} width="15%" height="15%"></img>
-                <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
-                <img src={flag2} style={{ paddingTop: 3 }} width="13%" height="13%"></img>
-              </div>
-            </div>
-          </div>
-        </div>
+        </marquee>
       </div>
 
       <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
@@ -169,19 +203,19 @@ function Home() {
         <h2 className='heading'>Video Hub</h2>
         <div className='card-container'>
           <div className='home-card'>
-            <iframe width="400" height="225" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" className='video'>
+            <iframe width="440" height="235" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" className='video'>
             </iframe>
             <p className='w-text'>2022- The Year of the Cricket World Cup</p>
             <p className='p-text'>01 Jan 2022</p>
           </div>
           <div className='home-card'>
-            <iframe width="400" height="225" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" className='video'>
+            <iframe width="440" height="235" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" className='video'>
             </iframe>
             <p className='w-text'>2022- The Year of the Cricket World Cup</p>
             <p className='p-text'>01 Jan 2022</p>
           </div>
           <div className='home-card'>
-            <iframe width="400" height="225" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" className='video'>
+            <iframe width="440" height="235" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" className='video'>
             </iframe>
             <p className='w-text'>2022- The Year of the Cricket World Cup</p>
             <p className='p-text'>01 Jan 2022</p>
@@ -218,6 +252,12 @@ function Home() {
             <h4 className='light-h4'>TATA IPL 2022  Final Quiz.</h4>
             <p class="light-caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
           </div>
+
+          <div class="polaroid rotate_right">
+            <i className='fa fa-group'> {" "} 60k + Participants</i>
+            <h4 className='h4'>T20 Match 2022  Final Quiz.</h4>
+            <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
+          </div>
         </div>
       </div>
 
@@ -225,10 +265,10 @@ function Home() {
         <h2 className='heading'>Cricket News and Editorials</h2>
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -240,7 +280,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -252,10 +292,10 @@ function Home() {
         <hr />
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={cricketimg2} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={cricketimg2} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -267,7 +307,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -281,16 +321,16 @@ function Home() {
       <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
         <h2 className='heading'>India National Cricket Team</h2>
         <Row className="mt-5">
-          <Col xs={4}><img src={cricketimg2} width="80%" height="auto"></img>
+          <Col xs={4}><img className='news-img' src={cricketimg2} width="80%" height="auto"></img>
           </Col>
-          <Col xs={8}><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+          <Col xs={8}><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
             <p style={{ textAlign: "start", color: "grey" }}>
               Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
               Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
               Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
               Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
             </p>
-            <br /> <br /> <br />
+            <br /> <br />
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <p className='p-gray'>Nov 26 2022</p>
               <p className='see-more'><Link to='team'>View More</Link></p>
@@ -300,27 +340,39 @@ function Home() {
       </div>
 
       <div className='bg-section'>
-        <h2 className='heading'>Our Cricket Teams</h2>
         <div className='d-flex justify-content-around'>
-          <div style={{ width: '100%', height: '100%', margin: 20 }}>
+          <div className='see-more-home'>{" "}</div>
+          <h2 className='heading'>Our Cricket Teams</h2>
+          <Link>
+            <h3 className='see-more-home'>See More</h3>
+          </Link>
+        </div>
+        <div className='d-flex justify-content-around'>
+          <div className='team-img' style={{ width: '100%', height: '100%', margin: 20 }}>
             <img src={cricketimg1} width="100%" height="100%"></img>
-            <h3 style={{ color: '#000', padding: 5, textAlign: 'center' }}>Indian Cricket Team Players</h3>
+            <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10 }}>Indian Cricket Team Players</h2>
           </div>
 
-          <div style={{ width: '100%', height: '100%', margin: 20 }}>
+          <div className='team-img' style={{ width: '100%', height: '100%', margin: 20 }}>
             <img src={usteam} width="100%" height="100%"></img>
-            <h3 style={{ color: '#000', padding: 5, textAlign: 'center' }}>Us Cricket Team Players</h3>
+            <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10 }}>Us Cricket Team Players</h2>
           </div>
-          <div style={{ width: '100%', height: '100%', margin: 20 }}>
+          <div className='team-img' style={{ width: '100%', height: '100%', margin: 20 }}>
             <img src={newzteam} width="100%" height="100%"></img>
-            <h3 style={{ color: '#000', padding: 5, textAlign: 'center' }}>NewZeland Cricket Team Players</h3>
+            <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10 }}>NewZeland Cricket Team Players</h2>
           </div>
 
         </div>
       </div>
 
       <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
-        <h2 className='heading'>Cricket Players (Our Heroes)</h2>
+        <div className='d-flex justify-content-around'>
+          <div className='see-more-home'>{" "}</div>
+          <h2 className='heading'>Cricket Players (Our Heroes)</h2>
+          <Link>
+            <h3 className='see-more-home'>See More</h3>
+          </Link>
+        </div>
         <Row className="mt-5" style={{ marginTop: 10 }}>
           <Col xs={4}>
             <div className='player-card'>
@@ -368,17 +420,18 @@ function Home() {
 
           </Col>
         </Row>
+
       </div>
 
       <div className='bg-section'>
         <h2 className='heading'>Latest News and Articles</h2>
-        
+
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -390,7 +443,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -403,10 +456,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={cricketimg2} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={cricketimg2} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -418,7 +471,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -431,10 +484,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -446,7 +499,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -459,10 +512,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={newzteam} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={newzteam} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -474,7 +527,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -487,10 +540,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={usteam} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={usteam} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -502,7 +555,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -515,10 +568,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -530,7 +583,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -543,10 +596,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={cricketimg2} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={cricketimg2} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -558,7 +611,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -571,10 +624,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={newzteam} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={newzteam} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -586,7 +639,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -599,10 +652,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -614,7 +667,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -627,10 +680,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={usteam} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={usteam} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -642,7 +695,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -655,10 +708,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={cricketimg2} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={cricketimg2} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -670,7 +723,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -683,10 +736,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -698,7 +751,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -711,10 +764,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={newzteam} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={newzteam} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -726,7 +779,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -739,10 +792,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={usteam} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={usteam} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -754,7 +807,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -767,10 +820,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -782,7 +835,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -795,10 +848,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -810,7 +863,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -823,10 +876,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={newzteam} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={newzteam} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -838,7 +891,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -851,10 +904,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={usteam} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={usteam} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -866,7 +919,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -879,10 +932,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -894,7 +947,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -907,10 +960,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -922,7 +975,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -935,10 +988,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={newzteam} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={newzteam} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -950,7 +1003,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -963,10 +1016,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={usteam} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={usteam} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -978,7 +1031,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -991,10 +1044,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -1006,7 +1059,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -1019,10 +1072,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -1034,7 +1087,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -1047,10 +1100,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={newzteam} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={usteam} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -1062,7 +1115,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -1075,10 +1128,10 @@ function Home() {
 
         <div className='new-part'>
           <Row>
-            <Col xs={4}><img src={usteam} width="80%" height="auto"></img>
+            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
             </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
+            <Col xs={8}>
+              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               </Link>
               <p style={{ textAlign: "start", color: "grey", }}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
@@ -1090,147 +1143,7 @@ function Home() {
                 classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
                 Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
                 Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img src={newzteam} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img src={usteam} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img src={cricketimg1} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={7}>
-              <Link><h3 style={{ textAlign: "start", color: "black" }}>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br /> <br /> <br /> <br />
+                <br /> <br />
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <p className='p-gray'>Nov 26 2022</p>
@@ -1240,6 +1153,7 @@ function Home() {
           </Row>
         </div>
 
+       
       </div>
     </div>
   );

@@ -109,11 +109,15 @@ body {
   animation-duration: 1s;
   padding-bottom: 7px;
   border-bottom-left-radius: 70px;
+  /* -webkit-box-reflect: below 7px linear-gradient(transparent, transparent, #0004); */
+  transform-origin: center;
+  transform: perspective(750px) rotateY(10deg);
+  transition: 0.5s;
 }
 
 .video {
   border-radius: 20px;
-  border-bottom-left-radius: 65px;
+  border-bottom-left-radius: 60px;
   border: 0px solid #fff;
 }
 
@@ -121,22 +125,22 @@ body {
   background: #e6e9f3;
   width: '100%';
   margin-top: 15px;
-  padding: 45px 130px 45px 130px;
+  padding: 45px 80px 45px 80px;
 }
 
 .plain-section {
   background: #fff;
   width: '100%';
-  padding: 45px 130px 55px 130px;
-  margin: 115px 65px 0 65px;;
+  padding: 45px 60px 80px 60px;
+  margin: 115px 65px 25px 65px;;
   border-radius: 20px;
 }
 
 .quiz-section {
   justify-content: center;
   display: flex;
-  margin-top: 45px;
-  /* padding-top: 40px; */
+  margin-top: 50px;
+  /* padding-bottom: 25px; */
 }
 
 .card-container {
@@ -153,10 +157,12 @@ div.polaroid {
 }
 
 div.polaroid:hover {
-  border: 1px solid #323d94;
+  /* border: 1px solid #323d94; */
   box-shadow: 5px 5px 5px 5px #323d94;
   z-index: 10;
   cursor: pointer;
+  background: linear-gradient(to right, #323d94, #000);
+
 }
 
 div.rotate_right {
@@ -190,28 +196,30 @@ div.rotate_left {
 
 .w-text {
   color: #fff;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
-  text-align: center;
+  text-align: center !important;
   padding-top: 12px;
 }
 
 .p-text {
   color: #FB4570;
-  font-size: 15px;
-  font-weight: 500;
-  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center !important;
   margin-top: -7px;
+
 
 }
 
 .see-more-home {
-  padding-right: 190px;
-  font-size: 14px;
+  padding-right: 90px;
+  font-size: 17px;
   color: #323d94;
   text-align: right;
   text-decoration: underline;
   font-weight: '800';
+  padding-top: 25px;
 }
 
 .d-flew {
@@ -227,7 +235,7 @@ div.rotate_left {
 }
 
 .see-more {
-  font-size: 14px;
+  font-size: 15px;
   color: #323d94;
   text-align: right;
   text-decoration: underline;
@@ -262,9 +270,10 @@ a#nav-dropdown-dark-example {
   padding: 15;
   position: absolute;
   top: 110px;
-  right: 25px;
+  right: 50px;
   font-weight: '500';
-  font-size: 25px;
+  font-size: 40px;
+  color: #fff;
 }
 
 .caption {
@@ -274,8 +283,8 @@ a#nav-dropdown-dark-example {
 
 .fa-group {
   color: #fff;
-  font-size: 12px;
-  padding-bottom: 5px;
+  font-size: 15px;
+  padding-bottom: 10px;
 }
 
 .h4 {
@@ -318,10 +327,11 @@ a#nav-dropdown-dark-example {
 .heading {
   text-align: center;
   color: #282c34;
-  margin-bottom: 25px;
-  font-size: 30px;
+  margin-bottom: 40px;
+  font-size: 38px;
   text-shadow: 1px 1px 2px #fff, 0 0 25px blue, 0 0 5px #323d94;
   font-weight: 600;
+  font-style: italic;
 }
 
 h1 {
@@ -336,7 +346,7 @@ h1 {
 
 .p-gray {
   color: gray;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 Col {
