@@ -1,5 +1,9 @@
+body {
+    /* background: linear-gradient(to right, #EEF8FF, #323d94); */
+    font-family: cursive !important;
+  }
+  
 .main {
-
     background: linear-gradient(0deg,#00121d,#ff0000);
     /* background: #323d94; */
     position: fixed;
@@ -68,7 +72,6 @@ p.plain-list {
 }
 
 .live-card {
-  
     width: 430px;
     background: linear-gradient(to right, #000, #fb0f0f);
     border-radius: 20px;
@@ -81,6 +84,12 @@ p.plain-list {
     transition: 0.5s;
 }
 
+.live-card:hover {
+    box-shadow: 5px 5px 5px 5px #323d94;
+    cursor: pointer;
+    background: linear-gradient(to right, #323d94, #000);
+}
+
 .flag-contain {
     display: flex;
     justify-content: space-evenly;
@@ -90,11 +99,27 @@ p.plain-list {
 .player-card {
     height: 160px;
     background: linear-gradient(to right, #000, #323d94);
-    border-radius: 50px;
+    border-radius: 30px;
     display: flex;
     margin: 7px;
-}
+    margin-bottom: 12px;
+    /* transition: width 2s, height 4s; */
 
+    rotate: 1deg;
+    -webkit-box-reflect: below 7px linear-gradient(transparent, transparent, #0004);
+    transform-origin: center;
+    transform: perspective(761px) rotateY(21deg);
+    transition: 0.5s;
+}
+.player-card:hover{
+    /* border: 1px solid #323d94; */
+    box-shadow: 5px 5px 5px 5px #323d94;
+    cursor: pointer;
+    background: linear-gradient(to right, #000, #fff);
+    /* height: 165px; */
+    margin-bottom: 18px;
+
+}
 .new-part {
     margin-top: 20px;
 }

@@ -58,7 +58,6 @@
 @media only screen and (max-width: 600px) {
   .slider-card {
     width: 100px;
-    height: 150px;
   }
   .slider-backward-arrow {
     font-size: x-large;
@@ -66,6 +65,9 @@
     margin-top: -35px;
     left: 80vw;
   }
+  .hh {
+    height: 300px !important;
+}
 
   .slider-forward-arrow {
     font-size: x-large;

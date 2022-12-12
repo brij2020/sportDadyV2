@@ -85,7 +85,7 @@ export default class ResponsiveSlider extends Component {
         <Slider {...settings}>
            {
            	this.props.slides && this.props.slides.map((slide, i) => {
-           		return (<div className="slider-card" key={i}><img class="d-block w-100" src={slide?.url}  alt={slide?.url} /></div>)
+           		return (<div className="slider-card" key={i}><img className="d-block w-100 hh" src={slide?.url}  alt={slide?.url} /></div>)
            	})
            }
             
