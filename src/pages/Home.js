@@ -8,7 +8,10 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import cricketimg1 from '../assets/images/cricketimg1.jpg';
 import cricketimg2 from '../assets/images/cricketimg2.jpeg';
+import img3 from '../assets/images/img3.png';
+import img4 from '../assets/images/img4.jpg';
 import img7 from '../assets/images/img7.jpg';
+import img9 from '../assets/images/img9.jpg';
 import cricketimg3 from '../assets/images/cricketimg2.jpeg';
 import cricketimg4 from '../assets/images/cricketimg2.jpeg';
 import flag1 from '../assets/icons/us.png';
@@ -25,6 +28,9 @@ import ONE from '../assets/images/slides/banner.png'
 import TWO from '../assets/images/slides/India-win.png'
 import THREE from '../assets/images/slides/win.jpg'
 import Nav from 'react-bootstrap/Nav';
+import ReactPlayer from 'react-player/youtube'
+import video from './cricket.mp4';
+
 
 function Home() {
 
@@ -136,7 +142,7 @@ function Home() {
       <div id='top'>
 
         <ResponsiveSlider slides={images} />
-        <marquee className='banner-heading'>Welcome to the Sport Daddy</marquee>
+        {/* <marquee className='banner-heading'>Welcome to the Sport Daddy</marquee> */}
         <div style={{ display: 'flex', position: 'absolute', bottom: 300, left: 120, }}>
           <div className='banner-card'>
             See Schedule & Players Details of Every Match
@@ -162,9 +168,15 @@ function Home() {
                 </h3>
                 <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
                 <div className='flag-contain'>
-                  <img src={flag1} width="15%" height="15%"></img>
+                  <div>
+                    <img src={flag3} style={{ height: 50, width: 50 }}></img>
+                    <p style={{ color: '#fff', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>173/3 (20)</p>
+                  </div>
                   <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
-                  <img src={flag2} style={{ paddingTop: 3 }} width="13%" height="13%"></img>
+                  <div>
+                    <img src={flag2} style={{ height: 50, width: 50 }}></img>
+                    <p style={{ color: 'yellow', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>Innings Break</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -178,10 +190,15 @@ function Home() {
                 </h3>
                 <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
                 <div className='flag-contain'>
-                  <img src={flag3} width="15.7%" height="15.7%"></img>
-                  {/* <p style={{ fontsize: 5, color: 'blue' }}>172-8 (20)</p> */}
+                  <div>
+                    <img src={flag1} style={{ height: 50, width: 50 }}></img>
+                    <p style={{ color: '#fff', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>173/3 (20)</p>
+                  </div>
                   <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
-                  <img src={flag4} width="15.7%" height="15.7%"></img>
+                  <div>
+                    <img src={flag4} style={{ height: 60, width: 60 }}></img>
+                    <p style={{ color: 'yellow', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>Innings Break</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -195,9 +212,15 @@ function Home() {
                 </h3>
                 <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
                 <div className='flag-contain'>
-                  <img src={flag1} width="15%" height="15%"></img>
+                  <div>
+                    <img src={flag1} style={{ height: 50, width: 50 }}></img>
+                    <p style={{ color: '#fff', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>173/3 (20)</p>
+                  </div>
                   <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
-                  <img src={flag2} style={{ paddingTop: 3 }} width="13%" height="13%"></img>
+                  <div>
+                    <img src={flag2} style={{ height: 50, width: 50 }}></img>
+                    <p style={{ color: 'yellow', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>Win by 174 (18)</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -211,9 +234,15 @@ function Home() {
                 </h3>
                 <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
                 <div className='flag-contain'>
-                  <img src={flag1} width="15%" height="15%"></img>
+                  <div>
+                    <img src={flag1} style={{ height: 50, width: 50 }}></img>
+                    <p style={{ color: '#fff', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>173/3</p>
+                  </div>
                   <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
-                  <img src={flag2} style={{ paddingTop: 3 }} width="13%" height="13%"></img>
+                  <div>
+                    <img src={flag2} style={{ height: 50, width: 50 }}></img>
+                    <p style={{ color: 'yellow', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>Innings Break</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -227,9 +256,15 @@ function Home() {
                 </h3>
                 <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
                 <div className='flag-contain'>
-                  <img src={flag1} width="15%" height="15%"></img>
+                  <div>
+                    <img src={flag1} style={{ height: 50, width: 50 }}></img>
+                    <p style={{ color: 'yellow', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>win by 175 (16)</p>
+                  </div>
                   <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
-                  <img src={flag2} style={{ paddingTop: 3 }} width="13%" height="13%"></img>
+                  <div>
+                    <img src={flag2} style={{ height: 50, width: 50 }}></img>
+                    <p style={{ color: '#fff', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>173/3 (20)</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -275,62 +310,91 @@ function Home() {
       {/* video  */}
       <div className='bg-section' >
         <h2 className='heading'>Video Hub</h2>
-        <div className='card-container'>
-          <div className='home-card'>
-            <iframe width="440" height="235" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" className='video'>
-            </iframe>
-            <p className='w-text'>2022- The Year of the Cricket World Cup</p>
-            <p className='p-text'>01 Jan 2022</p>
-          </div>
-          <div className='home-card'>
-            <iframe width="440" height="235" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" className='video'>
-            </iframe>
-            <p className='w-text'>2022- The Year of the Cricket World Cup</p>
-            <p className='p-text'>01 Jan 2022</p>
-          </div>
-          <div className='home-card'>
-            <iframe width="440" height="235" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" className='video'>
-            </iframe>
-            <p className='w-text'>2022- The Year of the Cricket World Cup</p>
-            <p className='p-text'>01 Jan 2022</p>
+        <div class="containerv">
+
+          <div class="main-box">
+            <div class="box one">
+              <video
+                poster={img3}
+                height={'100%'}
+                width={'100%'}
+                src={video} controls>
+              </video>
+            </div>
+            <div class="box two">
+              <video
+                poster={img4}
+                height={'100%'}
+                width={'100%'}
+                src={video} controls>
+              </video></div>
+            <div class="box three">  <video
+              poster={img7}
+              height={'100%'}
+              width={'100%'}
+              src={video} controls>
+            </video></div>
+            <div class="box four">  <video
+              poster={img9}
+              height={'100%'}
+              width={'100%'}
+              src={video} controls>
+            </video></div>
+            <div class="box five">  <video
+              poster={usteam}
+              height={'100%'}
+              width={'100%'}
+              src={video} controls>
+            </video></div>
+            <div class="box six">  <video
+              poster={newzteam}
+              height={'100%'}
+              width={'100%'}
+              src={video} controls>
+            </video></div>
+            <div class="box six">  <video
+              poster={cricketimg1}
+              height={'100%'}
+              width={'100%'}
+              src={video} controls>
+            </video></div>
           </div>
         </div>
-        <Link to='video'>
-          <h3 className='see-more-home'>See More</h3>
-        </Link>
+
+
       </div>
 
       {/* photos  */}
-      <div className='bg-section' style={{height: 470}}>
+      <div className='bg-section' style={{ height: 470 }}>
         <h2 className='heading'>Photos Gallery</h2>
-        <div className='d-flex' style={{marginTop: 60}}>
+        <div className='d-flex' style={{ marginTop: 60 }}>
           <div className='gallery-1'>
             <img src={cricketimg1} className='gallery-img'></img>
             <img src={cricketimg2} className='gallery-img1'></img>
             <img src={img7} className='gallery-img2'></img>
-            <h1 style={{textAlign: 'center', marginTop: 250}}>Todays Match Photos</h1>
+            <h1 style={{ textAlign: 'center', marginTop: 250 }}>Todays Match Photos</h1>
           </div>
           <div className='gallery-2'>
             <img src={cricketimg1} className='gallery-img'></img>
             <img src={cricketimg2} className='gallery-img1'></img>
             <img src={cricketimg1} className='gallery-img2'></img>
-            <h1 style={{textAlign: 'center', marginTop: 250}}>T20 Todays Match Photos</h1>
+            <h1 style={{ textAlign: 'center', marginTop: 250 }}>T20 Todays Match Photos</h1>
           </div>
           <div className='gallery-3'>
             <img src={cricketimg1} className='gallery-img'></img>
             <img src={cricketimg1} className='gallery-img1'></img>
             <img src={cricketimg2} className='gallery-img2'></img>
-            <h1 style={{textAlign: 'center', marginTop: 250}}>World Cup Match Photos</h1>
+            <h1 style={{ textAlign: 'center', marginTop: 250 }}>World Cup Match Photos</h1>
 
           </div>
           <div className='gallery-4'>
             <img src={cricketimg1} className='gallery-img'></img>
             <img src={cricketimg2} className='gallery-img1'></img>
             <img src={newzteam} className='gallery-img2'></img>
-            <h1 style={{textAlign: 'center', marginTop: 250}}>World Cup Match Photos</h1>
+            <h1 style={{ textAlign: 'center', marginTop: 250 }}>World Cup Match Photos</h1>
           </div>
         </div>
-    
+
       </div>
 
       {/* ranking  */}
@@ -340,7 +404,7 @@ function Home() {
           <h3 style={{ marginRight: 20, borderBottomWidth: 1, borderBottomColor: '#c93a3e' }}>ODI RANKINGS</h3>
           <h3 style={{ marginRight: 20, borderBottomWidth: 1, borderBottomColor: '#c93a3e' }}>T20 RANKINGS</h3>
         </div>
-        <h2 className='heading'>ICC Rankings</h2>
+        <h2 className='heading'>ICC CRICKET Rankings</h2>
         <Nav justify variant="tabs" defaultActiveKey="/home" style={{ alignSelf: 'center', marginBottom: 15 }}>
           <Nav.Item>
             <Nav.Link >TEAMS</Nav.Link>
@@ -387,7 +451,11 @@ function Home() {
                   <p style={{ color: "grey" }}>{item.srNo}</p>
                 </Col>
                 <Col xs={2}>
-                  <img src={item.img} width="25%" height="100%" style={{ marginTop: -10 }}></img>
+                  <img src={item.img} style={{
+                    marginTop: -21,
+                    width: 50,
+                    height: 50
+                  }}></img>
                 </Col>
                 <Col xs={6}>
                   <h2 style={{ color: "grey" }}>{item.country}</h2>
@@ -623,7 +691,7 @@ function Home() {
             <h3 className='see-more-home'>See More</h3>
           </Link>
         </div>
-        <Row className="mt-5" style={{ marginTop: 10 }}>
+        <Row style={{ marginTop: -20 }}>
           <Col xs={4}>
             <div className='player-card'>
               <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
