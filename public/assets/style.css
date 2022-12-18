@@ -1,7 +1,7 @@
 body {
     /* background: linear-gradient(to right, #EEF8FF, #323d94); */
-    font-family: cursive !important;
-}
+    /* font-family: cursive !important; */
+  }
 
 .main {
     background: linear-gradient(0deg, #00121d, #ff0000);
@@ -418,4 +418,15 @@ ul li {
 .nnnn{
     color: linear-gradient(to right, #000, #fb0f0f);
 font-size: 40px;
+}
+.year-timeline{
+    text-align: center;
+    color: #323d94;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.image-timeline{
+    border: 3px solid #323d94;
+    border-radius: 50px;
 }

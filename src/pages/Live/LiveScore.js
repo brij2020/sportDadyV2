@@ -76,7 +76,6 @@ function LiveScore() {
                 <Nav justify variant="tabs" defaultActiveKey="/home">
                     <Nav.Item>
                         <Nav.Link href="/home">INTERNATIONAL
-                        <img src={ball1} width="40%" height="100%"></img>
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>

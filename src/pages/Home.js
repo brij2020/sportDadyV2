@@ -8,6 +8,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import cricketimg1 from '../assets/images/cricketimg1.jpg';
 import cricketimg2 from '../assets/images/cricketimg2.jpeg';
+import img7 from '../assets/images/img7.jpg';
+import cricketimg3 from '../assets/images/cricketimg2.jpeg';
+import cricketimg4 from '../assets/images/cricketimg2.jpeg';
 import flag1 from '../assets/icons/us.png';
 import flag2 from '../assets/icons/nami.png';
 import flag3 from '../assets/icons/flag1.png';
@@ -18,18 +21,20 @@ import abdev from '../assets/images/players/abdev.png';
 import chris from '../assets/images/players/chris.png';
 import david from '../assets/images/players/david.png';
 import ResponsiveSlider from '../Components/Slider'
-import ONE from '../assets/images/slides/one.jpg'
-import TWO from '../assets/images/slides/two.jpg'
+import ONE from '../assets/images/slides/banner.png'
+import TWO from '../assets/images/slides/India-win.png'
+import THREE from '../assets/images/slides/win.jpg'
+import Nav from 'react-bootstrap/Nav';
 
 function Home() {
 
   const images = [
     { url: ONE },
     { url: TWO },
+    { url: THREE },
+    { url: ONE },
     { url: TWO },
-    { url: TWO },
-    { url: TWO },
-    { url: TWO },
+    { url: THREE },
     { url: TWO },
   ];
 
@@ -57,8 +62,73 @@ function Home() {
       date_2: '01:30 AM GMT / 02:30 PM LOCAL',
       date: '7:00 AM',
     },
+  ]
 
-
+  const Data3 = [
+    {
+      srNo: '1',
+      img: flag3,
+      matches: '19',
+      points: '2,418',
+      rating: '128',
+      country: 'India'
+    },
+    {
+      srNo: '2',
+      img: flag4,
+      matches: '19',
+      points: '2,418',
+      rating: '128',
+      country: 'Pakistan'
+    },
+    {
+      srNo: '3',
+      img: flag1,
+      matches: '19',
+      points: '2,418',
+      rating: '128',
+      country: 'America'
+    },
+    {
+      srNo: '4',
+      img: flag4,
+      matches: '19',
+      points: '2,418',
+      rating: '128',
+      country: 'England'
+    },
+    {
+      srNo: '5',
+      img: flag3,
+      matches: '19',
+      points: '2,418',
+      rating: '128',
+      country: 'New Zealand'
+    },
+    {
+      srNo: '6',
+      img: flag3,
+      matches: '19',
+      points: '2,418',
+      rating: '128',
+      country: 'West Indies'
+    },
+    {
+      srNo: '7',
+      img: flag2,
+      matches: '19',
+      points: '2,418',
+      rating: '128',
+      country: 'Banladesh'
+    },
+    {
+      srNo: '8',
+      img: flag2,
+      matches: '19',
+      points: '2,418',
+      rating: '128',
+      country: 'Namibia'
+    },
   ]
 
   return (
@@ -77,6 +147,7 @@ function Home() {
         </div>
       </div>
 
+      {/* live */}
       <div className='bg-section' style={{ marginTop: "30px" }}>
         <h2 className='heading'>Live Cricket Score</h2>
         <marquee behavior="alternate">
@@ -108,6 +179,7 @@ function Home() {
                 <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
                 <div className='flag-contain'>
                   <img src={flag3} width="15.7%" height="15.7%"></img>
+                  {/* <p style={{ fontsize: 5, color: 'blue' }}>172-8 (20)</p> */}
                   <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
                   <img src={flag4} width="15.7%" height="15.7%"></img>
                 </div>
@@ -165,6 +237,7 @@ function Home() {
         </marquee>
       </div>
 
+      {/* Schedule */}
       <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
         <h2 className='heading'>Cricket Schedule</h2>
         {Data.map((item) => (
@@ -175,19 +248,19 @@ function Home() {
               <div>
                 <Row className='ml-3' style={{ marginLeft: "8px" }}>
                   <Col >
-                    <h5>
+                    <h3>
                       {item2.matches}
-                    </h5>
+                    </h3>
                   </Col>
                   <Col>
-                    <h5>
+                    <h3>
                       New Zealand vs India, 2nd ODI
-                    </h5>
+                    </h3>
                     <p style={{ color: "grey" }}>{item2.player}</p>
                   </Col>
                   <Col>
-                    <h5>{item2.date}
-                    </h5>
+                    <h3>{item2.date}
+                    </h3>
                     <p style={{ color: "grey" }}>
                       {item2.date_2}</p>
                   </Col>
@@ -199,6 +272,7 @@ function Home() {
         ))}
       </div>
 
+      {/* video  */}
       <div className='bg-section' >
         <h2 className='heading'>Video Hub</h2>
         <div className='card-container'>
@@ -226,6 +300,178 @@ function Home() {
         </Link>
       </div>
 
+      {/* photos  */}
+      <div className='bg-section' style={{height: 470}}>
+        <h2 className='heading'>Photos Gallery</h2>
+        <div className='d-flex' style={{marginTop: 60}}>
+          <div className='gallery-1'>
+            <img src={cricketimg1} className='gallery-img'></img>
+            <img src={cricketimg2} className='gallery-img1'></img>
+            <img src={img7} className='gallery-img2'></img>
+            <h1 style={{textAlign: 'center', marginTop: 250}}>Todays Match Photos</h1>
+          </div>
+          <div className='gallery-2'>
+            <img src={cricketimg1} className='gallery-img'></img>
+            <img src={cricketimg2} className='gallery-img1'></img>
+            <img src={cricketimg1} className='gallery-img2'></img>
+            <h1 style={{textAlign: 'center', marginTop: 250}}>T20 Todays Match Photos</h1>
+          </div>
+          <div className='gallery-3'>
+            <img src={cricketimg1} className='gallery-img'></img>
+            <img src={cricketimg1} className='gallery-img1'></img>
+            <img src={cricketimg2} className='gallery-img2'></img>
+            <h1 style={{textAlign: 'center', marginTop: 250}}>World Cup Match Photos</h1>
+
+          </div>
+          <div className='gallery-4'>
+            <img src={cricketimg1} className='gallery-img'></img>
+            <img src={cricketimg2} className='gallery-img1'></img>
+            <img src={newzteam} className='gallery-img2'></img>
+            <h1 style={{textAlign: 'center', marginTop: 250}}>World Cup Match Photos</h1>
+          </div>
+        </div>
+    
+      </div>
+
+      {/* ranking  */}
+      <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
+        <div className='d-flex justify-content-end'>
+          <h3 style={{ marginRight: 20, color: '#c93a3e' }}>TEST RANKINGS</h3>
+          <h3 style={{ marginRight: 20, borderBottomWidth: 1, borderBottomColor: '#c93a3e' }}>ODI RANKINGS</h3>
+          <h3 style={{ marginRight: 20, borderBottomWidth: 1, borderBottomColor: '#c93a3e' }}>T20 RANKINGS</h3>
+        </div>
+        <h2 className='heading'>ICC Rankings</h2>
+        <Nav justify variant="tabs" defaultActiveKey="/home" style={{ alignSelf: 'center', marginBottom: 15 }}>
+          <Nav.Item>
+            <Nav.Link >TEAMS</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link>BATTING</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link>BOWLING</Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link>ALL-ROUDERS</Nav.Link>
+          </Nav.Item>
+        </Nav>
+        <div>
+          <Row style={{ backgroundColor: "GhostWhite", paddingTop: 17, height: 50 }}>
+            <Col xs={1}>
+              <h3 style={{ color: "#000" }}>#</h3>
+            </Col>
+            <Col xs={2}>
+              <h3 style={{ color: "#000" }}></h3>
+            </Col>
+            <Col xs={6}>
+              <h3 style={{ color: "#000" }}>Country</h3>
+            </Col>
+            <Col xs={1}>
+              <h3>Matches
+              </h3>
+            </Col>
+            <Col xs={1}>
+              <h3>Points
+              </h3>
+            </Col>
+            <Col xs={1}>
+              <h3>Rating
+              </h3>
+            </Col>
+          </Row>
+
+          {Data3.map((item) => (
+            <div>
+              <Row className='ml-3' style={{ marginLeft: "8px", height: 50, marginTop: -10 }}>
+                <Col xs={1}>
+                  <p style={{ color: "grey" }}>{item.srNo}</p>
+                </Col>
+                <Col xs={2}>
+                  <img src={item.img} width="25%" height="100%" style={{ marginTop: -10 }}></img>
+                </Col>
+                <Col xs={6}>
+                  <h2 style={{ color: "grey" }}>{item.country}</h2>
+                </Col>
+                <Col xs={1}>
+                  <h2 style={{ color: "grey" }}>{item.matches}</h2>
+                </Col>
+                <Col xs={1}>
+                  <h2 style={{ color: "grey" }}>{item.points}</h2>
+                </Col>
+                <Col xs={1}>
+                  <h2 style={{ color: "grey" }}>{item.rating}</h2>
+                </Col>
+              </Row>
+              <hr style={{ backgroundColor: 'black' }} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* world timeline  */}
+      <div className='bg-section' >
+        <h2 className='heading'>T20 WORLD CUP TIMELINE</h2>
+        <marquee behavior="alternate">
+          <div className='d-flex'>
+            <div style={{ marginLeft: 20, marginRight: 20 }}>
+              <img src={flag3} width="100%" height="60%" className='image-timeline'></img>
+              <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>Australia</h3>
+              <h5 className='year-timeline'>2021</h5>
+            </div>
+            <div style={{ marginLeft: 20, marginRight: 20 }}>
+              <img src={flag4} width="100%" height="60%" className='image-timeline'></img>
+              <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>West Indies</h3>
+              <h5 className='year-timeline'>2016</h5>
+            </div>
+            <div style={{ marginLeft: 20, marginRight: 20 }}>
+              <img src={flag3} width="100%" height="60%" className='image-timeline'></img>
+              <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>Sri Lanka</h3>
+              <h5 className='year-timeline'>2014</h5>
+            </div>
+            <div style={{ marginLeft: 20, marginRight: 20 }}>
+              <img src={flag4} width="100%" height="60%" className='image-timeline'></img>
+              <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>West Indies</h3>
+              <h5 className='year-timeline'>2012</h5>
+            </div>
+            <div style={{ marginLeft: 20, marginRight: 20 }}>
+              <img src={flag3} width="100%" height="60%" className='image-timeline'></img>
+              <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>India</h3>
+              <h5 className='year-timeline'>2021</h5>
+            </div>
+            <div style={{ marginLeft: 20, marginRight: 20 }}>
+              <img src={flag4} width="100%" height="60%" className='image-timeline'></img>
+              <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>England</h3>
+              <h5 className='year-timeline'>2010</h5>
+            </div>
+            <div style={{ marginLeft: 20, marginRight: 20 }}>
+              <img src={flag4} width="100%" height="60%" className='image-timeline'></img>
+              <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>Pakistan</h3>
+              <h5 className='year-timeline'>2007</h5>
+            </div>
+            <div style={{ marginLeft: 20, marginRight: 20 }}>
+              <img src={flag3} width="100%" height="60%" className='image-timeline'></img>
+              <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>India</h3>
+              <h5 className='year-timeline'>2009</h5>
+            </div>
+            <div style={{ marginLeft: 20, marginRight: 20 }}>
+              <img src={flag3} width="100%" height="60%" className='image-timeline'></img>
+              <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>India</h3>
+              <h5 className='year-timeline'>2009</h5>
+            </div>
+            <div style={{ marginLeft: 20, marginRight: 20 }}>
+              <img src={flag3} width="100%" height="60%" className='image-timeline'></img>
+              <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>India</h3>
+              <h5 className='year-timeline'>2009</h5>
+            </div>
+          </div>
+        </marquee>
+
+        <Link>
+          <h3 className='see-more-home'>See More</h3>
+        </Link>
+      </div>
+
+      {/* Quiz  */}
       <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
         <h2 className='heading'>Quiz</h2>
         <div className='quiz-section'>
@@ -261,6 +507,7 @@ function Home() {
         </div>
       </div>
 
+      {/*cricket news Editorials */}
       <div className='bg-section'>
         <h2 className='heading'>Cricket News and Editorials</h2>
         <div className='new-part'>
@@ -318,6 +565,7 @@ function Home() {
         </div>
       </div>
 
+      {/* India National Cricket Team */}
       <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
         <h2 className='heading'>India National Cricket Team</h2>
         <Row className="mt-5">
@@ -339,6 +587,7 @@ function Home() {
         </Row>
       </div>
 
+      {/* Our Cricket Teams */}
       <div className='bg-section'>
         <div className='d-flex justify-content-around'>
           <div className='see-more-home'>{" "}</div>
@@ -365,6 +614,7 @@ function Home() {
         </div>
       </div>
 
+      {/* Cricket Players (Our Heroes) */}
       <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
         <div className='d-flex justify-content-around'>
           <div className='see-more-home'>{" "}</div>
@@ -423,6 +673,7 @@ function Home() {
 
       </div>
 
+      {/* Latest News and Articles */}
       <div className='bg-section'>
         <h2 className='heading'>Latest News and Articles</h2>
 
@@ -1153,7 +1404,7 @@ function Home() {
           </Row>
         </div>
 
-       
+
       </div>
     </div>
   );
