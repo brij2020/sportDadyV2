@@ -30,7 +30,9 @@ import THREE from '../assets/images/slides/win.jpg'
 import Nav from 'react-bootstrap/Nav';
 import ReactPlayer from 'react-player/youtube'
 import video from './cricket.mp4';
-
+import LiveScoreComponet from '../Components/Home/LiveScore'
+import AricleList from '../Components/Home/ArticleList'
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 function Home() {
 
@@ -54,6 +56,12 @@ function Home() {
     },
 
   ]
+  React.useEffect(() => {
+    let xButtonTop = document.querySelector('#topBtn');
+    if(xButtonTop) {
+      xButtonTop.click()
+    }
+  },[])
 
   const Data2 = [
     {
@@ -153,161 +161,50 @@ function Home() {
         </div>
       </div>
 
-      {/* live */}
-      <div className='bg-section' style={{ marginTop: "30px" }}>
-        <h2 className='heading'>Live Cricket Score</h2>
-        <marquee behavior="alternate">
-          <div className='d-flex hello'>
-            <div className='live-section'>
-              <div className='live-card'>
-                <h4 style={{ fontWeight: "bold", color: 'GhostWhite', }}>
-                  ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
-                </h4>
-                <h3 style={{ fontWeight: "bold", color: 'GhostWhite', marginTop: 20 }}>
-                  United States vs Namibia,
-                </h3>
-                <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
-                <div className='flag-contain'>
-                  <div>
-                    <img src={flag3} style={{ height: 50, width: 50 }}></img>
-                    <p style={{ color: '#fff', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>173/3 (20)</p>
-                  </div>
-                  <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
-                  <div>
-                    <img src={flag2} style={{ height: 50, width: 50 }}></img>
-                    <p style={{ color: 'yellow', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>Innings Break</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='live-section'>
-              <div className='live-card'>
-                <h4 style={{ fontWeight: "bold", color: 'GhostWhite', }}>
-                  ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
-                </h4>
-                <h3 style={{ fontWeight: "bold", color: 'GhostWhite', marginTop: 20 }}>
-                  India vs Pakistan,
-                </h3>
-                <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
-                <div className='flag-contain'>
-                  <div>
-                    <img src={flag1} style={{ height: 50, width: 50 }}></img>
-                    <p style={{ color: '#fff', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>173/3 (20)</p>
-                  </div>
-                  <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
-                  <div>
-                    <img src={flag4} style={{ height: 60, width: 60 }}></img>
-                    <p style={{ color: 'yellow', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>Innings Break</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='live-section'>
-              <div className='live-card'>
-                <h4 style={{ fontWeight: "bold", color: 'GhostWhite', }}>
-                  ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
-                </h4>
-                <h3 style={{ fontWeight: "bold", color: 'GhostWhite', marginTop: 20 }}>
-                  United States vs Namibia,
-                </h3>
-                <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
-                <div className='flag-contain'>
-                  <div>
-                    <img src={flag1} style={{ height: 50, width: 50 }}></img>
-                    <p style={{ color: '#fff', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>173/3 (20)</p>
-                  </div>
-                  <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
-                  <div>
-                    <img src={flag2} style={{ height: 50, width: 50 }}></img>
-                    <p style={{ color: 'yellow', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>Win by 174 (18)</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='live-section'>
-              <div className='live-card'>
-                <h4 style={{ fontWeight: "bold", color: 'GhostWhite', }}>
-                  ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
-                </h4>
-                <h3 style={{ fontWeight: "bold", color: 'GhostWhite', marginTop: 20 }}>
-                  United States vs Namibia,
-                </h3>
-                <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
-                <div className='flag-contain'>
-                  <div>
-                    <img src={flag1} style={{ height: 50, width: 50 }}></img>
-                    <p style={{ color: '#fff', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>173/3</p>
-                  </div>
-                  <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
-                  <div>
-                    <img src={flag2} style={{ height: 50, width: 50 }}></img>
-                    <p style={{ color: 'yellow', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>Innings Break</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='live-section'>
-              <div className='live-card'>
-                <h4 style={{ fontWeight: "bold", color: 'GhostWhite', }}>
-                  ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
-                </h4>
-                <h3 style={{ fontWeight: "bold", color: 'GhostWhite', marginTop: 20 }}>
-                  United States vs Namibia,
-                </h3>
-                <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
-                <div className='flag-contain'>
-                  <div>
-                    <img src={flag1} style={{ height: 50, width: 50 }}></img>
-                    <p style={{ color: 'yellow', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>win by 175 (16)</p>
-                  </div>
-                  <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
-                  <div>
-                    <img src={flag2} style={{ height: 50, width: 50 }}></img>
-                    <p style={{ color: '#fff', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>173/3 (20)</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </marquee>
-      </div>
 
+      {/* live */}
+      <LiveScoreComponet />
       {/* Schedule */}
+      <AnimationOnScroll animateIn="animate__fadeInUp  ">
       <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
-        <h2 className='heading'>Cricket Schedule</h2>
-        {Data.map((item) => (
-          <div>
-            <h4 style={{ backgroundColor: "GhostWhite", padding: "15px", fontWeight: "bold" }}>{item.heading}
-            </h4>
-            {Data2.map((item2) => (
-              <div>
-                <Row className='ml-3' style={{ marginLeft: "8px" }}>
-                  <Col >
-                    <h3>
-                      {item2.matches}
-                    </h3>
-                  </Col>
-                  <Col>
-                    <h3>
-                      New Zealand vs India, 2nd ODI
-                    </h3>
-                    <p style={{ color: "grey" }}>{item2.player}</p>
-                  </Col>
-                  <Col>
-                    <h3>{item2.date}
-                    </h3>
-                    <p style={{ color: "grey" }}>
-                      {item2.date_2}</p>
-                  </Col>
-                </Row>
-                <br></br>
-              </div>
-            ))}
-          </div>
-        ))}
-      </div>
+          <h2 className='heading'>Cricket Schedule</h2>
+          {Data.map((item) => (
+            <div>
+              <h4 style={{ backgroundColor: "GhostWhite", padding: "15px", fontWeight: "bold" }}>{item.heading}
+              </h4>
+              {Data2.map((item2) => (
+                <div>
+                  <Row className='ml-3' style={{ marginLeft: "8px" }}>
+                    <Col >
+                      <h3>
+                        {item2.matches}
+                      </h3>
+                    </Col>
+                    <Col>
+                      <h3>
+                        New Zealand vs India, 2nd ODI
+                      </h3>
+                      <p style={{ color: "grey" }}>{item2.player}</p>
+                    </Col>
+                    <Col>
+                      <h3>{item2.date}
+                      </h3>
+                      <p style={{ color: "grey" }}>
+                        {item2.date_2}</p>
+                    </Col>
+                  </Row>
+                  <br></br>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </AnimationOnScroll>
+    
+
 
       {/* video  */}
+      <AnimationOnScroll animateIn="animate__bounceInRight ">
       <div className='bg-section' >
         <h2 className='heading'>Video Hub</h2>
         <div class="containerv">
@@ -363,8 +260,11 @@ function Home() {
 
 
       </div>
+      </AnimationOnScroll>
+    
 
       {/* photos  */}
+      <AnimationOnScroll animateIn="animate__backInDown ">
       <div className='bg-section' style={{ height: 470 }}>
         <h2 className='heading'>Photos Gallery</h2>
         <div className='d-flex' style={{ marginTop: 60 }}>
@@ -397,86 +297,92 @@ function Home() {
 
       </div>
 
-      {/* ranking  */}
-      <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
-        <div className='d-flex justify-content-end'>
-          <h3 style={{ marginRight: 20, color: '#c93a3e' }}>TEST RANKINGS</h3>
-          <h3 style={{ marginRight: 20, borderBottomWidth: 1, borderBottomColor: '#c93a3e' }}>ODI RANKINGS</h3>
-          <h3 style={{ marginRight: 20, borderBottomWidth: 1, borderBottomColor: '#c93a3e' }}>T20 RANKINGS</h3>
-        </div>
-        <h2 className='heading'>ICC CRICKET Rankings</h2>
-        <Nav justify variant="tabs" defaultActiveKey="/home" style={{ alignSelf: 'center', marginBottom: 15 }}>
-          <Nav.Item>
-            <Nav.Link >TEAMS</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link>BATTING</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link>BOWLING</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link>ALL-ROUDERS</Nav.Link>
-          </Nav.Item>
-        </Nav>
-        <div>
-          <Row style={{ backgroundColor: "GhostWhite", paddingTop: 17, height: 50 }}>
-            <Col xs={1}>
-              <h3 style={{ color: "#000" }}>#</h3>
-            </Col>
-            <Col xs={2}>
-              <h3 style={{ color: "#000" }}></h3>
-            </Col>
-            <Col xs={6}>
-              <h3 style={{ color: "#000" }}>Country</h3>
-            </Col>
-            <Col xs={1}>
-              <h3>Matches
-              </h3>
-            </Col>
-            <Col xs={1}>
-              <h3>Points
-              </h3>
-            </Col>
-            <Col xs={1}>
-              <h3>Rating
-              </h3>
-            </Col>
-          </Row>
+      </AnimationOnScroll>
 
-          {Data3.map((item) => (
-            <div>
-              <Row className='ml-3' style={{ marginLeft: "8px", height: 50, marginTop: -10 }}>
-                <Col xs={1}>
-                  <p style={{ color: "grey" }}>{item.srNo}</p>
-                </Col>
-                <Col xs={2}>
-                  <img src={item.img} style={{
-                    marginTop: -21,
-                    width: 50,
-                    height: 50
-                  }}></img>
-                </Col>
-                <Col xs={6}>
-                  <h2 style={{ color: "grey" }}>{item.country}</h2>
-                </Col>
-                <Col xs={1}>
-                  <h2 style={{ color: "grey" }}>{item.matches}</h2>
-                </Col>
-                <Col xs={1}>
-                  <h2 style={{ color: "grey" }}>{item.points}</h2>
-                </Col>
-                <Col xs={1}>
-                  <h2 style={{ color: "grey" }}>{item.rating}</h2>
-                </Col>
-              </Row>
-              <hr style={{ backgroundColor: 'black' }} />
-            </div>
-          ))}
+      {/* ranking  */}
+      <AnimationOnScroll animateIn="animate__fadeInUpBig ">
+        <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
+          <div className='d-flex justify-content-end'>
+            <h3 style={{ marginRight: 20, color: '#c93a3e' }}>TEST RANKINGS</h3>
+            <h3 style={{ marginRight: 20, borderBottomWidth: 1, borderBottomColor: '#c93a3e' }}>ODI RANKINGS</h3>
+            <h3 style={{ marginRight: 20, borderBottomWidth: 1, borderBottomColor: '#c93a3e' }}>T20 RANKINGS</h3>
+          </div>
+          <h2 className='heading'>ICC CRICKET Rankings</h2>
+          <Nav justify variant="tabs" defaultActiveKey="/home" style={{ alignSelf: 'center', marginBottom: 15 }}>
+            <Nav.Item>
+              <Nav.Link >TEAMS</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link>BATTING</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link>BOWLING</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link>ALL-ROUDERS</Nav.Link>
+            </Nav.Item>
+          </Nav>
+          <div>
+            <Row style={{ backgroundColor: "GhostWhite", paddingTop: 17, height: 50 }}>
+              <Col xs={1}>
+                <h3 style={{ color: "#000" }}>#</h3>
+              </Col>
+              <Col xs={2}>
+                <h3 style={{ color: "#000" }}></h3>
+              </Col>
+              <Col xs={6}>
+                <h3 style={{ color: "#000" }}>Country</h3>
+              </Col>
+              <Col xs={1}>
+                <h3>Matches
+                </h3>
+              </Col>
+              <Col xs={1}>
+                <h3>Points
+                </h3>
+              </Col>
+              <Col xs={1}>
+                <h3>Rating
+                </h3>
+              </Col>
+            </Row>
+
+            {Data3.map((item) => (
+              <div>
+                <Row className='ml-3' style={{ marginLeft: "8px", height: 50, marginTop: -10 }}>
+                  <Col xs={1}>
+                    <p style={{ color: "grey" }}>{item.srNo}</p>
+                  </Col>
+                  <Col xs={2}>
+                    <img src={item.img} style={{
+                      marginTop: -21,
+                      width: 50,
+                      height: 50
+                    }}></img>
+                  </Col>
+                  <Col xs={6}>
+                    <h2 style={{ color: "grey" }}>{item.country}</h2>
+                  </Col>
+                  <Col xs={1}>
+                    <h2 style={{ color: "grey" }}>{item.matches}</h2>
+                  </Col>
+                  <Col xs={1}>
+                    <h2 style={{ color: "grey" }}>{item.points}</h2>
+                  </Col>
+                  <Col xs={1}>
+                    <h2 style={{ color: "grey" }}>{item.rating}</h2>
+                  </Col>
+                </Row>
+                <hr style={{ backgroundColor: 'black' }} />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+
+      </AnimationOnScroll>
 
       {/* world timeline  */}
+      <AnimationOnScroll animateIn="animate__lightSpeedInRight ">
       <div className='bg-section' >
         <h2 className='heading'>T20 WORLD CUP TIMELINE</h2>
         <marquee behavior="alternate">
@@ -539,101 +445,111 @@ function Home() {
         </Link>
       </div>
 
+      </AnimationOnScroll>
+
       {/* Quiz  */}
-      <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
-        <h2 className='heading'>Quiz</h2>
-        <div className='quiz-section'>
-          <div class="polaroid rotate_right">
-            <i className='fa fa-group'> {" "} 60k + Participants</i>
-            <h4 className='h4'>T20 Match 2022  Final Quiz.</h4>
-            <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
-          </div>
+      <AnimationOnScroll animateIn="animate__zoomInUp"> 
+        <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
+          <h2 className='heading'>Quiz</h2>
+          <div className='quiz-section'>
+            <div class="polaroid rotate_right">
+              <i className='fa fa-group'> {" "} 60k + Participants</i>
+              <h4 className='h4'>T20 Match 2022  Final Quiz.</h4>
+              <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
+            </div>
 
-          <div class="polaroid rotate_left">
-            <i className='fa fa-group '>{" "} 60k + Participants</i>
-            <h4 className='light-h4'>TATA IPL 2022  Final Quiz.</h4>
-            <p class="light-caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
-          </div>
+            <div class="polaroid rotate_left">
+              <i className='fa fa-group '>{" "} 60k + Participants</i>
+              <h4 className='light-h4'>TATA IPL 2022  Final Quiz.</h4>
+              <p class="light-caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
+            </div>
 
-          <div class="polaroid rotate_right">
-            <i className='fa fa-group'> {" "} 60k + Participants</i>
-            <h4 className='h4'>T20 Match 2022  Final Quiz.</h4>
-            <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
-          </div>
+            <div class="polaroid rotate_right">
+              <i className='fa fa-group'> {" "} 60k + Participants</i>
+              <h4 className='h4'>T20 Match 2022  Final Quiz.</h4>
+              <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
+            </div>
 
-          <div class="polaroid rotate_left">
-            <i className='fa fa-group '>{" "} 60k + Participants</i>
-            <h4 className='light-h4'>TATA IPL 2022  Final Quiz.</h4>
-            <p class="light-caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
-          </div>
+            <div class="polaroid rotate_left">
+              <i className='fa fa-group '>{" "} 60k + Participants</i>
+              <h4 className='light-h4'>TATA IPL 2022  Final Quiz.</h4>
+              <p class="light-caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
+            </div>
 
-          <div class="polaroid rotate_right">
-            <i className='fa fa-group'> {" "} 60k + Participants</i>
-            <h4 className='h4'>T20 Match 2022  Final Quiz.</h4>
-            <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
+            <div class="polaroid rotate_right">
+              <i className='fa fa-group'> {" "} 60k + Participants</i>
+              <h4 className='h4'>T20 Match 2022  Final Quiz.</h4>
+              <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
+            </div>
           </div>
         </div>
-      </div>
+        
+      </AnimationOnScroll>
+      
 
       {/*cricket news Editorials */}
-      <div className='bg-section'>
-        <h2 className='heading'>Cricket News and Editorials</h2>
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
+      <AnimationOnScroll animateIn="animate__pulse ">
+        <div className='bg-section'>
+          <h2 className='heading'>Cricket News and Editorials</h2>
+          <div className='new-part'>
+            <Row>
+              <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
+              </Col>
+              <Col xs={8}>
+                <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
+                </Link>
+                <p style={{ textAlign: "start", color: "grey", }}>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                  a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                  remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                  Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                  of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                  classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                  Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                  Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                  <br /> <br />
+                </p>
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <p className='p-gray'>Nov 26 2022</p>
+                  <p className='see-more'><Link>View More</Link></p>
+                </div>
+              </Col>
+            </Row>
+          </div>
+          <hr />
+          <div className='new-part'>
+            <Row>
+              <Col xs={4}><img className='news-img' src={cricketimg2} width="80%" height="auto"></img>
+              </Col>
+              <Col xs={8}>
+                <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
+                </Link>
+                <p style={{ textAlign: "start", color: "grey", }}>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                  a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                  remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                  Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                  of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                  classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                  Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                  Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                  <br /> <br />
+                </p>
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <p className='p-gray'>Nov 26 2022</p>
+                  <p className='see-more'><Link>View More</Link></p>
+                </div>
+              </Col>
+            </Row>
+          </div>
         </div>
-        <hr />
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={cricketimg2} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-      </div>
 
-      {/* India National Cricket Team */}
+      </AnimationOnScroll>
+
+       {/* India National Cricket Team */}
+      <AnimationOnScroll animateIn="animate__fadeInBottomRight ">
       <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
         <h2 className='heading'>India National Cricket Team</h2>
         <Row className="mt-5">
@@ -655,7 +571,11 @@ function Home() {
         </Row>
       </div>
 
+      </AnimationOnScroll>
+     
+
       {/* Our Cricket Teams */}
+      <AnimationOnScroll animateIn="animate__lightSpeedInLeft ">
       <div className='bg-section'>
         <div className='d-flex justify-content-around'>
           <div className='see-more-home'>{" "}</div>
@@ -681,8 +601,10 @@ function Home() {
 
         </div>
       </div>
-
+      </AnimationOnScroll>
       {/* Cricket Players (Our Heroes) */}
+      <AnimationOnScroll animateIn="animate__jackInTheBox ">
+
       <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
         <div className='d-flex justify-content-around'>
           <div className='see-more-home'>{" "}</div>
@@ -740,740 +662,16 @@ function Home() {
         </Row>
 
       </div>
-
+      </AnimationOnScroll>
       {/* Latest News and Articles */}
+      <AnimationOnScroll animateIn="animate__slideInLeft ">
+      
       <div className='bg-section'>
-        <h2 className='heading'>Latest News and Articles</h2>
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={cricketimg2} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={newzteam} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={usteam} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={cricketimg2} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={newzteam} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={usteam} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={cricketimg2} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={newzteam} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={usteam} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={newzteam} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={usteam} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={newzteam} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={usteam} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={usteam} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-        <hr />
-
-        <div className='new-part'>
-          <Row>
-            <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-              </Link>
-              <p style={{ textAlign: "start", color: "grey", }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
-                Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
-                Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
-                <br /> <br />
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div>
-
-
+        <h2 className='heading' style={{marginBottom: "20px"}}>Latest News and Articles</h2>
+        <AricleList />
+      
       </div>
+      </AnimationOnScroll>
     </div>
   );
 }
