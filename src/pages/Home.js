@@ -48,20 +48,43 @@ function Home() {
 
   const Data = [
     {
-      heading: 'SUN, NOV 27 2022'
+      heading: 'SUN, NOV 27 2022',
+      matches: 'India vs Pakistan, 2nd ODI',
+      player: 'Rohit Sharma, Baber Azam',
+      date_2: '01:30 AM GMT / 02:30 PM LOCAL',
+      date: '7:00 AM',
+      img: flag3,
+      img2: flag4,
 
     },
     {
-      heading: 'SUN, NOV 27 2022'
+      heading: 'SUN, NOV 27 2022',
+      matches: 'India vs Pakistan, 2nd ODI',
+      player: 'Rohit Sharma, Baber Azam',
+      date_2: '01:30 AM GMT / 02:30 PM LOCAL',
+      date: '7:00 AM',
+      img: flag3,
+      img2: flag4,
+
+    },
+    {
+      heading: 'SUN, NOV 27 2022',
+      matches: 'India vs Pakistan, 2nd ODI',
+      player: 'Rohit Sharma, Baber Azam',
+      date_2: '01:30 AM GMT / 02:30 PM LOCAL',
+      date: '7:00 AM',
+      img: flag3,
+      img2: flag4,
+
     },
 
   ]
   React.useEffect(() => {
     let xButtonTop = document.querySelector('#topBtn');
-    if(xButtonTop) {
+    if (xButtonTop) {
       xButtonTop.click()
     }
-  },[])
+  }, [])
 
   const Data2 = [
     {
@@ -161,141 +184,178 @@ function Home() {
         </div>
       </div>
 
-
       {/* live */}
       <LiveScoreComponet />
+
       {/* Schedule */}
       <AnimationOnScroll animateIn="animate__fadeInUp  ">
-      <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
+        <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
           <h2 className='heading'>Cricket Schedule</h2>
           {Data.map((item) => (
             <div>
-              <h4 style={{ backgroundColor: "GhostWhite", padding: "15px", fontWeight: "bold" }}>{item.heading}
-              </h4>
-              {Data2.map((item2) => (
-                <div>
-                  <Row className='ml-3' style={{ marginLeft: "8px" }}>
-                    <Col >
-                      <h3>
-                        {item2.matches}
-                      </h3>
-                    </Col>
-                    <Col>
-                      <h3>
-                        New Zealand vs India, 2nd ODI
-                      </h3>
-                      <p style={{ color: "grey" }}>{item2.player}</p>
-                    </Col>
-                    <Col>
-                      <h3>{item2.date}
-                      </h3>
-                      <p style={{ color: "grey" }}>
-                        {item2.date_2}</p>
-                    </Col>
-                  </Row>
-                  <br></br>
-                </div>
-              ))}
+              <Row style={{ backgroundColor: "GhostWhite", paddingTop: 17, height: 50 }}>
+                <Col xs={4}>
+                  <p style={{ color: "#000" }}>Country
+                  </p>
+                </Col>
+                <Col xs={4}>
+                  <p style={{ color: "#000" }}>Players
+                  </p>
+                </Col>
+                <Col xs={4}>
+                  <p style={{ color: "#000" }}>{item.heading}
+                  </p>
+                </Col>
+              </Row>
+
+              <div>
+                <Row className='' style={{}}>
+                  <Col xs={4}>
+                    <div className='d-flex'>
+                      <p style={{
+                        color: "black", alignSelf: 'center',
+                        marginRight: 7
+                      }}>{item.matches}</p>
+                      <div className='d-flex'>
+                        <img src={item.img} style={{
+                          width: 50,
+                          height: 50,
+                          marginRight: 5
+                        }}></img>
+                        <h4 style={{
+                          alignSelf: 'center',
+                          marginRight: 5,
+                          marginTop: 5
+                        }}>
+                          V/S
+                        </h4>
+                        <img src={item.img2} style={{
+                          width: 50,
+                          height: 50
+                        }}></img>
+                      </div>
+                    </div>
+                  </Col>
+                  <Col xs={4}>
+                    <p style={{ color: "grey" }}>{item.player}</p>
+                    <p style={{ color: "grey" }}>{item.date}</p>
+                  </Col>
+                  <Col xs={4}>
+                    <p style={{ color: "grey" }}>
+                      {item.date_2}</p>
+                  </Col>
+                </Row>
+                <br></br>
+              </div>
             </div>
           ))}
         </div>
       </AnimationOnScroll>
-    
-
 
       {/* video  */}
       <AnimationOnScroll animateIn="animate__bounceInRight ">
-      <div className='bg-section' >
-        <h2 className='heading'>Video Hub</h2>
-        <div class="containerv">
+        <div className='bg-section' >
+          <h2 className='heading'>Video Hub</h2>
+          <div class="containerv">
 
-          <div class="main-box">
-            <div class="box one">
-              <video
-                poster={img3}
-                height={'100%'}
-                width={'100%'}
-                src={video} controls>
-              </video>
-            </div>
-            <div class="box two">
-              <video
-                poster={img4}
+            <div class="main-box">
+              <div class="box one">
+                <video
+                  poster={img3}
+                  height={'400%'}
+                  width={'100%'}
+                  src={video} controls>
+                </video>
+              </div>
+              <div class="box two">
+                <video
+                  poster={img4}
+                  height={'100%'}
+                  width={'100%'}
+                  src={video} controls>
+                </video></div>
+              <div class="box three">  <video
+                poster={img7}
                 height={'100%'}
                 width={'100%'}
                 src={video} controls>
               </video></div>
-            <div class="box three">  <video
-              poster={img7}
-              height={'100%'}
-              width={'100%'}
-              src={video} controls>
-            </video></div>
-            <div class="box four">  <video
-              poster={img9}
-              height={'100%'}
-              width={'100%'}
-              src={video} controls>
-            </video></div>
-            <div class="box five">  <video
-              poster={usteam}
-              height={'100%'}
-              width={'100%'}
-              src={video} controls>
-            </video></div>
-            <div class="box six">  <video
-              poster={newzteam}
-              height={'100%'}
-              width={'100%'}
-              src={video} controls>
-            </video></div>
-            <div class="box six">  <video
-              poster={cricketimg1}
-              height={'100%'}
-              width={'100%'}
-              src={video} controls>
-            </video></div>
+              <div class="box four">  <video
+                poster={img9}
+                height={'100%'}
+                width={'100%'}
+                src={video} controls>
+              </video></div>
+              <div class="box five">  <video
+                poster={usteam}
+                height={'100%'}
+                width={'100%'}
+                src={video} controls>
+              </video></div>
+              <div class="box six">  <video
+                poster={newzteam}
+                height={'100%'}
+                width={'100%'}
+                src={video} controls>
+              </video></div>
+              <div class="box six">  <video
+                poster={cricketimg1}
+                height={'100%'}
+                width={'100%'}
+                src={video} controls>
+              </video></div>
+            </div>
           </div>
+
+
         </div>
-
-
-      </div>
       </AnimationOnScroll>
-    
 
       {/* photos  */}
       <AnimationOnScroll animateIn="animate__backInDown ">
-      <div className='bg-section' style={{ height: 470 }}>
-        <h2 className='heading'>Photos Gallery</h2>
-        <div className='d-flex' style={{ marginTop: 60 }}>
-          <div className='gallery-1'>
-            <img src={cricketimg1} className='gallery-img'></img>
-            <img src={cricketimg2} className='gallery-img1'></img>
-            <img src={img7} className='gallery-img2'></img>
-            <h1 style={{ textAlign: 'center', marginTop: 250 }}>Todays Match Photos</h1>
-          </div>
-          <div className='gallery-2'>
-            <img src={cricketimg1} className='gallery-img'></img>
-            <img src={cricketimg2} className='gallery-img1'></img>
-            <img src={cricketimg1} className='gallery-img2'></img>
-            <h1 style={{ textAlign: 'center', marginTop: 250 }}>T20 Todays Match Photos</h1>
-          </div>
-          <div className='gallery-3'>
-            <img src={cricketimg1} className='gallery-img'></img>
-            <img src={cricketimg1} className='gallery-img1'></img>
-            <img src={cricketimg2} className='gallery-img2'></img>
-            <h1 style={{ textAlign: 'center', marginTop: 250 }}>World Cup Match Photos</h1>
+        <div className='bg-section' style={{ height: 470 }}>
+          <h2 className='heading'>Photos Gallery</h2>
+          <div className='d-flex' style={{ marginTop: 60 }}>
+            <Link to="gallery">
+              <div className='gallery-1'>
+                <img src={cricketimg1} className='gallery-img'></img>
+                <img src={cricketimg2} className='gallery-img1'></img>
+                <img src={img7} className='gallery-img2'></img>
+                <h1 style={{ textAlign: 'center', marginTop: 250 }}>Todays Match Photos</h1>
+              </div>
+            </Link>
+
+            <Link to="gallery">
+              <div className='gallery-2'>
+                <img src={cricketimg1} className='gallery-img'></img>
+                <img src={cricketimg2} className='gallery-img1'></img>
+                <img src={cricketimg1} className='gallery-img2'></img>
+                <h1 style={{ textAlign: 'center', marginTop: 250 }}>T20 Todays Match Photos</h1>
+              </div>
+            </Link>
+
+            <Link to="gallery">
+              <div className='gallery-3'>
+                <img src={cricketimg1} className='gallery-img'></img>
+                <img src={cricketimg1} className='gallery-img1'></img>
+                <img src={cricketimg2} className='gallery-img2'></img>
+                <h1 style={{ textAlign: 'center', marginTop: 250 }}>World Cup Match Photos</h1>
+
+              </div>
+            </Link>
+
+            <Link to="gallery">
+              <div className='gallery-4'>
+                <img src={cricketimg1} className='gallery-img'></img>
+                <img src={cricketimg2} className='gallery-img1'></img>
+                <img src={newzteam} className='gallery-img2'></img>
+                <h1 style={{ textAlign: 'center', marginTop: 250 }}>World Cup Match Photos</h1>
+              </div>
+            </Link>
 
           </div>
-          <div className='gallery-4'>
-            <img src={cricketimg1} className='gallery-img'></img>
-            <img src={cricketimg2} className='gallery-img1'></img>
-            <img src={newzteam} className='gallery-img2'></img>
-            <h1 style={{ textAlign: 'center', marginTop: 250 }}>World Cup Match Photos</h1>
-          </div>
+
         </div>
-
-      </div>
 
       </AnimationOnScroll>
 
@@ -325,31 +385,31 @@ function Home() {
           <div>
             <Row style={{ backgroundColor: "GhostWhite", paddingTop: 17, height: 50 }}>
               <Col xs={1}>
-                <h3 style={{ color: "#000" }}>#</h3>
+                <p style={{ color: "#000" }}>#</p>
               </Col>
               <Col xs={2}>
-                <h3 style={{ color: "#000" }}></h3>
+                <p style={{ color: "#000" }}>Flags</p>
               </Col>
               <Col xs={6}>
-                <h3 style={{ color: "#000" }}>Country</h3>
+                <p style={{ color: "#000" }}>Country</p>
               </Col>
               <Col xs={1}>
-                <h3>Matches
-                </h3>
+                <p style={{ color: "#000" }}>Matches
+                </p>
               </Col>
               <Col xs={1}>
-                <h3>Points
-                </h3>
+                <p style={{ color: "#000" }}>Points
+                </p>
               </Col>
               <Col xs={1}>
-                <h3>Rating
-                </h3>
+                <p style={{ color: "#000" }}>Rating
+                </p>
               </Col>
             </Row>
 
             {Data3.map((item) => (
               <div>
-                <Row className='ml-3' style={{ marginLeft: "8px", height: 50, marginTop: -10 }}>
+                <Row className='' style={{ height: 50, marginTop: -5 }}>
                   <Col xs={1}>
                     <p style={{ color: "grey" }}>{item.srNo}</p>
                   </Col>
@@ -383,72 +443,72 @@ function Home() {
 
       {/* world timeline  */}
       <AnimationOnScroll animateIn="animate__lightSpeedInRight ">
-      <div className='bg-section' >
-        <h2 className='heading'>T20 WORLD CUP TIMELINE</h2>
-        <marquee behavior="alternate">
-          <div className='d-flex'>
-            <div style={{ marginLeft: 20, marginRight: 20 }}>
-              <img src={flag3} width="100%" height="60%" className='image-timeline'></img>
-              <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>Australia</h3>
-              <h5 className='year-timeline'>2021</h5>
+        <div className='bg-section' >
+          <h2 className='heading'>T20 WORLD CUP TIMELINE</h2>
+          <marquee behavior="alternate">
+            <div className='d-flex'>
+              <div style={{ marginLeft: 20, marginRight: 20 }}>
+                <img src={flag3} width="100%" height="70%" className='image-timeline'></img>
+                <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>Australia</h3>
+                <h5 className='year-timeline'>2021</h5>
+              </div>
+              <div style={{ marginLeft: 20, marginRight: 20 }}>
+                <img src={flag4} width="100%" height="70%" className='image-timeline'></img>
+                <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>West Indies</h3>
+                <h5 className='year-timeline'>2016</h5>
+              </div>
+              <div style={{ marginLeft: 20, marginRight: 20 }}>
+                <img src={flag3} width="100%" height="70%" className='image-timeline'></img>
+                <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>Sri Lanka</h3>
+                <h5 className='year-timeline'>2014</h5>
+              </div>
+              <div style={{ marginLeft: 20, marginRight: 20 }}>
+                <img src={flag4} width="100%" height="70%" className='image-timeline'></img>
+                <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>West Indies</h3>
+                <h5 className='year-timeline'>2012</h5>
+              </div>
+              <div style={{ marginLeft: 20, marginRight: 20 }}>
+                <img src={flag3} width="100%" height="70%" className='image-timeline'></img>
+                <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>India</h3>
+                <h5 className='year-timeline'>2021</h5>
+              </div>
+              <div style={{ marginLeft: 20, marginRight: 20 }}>
+                <img src={flag4} width="100%" height="70%" className='image-timeline'></img>
+                <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>England</h3>
+                <h5 className='year-timeline'>2010</h5>
+              </div>
+              <div style={{ marginLeft: 20, marginRight: 20 }}>
+                <img src={flag4} width="100%" height="70%" className='image-timeline'></img>
+                <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>Pakistan</h3>
+                <h5 className='year-timeline'>2007</h5>
+              </div>
+              <div style={{ marginLeft: 20, marginRight: 20 }}>
+                <img src={flag3} width="100%" height="70%" className='image-timeline'></img>
+                <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>India</h3>
+                <h5 className='year-timeline'>2009</h5>
+              </div>
+              <div style={{ marginLeft: 20, marginRight: 20 }}>
+                <img src={flag3} width="100%" height="70%" className='image-timeline'></img>
+                <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>India</h3>
+                <h5 className='year-timeline'>2009</h5>
+              </div>
+              <div style={{ marginLeft: 20, marginRight: 20 }}>
+                <img src={flag3} width="100%" height="70%" className='image-timeline'></img>
+                <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>India</h3>
+                <h5 className='year-timeline'>2009</h5>
+              </div>
             </div>
-            <div style={{ marginLeft: 20, marginRight: 20 }}>
-              <img src={flag4} width="100%" height="60%" className='image-timeline'></img>
-              <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>West Indies</h3>
-              <h5 className='year-timeline'>2016</h5>
-            </div>
-            <div style={{ marginLeft: 20, marginRight: 20 }}>
-              <img src={flag3} width="100%" height="60%" className='image-timeline'></img>
-              <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>Sri Lanka</h3>
-              <h5 className='year-timeline'>2014</h5>
-            </div>
-            <div style={{ marginLeft: 20, marginRight: 20 }}>
-              <img src={flag4} width="100%" height="60%" className='image-timeline'></img>
-              <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>West Indies</h3>
-              <h5 className='year-timeline'>2012</h5>
-            </div>
-            <div style={{ marginLeft: 20, marginRight: 20 }}>
-              <img src={flag3} width="100%" height="60%" className='image-timeline'></img>
-              <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>India</h3>
-              <h5 className='year-timeline'>2021</h5>
-            </div>
-            <div style={{ marginLeft: 20, marginRight: 20 }}>
-              <img src={flag4} width="100%" height="60%" className='image-timeline'></img>
-              <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>England</h3>
-              <h5 className='year-timeline'>2010</h5>
-            </div>
-            <div style={{ marginLeft: 20, marginRight: 20 }}>
-              <img src={flag4} width="100%" height="60%" className='image-timeline'></img>
-              <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>Pakistan</h3>
-              <h5 className='year-timeline'>2007</h5>
-            </div>
-            <div style={{ marginLeft: 20, marginRight: 20 }}>
-              <img src={flag3} width="100%" height="60%" className='image-timeline'></img>
-              <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>India</h3>
-              <h5 className='year-timeline'>2009</h5>
-            </div>
-            <div style={{ marginLeft: 20, marginRight: 20 }}>
-              <img src={flag3} width="100%" height="60%" className='image-timeline'></img>
-              <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>India</h3>
-              <h5 className='year-timeline'>2009</h5>
-            </div>
-            <div style={{ marginLeft: 20, marginRight: 20 }}>
-              <img src={flag3} width="100%" height="60%" className='image-timeline'></img>
-              <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>India</h3>
-              <h5 className='year-timeline'>2009</h5>
-            </div>
-          </div>
-        </marquee>
+          </marquee>
 
-        <Link>
-          <h3 className='see-more-home'>See More</h3>
-        </Link>
-      </div>
+          <Link>
+            <h3 className='see-more-home'>See More</h3>
+          </Link>
+        </div>
 
       </AnimationOnScroll>
 
       {/* Quiz  */}
-      <AnimationOnScroll animateIn="animate__zoomInUp"> 
+      <AnimationOnScroll animateIn="animate__zoomInUp">
         <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
           <h2 className='heading'>Quiz</h2>
           <div className='quiz-section'>
@@ -483,9 +543,8 @@ function Home() {
             </div>
           </div>
         </div>
-        
+
       </AnimationOnScroll>
-      
 
       {/*cricket news Editorials */}
       <AnimationOnScroll animateIn="animate__pulse ">
@@ -548,129 +607,128 @@ function Home() {
 
       </AnimationOnScroll>
 
-       {/* India National Cricket Team */}
+      {/* India National Cricket Team */}
       <AnimationOnScroll animateIn="animate__fadeInBottomRight ">
-      <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
-        <h2 className='heading'>India National Cricket Team</h2>
-        <Row className="mt-5">
-          <Col xs={4}><img className='news-img' src={cricketimg2} width="80%" height="auto"></img>
-          </Col>
-          <Col xs={8}><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-            <p style={{ textAlign: "start", color: "grey" }}>
-              Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
-              Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
-              Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
-              Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
-            </p>
-            <br /> <br />
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              <p className='p-gray'>Nov 26 2022</p>
-              <p className='see-more'><Link to='team'>View More</Link></p>
-            </div>
-          </Col>
-        </Row>
-      </div>
+        <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
+          <h2 className='heading'>India National Cricket Team</h2>
+          <Row className="mt-5">
+            <Col xs={4}><img className='news-img' src={cricketimg2} width="80%" height="auto"></img>
+            </Col>
+            <Col xs={8}><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
+              <p style={{ textAlign: "start", color: "grey" }}>
+                Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
+                Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
+                Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
+                Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
+              </p>
+              <br /> <br />
+              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p className='p-gray'>Nov 26 2022</p>
+                <p className='see-more'><Link to='team'>View More</Link></p>
+              </div>
+            </Col>
+          </Row>
+        </div>
 
       </AnimationOnScroll>
-     
 
       {/* Our Cricket Teams */}
       <AnimationOnScroll animateIn="animate__lightSpeedInLeft ">
-      <div className='bg-section'>
-        <div className='d-flex justify-content-around'>
-          <div className='see-more-home'>{" "}</div>
-          <h2 className='heading'>Our Cricket Teams</h2>
-          <Link>
-            <h3 className='see-more-home'>See More</h3>
-          </Link>
-        </div>
-        <div className='d-flex justify-content-around'>
-          <div className='team-img' style={{ width: '100%', height: '100%', margin: 20 }}>
-            <img src={cricketimg1} width="100%" height="100%"></img>
-            <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10 }}>Indian Cricket Team Players</h2>
+        <div className='bg-section'>
+          <div className='d-flex justify-content-around'>
+            <div className='see-more-home'>{" "}</div>
+            <h2 className='heading'>Our Cricket Teams</h2>
+            <Link>
+              <h3 className='see-more-home'>See More</h3>
+            </Link>
           </div>
+          <div className='d-flex justify-content-around'>
+            <div className='team-img' style={{ width: '100%', height: '100%', margin: 20 }}>
+              <img src={cricketimg1} width="100%" height="100%"></img>
+              <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10 }}>Indian Cricket Team Players</h2>
+            </div>
 
-          <div className='team-img' style={{ width: '100%', height: '100%', margin: 20 }}>
-            <img src={usteam} width="100%" height="100%"></img>
-            <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10 }}>Us Cricket Team Players</h2>
-          </div>
-          <div className='team-img' style={{ width: '100%', height: '100%', margin: 20 }}>
-            <img src={newzteam} width="100%" height="100%"></img>
-            <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10 }}>NewZeland Cricket Team Players</h2>
-          </div>
+            <div className='team-img' style={{ width: '100%', height: '100%', margin: 20 }}>
+              <img src={usteam} width="100%" height="100%"></img>
+              <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10 }}>Us Cricket Team Players</h2>
+            </div>
+            <div className='team-img' style={{ width: '100%', height: '100%', margin: 20 }}>
+              <img src={newzteam} width="100%" height="100%"></img>
+              <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10 }}>NewZeland Cricket Team Players</h2>
+            </div>
 
+          </div>
         </div>
-      </div>
       </AnimationOnScroll>
+
       {/* Cricket Players (Our Heroes) */}
       <AnimationOnScroll animateIn="animate__jackInTheBox ">
+        <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
+          <div className='d-flex justify-content-around'>
+            <div className='see-more-home'>{" "}</div>
+            <h2 className='heading'>Cricket Players (Our Heroes)</h2>
+            <Link>
+              <h3 className='see-more-home'>See More</h3>
+            </Link>
+          </div>
+          <Row style={{ marginTop: -20 }}>
+            <Col xs={4}>
+              <div className='player-card'>
+                <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
+                <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Ab de villiers</h3>
+              </div>
+              <div className='player-card'>
+                <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
+                <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Ab de villiers</h3>
+              </div>
+              <div className='player-card'>
+                <img src={david} width="75%" height="100%" style={{ alignSelf: 'center' }}></img>
+                <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>David warner</h3>
+              </div>
 
-      <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
-        <div className='d-flex justify-content-around'>
-          <div className='see-more-home'>{" "}</div>
-          <h2 className='heading'>Cricket Players (Our Heroes)</h2>
-          <Link>
-            <h3 className='see-more-home'>See More</h3>
-          </Link>
+            </Col>
+            <Col xs={4}>
+              <div className='player-card'>
+                <img src={chris} width="70%" height="100%" style={{ alignSelf: 'center' }}></img>
+                <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Chris Jordanr</h3>
+              </div>
+              <div className='player-card'>
+                <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
+                <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Ab de villiers</h3>
+              </div>
+              <div className='player-card'>
+                <img src={david} width="75%" height="100%" style={{ alignSelf: 'center' }}></img>
+                <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>David warner</h3>
+              </div>
+
+            </Col>
+            <Col xs={4}>
+              <div className='player-card'>
+                <img src={david} width="75%" height="100%" style={{ alignSelf: 'center' }}></img>
+                <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>David warner</h3>
+              </div>
+              <div className='player-card'>
+                <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
+                <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Ab de villiers</h3>
+              </div>
+              <div className='player-card'>
+                <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
+                <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Ab de villiers</h3>
+              </div>
+
+            </Col>
+          </Row>
+
         </div>
-        <Row style={{ marginTop: -20 }}>
-          <Col xs={4}>
-            <div className='player-card'>
-              <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
-              <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Ab de villiers</h3>
-            </div>
-            <div className='player-card'>
-              <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
-              <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Ab de villiers</h3>
-            </div>
-            <div className='player-card'>
-              <img src={david} width="75%" height="100%" style={{ alignSelf: 'center' }}></img>
-              <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>David warner</h3>
-            </div>
-
-          </Col>
-          <Col xs={4}>
-            <div className='player-card'>
-              <img src={chris} width="70%" height="100%" style={{ alignSelf: 'center' }}></img>
-              <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Chris Jordanr</h3>
-            </div>
-            <div className='player-card'>
-              <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
-              <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Ab de villiers</h3>
-            </div>
-            <div className='player-card'>
-              <img src={david} width="75%" height="100%" style={{ alignSelf: 'center' }}></img>
-              <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>David warner</h3>
-            </div>
-
-          </Col>
-          <Col xs={4}>
-            <div className='player-card'>
-              <img src={david} width="75%" height="100%" style={{ alignSelf: 'center' }}></img>
-              <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>David warner</h3>
-            </div>
-            <div className='player-card'>
-              <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
-              <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Ab de villiers</h3>
-            </div>
-            <div className='player-card'>
-              <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
-              <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Ab de villiers</h3>
-            </div>
-
-          </Col>
-        </Row>
-
-      </div>
       </AnimationOnScroll>
+
       {/* Latest News and Articles */}
       <AnimationOnScroll animateIn="animate__slideInLeft ">
-      
-      <div className='bg-section'>
-        <h2 className='heading' style={{marginBottom: "20px"}}>Latest News and Articles</h2>
-        <AricleList />
-      
-      </div>
+        <div className='bg-section'>
+          <h2 className='heading' style={{ marginBottom: "20px" }}>Latest News and Articles</h2>
+          <AricleList />
+
+        </div>
       </AnimationOnScroll>
     </div>
   );

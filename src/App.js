@@ -11,6 +11,7 @@ import Schedule from "./pages/Schedule";
 import LiveScore from "./pages/Live/LiveScore";
 import News from "./pages/News/News";
 import Archives from "./pages/Archives/Archives";
+import PhotoGallery from './Components/Home/PhotoGallery';
 
 export default function App() {
   return (
@@ -28,6 +29,7 @@ export default function App() {
         <Route path="team" element={<BrowserTeam />} />
         <Route path="news" element={<News />} />
         <Route path="archives" element={<Archives />} />
+        <Route path="gallery" element={<PhotoGallery />} />
       </Routes>
       <Footer />
     </BrowserRouter>
