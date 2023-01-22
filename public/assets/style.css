@@ -121,13 +121,14 @@ p.plain-list {
     background: linear-gradient(to right, #fff, #000);
     /* height: 165px; */
     margin-bottom: 20px;
-
 }
 
 .new-part {
-    margin-top: 28px;
+    margin-top: -10px;
 }
-
+.team-part {
+    margin-top: -60px !important;
+}
 p {
     font-size: 16px;
     letter-spacing: 0.5px;
@@ -153,9 +154,7 @@ a {
 }
 
 .news-img {
-    -webkit-box-reflect: below 7px linear-gradient(transparent, transparent, #0004);
     transform-origin: center;
-    transform: perspective(750px) rotateX(-15deg);
     transition: 0.5s;
 }
 

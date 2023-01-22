@@ -11,9 +11,9 @@ export default class ResponsiveSlider extends Component {
     var settings = {
       draggable: true,
     autoplay: true,
-    autoplaySpeed: 7000,
+    autoplaySpeed: 3000,
     arrows: false,
-    dots: true,
+    dots: false,
     fade: true,
     speed: 500,
     infinite: true,
@@ -26,7 +26,7 @@ export default class ResponsiveSlider extends Component {
             slidesToShow: 5,
             slidesToScroll: 3,
             // infinite: true,
-            dots: true,
+            dots: false,
           },
         },
         {
@@ -35,7 +35,7 @@ export default class ResponsiveSlider extends Component {
             slidesToShow: 5,
             slidesToScroll: 3,
             // infinite: true,
-            dots: true,
+            dots: false,
           },
         },
         {
@@ -44,7 +44,7 @@ export default class ResponsiveSlider extends Component {
             slidesToShow: 4,
             slidesToScroll: 3,
             // infinite: true,
-            dots: true,
+            dots: false,
           },
         },
         {
@@ -53,7 +53,7 @@ export default class ResponsiveSlider extends Component {
             slidesToShow: 3,
             slidesToScroll: 3,
             // infinite: true,
-            dots: true,
+            dots: false,
           },
         },
         {
@@ -61,6 +61,7 @@ export default class ResponsiveSlider extends Component {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
+            dots: false,
             initialSlide: 2,
           },
         },
@@ -88,8 +89,6 @@ export default class ResponsiveSlider extends Component {
            		return (<div className="slider-card" key={i}><img className="d-block w-100 hh" src={slide?.url}  alt={slide?.url} /></div>)
            	})
            }
-            
-          
         </Slider>
       </div>
     );

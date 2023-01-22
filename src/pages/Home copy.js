@@ -12,6 +12,8 @@ import img3 from '../assets/images/img3.png';
 import img4 from '../assets/images/img4.jpg';
 import img7 from '../assets/images/img7.jpg';
 import img9 from '../assets/images/img9.jpg';
+import cricketimg3 from '../assets/images/cricketimg2.jpeg';
+import cricketimg4 from '../assets/images/cricketimg2.jpeg';
 import flag1 from '../assets/icons/us.png';
 import flag2 from '../assets/icons/nami.png';
 import flag3 from '../assets/icons/flag1.png';
@@ -244,8 +246,8 @@ function Home() {
       <AnimationOnScroll animateIn="animate__bounceInRight ">
         <div className='bg-section' >
           <h2 className='heading'>Video Hub</h2>
-
           <div class="containerv">
+
             <div class="main-box">
               <div class="box one">
                 <video
@@ -295,59 +297,54 @@ function Home() {
             </div>
           </div>
 
+
         </div>
       </AnimationOnScroll>
 
       {/* photos  */}
       <AnimationOnScroll animateIn="animate__backInDown ">
-        <div className='bg-section'>
+        <div className='bg-section' style={{ height: 470 }}>
           <h2 className='heading'>Photos Gallery</h2>
-          <div class="containerv">
-            <div class="main-box">
-              <div class="box one">
-                <img src={cricketimg1}
-                  height={"100%"}
-                  width={"100%"}>
-                </img>
+          <div className='d-flex' style={{ marginTop: 60 }}>
+            <Link to="gallery">
+              <div className='gallery-1'>
+                <img src={cricketimg1} className='gallery-img'></img>
+                <img src={cricketimg2} className='gallery-img1'></img>
+                <img src={img7} className='gallery-img2'></img>
+                <h1 style={{ textAlign: 'center', marginTop: 250 }}>Todays Match Photos</h1>
               </div>
-              <div class="box two">
-                <img src={cricketimg2}
-                  height={"100%"}
-                  width={"100%"}>
-                </img>
+            </Link>
+
+            <Link to="gallery">
+              <div className='gallery-2'>
+                <img src={cricketimg1} className='gallery-img'></img>
+                <img src={cricketimg2} className='gallery-img1'></img>
+                <img src={cricketimg1} className='gallery-img2'></img>
+                <h1 style={{ textAlign: 'center', marginTop: 250 }}>T20 Todays Match Photos</h1>
               </div>
-              <div class="box three">
-                <img src={img3}
-                  height={"100%"}
-                  width={"100%"}>
-                </img>
+            </Link>
+
+            <Link to="gallery">
+              <div className='gallery-3'>
+                <img src={cricketimg1} className='gallery-img'></img>
+                <img src={cricketimg1} className='gallery-img1'></img>
+                <img src={cricketimg2} className='gallery-img2'></img>
+                <h1 style={{ textAlign: 'center', marginTop: 250 }}>World Cup Match Photos</h1>
+
               </div>
-              <div class="box four">
-                <img src={img4}
-                  height={"100%"}
-                  width={"100%"}>
-                </img>
+            </Link>
+
+            <Link to="gallery">
+              <div className='gallery-4'>
+                <img src={cricketimg1} className='gallery-img'></img>
+                <img src={cricketimg2} className='gallery-img1'></img>
+                <img src={newzteam} className='gallery-img2'></img>
+                <h1 style={{ textAlign: 'center', marginTop: 250 }}>World Cup Match Photos</h1>
               </div>
-              <div class="box five">
-                <img src={img7}
-                  height={"100%"}
-                  width={"100%"}>
-                </img>
-              </div>
-              <div class="box six">
-                <img src={img9}
-                  height={"100%"}
-                  width={"100%"}>
-                </img>
-              </div>
-              <div class="box six">
-                <img src={newzteam}
-                  height={"100%"}
-                  width={"100%"}>
-                </img>
-              </div>
-            </div>
+            </Link>
+
           </div>
+
         </div>
 
       </AnimationOnScroll>
@@ -503,7 +500,7 @@ function Home() {
       {/* Quiz  */}
       <AnimationOnScroll animateIn="animate__zoomInUp">
         <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
-          <h2 className='heading'>Quiz - Ask an interesting question</h2>
+          <h2 className='heading'>Quiz</h2>
           <div className='quiz-section'>
             <div class="polaroid rotate_right">
               <i className='fa fa-group'> {" "} 60k + Participants</i>
@@ -557,8 +554,10 @@ function Home() {
                   remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
                   Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
                   of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                  classical Latin literature from 45 BC,
-                  <br />
+                  classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                  Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                  Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                  <br /> <br />
                 </p>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <p className='p-gray'>Nov 26 2022</p>
@@ -582,8 +581,10 @@ function Home() {
                   remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
                   Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
                   of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                  classical Latin literature from 45 BC,
-                  <br />
+                  classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                  Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem
+                  Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+                  <br /> <br />
                 </p>
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <p className='p-gray'>Nov 26 2022</p>
@@ -600,11 +601,10 @@ function Home() {
       <AnimationOnScroll animateIn="animate__fadeInBottomRight ">
         <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
           <h2 className='heading'>India National Cricket Team</h2>
-          <Row className="team-part">
-            <Col xs={4}>
-              <img className='news-img' src={cricketimg2} width="80%" height="auto"></img>
+          <Row className="mt-5">
+            <Col xs={4}><img className='news-img' src={cricketimg2} width="80%" height="auto"></img>
             </Col>
-            <Col xs={8}>
+            <Col xs={8}><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
               <p style={{ textAlign: "start", color: "grey" }}>
                 Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
                 Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>

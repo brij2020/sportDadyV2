@@ -1,5 +1,3 @@
-
-
 .App {
   text-align: center;
 }
@@ -121,24 +119,23 @@
 .bg-section {
   background: #e6e9f3;
   width: '100%';
-  margin-top: 15px;
-  padding: 45px 80px 45px 80px;
+  /* margin-top: 5px; */
+  padding: 22px 65px 22px 65px;
 }
 
 .plain-section {
   background: #fff;
   width: '100%';
-  padding: 45px 60px 80px 60px;
-  margin: 35px 65px 15px 65px;
-  ;
+  padding: 20px 60px 15px 60px;
+  margin: 15px 65px 15px 65px;
   border-radius: 20px;
 }
 
 .quiz-section {
   justify-content: center;
   display: flex;
-  margin-top: 50px;
-  /* padding-bottom: 25px; */
+  margin-top: 25px;
+  padding-bottom: 26px;
 }
 
 .card-container {
@@ -327,11 +324,10 @@ a#nav-dropdown-dark-example {
 .heading {
   text-align: center;
   color: #AE0E36FF;
-  margin-bottom: 40px;
+  margin-bottom: 5px;
   font-size: 38px;
-  /* text-shadow: 1px 1px 2px #fff, 0 0 25px blue, 0 0 5px #323d94; */
+  /* text-shadow: 1px 1px 2px #fff, 0 0 25px #AE0E36FF, 0 0 5px #AE0E36FF; */
   font-weight: 600;
-  /* font-style: italic; */
 }
 
 h1 {
@@ -397,45 +393,24 @@ a.nav-link.active {
 
 .gallery-img {
   float: left;
-  -ms-transform: rotate(-4deg);
-  /* IE 9 */
-  -webkit-transform: rotate(-4deg);
-  /* Safari */
-  transform: rotate(-4deg);
   background: linear-gradient(to right, #000, #fb0f0f);
   border-radius: 3px;
   height: 200px;
-  width: 290px;
+  width: 350px;
   position: absolute;
 
 }
+
 .gallery-img1 {
   float: left;
-  -ms-transform: rotate(5deg);
-  /* IE 9 */
-  -webkit-transform: rotate(5deg);
-  /* Safari */
-  transform: rotate(5deg);
   background: linear-gradient(to right, #000, #fb0f0f);
   border-radius: 3px;
   height: 200px;
   width: 290px;
   position: absolute;
 }
-.gallery-img2 {
-  float: left;
-  -ms-transform: rotate(-13deg);
-  /* IE 9 */
-  -webkit-transform: rotate(-13deg);
-  /* Safari */
-  transform: rotate(-13deg);
-  background: linear-gradient(to right, #000, #fb0f0f);
-  border-radius: 3px;
-  height: 200px;
-  width: 290px;
-  position: absolute;
-}
-.gallery-1{
+
+/* .gallery-1{
   position: absolute;
   left: 120px;
 }
@@ -451,7 +426,24 @@ a.nav-link.active {
 .gallery-4{
   position: absolute;
   left: 1200px;
+} */
 
-
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
 }
 
+.grid-container>div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item1 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}

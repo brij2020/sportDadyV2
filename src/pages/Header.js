@@ -12,7 +12,7 @@ function Header() {
             <div style={{}}>
                 <img src={img} width="60" height="60"></img>
             </div>
-            <div style={{ marginLeft: 170 }} >
+            <div style={{ marginLeft: 20 }} >
                 <Container fluid>
                     <Navbar.Collapse id="navbar-dark-example"> 
                         <Link to='/' className='header-text'> <Nav>Home</Nav></Link>

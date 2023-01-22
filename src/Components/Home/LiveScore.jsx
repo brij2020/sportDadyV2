@@ -10,10 +10,8 @@ const LiveScoreComponet = (props) => {
   
 	return(
   <AnimationOnScroll animateIn="animate__bounceInLeft ">
-		<div className='bg-section  ' style={{ marginTop: "30px" }} id="live">
-        <h2 className='heading ' >Live Cricket Score</h2>
-  
-
+		<div className='bg-section' id="live">
+        <h2 className='heading' >Live Cricket Score</h2>
         <marquee behavior="alternate">
           <div className='d-flex hello'>
             <div className='live-section'>
