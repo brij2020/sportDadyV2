@@ -19,6 +19,8 @@ import flag4 from '../assets/icons/flag2.png';
 import newzteam from '../assets/images/teams/newzteam.jpeg';
 import usteam from '../assets/images/teams/usteam.jpg';
 import abdev from '../assets/images/players/abdev.png';
+import apple from '../assets/icons/apple.png';
+import playstore from '../assets/icons/playstore.png';
 import chris from '../assets/images/players/chris.png';
 import david from '../assets/images/players/david.png';
 import ResponsiveSlider from '../Components/Slider'
@@ -240,9 +242,17 @@ function Home() {
         </div>
       </AnimationOnScroll>
 
+      {/* Latest News and Articles */}
+      <AnimationOnScroll animateIn="animate__slideInLeft ">
+        <div className='bg-section'>
+          <h2 className='heading'>Latest News and Articles</h2>
+          <AricleList />
+        </div>
+      </AnimationOnScroll>
+
       {/* video  */}
       <AnimationOnScroll animateIn="animate__bounceInRight ">
-        <div className='bg-section' >
+        <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
           <h2 className='heading'>Video Hub</h2>
 
           <div class="containerv">
@@ -712,14 +722,34 @@ function Home() {
         </div>
       </AnimationOnScroll>
 
-      {/* Latest News and Articles */}
-      <AnimationOnScroll animateIn="animate__slideInLeft ">
-        <div className='bg-section'>
-          <h2 className='heading' style={{ marginBottom: "20px" }}>Latest News and Articles</h2>
-          <AricleList />
 
+      {/* download app section  */}
+      <AnimationOnScroll animateIn="animate__jackInTheBox" >
+        <div className='bg-section'>
+          <div class="wrapper">
+            <a href="https://www.apple.com/in/app-store/" target={'_blank'} class="link-wrapper">
+              <div class="img-wrapper">
+                <img src={apple} />
+              </div>
+              <div class="content-wrapper">
+                <h6 style={{ paddingTop: 6, color: '#fff' }}>Download in the</h6>
+                <p style={{ color: '#fff' }}>App Store</p>
+              </div>
+            </a>
+
+            <a href="https://play.google.com/store/apps" target={'_blank'} class="link-wrapper">
+              <div class="img-wrapper">
+                <img src={playstore} />
+              </div>
+              <div class="content-wrapper">
+                <h6 style={{ paddingTop: 6, color: '#fff' }}>Android app on</h6>
+                <p style={{ color: '#fff' }}>Google Play</p>
+              </div>
+            </a>
+          </div>
         </div>
       </AnimationOnScroll>
+
     </div>
   );
 }

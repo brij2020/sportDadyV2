@@ -447,3 +447,47 @@ a.nav-link.active {
   grid-row-start: 1;
   grid-row-end: 3;
 }
+
+.img-wrapper{
+  width: 48px;
+  display: flex;
+  align-items: center;
+}
+
+img{
+  width: 100%;
+}
+
+.link-wrapper{
+  background: #111;
+  color: #E1E1E1 !important;
+  width: 185px;
+  height: 48px;
+  text-decoration: none;
+  padding: 28px 16px;
+  border-radius: 4px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  align-self: center;
+  margin-top: 30px !important;
+  margin: auto;
+}
+
+.content-wrapper{
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 18px;
+  flex-direction: column;
+  width: 140px;
+}

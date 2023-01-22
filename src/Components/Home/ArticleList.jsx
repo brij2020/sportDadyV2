@@ -13,43 +13,91 @@ import img9 from '../../assets/images/img9.jpg';
 const AricleList = () => {
   return (
 
-    <div class="grid-container">
-      <div class="grid-item">
-        <img src={cricketimg1} width="100%" height="50%"></img>
-        <div>
-          <p className='news-heading'>India vs Bangladesh 2nd Test Day 3 Live Updates: Litton Das, Taskin Ahmed Revive Bangladesh's Innings; Lead Goes Over 120</p>
-          <p className='news-para'>India vs Bangladesh Live: Bangladesh have lost seventh wickets against India on Day 3 of the ongoing second Test against India in Mirpur</p>
-          <p className='news-para'>India vs Bangladesh Live: Bangladesh have lost seventh wickets against India on Day 3 of the ongoing second Test against India in Mirpur</p>
-        </div>
-      </div>
-      <div class="grid-item">
-        <img src={img7} width="90%" height="100%"></img>
-        <div>
-          <p className='news-heading'>India vs Bangladesh 2nd Test Day 3 Live Updates: Litton Das, Taskin Ahmed Revive Bangladesh's Innings; Lead Goes Over 120</p>
-          <p className='news-para'>India vs Bangladesh Live: Bangladesh have lost seventh wickets against India on Day 3 of the ongoing second Test against
-            India in Mirpur India vs Bangladesh Live: Bangladesh have lost n Mirpur India vs Bangladesh Live: Bangladesh have lost seventh wickets
-          </p>
-        </div>
+    // <div class="grid-container">
+    //   <div class="grid-item">
+    //     <img src={cricketimg1} width="100%" height="50%"></img>
+    //     <div>
+    //       <p className='news-heading'>India vs Bangladesh 2nd Test Day 3 Live Updates: Litton Das, Taskin Ahmed Revive Bangladesh's Innings; Lead Goes Over 120</p>
+    //       <p className='news-para'>India vs Bangladesh Live: Bangladesh have lost seventh wickets against India on Day 3 of the ongoing second Test against India in Mirpur</p>
+    //       <p className='news-para'>India vs Bangladesh Live: Bangladesh have lost seventh wickets against India on Day 3 of the ongoing second Test against India in Mirpur</p>
+    //     </div>
+    //   </div>
+    //   <div class="grid-item">
+    //     <img src={img7} width="90%" height="100%"></img>
+    //     <div>
+    //       <p className='news-heading'>India vs Bangladesh 2nd Test Day 3 Live Updates: Litton Das, Taskin Ahmed Revive Bangladesh's Innings; Lead Goes Over 120</p>
+    //       <p className='news-para'>India vs Bangladesh Live: Bangladesh have lost seventh wickets against India on Day 3 of the ongoing second Test against
+    //         India in Mirpur India vs Bangladesh Live: Bangladesh have lost n Mirpur India vs Bangladesh Live: Bangladesh have lost seventh wickets
+    //       </p>
+    //     </div>
 
-      </div>
-      <div class="grid-item"></div>
-      <div class="grid-item">
-        <div>
-          <p className='news-para'>India vs Bangladesh Live: Bangladesh have lost seventh wickets against India on Day 3 of the ongoing second Test against
-            India in Mirpur India vs Bangladesh India on Day 3 of the ongoing second Test against India in Mirpur</p>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div>
-          <img src={cricketimg1} width="100%" height="100%"></img>
-        </div>
-        <div style={{width: '80%'}}>
-          <p className='news-heading'>India vs Bangladesh 2nd Test Day 3 Live Updates: Litton Das, Taskin Ahmed Revive Bangladesh's Innings; Lead Goes Over 120</p>
-          <p className='news-para'>India vs Bangladesh Live: Bangladesh have lost seventh wickets against India on Day 3 of against India in Mirpur</p>
-        </div>
-      </div>
+    //   </div>
+    //   <div class="grid-item"></div>
+    //   <div class="grid-item">
+    //     <div>
+    //       <p className='news-para'>India vs Bangladesh Live: Bangladesh have lost seventh wickets against India on Day 3 of the ongoing second Test against
+    //         India in Mirpur India vs Bangladesh India on Day 3 of the ongoing second Test against India in Mirpur</p>
+    //     </div>
+    //   </div>
+    //   <div class="grid-item">
+    //     <div>
+    //       <img src={cricketimg1} width="100%" height="100%"></img>
+    //     </div>
+    //     <div style={{width: '80%'}}>
+    //       <p className='news-heading'>India vs Bangladesh 2nd Test Day 3 Live Updates: Litton Das, Taskin Ahmed Revive Bangladesh's Innings; Lead Goes Over 120</p>
+    //       <p className='news-para'>India vs Bangladesh Live: Bangladesh have lost seventh wickets against India on Day 3 of against India in Mirpur</p>
+    //     </div>
+    //   </div>
 
+    // </div>
+    <div class="containerv">
+      <div class="main-news">
+        <div class="news one">
+          <div className='d-flex flex-column'>
+            <img src={cricketimg1}
+              height={"40%"}
+              width={"60%"}
+              style={{alignSelf: 'center'}}>
+            </img>
+            <div >
+              <p className='news-heading'>India vs Bangladesh 2nd Test Day 3 Live Updates: Litton Das, Taskin Ahmed Revive Bangladesh's Innings;</p>
+              <p className='news-para'>India vs Bangladesh Live: Bangladesh have lost seventh wickets against India on Day 3 of the ongoing second Test against India in Mirpur against India in Mirpur</p>
+            </div>
+          </div>
+        </div>
+        <div class="news two">
+          <div >
+            <p className='news-para'>India vs Bangladesh Live: Bangladesh have lost seventh wickets against India on Day 3 of the ongoing second Test against India in Mirpur</p>
+          </div>
+        </div>
+        <div class="news three">
+          <div >
+            <p className='news-para'>India vs Bangladesh Live: Bangladesh have lost seventh wickets against India on Day 3 of the ongoing second Test against India in Mirpur</p>
+          </div>
+        </div>
+        <div class="news four">
+          <div >
+            <p className='news-para'>India vs Bangladesh Live: Bangladesh have lost seventh wickets against India on Day 3 of the ongoing second Test against India in Mirpur</p>
+          </div>
+        </div>
+        <div class="news five">
+          <div >
+            <p className='news-para'>India vs Bangladesh Live: Bangladesh have lost seventh wickets against India on Day 3 of the ongoing second Test against India in Mirpur</p>
+          </div>
+        </div>
+        <div class="news six">
+          <div >
+            <p className='news-para'>India vs Bangladesh Live: Bangladesh have lost seventh wickets against India on Day 3 of the ongoing second Test against India in Mirpur</p>
+          </div>
+        </div>
+        <div class="news six">
+          <div >
+            <p className='news-para'>India vs Bangladesh Live: Bangladesh have lost seventh wickets against India on Day 3 of the ongoing second Test against India in Mirpur</p>
+          </div>
+        </div>
+      </div>
     </div>
+
   )
 }
 
