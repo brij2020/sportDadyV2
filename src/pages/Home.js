@@ -1,4 +1,6 @@
 import * as React from 'react'
+import react, { useState } from 'react';
+
 import { Link, redirect } from 'react-router-dom';
 import '../App.css';
 import SimpleImageSlider from "react-simple-image-slider";
@@ -35,6 +37,11 @@ import AricleList from '../Components/Home/ArticleList'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 function Home() {
+
+  const [team, setTeam] = useState(true)
+  const [batting, setBatting] = useState(false)
+  const [bowling, setBowling] = useState(false)
+  const [allRounder, setAllRounder] = useState(false)
 
   const images = [
     { url: ONE },
@@ -373,73 +380,273 @@ function Home() {
           <h2 className='heading'>ICC CRICKET Rankings</h2>
           <Nav justify variant="tabs" defaultActiveKey="/home" style={{ alignSelf: 'center', marginBottom: 15 }}>
             <Nav.Item>
-              <Nav.Link >TEAMS</Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  setTeam(true);
+                  setBatting(false);
+                  setBowling(false);
+                  setAllRounder(false);
+                }}>TEAMS</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link>BATTING</Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  setTeam(false);
+                  setBatting(true);
+                  setBowling(false);
+                  setAllRounder(false);
+                }}>BATTING</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link>BOWLING</Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  setTeam(false);
+                  setBatting(false);
+                  setBowling(true);
+                  setAllRounder(false);
+                }}>BOWLING</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link>ALL-ROUDERS</Nav.Link>
+              <Nav.Link
+                onClick={() => {
+                  setTeam(false);
+                  setBatting(false);
+                  setBowling(false);
+                  setAllRounder(true);
+                }}>ALL-ROUDERS</Nav.Link>
             </Nav.Item>
           </Nav>
-          <div>
-            <Row style={{ backgroundColor: "GhostWhite", paddingTop: 17, height: 50 }}>
-              <Col xs={1}>
-                <p style={{ color: "#000" }}>#</p>
-              </Col>
-              <Col xs={2}>
-                <p style={{ color: "#000" }}>Flags</p>
-              </Col>
-              <Col xs={6}>
-                <p style={{ color: "#000" }}>Country</p>
-              </Col>
-              <Col xs={1}>
-                <p style={{ color: "#000" }}>Matches
-                </p>
-              </Col>
-              <Col xs={1}>
-                <p style={{ color: "#000" }}>Points
-                </p>
-              </Col>
-              <Col xs={1}>
-                <p style={{ color: "#000" }}>Rating
-                </p>
-              </Col>
-            </Row>
 
-            {Data3.map((item) => (
+          {team == true ?
+            <div>
+              <Row style={{ backgroundColor: "GhostWhite", paddingTop: 17, height: 50 }}>
+                <Col xs={1}>
+                  <p style={{ color: "#000" }}>#</p>
+                </Col>
+                <Col xs={2}>
+                  <p style={{ color: "#000" }}>Flags</p>
+                </Col>
+                <Col xs={6}>
+                  <p style={{ color: "#000" }}>Country</p>
+                </Col>
+                <Col xs={1}>
+                  <p style={{ color: "#000" }}>Matches
+                  </p>
+                </Col>
+                <Col xs={1}>
+                  <p style={{ color: "#000" }}>Points
+                  </p>
+                </Col>
+                <Col xs={1}>
+                  <p style={{ color: "#000" }}>Rating
+                  </p>
+                </Col>
+              </Row>
+
+              {Data3.map((item) => (
+                <div>
+                  <Row className='' style={{ height: 50, marginTop: -5 }}>
+                    <Col xs={1}>
+                      <p style={{ color: "grey" }}>{item.srNo}</p>
+                    </Col>
+                    <Col xs={2}>
+                      <img src={item.img} style={{
+                        marginTop: -21,
+                        width: 50,
+                        height: 50
+                      }}></img>
+                    </Col>
+                    <Col xs={6}>
+                      <h2 style={{ color: "grey" }}>{item.country}</h2>
+                    </Col>
+                    <Col xs={1}>
+                      <h2 style={{ color: "grey" }}>{item.matches}</h2>
+                    </Col>
+                    <Col xs={1}>
+                      <h2 style={{ color: "grey" }}>{item.points}</h2>
+                    </Col>
+                    <Col xs={1}>
+                      <h2 style={{ color: "grey" }}>{item.rating}</h2>
+                    </Col>
+                  </Row>
+                  <hr style={{ backgroundColor: 'black' }} />
+                </div>
+              ))}
+            </div>
+            :
+            batting == true ?
               <div>
-                <Row className='' style={{ height: 50, marginTop: -5 }}>
+                <Row style={{ backgroundColor: "GhostWhite", paddingTop: 17, height: 50 }}>
                   <Col xs={1}>
-                    <p style={{ color: "grey" }}>{item.srNo}</p>
+                    <p style={{ color: "#000" }}>#</p>
                   </Col>
                   <Col xs={2}>
-                    <img src={item.img} style={{
-                      marginTop: -21,
-                      width: 50,
-                      height: 50
-                    }}></img>
+                    <p style={{ color: "#000" }}>Flags</p>
                   </Col>
                   <Col xs={6}>
-                    <h2 style={{ color: "grey" }}>{item.country}</h2>
+                    <p style={{ color: "#000" }}>Player</p>
                   </Col>
                   <Col xs={1}>
-                    <h2 style={{ color: "grey" }}>{item.matches}</h2>
+                    <p style={{ color: "#000" }}>Matches
+                    </p>
                   </Col>
                   <Col xs={1}>
-                    <h2 style={{ color: "grey" }}>{item.points}</h2>
+                    <p style={{ color: "#000" }}>Points
+                    </p>
                   </Col>
                   <Col xs={1}>
-                    <h2 style={{ color: "grey" }}>{item.rating}</h2>
+                    <p style={{ color: "#000" }}>Rating
+                    </p>
                   </Col>
                 </Row>
-                <hr style={{ backgroundColor: 'black' }} />
+
+                {Data3.map((item) => (
+                  <div>
+                    <Row className='' style={{ height: 50, marginTop: -5 }}>
+                      <Col xs={1}>
+                        <p style={{ color: "grey" }}>{item.srNo}</p>
+                      </Col>
+                      <Col xs={2}>
+                        <img src={item.img} style={{
+                          marginTop: -21,
+                          width: 50,
+                          height: 50
+                        }}></img>
+                      </Col>
+                      <Col xs={6}>
+                        <h2 style={{ color: "grey" }}>Virat Kohli</h2>
+                      </Col>
+                      <Col xs={1}>
+                        <h2 style={{ color: "grey" }}>80</h2>
+                      </Col>
+                      <Col xs={1}>
+                        <h2 style={{ color: "grey" }}>3014</h2>
+                      </Col>
+                      <Col xs={1}>
+                        <h2 style={{ color: "grey" }}>200</h2>
+                      </Col>
+                    </Row>
+                    <hr style={{ backgroundColor: 'black' }} />
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+              :
+              bowling == true ?
+                <div>
+                  <Row style={{ backgroundColor: "GhostWhite", paddingTop: 17, height: 50 }}>
+                    <Col xs={1}>
+                      <p style={{ color: "#000" }}>#</p>
+                    </Col>
+                    <Col xs={2}>
+                      <p style={{ color: "#000" }}>Flags</p>
+                    </Col>
+                    <Col xs={6}>
+                      <p style={{ color: "#000" }}>Bowler</p>
+                    </Col>
+                    <Col xs={1}>
+                      <p style={{ color: "#000" }}>Matches
+                      </p>
+                    </Col>
+                    <Col xs={1}>
+                      <p style={{ color: "#000" }}>Points
+                      </p>
+                    </Col>
+                    <Col xs={1}>
+                      <p style={{ color: "#000" }}>Rating
+                      </p>
+                    </Col>
+                  </Row>
+
+                  {Data3.map((item) => (
+                    <div>
+                      <Row className='' style={{ height: 50, marginTop: -5 }}>
+                        <Col xs={1}>
+                          <p style={{ color: "grey" }}>{item.srNo}</p>
+                        </Col>
+                        <Col xs={2}>
+                          <img src={item.img} style={{
+                            marginTop: -21,
+                            width: 50,
+                            height: 50
+                          }}></img>
+                        </Col>
+                        <Col xs={6}>
+                          <h2 style={{ color: "grey" }}>Jasprit bumrah</h2>
+                        </Col>
+                        <Col xs={1}>
+                          <h2 style={{ color: "grey" }}>45</h2>
+                        </Col>
+                        <Col xs={1}>
+                          <h2 style={{ color: "grey" }}>2700</h2>
+                        </Col>
+                        <Col xs={1}>
+                          <h2 style={{ color: "grey" }}>300</h2>
+                        </Col>
+                      </Row>
+                      <hr style={{ backgroundColor: 'black' }} />
+                    </div>
+                  ))}
+                </div>
+                :
+                allRounder == true ?
+                  <div>
+                    <Row style={{ backgroundColor: "GhostWhite", paddingTop: 17, height: 50 }}>
+                      <Col xs={1}>
+                        <p style={{ color: "#000" }}>#</p>
+                      </Col>
+                      <Col xs={2}>
+                        <p style={{ color: "#000" }}>Flags</p>
+                      </Col>
+                      <Col xs={6}>
+                        <p style={{ color: "#000" }}>All Rounder</p>
+                      </Col>
+                      <Col xs={1}>
+                        <p style={{ color: "#000" }}>Matches
+                        </p>
+                      </Col>
+                      <Col xs={1}>
+                        <p style={{ color: "#000" }}>Points
+                        </p>
+                      </Col>
+                      <Col xs={1}>
+                        <p style={{ color: "#000" }}>Rating
+                        </p>
+                      </Col>
+                    </Row>
+
+                    {Data3.map((item) => (
+                      <div>
+                        <Row className='' style={{ height: 50, marginTop: -5 }}>
+                          <Col xs={1}>
+                            <p style={{ color: "grey" }}>{item.srNo}</p>
+                          </Col>
+                          <Col xs={2}>
+                            <img src={item.img} style={{
+                              marginTop: -21,
+                              width: 50,
+                              height: 50
+                            }}></img>
+                          </Col>
+                          <Col xs={6}>
+                            <h2 style={{ color: "grey" }}>Hardik Pandya</h2>
+                          </Col>
+                          <Col xs={1}>
+                            <h2 style={{ color: "grey" }}>30</h2>
+                          </Col>
+                          <Col xs={1}>
+                            <h2 style={{ color: "grey" }}>3900</h2>
+                          </Col>
+                          <Col xs={1}>
+                            <h2 style={{ color: "grey" }}>250</h2>
+                          </Col>
+                        </Row>
+                        <hr style={{ backgroundColor: 'black' }} />
+                      </div>
+                    ))}
+                  </div>
+                  :
+                  null
+          }
         </div>
 
       </AnimationOnScroll>
@@ -721,7 +928,6 @@ function Home() {
 
         </div>
       </AnimationOnScroll>
-
 
       {/* download app section  */}
       <AnimationOnScroll animateIn="animate__jackInTheBox" >
