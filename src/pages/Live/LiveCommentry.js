@@ -5,6 +5,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import react, { useState } from 'react';
 import { useSpeechSynthesis } from "react-speech-kit";
+import { Link } from 'react-router-dom';
+import cricketimg1 from '../../assets/images/cricketimg1.jpg';
+import cricketimg2 from '../../assets/images/cricketimg2.jpeg';
+import img3 from '../../assets/images/img3.png';
+import img4 from '../../assets/images/img4.jpg';
+import img7 from '../../assets/images/img7.jpg';
+import img9 from '../../assets/images/img9.jpg';
+import newzteam from '../../assets/images/teams/newzteam.jpeg';
 
 function LiveCommentry() {
 
@@ -14,10 +22,9 @@ function LiveCommentry() {
     const [scorecard, setScorecard] = useState(false)
     const [squads, setSquads] = useState(false)
     const [highlights, setHighlights] = useState(false)
-    const [points, setPoints] = useState(false)
+    const [matchFacts, setMatchFacts] = useState(false)
     const [photos, setPhotos] = useState(false)
-    const [stats, setStats] = useState(false)
-    const [venues, setVenues] = useState(false)
+    const [news, setNews] = useState(false)
     const [mute, setMute] = useState(true)
 
 
@@ -270,9 +277,8 @@ function LiveCommentry() {
                             setSquads(false);
                             setHighlights(false);
                             setPhotos(false);
-                            setPoints(false);
-                            setStats(false);
-                            setVenues(false)
+                            setMatchFacts(false);
+                            setNews(false);
                         }}>Commentary</Nav.Link>
                     </Nav.Item>
                     <Nav.Item id="tablinks" onmouseover="openCity(event, 'Paris')">
@@ -282,9 +288,8 @@ function LiveCommentry() {
                             setSquads(false);
                             setHighlights(false);
                             setPhotos(false);
-                            setPoints(false);
-                            setStats(false);
-                            setVenues(false)
+                            setMatchFacts(false);
+                            setNews(false);
                         }}>Scorecard</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
@@ -294,9 +299,8 @@ function LiveCommentry() {
                             setSquads(true);
                             setHighlights(false);
                             setPhotos(false);
-                            setPoints(false);
-                            setStats(false);
-                            setVenues(false)
+                            setMatchFacts(false);
+                            setNews(false);
                         }}>Squads</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
@@ -306,9 +310,8 @@ function LiveCommentry() {
                             setSquads(false);
                             setHighlights(true);
                             setPhotos(false);
-                            setPoints(false);
-                            setStats(false);
-                            setVenues(false)
+                            setMatchFacts(false);
+                            setNews(false);
                         }}>Highlights</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
@@ -318,10 +321,9 @@ function LiveCommentry() {
                             setSquads(false);
                             setHighlights(false);
                             setPhotos(false);
-                            setPoints(true);
-                            setStats(false);
-                            setVenues(false)
-                        }}>Points Table</Nav.Link>
+                            setMatchFacts(true);
+                            setNews(false);
+                        }}>Match Facts</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link onClick={() => {
@@ -330,9 +332,8 @@ function LiveCommentry() {
                             setSquads(false);
                             setHighlights(false);
                             setPhotos(true);
-                            setPoints(false);
-                            setStats(false);
-                            setVenues(false)
+                            setMatchFacts(false);
+                            setNews(false);
                         }}>Photos</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
@@ -342,23 +343,11 @@ function LiveCommentry() {
                             setSquads(false);
                             setHighlights(false);
                             setPhotos(false);
-                            setPoints(false);
-                            setStats(true);
-                            setVenues(false)
-                        }}>Stats</Nav.Link>
+                            setMatchFacts(false);
+                            setNews(true);
+                        }}>News</Nav.Link>
                     </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link onClick={() => {
-                            setCommentry(false);
-                            setScorecard(false);
-                            setSquads(false);
-                            setHighlights(false);
-                            setPhotos(false);
-                            setPoints(false);
-                            setStats(false);
-                            setVenues(true)
-                        }}>Venues</Nav.Link>
-                    </Nav.Item>
+
                 </Nav>
                 <hr></hr>
 
@@ -547,119 +536,256 @@ function LiveCommentry() {
                                     ))}
                                 </div>
                                 :
-                                points == true ?
+                                matchFacts == true ?
                                     < div style={{ boxShadow: '1px 2px 9px #c93a3e', marginTop: 25, borderRadius: 40, padding: 10, marginBottom: 25 }}>
-                                        <h4 style={{ backgroundColor: "GhostWhite", padding: "18px", fontWeight: "bold", borderRadius: 30, margin: 5 }}>Month <span style={{ marginLeft: 385 }}>Series Name</span>
+                                        <h4 style={{ backgroundColor: "GhostWhite", padding: 18, paddingLeft: 30, fontWeight: "bold", borderRadius: 30, margin: 5 }}>Match Info
                                         </h4>
-                                        {Data2.map((item2) => (
-                                            <div>
-                                                <Row className='ml-3 list-section' style={{ marginLeft: "8px", padding: 8 }}>
-                                                    <Col xs={4}>
-                                                        <p className='month'>
-                                                            {item2.month}
-                                                        </p >
-                                                    </Col>
-                                                    <Col xs={6}>
-                                                        <p className='text'>
-                                                            {item2.matches}
-                                                        </p >
-                                                    </Col>
-                                                    <Col xs={2}>
-                                                        <p className='text'>{item2.date}
-                                                        </p >
+                                        <div style={{ padding: 15, paddingLeft: 30 }}>
 
-                                                    </Col>
-                                                </Row>
-                                                <br></br>
+                                            <div className='d-flex'>
+                                                <p className='bold-text'>Match:</p>
+                                                <p className='gray-text'>IND vs NZ, 3rd ODI, New Zealand tour of India, 2023</p>
                                             </div>
-                                        ))}
+
+                                            <div className='d-flex'>
+                                                <p className='bold-text'>Date:</p>
+                                                <p className='gray-text'>Tuesday, January 24, 2023</p>
+                                            </div>
+
+                                            <div className='d-flex'>
+                                                <p className='bold-text'>Toss:</p>
+                                                <p className='gray-text'>New Zealand won the toss and opt to bowl</p>
+                                            </div>
+
+                                            <div className='d-flex'>
+                                                <p className='bold-text'>Time:</p>
+                                                <p className='gray-text'>1:30 PM</p>
+                                            </div>
+
+                                            <div className='d-flex'>
+                                                <p className='bold-text'>Venue:</p>
+                                                <p className='gray-text'>Holkar Cricket Stadium, Indore</p>
+                                            </div>
+
+                                            <div className='d-flex'>
+                                                <p className='bold-text'>Umpires:</p>
+                                                <p className='gray-text'>Nitin Menon, Jayaraman Madanagopal</p>
+                                            </div>
+
+                                            <div className='d-flex'>
+                                                <p className='bold-text'>Third Umpire:</p>
+                                                <p className='gray-text'>Anil Kumar Chaudhary</p>
+                                            </div>
+
+                                            <div className='d-flex'>
+                                                <p className='bold-text'>Match Referee:</p>
+                                                <p className='gray-text'>Javagal Srinath</p>
+                                            </div>
+
+                                            <div className='d-flex'>
+                                                <p className='bold-text'>India Squad:</p>
+                                                <p className='gray-text'></p>
+                                            </div>
+
+                                            <div className='d-flex'>
+                                                <p className='bold-text'>Playing:</p>
+                                                <p className='gray-text'>Rohit Sharma (c), Shubman Gill, Virat Kohli, Ishan Kishan (wk), Suryakumar Yadav, Hardik Pandya, Washington Sundar, Shardul Thakur, Kuldeep Yadav, Yuzvendra Chahal, Umran Malik</p>
+                                            </div>
+
+                                            <div className='d-flex'>
+                                                <p className='bold-text'>Bench:</p>
+                                                <p className='gray-text'>Srikar Bharat, Rajat Patidar, Shahbaz Ahmed, Mohammed Shami, Mohammed Siraj</p>
+                                            </div>
+
+                                            <div className='d-flex'>
+                                                <p className='bold-text'>New Zealand Squad:</p>
+                                                <p className='gray-text'></p>
+                                            </div>
+
+                                            <div className='d-flex'>
+                                                <p className='bold-text'>Playing:</p>
+                                                <p className='gray-text'>Finn Allen, Devon Conway, Henry Nicholls, Daryl Mitchell, Tom Latham (c & wk), Glenn Phillips, Michael Bracewell, Mitchell Santner, Jacob Duffy, Lockie Ferguson, Blair Tickner</p>
+                                            </div>
+
+                                            <div className='d-flex'>
+                                                <p className='bold-text'>Bench:</p>
+                                                <p className='gray-text'>Mark Chapman, Ish Sodhi, Doug Bracewell, Henry Shipley</p>
+                                            </div>
+                                        </div>
+
+                                        <h4 style={{ backgroundColor: "GhostWhite", padding: 18, paddingLeft: 30, fontWeight: "bold", borderRadius: 30, margin: 5 }}>
+                                        Venue Guide
+                                        </h4>
+                                        <div style={{ padding: 15, paddingLeft: 30 }}>
+
+                                            <div className='d-flex'>
+                                                <p className='bold-text'>Stadium:</p>
+                                                <p className='gray-text'>Holkar Cricket Stadium</p>
+                                            </div>
+
+                                            <div className='d-flex'>
+                                                <p className='bold-text'>City:</p>
+                                                <p className='gray-text'>Indore</p>
+                                            </div>
+
+                                            <div className='d-flex'>
+                                                <p className='bold-text'>Hosts to:</p>
+                                                <p className='gray-text'>Madhya Pradesh</p>
+                                            </div>
+
+                                        </div>
+
+                                        <h4 style={{ backgroundColor: "GhostWhite", padding: 18, paddingLeft: 30, fontWeight: "bold", borderRadius: 30, margin: 5 }}>
+                                        Broadcast Guide
+                                        </h4>
+                                        <div style={{ padding: 15, paddingLeft: 30 }}>
+
+                                            <div className='d-flex'>
+                                                <p className='bold-text'>Streaming</p>
+                                                <p className='gray-text'>Disney+ Hotstar</p>
+                                            </div>
+
+                                            <div className='d-flex'>
+                                                <p className='bold-text'>TV</p>
+                                                <p className='gray-text'>Star Sports Network,DD Sports</p>
+                                            </div>
+
+                                        </div>
+
                                     </div>
                                     :
                                     photos == true ?
-                                        < div style={{ boxShadow: '1px 2px 9px #c93a3e', marginTop: 25, borderRadius: 40, padding: 10, marginBottom: 25 }}>
-                                            <h4 style={{ backgroundColor: "GhostWhite", padding: "18px", fontWeight: "bold", borderRadius: 30, margin: 5 }}>Month <span style={{ marginLeft: 385 }}>Series Name</span>
-                                            </h4>
-                                            {Data2.map((item2) => (
-                                                <div>
-                                                    <Row className='ml-3 list-section' style={{ marginLeft: "8px", padding: 8 }}>
-                                                        <Col xs={4}>
-                                                            <p className='month'>
-                                                                {item2.month}
-                                                            </p >
-                                                        </Col>
-                                                        <Col xs={6}>
-                                                            <p className='text'>
-                                                                {item2.matches}
-                                                            </p >
-                                                        </Col>
-                                                        <Col xs={2}>
-                                                            <p className='text'>{item2.date}
-                                                            </p >
-
-                                                        </Col>
-                                                    </Row>
-                                                    <br></br>
+                                        <div style={{ boxShadow: '1px 2px 9px #c93a3e', marginTop: 25, borderRadius: 40, padding: 10, marginBottom: 25 }}>
+                                            <h2 className='heading mt-2'>Highlighted Photos</h2>
+                                            <div class="containerv">
+                                                <div class="main-box">
+                                                    <div class="box one">
+                                                        <img src={cricketimg1}
+                                                            height={"100%"}
+                                                            width={"100%"}>
+                                                        </img>
+                                                    </div>
+                                                    <div class="box two">
+                                                        <img src={cricketimg2}
+                                                            height={"100%"}
+                                                            width={"100%"}>
+                                                        </img>
+                                                    </div>
+                                                    <div class="box three">
+                                                        <img src={img3}
+                                                            height={"100%"}
+                                                            width={"100%"}>
+                                                        </img>
+                                                    </div>
+                                                    <div class="box four">
+                                                        <img src={img4}
+                                                            height={"100%"}
+                                                            width={"100%"}>
+                                                        </img>
+                                                    </div>
+                                                    <div class="box five">
+                                                        <img src={img7}
+                                                            height={"100%"}
+                                                            width={"100%"}>
+                                                        </img>
+                                                    </div>
+                                                    <div class="box six">
+                                                        <img src={img9}
+                                                            height={"100%"}
+                                                            width={"100%"}>
+                                                        </img>
+                                                    </div>
+                                                    <div class="box six">
+                                                        <img src={newzteam}
+                                                            height={"100%"}
+                                                            width={"100%"}>
+                                                        </img>
+                                                    </div>
                                                 </div>
-                                            ))}
+                                            </div>
                                         </div>
                                         :
-                                        stats == true ?
-                                            < div style={{ boxShadow: '1px 2px 9px #c93a3e', marginTop: 25, borderRadius: 40, padding: 10, marginBottom: 25 }}>
-                                                <h4 style={{ backgroundColor: "GhostWhite", padding: "18px", fontWeight: "bold", borderRadius: 30, margin: 5 }}>Month <span style={{ marginLeft: 385 }}>Series Name</span>
-                                                </h4>
-                                                {Data2.map((item2) => (
-                                                    <div>
-                                                        <Row className='ml-3 list-section' style={{ marginLeft: "8px", padding: 8 }}>
-                                                            <Col xs={4}>
-                                                                <p className='month'>
-                                                                    {item2.month}
-                                                                </p >
-                                                            </Col>
-                                                            <Col xs={6}>
-                                                                <p className='text'>
-                                                                    {item2.matches}
-                                                                </p >
-                                                            </Col>
-                                                            <Col xs={2}>
-                                                                <p className='text'>{item2.date}
-                                                                </p >
-
-                                                            </Col>
-                                                        </Row>
-                                                        <br></br>
-                                                    </div>
-                                                ))}
+                                        news == true ?
+                                            <div style={{ boxShadow: '1px 2px 9px #c93a3e', marginTop: 25, borderRadius: 40, paddingLeft: 30, paddingRight: 30, padding: 20, marginBottom: 25 }}>
+                                                <h2 className='heading'>Cricket News and Editorials</h2>
+                                                <div className='new-part'>
+                                                    <Row>
+                                                        <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
+                                                        </Col>
+                                                        <Col xs={8}>
+                                                            <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
+                                                            </Link>
+                                                            <p style={{ textAlign: "start", color: "grey", }}>
+                                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                                                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                                                                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                                                                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                                                                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                                                                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                                                                classical Latin literature from 45 BC,
+                                                                <br />
+                                                            </p>
+                                                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                                                <p className='p-gray'>Nov 26 2022</p>
+                                                                <p className='see-more'><Link>View More</Link></p>
+                                                            </div>
+                                                        </Col>
+                                                    </Row>
+                                                </div>
+                                                <hr className='hr-line' />
+                                                <div className='new-part'>
+                                                    <Row>
+                                                        <Col xs={4}><img className='news-img' src={cricketimg2} width="80%" height="auto"></img>
+                                                        </Col>
+                                                        <Col xs={8}>
+                                                            <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
+                                                            </Link>
+                                                            <p style={{ textAlign: "start", color: "grey", }}>
+                                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                                                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                                                                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                                                                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                                                                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                                                                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                                                                classical Latin literature from 45 BC,
+                                                                <br />
+                                                            </p>
+                                                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                                                <p className='p-gray'>Nov 26 2022</p>
+                                                                <p className='see-more'><Link>View More</Link></p>
+                                                            </div>
+                                                        </Col>
+                                                    </Row>
+                                                </div>
+                                                <hr className='hr-line' />
+                                                <div className='new-part'>
+                                                    <Row>
+                                                        <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
+                                                        </Col>
+                                                        <Col xs={8}>
+                                                            <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
+                                                            </Link>
+                                                            <p style={{ textAlign: "start", color: "grey", }}>
+                                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                                                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+                                                                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                                                                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                                                                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+                                                                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                                                                classical Latin literature from 45 BC,
+                                                                <br />
+                                                            </p>
+                                                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                                                <p className='p-gray'>Nov 26 2022</p>
+                                                                <p className='see-more'><Link>View More</Link></p>
+                                                            </div>
+                                                        </Col>
+                                                    </Row>
+                                                </div>
                                             </div>
                                             :
-                                            venues == true ?
-                                                < div style={{ boxShadow: '1px 2px 9px #c93a3e', marginTop: 25, borderRadius: 40, padding: 10, marginBottom: 25 }}>
-                                                    <h4 style={{ backgroundColor: "GhostWhite", padding: "18px", fontWeight: "bold", borderRadius: 30, margin: 5 }}>Month <span style={{ marginLeft: 385 }}>Series Name</span>
-                                                    </h4>
-                                                    {Data2.map((item2) => (
-                                                        <div>
-                                                            <Row className='ml-3 list-section' style={{ marginLeft: "8px", padding: 8 }}>
-                                                                <Col xs={4}>
-                                                                    <p className='month'>
-                                                                        {item2.month}
-                                                                    </p >
-                                                                </Col>
-                                                                <Col xs={6}>
-                                                                    <p className='text'>
-                                                                        {item2.matches}
-                                                                    </p >
-                                                                </Col>
-                                                                <Col xs={2}>
-                                                                    <p className='text'>{item2.date}
-                                                                    </p >
 
-                                                                </Col>
-                                                            </Row>
-                                                            <br></br>
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                                :
-                                                null
+                                            null
                 }
 
 
