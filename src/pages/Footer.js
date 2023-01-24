@@ -47,7 +47,7 @@ function Footer() {
                         <div class="col-md-12 col-lg-10">
                             <div class="footer-widget footer-left-widget">
                                 <div class="section-heading">
-                                    <h3 className='cont-heading'>Useful Links</h3>
+                                    {/* <h3 className='cont-heading'>Useful Links</h3> */}
                                     <span class="animate-border border-black"></span>
                                 </div>
                                 <div className='d-flex'>

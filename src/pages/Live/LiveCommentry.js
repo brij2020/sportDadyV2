@@ -4,7 +4,11 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import react, { useState } from 'react';
+import { useSpeechSynthesis } from "react-speech-kit";
+
 function LiveCommentry() {
+
+    const { speak } = useSpeechSynthesis();
 
     const [commentry, setCommentry] = useState(true)
     const [scorecard, setScorecard] = useState(false)
@@ -14,6 +18,7 @@ function LiveCommentry() {
     const [photos, setPhotos] = useState(false)
     const [stats, setStats] = useState(false)
     const [venues, setVenues] = useState(false)
+    const [mute, setMute] = useState(true)
 
 
     const Data2 = [
@@ -370,6 +375,34 @@ function LiveCommentry() {
                                 </div>
                             </div>
                             <div className='screen'>
+                                <div className='d-flex justify-content-between' style={{ padding: 10 }}>
+                                    <div>
+                                        {mute == true ?
+                                            <i
+                                                onClick={() => {
+                                                    speak({
+                                                        lang: "hi",
+                                                        text: 'Payne to Prestwidge, SIX, slower ball on a length just outside off, Prestwidge smashes it off the back foot, gets a lot of bat and clears wide long-on... Payne to Finch, FOUR, Finch ends on a high, slower ball wide outside off, Finch reaches out and smashes it over extra-cover, runs away to the fence. The Scorchers win by 10 runs'
+                                                    }); setMute(false)
+                                                }}
+                                                class="fa fa-volume-up text-white" aria-hidden="true" style={{ fontSize: 30 }}></i>
+                                            :
+                                            <i
+                                                onClick={() => {
+                                                    speak({
+                                                        lang: "hi",
+                                                        text: ''
+                                                    }); setMute(true)
+                                                }}
+                                                class="fa fa-volume-off text-white" aria-hidden="true" style={{ fontSize: 30 }}></i>
+                                        }
+                                    </div>
+                                    <div>
+                                        <p className='live-text'>Live</p>
+                                        <p className="live-animate"></p>
+                                    </div>
+
+                                </div>
                                 <p className='screen-text'>4 Run</p>
                             </div>
                         </div>
@@ -636,7 +669,7 @@ function LiveCommentry() {
     );
 }
 export default LiveCommentry;
-
+// https://dev.to/shubhamtiwari909/text-to-speech-in-reactjs-52ml
 
 // import React from 'react';
 // import 'bootstrap/dist/css/bootstrap.css';

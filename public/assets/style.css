@@ -582,16 +582,88 @@ h3 {
     width: 500px;
     background: #000;
     border-radius: 4px;
-   margin: auto;
-    line-height: 200px;
-    text-align: center;
+    margin: auto;
+
     border: 3px dashed blue;
 }
-.screen-text{
+
+.screen-text {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
     color: #fff;
-    font-weight:500;
+    font-weight: 500;
     font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    align-self: center;
+    padding-left: 200px;
+}
+
+.live-text {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.live-animate {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: red;
+    bottom: 8px;
+    /* right: 5px; */
+}
+
+.live-animate:after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 4px;
+    left: 0;
+    bottom: 0;
+    border-left: 5px solid #fff;
+    border-right: 5px solid #fff;
+    -webkit-animation: animlive 1.5s linear infinite;
+    animation: animlive 1.5s linear infinite;
+}
+
+@-webkit-keyframes animlive {
+    0% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+
+    100% {
+        -webkit-transform: translateX(113px);
+        transform: translateX(113px);
+    }
+}
+
+@keyframes animlive {
+    0% {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
+    }
+
+    100% {
+        -webkit-transform: translateX(113px);
+        transform: translateX(113px);
+    }
+}
+
+.live-animate.border-orange:after {
+    border-right-color: red;
+    border-left-color: red;
+}
+
+.live-animate.border-ash:after {
+    border-right-color: #EEF0EF;
+    border-left-color: #EEF0EF;
+}
+
+.live-animate.border-offwhite:after {
+    border-right-color: #F7F9F8;
+    border-left-color: #F7F9F8;
 }
