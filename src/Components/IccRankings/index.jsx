@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import "./icc-ranking.css"
+// import "./icc-ranking.css"
 const ICCRanking = (props) => {
     const [isPlayer, setPlayer] = React.useState(true);
     const [isMen, setMen] = React.useState(true);
@@ -24,30 +24,7 @@ const ICCRanking = (props) => {
                 <div className="constraint-wrapper">
                     <div className="rankings__container">
                         <div className="rankings__widget-header-container">
-                            <div className="rankings__promo-container">
-
-                                <div className="rankings__sponsor">
-
-                                    <a href="https://www.mrftyres.com/" className="partners__link"
-                                        aria-label="https://www.mrftyres.com/" title="https://www.mrftyres.com/">
-                                        <picture className="rankings__promo-picture picture ">
-                                            <source className="rankings__promo-image"
-                                                srcset="https://resources.pulse.icc-cricket.com/photo-resources/2022/07/11/0906796e-088a-4c9f-816f-52fa87813bb7/MRF-Rankings-logo.png?width=100&height=33, https://resources.pulse.icc-cricket.com/photo-resources/2022/07/11/0906796e-088a-4c9f-816f-52fa87813bb7/MRF-Rankings-logo.png?width=200&height=66 2x"
-                                                media="(max-width: 840px)" />
-                                            <img className="rankings__promo-image  picture__img"
-                                                src="https://resources.pulse.icc-cricket.com/photo-resources/2022/07/11/0906796e-088a-4c9f-816f-52fa87813bb7/MRF-Rankings-logo.png?width=150&height=50"
-                                                alt="MRF Rankings logo" />
-                                        </picture>
-                                    </a>
-                                </div>
-
-                                <header className="widget-header rankings__widget-header">
-                                    <h2 className="widget-header__title rankings__widget-header-title">ICC Rankings</h2>
-                                </header>
-                                <a href="https://www.icc-cricket.com/rankings/mens/overview"
-                                    className="btn rankings__widget-header-button-mobile u-show-tablet"
-                                    title="View All Rankings">View All</a>
-                            </div>
+                         
 
                             <a href="https://www.icc-cricket.com/rankings/mens/overview"
                                 className="btn rankings__widget-header-button u-hide-tablet" title="View All Rankings">View
