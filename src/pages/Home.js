@@ -599,7 +599,7 @@ function Home() {
       </AnimationOnScroll>
 
       {/* download app section  */}
-      <AnimationOnScroll animateIn="animate__jackInTheBox" >
+      {/* <AnimationOnScroll animateIn="animate__jackInTheBox" > */}
         <div className='bg-section'>
           <div class="wrapper">
             <a href="https://www.apple.com/in/app-store/" target={'_blank'} class="link-wrapper">
@@ -623,7 +623,7 @@ function Home() {
             </a>
           </div>
         </div>
-      </AnimationOnScroll>
+      {/*</AnimationOnScroll>*/}
 
     </div>
   );
