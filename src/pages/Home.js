@@ -36,6 +36,7 @@ import LiveScoreComponet from '../Components/Home/LiveScore'
 import AricleList from '../Components/Home/ArticleList'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import ICCRanking from '../Components/IccRankings'
+import MatchSchedule from "../Components/MatchSchdule"
 function Home() {
 
   const [team, setTeam] = useState(true)
@@ -185,69 +186,12 @@ function Home() {
       <LiveScoreComponet />
 
       {/* Schedule */}
-      <AnimationOnScroll animateIn="animate__fadeInUp  ">
-        <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
+      
+       <div className='plain-section'>
           <h2 className='heading'>Cricket Schedule</h2>
-          {Data.map((item) => (
-            <div>
-              <Row style={{ backgroundColor: "GhostWhite", paddingTop: 17, height: 50 }}>
-                <Col xs={4}>
-                  <p style={{ color: "#000" }}>Country
-                  </p>
-                </Col>
-                <Col xs={4}>
-                  <p style={{ color: "#000" }}>Players
-                  </p>
-                </Col>
-                <Col xs={4}>
-                  <p style={{ color: "#000" }}>{item.heading}
-                  </p>
-                </Col>
-              </Row>
-
-              <div>
-                <Row className='' style={{}}>
-                  <Col xs={4}>
-                    <div className='d-flex'>
-                      <p style={{
-                        color: "black", alignSelf: 'center',
-                        marginRight: 7
-                      }}>{item.matches}</p>
-                      <div className='d-flex'>
-                        <img src={item.img} style={{
-                          width: 50,
-                          height: 50,
-                          marginRight: 5
-                        }}></img>
-                        <h4 style={{
-                          alignSelf: 'center',
-                          marginRight: 5,
-                          marginTop: 5
-                        }}>
-                          V/S
-                        </h4>
-                        <img src={item.img2} style={{
-                          width: 50,
-                          height: 50
-                        }}></img>
-                      </div>
-                    </div>
-                  </Col>
-                  <Col xs={4}>
-                    <p style={{ color: "grey" }}>{item.player}</p>
-                    <p style={{ color: "grey" }}>{item.date}</p>
-                  </Col>
-                  <Col xs={4}>
-                    <p style={{ color: "grey" }}>
-                      {item.date_2}</p>
-                  </Col>
-                </Row>
-                <br></br>
-              </div>
-            </div>
-          ))}
+        <MatchSchedule data={Data}/>
         </div>
-      </AnimationOnScroll>
+      
 
       {/* Latest News and Articles */}
       <AnimationOnScroll animateIn="animate__slideInLeft ">
@@ -267,7 +211,7 @@ function Home() {
               <div class="box one">
                 <video
                   poster={img3}
-                  height={'400%'}
+                  height={'100%'}
                   width={'100%'}
                   src={video} controls>
                 </video>
@@ -378,62 +322,62 @@ function Home() {
 
       {/* world timeline  */}
       <AnimationOnScroll animateIn="animate__lightSpeedInRight ">
-        <div className='bg-section' >
+        <div className='bg-section-time-line' >
           <h2 className='heading'>T20 WORLD CUP TIMELINE</h2>
           <marquee behavior="alternate">
             <div className='d-flex'>
               <div style={{ marginLeft: 20, marginRight: 20 }}>
-                <img src={flag3} width="100%" height="70%" className='image-timeline'></img>
+                <img src={flag3} width="100%" height="100%" className='image-timeline'></img>
                 <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>Australia</h3>
                 <h5 className='year-timeline'>2021</h5>
               </div>
               <div style={{ marginLeft: 20, marginRight: 20 }}>
-                <img src={flag4} width="100%" height="70%" className='image-timeline'></img>
+                <img src={flag4} width="100%" height="100%" className='image-timeline'></img>
                 <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>West Indies</h3>
                 <h5 className='year-timeline'>2016</h5>
               </div>
               <div style={{ marginLeft: 20, marginRight: 20 }}>
-                <img src={flag3} width="100%" height="70%" className='image-timeline'></img>
+                <img src={flag3} width="100%" height="100%" className='image-timeline'></img>
                 <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>Sri Lanka</h3>
                 <h5 className='year-timeline'>2014</h5>
               </div>
               <div style={{ marginLeft: 20, marginRight: 20 }}>
-                <img src={flag4} width="100%" height="70%" className='image-timeline'></img>
+                <img src={flag4} width="100%" height="100%" className='image-timeline'></img>
                 <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>West Indies</h3>
                 <h5 className='year-timeline'>2012</h5>
               </div>
               <div style={{ marginLeft: 20, marginRight: 20 }}>
-                <img src={flag3} width="100%" height="70%" className='image-timeline'></img>
+                <img src={flag3} width="100%" height="100%" className='image-timeline'></img>
                 <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>India</h3>
                 <h5 className='year-timeline'>2021</h5>
               </div>
               <div style={{ marginLeft: 20, marginRight: 20 }}>
-                <img src={flag4} width="100%" height="70%" className='image-timeline'></img>
+                <img src={flag4} width="100%" height="100%" className='image-timeline'></img>
                 <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>England</h3>
                 <h5 className='year-timeline'>2010</h5>
               </div>
               <div style={{ marginLeft: 20, marginRight: 20 }}>
-                <img src={flag4} width="100%" height="70%" className='image-timeline'></img>
+                <img src={flag4} width="100%" height="100%" className='image-timeline'></img>
                 <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>Pakistan</h3>
                 <h5 className='year-timeline'>2007</h5>
               </div>
               <div style={{ marginLeft: 20, marginRight: 20 }}>
-                <img src={flag3} width="100%" height="70%" className='image-timeline'></img>
+                <img src={flag3} width="100%" height="100%" className='image-timeline'></img>
                 <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>India</h3>
                 <h5 className='year-timeline'>2009</h5>
               </div>
               <div style={{ marginLeft: 20, marginRight: 20 }}>
-                <img src={flag3} width="100%" height="70%" className='image-timeline'></img>
+                <img src={flag3} width="100%" height="100%" className='image-timeline'></img>
                 <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>India</h3>
                 <h5 className='year-timeline'>2009</h5>
               </div>
               <div style={{ marginLeft: 20, marginRight: 20 }}>
-                <img src={flag3} width="100%" height="70%" className='image-timeline'></img>
+                <img src={flag3} width="100%" height="100%" className='image-timeline'></img>
                 <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>India</h3>
                 <h5 className='year-timeline'>2009</h5>
               </div>
             </div>
-          </marquee>
+         </marquee>
 
           <Link>
             <h3 className='see-more-home'>See More</h3>

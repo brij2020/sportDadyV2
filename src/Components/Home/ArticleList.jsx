@@ -66,13 +66,21 @@ const AricleList = () => {
           </div>
         </div>
         <div class="news two">
-          <div >
+
+          <div>
+            <div>
+            <img src={cricketimg1} />
+          
             <p className='news-para'>India vs Bangladesh Live: Bangladesh have lost seventh wickets against India on Day 3 of the ongoing second Test against India in Mirpur</p>
+            </div>
           </div>
         </div>
         <div class="news three">
           <div >
+           <div>
+            <img src={cricketimg1} />
             <p className='news-para'>India vs Bangladesh Live: Bangladesh have lost seventh wickets against India on Day 3 of the ongoing second Test against India in Mirpur</p>
+            </div>
           </div>
         </div>
         <div class="news four">
