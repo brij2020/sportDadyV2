@@ -202,8 +202,9 @@ function Home() {
       </AnimationOnScroll>
 
       {/* video  */}
-      <AnimationOnScroll animateIn="animate__bounceInRight ">
-        <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
+      <AnimationOnScroll animateIn="animate__bounceInRight " style={{    "animation-duration": "1s",
+      background: `rgb(211 234 255)`}}>
+        <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94',boxShadow:"none" }}>
           <h2 className='heading'>Video Hub</h2>
 
           <div class="containerv">
