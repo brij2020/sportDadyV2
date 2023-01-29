@@ -35,7 +35,9 @@ import video from './cricket.mp4';
 import LiveScoreComponet from '../Components/Home/LiveScore'
 import AricleList from '../Components/Home/ArticleList'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import ICCRanking from '../Components/IccRankings'
+import ICCRanking from '../Components/IccRankings';
+import Gamebox from '../Components/Home/Gamebox';
+
 function Home() {
 
   const [team, setTeam] = useState(true)
@@ -441,8 +443,13 @@ function Home() {
         </div>
 
       </AnimationOnScroll>
+{/* Start Other Game Section  */}
 
+<Gamebox/>
+{/* End Other Game Section   */}
       {/* Quiz  */}
+
+      
       <AnimationOnScroll animateIn="animate__zoomInUp">
         <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
           <h2 className='heading'>Quiz - Ask an interesting question</h2>
