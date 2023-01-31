@@ -177,7 +177,7 @@ function Home() {
   ]
 
   return (
-    <div style={{ marginBottom: 20 }}>
+    <div style={{ marginBottom: 20 }} id="main-app">
       <div id='top'>
         <ResponsiveSlider slides={images} />
       </div>
@@ -194,7 +194,7 @@ function Home() {
       
 
       {/* Latest News and Articles */}
-      <AnimationOnScroll animateIn="animate__slideInLeft ">
+     <AnimationOnScroll animateIn="animate__fadeInUpBig ">
         <div className='bg-section'>
           <h2 className='heading'>Latest News and Articles</h2>
           <AricleList />
@@ -202,8 +202,9 @@ function Home() {
       </AnimationOnScroll>
 
       {/* video  */}
-      <AnimationOnScroll animateIn="animate__bounceInRight " style={{    "animation-duration": "1s",
+      <AnimationOnScroll animateIn="animate__fadeInUpBig " style={{    "animation-duration": "1s",
       background: `rgb(211 234 255)`}}>
+  
         <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94',boxShadow:"none" }}>
           <h2 className='heading'>Video Hub</h2>
 
@@ -261,7 +262,7 @@ function Home() {
       </AnimationOnScroll>
 
       {/* photos  */}
-      <AnimationOnScroll animateIn="animate__backInDown ">
+      <AnimationOnScroll animateIn="animate__fadeInUpBig ">
         <div className='bg-section'>
           <h2 className='heading'>Photos Gallery</h2>
           <div class="containerv">
@@ -322,7 +323,7 @@ function Home() {
       </AnimationOnScroll>
 
       {/* world timeline  */}
-      <AnimationOnScroll animateIn="animate__lightSpeedInRight ">
+      <AnimationOnScroll animateIn="animate__fadeInUpBig ">
         <div className='bg-section-time-line' >
           <h2 className='heading'>T20 WORLD CUP TIMELINE</h2>
           <marquee behavior="alternate">
@@ -388,7 +389,7 @@ function Home() {
       </AnimationOnScroll>
 
       {/* Quiz  */}
-      <AnimationOnScroll animateIn="animate__zoomInUp">
+      <AnimationOnScroll animateIn="animate__fadeInUpBig ">
         <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
           <h2 className='heading'>Quiz - Ask an interesting question</h2>
           <div className='quiz-section'>
@@ -427,7 +428,7 @@ function Home() {
       </AnimationOnScroll>
 
       {/*cricket news Editorials */}
-      <AnimationOnScroll animateIn="animate__pulse ">
+      <AnimationOnScroll animateIn="animate__fadeInUpBig ">
         <div className='bg-section'>
           <h2 className='heading'>Cricket News and Editorials</h2>
           <div className='new-part'>
@@ -484,7 +485,7 @@ function Home() {
       </AnimationOnScroll>
 
       {/* India National Cricket Team */}
-      <AnimationOnScroll animateIn="animate__fadeInBottomRight ">
+      <AnimationOnScroll animateIn="animate__fadeInUpBig ">
         <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
           <h2 className='heading'>India National Cricket Team</h2>
           <Row className="team-part">
@@ -510,7 +511,7 @@ function Home() {
       </AnimationOnScroll>
 
       {/* Our Cricket Teams */}
-      <AnimationOnScroll animateIn="animate__lightSpeedInLeft ">
+      <AnimationOnScroll animateIn="animate__fadeInUpBig ">
         <div className='bg-section'>
           <div className='d-flex justify-content-around'>
             <div className='see-more-home'>{" "}</div>
@@ -539,7 +540,7 @@ function Home() {
       </AnimationOnScroll>
 
       {/* Cricket Players (Our Heroes) */}
-      <AnimationOnScroll animateIn="animate__jackInTheBox ">
+      <AnimationOnScroll animateIn="animate__fadeInUpBig ">
         <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
           <div className='d-flex justify-content-around'>
             <div className='see-more-home'>{" "}</div>
