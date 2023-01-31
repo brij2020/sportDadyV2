@@ -56,7 +56,7 @@ return(<>
                 <a href="/" className="main-navigation__logo" title="label.returnToHomepage">
                     <img src={img} width="60" height="60" alt="logo"/>
                 </a>
-             <div className="main-navigation__desktop-navigation u-show-desktop">
+             <div className="main-navigation__desktop-navigation u-hide-desktop">
 
 
                 <nav id="" className="main-navigation__desktop-list js-desktop-nav" aria-label="Header Navigation"
