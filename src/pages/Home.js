@@ -36,7 +36,8 @@ import LiveScoreComponet from '../Components/Home/LiveScore'
 import AricleList from '../Components/Home/ArticleList'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import ICCRanking from '../Components/IccRankings'
-import MatchSchedule from "../Components/MatchSchdule"
+import MatchSchedule from "../Components/MatchSchdule";
+import OtherGame from '../Components/OtherGame'
 function Home() {
 
   const [team, setTeam] = useState(true)
@@ -191,8 +192,10 @@ function Home() {
           <h2 className='heading'>Cricket Schedule</h2>
         <MatchSchedule data={Data}/>
         </div>
-      
-
+        
+       
+       
+        
       {/* Latest News and Articles */}
      <AnimationOnScroll animateIn="animate__fadeInUpBig ">
         <div className='bg-section'>
@@ -513,25 +516,25 @@ function Home() {
       {/* Our Cricket Teams */}
       <AnimationOnScroll animateIn="animate__fadeInUpBig ">
         <div className='bg-section'>
-          <div className='d-flex justify-content-around'>
+          <div className='d-flex justify-content-around '>
             <div className='see-more-home'>{" "}</div>
             <h2 className='heading'>Our Cricket Teams</h2>
             <Link>
               <h3 className='see-more-home'>See More</h3>
             </Link>
           </div>
-          <div className='d-flex justify-content-around'>
+          <div className='d-flex justify-content-around m-cr-team'>
             <div className='team-img' style={{ width: '100%', height: '100%', margin: 20 }}>
-              <img src={cricketimg1} width="100%" height="100%"></img>
+              <img src={cricketimg1} width="100%" height="100%" className="ourteam"></img>
               <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10 }}>Indian Cricket Team Players</h2>
             </div>
 
             <div className='team-img' style={{ width: '100%', height: '100%', margin: 20 }}>
-              <img src={usteam} width="100%" height="100%"></img>
+              <img src={usteam} width="100%" height="100%"  className="ourteam"></img>
               <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10 }}>Us Cricket Team Players</h2>
             </div>
             <div className='team-img' style={{ width: '100%', height: '100%', margin: 20 }}>
-              <img src={newzteam} width="100%" height="100%"></img>
+              <img src={newzteam} width="100%" height="100%"  className="ourteam"></img>
               <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10 }}>NewZeland Cricket Team Players</h2>
             </div>
 
@@ -539,67 +542,13 @@ function Home() {
         </div>
       </AnimationOnScroll>
 
-      {/* Cricket Players (Our Heroes) */}
-      <AnimationOnScroll animateIn="animate__fadeInUpBig ">
-        <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
-          <div className='d-flex justify-content-around'>
-            <div className='see-more-home'>{" "}</div>
-            <h2 className='heading'>Cricket Players (Our Heroes)</h2>
-            <Link>
-              <h3 className='see-more-home'>See More</h3>
-            </Link>
-          </div>
-          <Row style={{ marginTop: -20 }}>
-            <Col xs={4}>
-              <div className='player-card'>
-                <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
-                <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Ab de villiers</h3>
-              </div>
-              <div className='player-card'>
-                <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
-                <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Ab de villiers</h3>
-              </div>
-              <div className='player-card'>
-                <img src={david} width="75%" height="100%" style={{ alignSelf: 'center' }}></img>
-                <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>David warner</h3>
-              </div>
-
-            </Col>
-            <Col xs={4}>
-              <div className='player-card'>
-                <img src={chris} width="70%" height="100%" style={{ alignSelf: 'center' }}></img>
-                <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Chris Jordanr</h3>
-              </div>
-              <div className='player-card'>
-                <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
-                <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Ab de villiers</h3>
-              </div>
-              <div className='player-card'>
-                <img src={david} width="75%" height="100%" style={{ alignSelf: 'center' }}></img>
-                <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>David warner</h3>
-              </div>
-
-            </Col>
-            <Col xs={4}>
-              <div className='player-card'>
-                <img src={david} width="75%" height="100%" style={{ alignSelf: 'center' }}></img>
-                <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>David warner</h3>
-              </div>
-              <div className='player-card'>
-                <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
-                <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Ab de villiers</h3>
-              </div>
-              <div className='player-card'>
-                <img src={abdev} width="75%" height="110%" style={{ alignSelf: 'center' }}></img>
-                <h3 style={{ alignSelf: 'center', color: '#fff', width: 70, }}>Ab de villiers</h3>
-              </div>
-
-            </Col>
-          </Row>
-
+      {/* Other Games*/}
+        <AnimationOnScroll animateIn="animate__fadeInUpBig " style={{background:'#162052!important'}}>
+        <div className='bg-section'>
+          <h2 className='heading'>Other Games</h2>
+         <OtherGame />
         </div>
-      </AnimationOnScroll>
-
+        </AnimationOnScroll>
       {/* download app section  */}
       {/* <AnimationOnScroll animateIn="animate__jackInTheBox" > */}
         <div className='bg-section'>

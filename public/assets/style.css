@@ -174,21 +174,74 @@ a {
     transition: 0.5s;
 }
 
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.ourteam {
+  --border-size: 3px;
+  --border-angle: 0turn;
+      padding: 3px;
+  width: 60vmin;
+  height: 50vmin;
+  background-image: conic-gradient(from var(--border-angle), #213, #112 50%, #213), conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+  background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)), cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-animation: bg-spin 3s linear infinite;
+          animation: bg-spin 3s linear infinite;
+}
+@-webkit-keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+@keyframes bg-spin {
+  to {
+    --border-angle: 1turn;
+  }
+}
+.ourteam:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
 .team-img {
     /* -webkit-box-reflect: below 7px linear-gradient(transparent, transparent, #0004); */
     transform-origin: center;
-    transform: perspective(750px) rotateY(18deg);
+/*    transform: perspective(750px) rotateY(18deg);*/
     transition: 0.5s;
 }
 
 .team-img:hover {
     /* -webkit-box-reflect: below 7px linear-gradient(transparent, transparent, #0004); */
     transform-origin: center;
-    transform: perspective(750px) rotateY(-18deg);
+/*    transform: perspective(750px) rotateY(-18deg);*/
     transition: 0.5s;
-    box-shadow: 5px 5px 5px 5px #323d94;
+/*    box-shadow: 5px 5px 5px 5px #323d94;*/
     cursor: pointer;
-    background: linear-gradient(to right, #fff, #000);
+/*    background: linear-gradient(to right, #fff, #000);*/
     border-radius: 20px;
 }
 
@@ -10759,6 +10812,21 @@ p a:focus{
     height: 11px;
     width: 30px;
   }
+  .main-other-game {
+    flex-direction: column;
+
+  }
+  div.main-other-game .containerothergane {
+    min-height: 26vh;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .boxothergame {
+    width: 200px !important;
+    height: 200px !important;
+    }
 }
 
 

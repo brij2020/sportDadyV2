@@ -712,8 +712,23 @@ img{
   img {
     width: 100%;
   }
-
+  .ourteam {
+      --border-size: 3px;
+      --border-angle: 0turn;
+      padding: 3px;
+      width: 84vmin;
+      height: 84vmin;
+      object-fit: cover;
+      flex-direction: column;
+  }
+  .m-cr-team{
+    flex-direction: column;
+  }
+  .rankings-card__player-image{
+    width: 52% !important;
+  }
 }
+
 
 @media all and (min-width:0px) and (max-width: 320px) {
 
