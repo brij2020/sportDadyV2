@@ -224,11 +224,46 @@ div.rotate_left {
   justify-content: space-between !important;
 }
 
+.live-card {
+  /* width: 80%; */
+}
+
+.l-card {
+  margin-top: 20px !important;
+  width: 100% !important;
+  height: 190px !important;
+  background: linear-gradient(to right, #000, #fb0f0f);
+  border-radius: 20px !important;
+  padding: 15px;
+  /* padding-top: 35px; */
+}
+
+.l-card:hover {
+  box-shadow: 5px 5px 5px 5px #323d94;
+  cursor: pointer;
+  background: linear-gradient(to right, #323d94, #000);
+}
+
 .live-section {
-  display: flex;
-  margin: 10px;
-  width: '100%';
   margin-top: 20px;
+  width: 95% !important;
+  /* height: 92% !important; */
+  background: linear-gradient(to right, #000, #fb0f0f);
+  border-radius: 20px;
+  padding: 22px;
+  padding-top: 35px;
+  rotate: 1deg;
+  -webkit-box-reflect: below 7px linear-gradient(transparent, transparent, #0004);
+  transform-origin: center;
+  transform: perspective(761px) rotateY(21deg);
+  transition: 0.5s;
+}
+
+.live-section:hover {
+  box-shadow: 5px 5px 5px 5px #323d94;
+  cursor: pointer;
+  background: linear-gradient(to right, #323d94, #000);
+  transform: perspective(761px) rotateY(-6deg);
 }
 
 .see-more {
@@ -448,7 +483,7 @@ a.nav-link.active {
   grid-row-end: 3;
 }
 
-.img-wrapper{
+.img-wrapper {
   width: 48px;
   display: flex;
   align-items: center;
@@ -456,7 +491,7 @@ a.nav-link.active {
 
 
 
-.link-wrapper{
+.link-wrapper {
   background: #111;
   color: #E1E1E1 !important;
   width: 185px;
@@ -471,7 +506,7 @@ a.nav-link.active {
   align-items: center;
 }
 
-.wrapper{
+.wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -482,7 +517,7 @@ a.nav-link.active {
   margin: auto;
 }
 
-.content-wrapper{
+.content-wrapper {
   display: flex;
   justify-content: flex-start;
   margin-left: 18px;
@@ -600,12 +635,90 @@ a.nav-link.active {
   bottom: 0;
 }
 
+.mobile-score {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .cardWrapper {
     flex-direction: column;
   }
+
   .card {
     margin-top: 3em;
   }
 }
+
+@media only screen and (max-width: 450px) {
+  #live {
+    background: #e6e9f3;
+    width: '100%';
+    /* margin-top: 5px; */
+    padding: 22px 20px 22px 20px;
+  }
+
+  .live-section {
+    margin-top: 20px;
+    width: 95% !important;
+    /* height: 92% !important; */
+    background: linear-gradient(to right, #000, #fb0f0f);
+    border-radius: 20px;
+    padding: 22px;
+    padding-top: 35px;
+    rotate: 1deg;
+    -webkit-box-reflect: below 7px linear-gradient(transparent, transparent, #0004);
+    transform-origin: center;
+    transform: perspective(761px) rotateY(21deg);
+    transition: 0.5s;
+    margin-left: -100px;
+  }
+
+  .web-score {
+    display: none;
+  }
+
+  .mobile-score {
+    display: block;
+  }
+
+  .l-text-info {
+    display: none;
+  }
+
+  .list-section {
+    /* border-bottom: 2px solid #e6e9f3; */
+    /* margin-bottom: -7px; */
+    padding: 0px 6px 0px 6px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .color-circle {
+    height: 45px;
+    width: 45px;
+    background: blue;
+    padding: 9px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .l-text {
+    font-size: 15px;
+    color: #000;
+    padding-left: 25px;
+  }
+
+  .screen {
+    border-radius: 40px;
+   margin: auto;
+   
+  }
+  .screen-text{
+  margin-left: -70px !important;
+  margin-top: 20px;
+  }
+}
+
 /* end other game card section*/

@@ -265,9 +265,9 @@ function LiveCommentry() {
                     Perth Scorchers vs Melbourne Renegades, 52nd Match - Live Cricket Score, Commentary
                 </h1>
                 <div className='d-flex justify-content-around'>
-                    <p className='text'><strong>Series: </strong>Big Bash League 2022-23</p>
-                    <p className='text'><strong>Venue: </strong>Perth Stadium, Perth</p>
-                    <p className='text'><strong>Date & Time: </strong>Jan 22, 04:15 PM LOCAL</p>
+                    <p className='text l-text-info'><strong>Series: </strong>Big Bash League 2022-23</p>
+                    <p className='text l-text-info'><strong>Venue: </strong>Perth Stadium, Perth</p>
+                    <p className='text l-text-info'><strong>Date & Time: </strong>Jan 22, 04:15 PM LOCAL</p>
                 </div>
                 <Nav justify variant="tabs" defaultActiveKey="/home" className='mt-2'>
                     <Nav.Item id="tablinks" onmouseover="openCity(event, 'London')">
@@ -354,7 +354,7 @@ function LiveCommentry() {
                 {commentry == true ?
                     < div style={{ boxShadow: '1px 2px 9px #c93a3e', marginTop: 25, borderRadius: 40, padding: 10, marginBottom: 25 }}>
                         <div className='d-flex'>
-                            <div style={{ padding: 17 }}>
+                            <div style={{ padding: 17 }} className="web-score">
                                 <h2 className='black-head'>PRS 212/5 (20)</h2>
                                 <h2 className='gray-head'>MLR 202/5 (20)</h2>
                                 <p className='blue-text'>Perth Scorchers won by 10 runs</p>
@@ -363,6 +363,7 @@ function LiveCommentry() {
                                     <p className='text'>Cameron Bancroft</p>
                                 </div>
                             </div>
+
                             <div className='screen'>
                                 <div className='d-flex justify-content-between' style={{ padding: 10 }}>
                                     <div>
@@ -395,6 +396,15 @@ function LiveCommentry() {
                                 <p className='screen-text'>4 Run</p>
                             </div>
                         </div>
+                        <div style={{ padding: 17 }} className="mobile-score">
+                            <h2 className='black-head'>PRS 212/5 (20)</h2>
+                            <h2 className='gray-head'>MLR 202/5 (20)</h2>
+                            <p className='blue-text'>Perth Scorchers won by 10 runs</p>
+                            <div style={{ marginTop: 20 }}>
+                                <h5 className='black-head'>PLAYER OF THE MATCH</h5>
+                                <p className='text'>Cameron Bancroft</p>
+                            </div>
+                        </div>
                         <hr className='hr-line' />
                         {CommentaryData.map((item) => (
                             <div>
@@ -405,7 +415,7 @@ function LiveCommentry() {
                                         </p >
                                     </Col>
                                     <Col xs={11}>
-                                        <p className='text'>
+                                        <p className='text l-text'>
                                             {item.commentry}
                                         </p >
                                     </Col>
@@ -614,7 +624,7 @@ function LiveCommentry() {
                                         </div>
 
                                         <h4 style={{ backgroundColor: "GhostWhite", padding: 18, paddingLeft: 30, fontWeight: "bold", borderRadius: 30, margin: 5 }}>
-                                        Venue Guide
+                                            Venue Guide
                                         </h4>
                                         <div style={{ padding: 15, paddingLeft: 30 }}>
 
@@ -636,7 +646,7 @@ function LiveCommentry() {
                                         </div>
 
                                         <h4 style={{ backgroundColor: "GhostWhite", padding: 18, paddingLeft: 30, fontWeight: "bold", borderRadius: 30, margin: 5 }}>
-                                        Broadcast Guide
+                                            Broadcast Guide
                                         </h4>
                                         <div style={{ padding: 15, paddingLeft: 30 }}>
 

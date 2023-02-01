@@ -81,28 +81,6 @@ p.plain-list {
     color: gray;
 }
 
-.live-card {
-    width: 430px;
-    background: linear-gradient(to right, #000, #fb0f0f);
-    border-radius: 20px;
-    padding: 22px;
-    padding-top: 40px;
-    rotate: 1deg;
-    -webkit-box-reflect: below 7px linear-gradient(transparent, transparent, #0004);
-    transform-origin: center;
-    transform: perspective(761px) rotateY(21deg);
-    transition: 0.5s;
-
-}
-
-.live-card:hover {
-    box-shadow: 5px 5px 5px 5px #323d94;
-    cursor: pointer;
-    background: linear-gradient(to right, #323d94, #000);
-    transform: perspective(761px) rotateY(-6deg);
-
-}
-
 .flag-contain {
     display: flex;
     justify-content: space-evenly;
@@ -675,3 +653,8 @@ h3 {
     border-right-color: #F7F9F8;
     border-left-color: #F7F9F8;
 }
+
+@media screen and (min-width: 480px) {
+    #leftsidebar {width: 200px; float: left;}
+    #main {margin-left: 216px;}
+  }

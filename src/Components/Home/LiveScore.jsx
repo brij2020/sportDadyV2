@@ -15,7 +15,7 @@ const LiveScoreComponet = (props) => {
       <div className='bg-section' id="live">
         <h2 className='heading' >Live Cricket Score</h2>
         <marquee behavior="alternate">
-          <div className='d-flex hello'>
+          <div className='d-flex mb-4'>
 
             <Link to="live-commentry">
               <div className='live-section'>
