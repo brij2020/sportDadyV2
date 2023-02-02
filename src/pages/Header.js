@@ -45,7 +45,7 @@ const Header = (props) => {
         console.log("hello")
         setIsmWebOpen(!ismwebOpen)
     }
-console.log("isMobile")
+// u-body-no-scroll
 return(<>
         <section className={`main-navigation__wrapper `} style={{ background: `radial-gradient(circle,
             rgba(51,13,241,0.9752275910364145) 3%, rgba(249,0,109,0.9752275910364145) 98%)` }}>
