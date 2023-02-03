@@ -3786,12 +3786,24 @@ p a:focus{
     height:66%;
     background:radial-gradient(108.77% 83.78% at 0 100%,#0d1635 0,rgba(13,22,53,.97917) 4.7%,rgba(13,22,53,.95603) 8.9%,rgba(13,22,53,.9296) 12.8%,rgba(13,22,53,.898904) 16.56%,rgba(13,22,53,.862963) 20.37%,rgba(13,22,53,.8208) 24.4%,rgba(13,22,53,.771437) 28.83%,rgba(13,22,53,.713896) 33.84%,rgba(13,22,53,.6472) 39.6%,rgba(13,22,53,.57037) 46.3%,rgba(13,22,53,.48243) 54.1%,rgba(13,22,53,.3824) 63.2%,rgba(13,22,53,.269304) 73.76%,rgba(13,22,53,.142163) 85.97%,rgba(13,22,53,0) 100%)
 }
+:root{
+    --fontColorArt: #AE0E36FF;
+}
 .lead-media-item__container{
     position:absolute;
-    bottom:0;
+    bottom:-100%;
     left:0;
-    padding:3.2rem
+    padding:3.2rem;
+    transition: all .5s ease-out;
 }
+.lead-media-item__link:hover > .lead-media-item__container {
+    bottom:0;
+    
+}
+
+
+
+
 .lead-media-item__tag{
     padding:2.4rem 0;
     margin-bottom:1.6rem;
@@ -3799,7 +3811,7 @@ p a:focus{
 }
 .lead-media-item__tag-text{
     font-size:1.2rem;
-    color:hsla(0,0%,100%,.8)
+    color:var(--fontColorArt)
 }
 .lead-media-item__tag.theme{
     padding-left:5.6rem!important
@@ -3825,7 +3837,7 @@ p a:focus{
     max-height:52.8rem;
     display:-webkit-box;
     -webkit-line-clamp:3;
-    color:#fff
+    color:#fff;
 }
 .lead-media-item__date{
     font-size:1.2rem;
@@ -3884,7 +3896,7 @@ p a:focus{
             display:block;
             content:"";
             width:100%;
-            padding-top:NaN%
+            padding-top:0%
         }
     }
     .lead-media-item__image-container{
@@ -3927,10 +3939,15 @@ p a:focus{
         color:#fff
     }
     .lead-media-item__container{
-        z-index:1;
-        padding:1.6rem;
-        margin-top:-8rem;
-        position:relative
+        z-index: 1;
+        padding: 1.6rem;
+        margin-top: -20rem;
+        position: relative;
+        overflow: hidden;
+        top: 100%;
+        transition: all .3s ease-out;
+        background: #fdf1f100;
+        height: 100%;
     }
     .lead-media-item .theme{
         padding-left:5.2rem!important
@@ -5113,7 +5130,7 @@ p a:focus{
     bottom:0
 }
 .media-thumbnail__meta{
-    padding:1.6rem
+    padding:1.6rem;
 }
 .media-thumbnail__tag{
     font-size:1.2rem;
@@ -10847,4 +10864,12 @@ p a:focus{
     .slider-backward-arrow {
         display: none;
     }
+}
+body {
+    overflow:   scroll;/* Hide scrollbars */
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
 }

@@ -18,6 +18,9 @@ import flag1 from '../assets/icons/us.png';
 import flag2 from '../assets/icons/nami.png';
 import flag3 from '../assets/icons/flag1.png';
 import flag4 from '../assets/icons/flag2.png';
+import flagW from '../assets/icons/teamW.jpeg';
+
+
 import newzteam from '../assets/images/teams/newzteam.jpeg';
 import usteam from '../assets/images/teams/usteam.jpg';
 import abdev from '../assets/images/players/abdev.png';
@@ -58,7 +61,17 @@ function Home() {
 
   const Data = [
     {
-      heading: 'SUN, NOV 27 2022',
+      heading: 'SUN, NOV 23 2022',
+      matches: 'India vs Pakistan, 2nd ODI',
+      player: 'Rohit Sharma, Baber Azam',
+      date_2: '01:30 AM GMT / 02:30 PM LOCAL',
+      date: '7:00 AM',
+      img: flagW,
+      img2: flag4,
+
+    },
+    {
+      heading: 'TUE, NOV 22 2023',
       matches: 'India vs Pakistan, 2nd ODI',
       player: 'Rohit Sharma, Baber Azam',
       date_2: '01:30 AM GMT / 02:30 PM LOCAL',
@@ -68,23 +81,13 @@ function Home() {
 
     },
     {
-      heading: 'SUN, NOV 27 2022',
+      heading: 'MON, NOV 21 2022',
       matches: 'India vs Pakistan, 2nd ODI',
       player: 'Rohit Sharma, Baber Azam',
       date_2: '01:30 AM GMT / 02:30 PM LOCAL',
       date: '7:00 AM',
       img: flag3,
-      img2: flag4,
-
-    },
-    {
-      heading: 'SUN, NOV 27 2022',
-      matches: 'India vs Pakistan, 2nd ODI',
-      player: 'Rohit Sharma, Baber Azam',
-      date_2: '01:30 AM GMT / 02:30 PM LOCAL',
-      date: '7:00 AM',
-      img: flag3,
-      img2: flag4,
+      img2: flagW,
 
     },
 
@@ -199,7 +202,7 @@ function Home() {
         
       {/* Latest News and Articles */}
      
-        <div className='bg-section'>
+        <div className='bg-section' style={{background:"#060606"  }}>
           <h2 className='heading'>Latest News and Articles</h2>
           <AricleList />
         </div>

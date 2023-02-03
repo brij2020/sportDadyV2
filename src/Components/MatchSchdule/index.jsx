@@ -12,18 +12,18 @@ const MatchSchedule = (props) => {
         		console.log('slide', slide)
         			return(
         				<>
-			<div className="blog-slider__item swiper-slide">
+			    <div className="blog-slider__item swiper-slide">
             <div className="blog-slider__img">
                <div className='d-flex' style={{ 
                	flexDirection: "column",
-    			marginTop: "23px"
+    			      marginTop: "23px"
                }}>
                 <img src={slide.img} style={{
                   width: "100px",
-			    height: "100px",
-			    marginRight: "5px",
-			    flexDirection: "column",
-			    marginLeft: "100px"
+                  height: "100px",
+                  marginRight: "5px",
+                  flexDirection: "column",
+                  marginLeft: "100px"
                 }}></img>
                 <h4 style={{
                   alignSelf: 'center',
@@ -34,10 +34,10 @@ const MatchSchedule = (props) => {
                 </h4>
                 <img src={slide.img2} style={{
                   width: "100px",
-				    height: "100px",
-				    marginRight: "5px",
-				    flexDirection: "column",
-				    marginLeft: "100px"
+                  height: "100px",
+                  marginRight: "5px",
+                  flexDirection: "column",
+                  marginLeft: "100px"
                 }}></img>
                       </div>
               {/*<img src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759872/kuldar-kalvik-799168-unsplash.jpg" alt="" />*/}
