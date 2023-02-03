@@ -38,6 +38,7 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 import ICCRanking from '../Components/IccRankings'
 import MatchSchedule from "../Components/MatchSchdule";
 import OtherGame from '../Components/OtherGame'
+import TimeLine from '../Components/TimeLine'
 function Home() {
 
   const [team, setTeam] = useState(true)
@@ -197,17 +198,15 @@ function Home() {
        
         
       {/* Latest News and Articles */}
-     <AnimationOnScroll animateIn="animate__fadeInUpBig ">
+     
         <div className='bg-section'>
           <h2 className='heading'>Latest News and Articles</h2>
           <AricleList />
         </div>
-      </AnimationOnScroll>
+     
 
       {/* video  */}
-      <AnimationOnScroll animateIn="animate__fadeInUpBig " style={{    "animation-duration": "1s",
-      background: `rgb(211 234 255)`}}>
-  
+      
         <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94',boxShadow:"none" }}>
           <h2 className='heading'>Video Hub</h2>
 
@@ -262,10 +261,10 @@ function Home() {
           </div>
 
         </div>
-      </AnimationOnScroll>
+    
 
       {/* photos  */}
-      <AnimationOnScroll animateIn="animate__fadeInUpBig ">
+      
         <div className='bg-section'>
           <h2 className='heading'>Photos Gallery</h2>
           <div class="containerv">
@@ -316,83 +315,30 @@ function Home() {
           </div>
         </div>
 
-      </AnimationOnScroll>
+      
 
       {/* ranking  */}
-      <AnimationOnScroll animateIn="animate__fadeInUpBig ">
+      
     
        <ICCRanking />
       
-      </AnimationOnScroll>
+      
 
       {/* world timeline  */}
-      <AnimationOnScroll animateIn="animate__fadeInUpBig ">
+      
         <div className='bg-section-time-line' >
-          <h2 className='heading'>T20 WORLD CUP TIMELINE</h2>
-          <marquee behavior="alternate">
-            <div className='d-flex'>
-              <div style={{ marginLeft: 20, marginRight: 20 }}>
-                <img src={flag3} width="100%" height="100%" className='image-timeline'></img>
-                <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>Australia</h3>
-                <h5 className='year-timeline'>2021</h5>
-              </div>
-              <div style={{ marginLeft: 20, marginRight: 20 }}>
-                <img src={flag4} width="100%" height="100%" className='image-timeline'></img>
-                <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>West Indies</h3>
-                <h5 className='year-timeline'>2016</h5>
-              </div>
-              <div style={{ marginLeft: 20, marginRight: 20 }}>
-                <img src={flag3} width="100%" height="100%" className='image-timeline'></img>
-                <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>Sri Lanka</h3>
-                <h5 className='year-timeline'>2014</h5>
-              </div>
-              <div style={{ marginLeft: 20, marginRight: 20 }}>
-                <img src={flag4} width="100%" height="100%" className='image-timeline'></img>
-                <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>West Indies</h3>
-                <h5 className='year-timeline'>2012</h5>
-              </div>
-              <div style={{ marginLeft: 20, marginRight: 20 }}>
-                <img src={flag3} width="100%" height="100%" className='image-timeline'></img>
-                <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>India</h3>
-                <h5 className='year-timeline'>2021</h5>
-              </div>
-              <div style={{ marginLeft: 20, marginRight: 20 }}>
-                <img src={flag4} width="100%" height="100%" className='image-timeline'></img>
-                <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>England</h3>
-                <h5 className='year-timeline'>2010</h5>
-              </div>
-              <div style={{ marginLeft: 20, marginRight: 20 }}>
-                <img src={flag4} width="100%" height="100%" className='image-timeline'></img>
-                <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>Pakistan</h3>
-                <h5 className='year-timeline'>2007</h5>
-              </div>
-              <div style={{ marginLeft: 20, marginRight: 20 }}>
-                <img src={flag3} width="100%" height="100%" className='image-timeline'></img>
-                <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>India</h3>
-                <h5 className='year-timeline'>2009</h5>
-              </div>
-              <div style={{ marginLeft: 20, marginRight: 20 }}>
-                <img src={flag3} width="100%" height="100%" className='image-timeline'></img>
-                <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>India</h3>
-                <h5 className='year-timeline'>2009</h5>
-              </div>
-              <div style={{ marginLeft: 20, marginRight: 20 }}>
-                <img src={flag3} width="100%" height="100%" className='image-timeline'></img>
-                <h3 style={{ textAlign: 'center', color: 'black', marginTop: 10 }}>India</h3>
-                <h5 className='year-timeline'>2009</h5>
-              </div>
-            </div>
-         </marquee>
+          <h2 className='heading'>ODI WORLD CUP TIMELINE</h2>
+            <TimeLine />
 
           <Link>
             <h3 className='see-more-home'>See More</h3>
           </Link>
         </div>
 
-      </AnimationOnScroll>
+     
 
       {/* Quiz  */}
-      <AnimationOnScroll animateIn="animate__fadeInUpBig ">
+      
         <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
           <h2 className='heading'>Quiz - Ask an interesting question</h2>
           <div className='quiz-section'>
@@ -428,10 +374,10 @@ function Home() {
           </div>
         </div>
 
-      </AnimationOnScroll>
+      
 
       {/*cricket news Editorials */}
-      <AnimationOnScroll animateIn="animate__fadeInUpBig ">
+      
         <div className='bg-section'>
           <h2 className='heading'>Cricket News and Editorials</h2>
           <div className='new-part'>
@@ -485,10 +431,10 @@ function Home() {
           </div>
         </div>
 
-      </AnimationOnScroll>
+      
 
       {/* India National Cricket Team */}
-      <AnimationOnScroll animateIn="animate__fadeInUpBig ">
+      
         <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
           <h2 className='heading'>India National Cricket Team</h2>
           <Row className="team-part">
@@ -511,10 +457,10 @@ function Home() {
           </Row>
         </div>
 
-      </AnimationOnScroll>
+      
 
       {/* Our Cricket Teams */}
-      <AnimationOnScroll animateIn="animate__fadeInUpBig ">
+      
         <div className='bg-section'>
           <div className='d-flex justify-content-around '>
             <div className='see-more-home'>{" "}</div>
@@ -540,15 +486,15 @@ function Home() {
 
           </div>
         </div>
-      </AnimationOnScroll>
+      
 
       {/* Other Games*/}
-        <AnimationOnScroll animateIn="animate__fadeInUpBig " style={{background:'#162052!important'}}>
+        
         <div className='bg-section'>
           <h2 className='heading'>Other Games</h2>
          <OtherGame />
         </div>
-        </AnimationOnScroll>
+       
       {/* download app section  */}
       {/* <AnimationOnScroll animateIn="animate__jackInTheBox" > */}
         <div className='bg-section'>
