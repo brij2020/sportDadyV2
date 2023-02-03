@@ -318,10 +318,11 @@ function Home() {
       
 
       {/* ranking  */}
-      
+      <div className='bg-section-time-line' >
+          <h2 className='heading'>ICC Ranking</h2>
     
        <ICCRanking />
-      
+      </div>
       
 
       {/* world timeline  */}
