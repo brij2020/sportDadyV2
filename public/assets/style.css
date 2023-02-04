@@ -8666,7 +8666,7 @@ p a:focus{
     transition:padding .25s cubic-bezier(0,.4,.5,1)
 }
 .main-navigation__desktop-list>.linked-list>.linked-list__item>.linked-list__dropdown{
-    background-color:var(--bg-col);
+    background-color: rgb(50, 61, 148);
     border-top:.1rem solid hsla(0,0%,100%,.1);
     padding:4.8rem 0 0;
     margin-top:0;
