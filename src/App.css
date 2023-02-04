@@ -1035,11 +1035,9 @@ img{
   
   
   .search-form {
-      position: absolute;
-      top: 5px;
-      left: 94%;
+
       transform: translateX(0);
-      width: 600px;
+      width: 10%;
       height: 44px;
       opacity: 0;
       visibility: hidden;
