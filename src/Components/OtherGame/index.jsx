@@ -56,10 +56,6 @@ const OtherGame = (props) =>{
     
   </div>
 </div>
-
-    
-  
-
 </div>
 )
 }

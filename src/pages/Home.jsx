@@ -276,47 +276,95 @@ function Home() {
           <div class="divider"><span></span><span>Photos Gallery</span><span></span></div>
           <div class="containerv">
             <div class="main-box">
-              <div class="box one">
-                <img src={cricketimg1}
+              <div class="box img-gal">
+              <img src={cricketimg1}
                   height={"100%"}
-                  width={"100%"}>
+                  width={"100%"}
+                  
+              >
                 </img>
+                <div class="image-caption">
+                  <p>
+                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                  </p>
+                  </div>
               </div>
-              <div class="box two">
+              <div class="box img-gal">
                 <img src={cricketimg2}
+                  
+
                   height={"100%"}
                   width={"100%"}>
                 </img>
+                <div class="image-caption">
+                  <p>
+                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                  </p>
+                  </div>
               </div>
-              <div class="box three">
+              <div class="box img-gal">
                 <img src={img3}
+                  
+
                   height={"100%"}
                   width={"100%"}>
                 </img>
+                <div class="image-caption">
+                  <p>
+                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                  </p>
+                  </div>
               </div>
-              <div class="box four">
+              <div class="box img-gal">
                 <img src={img4}
+                  
+
                   height={"100%"}
                   width={"100%"}>
                 </img>
+                <div class="image-caption">
+                  <p>
+                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                  </p>
+                  </div>
               </div>
-              <div class="box five">
+              <div class="box five img-gal">
                 <img src={img7}
+                 
+
                   height={"100%"}
                   width={"100%"}>
                 </img>
+                <div class="image-caption">
+                  <p>
+                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                  </p>
+                  </div>
               </div>
-              <div class="box six">
+              <div class="box six img-gal">
                 <img src={img9}
+                  
                   height={"100%"}
                   width={"100%"}>
                 </img>
+                <div class="image-caption">
+                  <p>
+                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                  </p>
+                  </div>
               </div>
-              <div class="box six">
+              <div class="box six img-gal">
                 <img src={newzteam}
+                  
+
                   height={"100%"}
                   width={"100%"}>
                 </img>
+                <div class="image-caption">
+                  <p>
+                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                  </p>
+                  </div>
               </div>
             </div>
           </div>
@@ -482,18 +530,18 @@ function Home() {
             </Link>
           </div>
           <div className='d-flex justify-content-around m-cr-team'>
-            <div className='team-img' style={{ width: '100%', height: '100%', margin: 20 }}>
-              <img src={cricketimg1} width="100%" height="100%" className="ourteam"></img>
-              <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10 }}>Indian Cricket Team Players</h2>
+            <div className='team-img ourteam' style={{ width: '100%', height: '100%',marginTop:10 }}>
+              <img src={cricketimg1} width="100%" height="100%" ></img>
+              <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10, color:"#fff" }}>Indian Cricket Team Players</h2>
             </div>
 
-            <div className='team-img' style={{ width: '100%', height: '100%', margin: 20 }}>
-              <img src={usteam} width="100%" height="100%"  className="ourteam"></img>
-              <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10 }}>Us Cricket Team Players</h2>
+            <div className='team-img ourteam' style={{ width: '100%', height: '100%',marginTop:10 }}>
+              <img src={usteam} width="100%" height="100%"  ></img>
+              <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10,color:"#fff" }}>Us Cricket Team Players</h2>
             </div>
-            <div className='team-img' style={{ width: '100%', height: '100%', margin: 20 }}>
-              <img src={newzteam} width="100%" height="100%"  className="ourteam"></img>
-              <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10 }}>NewZeland Cricket Team Players</h2>
+            <div className='team-img ourteam' style={{ width: '100%', height: '100%',marginTop:10 }}>
+              <img src={newzteam} width="100%" height="100%"  ></img>
+              <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10, color:"#fff" }}>NewZeland Cricket Team Players</h2>
             </div>
 
           </div>
