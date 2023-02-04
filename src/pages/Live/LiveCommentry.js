@@ -536,7 +536,7 @@ function LiveCommentry() {
                                                     </p >
                                                 </Col>
                                                 <Col xs={11}>
-                                                    <p className='text'>
+                                                    <p className='text l-text'>
                                                         {item.commentry}
                                                     </p >
                                                 </Col>
