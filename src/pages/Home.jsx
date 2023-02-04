@@ -474,18 +474,18 @@ function Home() {
             </Link>
           </div>
           <div className='d-flex justify-content-around m-cr-team'>
-            <div className='team-img' style={{ width: '100%', height: '100%', margin: 20 }}>
-              <img src={cricketimg1} width="100%" height="100%" className="ourteam"></img>
-              <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10 }}>Indian Cricket Team Players</h2>
+            <div className='team-img ourteam' style={{ width: '100%', height: '100%',marginTop:10 }}>
+              <img src={cricketimg1} width="100%" height="100%" ></img>
+              <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10, color:"#fff" }}>Indian Cricket Team Players</h2>
             </div>
 
-            <div className='team-img' style={{ width: '100%', height: '100%', margin: 20 }}>
-              <img src={usteam} width="100%" height="100%"  className="ourteam"></img>
-              <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10 }}>Us Cricket Team Players</h2>
+            <div className='team-img ourteam' style={{ width: '100%', height: '100%',marginTop:10 }}>
+              <img src={usteam} width="100%" height="100%"  ></img>
+              <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10,color:"#fff" }}>Us Cricket Team Players</h2>
             </div>
-            <div className='team-img' style={{ width: '100%', height: '100%', margin: 20 }}>
-              <img src={newzteam} width="100%" height="100%"  className="ourteam"></img>
-              <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10 }}>NewZeland Cricket Team Players</h2>
+            <div className='team-img ourteam' style={{ width: '100%', height: '100%',marginTop:10 }}>
+              <img src={newzteam} width="100%" height="100%"  ></img>
+              <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10, color:"#fff" }}>NewZeland Cricket Team Players</h2>
             </div>
 
           </div>
