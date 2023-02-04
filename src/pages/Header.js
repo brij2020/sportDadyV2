@@ -50,13 +50,13 @@ const Header = (props) => {
 
         <div id="side-sticky-tab">
             <div>
-                <div class="textwidget">
-                    <div class="sticky-container">
-                        <div class="callout">
-                            <a class="support" href="/students/future/admissions/">Win to Cash</a>
+                <div className="textwidget">
+                    <div className="sticky-container">
+                        <div className="callout">
+                            <a className="support" href="/students/future/admissions/">Win to Cash</a>
                         </div>
-                        <div class="slideout">
-                            <div class="inner">
+                        <div className="slideout">
+                            <div className="inner">
                                 <p> <a href="/"> Apply Form </a></p>
 
                             </div>
@@ -74,6 +74,7 @@ const Header = (props) => {
                 <a href="/" className="main-navigation__logo" title="label.returnToHomepage">
                     <img src={img} width="60" height="60" alt="logo" />
                 </a>
+                
                 <div className="main-navigation__desktop-navigation u-hide-desktop">
 
 
@@ -98,7 +99,7 @@ const Header = (props) => {
 
                             <li className="linked-list__item   ">
                                 <a className="linked-list__link  is-active" href="/">
-                                <i class="fa fa-fw fa-home" style={{ fontSize: "25px"}}></i>
+                                <i className="fa fa-fw fa-home" style={{ fontSize: "25px"}}></i>
                                 </a>
                             </li>
 
@@ -1143,6 +1144,7 @@ const Header = (props) => {
                                     Download the Mobile App
                                 </a>
                             </li>
+                            <li className="linked-list__item"><a className="linked-list__link" href="#" id="search"><i class="fa fa-search"></i></a></li>
 
                             <li className="linked-list__item no-border u-show-desktop  ">
                                 <span className="linked-list__title">Explore ICC</span>
@@ -1225,6 +1227,12 @@ const Header = (props) => {
                     </a>
                 </div>
 
+                 <div className="search-form">
+                    <form>
+                        <input type="text" placeholder="Search" />
+                    </form> 
+                </div>
+                <a className="close"><i className="fa fa-times"></i></a>
                 <button className="hamburger js-sidebar-btn " type="button" aria-label="Menu"
                     aria-controls="sidebar-menu"
                     onClick={handleHamBurger}
@@ -1246,7 +1254,7 @@ const Header = (props) => {
 
                     <nav className="sub-menu">
                         <a className="sub-menu__link " href="/">
-                            <i class="fa fa-fw fa-home" style={{ fontSize: "20px"}}></i>
+                            <i className="fa fa-fw fa-home" style={{ fontSize: "20px"}}></i>
                         </a>
                         <a className="sub-menu__link " href="/livescore">
                             Scores
@@ -1294,7 +1302,7 @@ const Header = (props) => {
 
                         <li className="linked-list__item   ">
                             <a className="linked-list__link " href="/homepage">
-                            <i class="fa fa-fw fa-home" style={{ fontSize: "20px"}}></i>
+                            <i className="fa fa-fw fa-home" style={{ fontSize: "20px"}}></i>
                             </a>
                         </li>
 
@@ -2162,7 +2170,9 @@ const Header = (props) => {
                             </div>
                         </li>
                     </ul>
+                    
                 </nav>
+               
             </div>
         </section>
         <div className={`sidebar-nav js-navigation-sidebar u-hide-desktop ${isHamOpen ? 'is-open' : ""}`} data-widget="sidebar-navigation" data-initialised="true" aria-expanded="true" aria-hidden="true">
@@ -2246,7 +2256,8 @@ const Header = (props) => {
                         </a>
                     </li>
                 </ul>
-            </div>
+               
+                </div>
 
         </div>
     </>
