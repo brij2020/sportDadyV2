@@ -272,47 +272,95 @@ function Home() {
           <h2 className='heading'>Photos Gallery</h2>
           <div class="containerv">
             <div class="main-box">
-              <div class="box one">
-                <img src={cricketimg1}
+              <div class="box img-gal">
+              <img src={cricketimg1}
                   height={"100%"}
-                  width={"100%"}>
+                  width={"100%"}
+                  
+              >
                 </img>
+                <div class="image-caption">
+                  <p>
+                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                  </p>
+                  </div>
               </div>
-              <div class="box two">
+              <div class="box img-gal">
                 <img src={cricketimg2}
+                  
+
                   height={"100%"}
                   width={"100%"}>
                 </img>
+                <div class="image-caption">
+                  <p>
+                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                  </p>
+                  </div>
               </div>
-              <div class="box three">
+              <div class="box img-gal">
                 <img src={img3}
+                  
+
                   height={"100%"}
                   width={"100%"}>
                 </img>
+                <div class="image-caption">
+                  <p>
+                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                  </p>
+                  </div>
               </div>
-              <div class="box four">
+              <div class="box img-gal">
                 <img src={img4}
+                  
+
                   height={"100%"}
                   width={"100%"}>
                 </img>
+                <div class="image-caption">
+                  <p>
+                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                  </p>
+                  </div>
               </div>
-              <div class="box five">
+              <div class="box five img-gal">
                 <img src={img7}
+                 
+
                   height={"100%"}
                   width={"100%"}>
                 </img>
+                <div class="image-caption">
+                  <p>
+                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                  </p>
+                  </div>
               </div>
-              <div class="box six">
+              <div class="box six img-gal">
                 <img src={img9}
+                  
                   height={"100%"}
                   width={"100%"}>
                 </img>
+                <div class="image-caption">
+                  <p>
+                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                  </p>
+                  </div>
               </div>
-              <div class="box six">
+              <div class="box six img-gal">
                 <img src={newzteam}
+                  
+
                   height={"100%"}
                   width={"100%"}>
                 </img>
+                <div class="image-caption">
+                  <p>
+                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                  </p>
+                  </div>
               </div>
             </div>
           </div>

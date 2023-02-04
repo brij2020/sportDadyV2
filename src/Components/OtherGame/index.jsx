@@ -56,16 +56,6 @@ const OtherGame = (props) =>{
     
   </div>
 </div>
-<div class="containerothergane">
-  <div class="boxothergame">
-    <div class="contentothergame">
-     <img src={Wresling} alt="wresling" style={{ background: "white"}}/>
-      <h2>Wrestling <br /> <span>Wrestling description</span></h2>
-      <a href="#">View More</a>
-    </div>
-    
-  </div>
-</div>
 </div>
 )
 }
