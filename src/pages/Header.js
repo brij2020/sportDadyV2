@@ -98,7 +98,7 @@ const Header = (props) => {
 
                             <li className="linked-list__item   ">
                                 <a className="linked-list__link  is-active" href="/">
-                                    Home
+                                <i class="fa fa-fw fa-home" style={{ fontSize: "25px"}}></i>
                                 </a>
                             </li>
 
@@ -1245,17 +1245,17 @@ const Header = (props) => {
 
 
                     <nav className="sub-menu">
-                        <a className="sub-menu__link " href="https://www.icc-cricket.com/homepage">
-                            Home
+                        <a className="sub-menu__link " href="/">
+                            <i class="fa fa-fw fa-home" style={{ fontSize: "20px"}}></i>
                         </a>
-                        <a className="sub-menu__link " href="https://www.icc-cricket.com/mens-schedule/list">
+                        <a className="sub-menu__link " href="/livescore">
                             Scores
                         </a>
-                        <a className="sub-menu__link " href="https://www.icc-cricket.com/rankings/mens/player-rankings/t20i">
+                        <a className="sub-menu__link " href="#">
                             Rankings
                         </a>
                         <a className="sub-menu__link "
-                            href="https://www.icc-cricket.com/awards/icc-awards-2022/mens-emerging-player-of-the-year-2022">
+                            href="#">
                             Awards
                         </a>
                     </nav>
@@ -1294,7 +1294,7 @@ const Header = (props) => {
 
                         <li className="linked-list__item   ">
                             <a className="linked-list__link " href="/homepage">
-                                Home
+                            <i class="fa fa-fw fa-home" style={{ fontSize: "20px"}}></i>
                             </a>
                         </li>
 
