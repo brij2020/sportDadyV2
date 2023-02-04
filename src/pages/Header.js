@@ -8,6 +8,7 @@ import '../App.css';
 import img from './logo.png';
 import closeSVG from '../assets/svg/close_icon.svg'
 import rArrow from '../assets/svg/r-arrow.svg'
+import quiz from '../assets/images/quiz.gif'
 
 
 
@@ -57,7 +58,7 @@ const Header = (props) => {
                         </div>
                         <div class="slideout">
                             <div class="inner">
-                                <p> <a href="/"> Apply Form </a></p>
+                                 <a href="/"> <img src={quiz} width="100" height="100" alt='quiz' ></img></a>
 
                             </div>
                         </div>
