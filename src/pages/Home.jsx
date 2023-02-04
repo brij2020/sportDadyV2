@@ -23,21 +23,19 @@ import flagW from '../assets/icons/teamW.jpeg';
 
 import newzteam from '../assets/images/teams/newzteam.jpeg';
 import usteam from '../assets/images/teams/usteam.jpg';
-import abdev from '../assets/images/players/abdev.png';
+
 import apple from '../assets/icons/apple.png';
 import playstore from '../assets/icons/playstore.png';
-import chris from '../assets/images/players/chris.png';
-import david from '../assets/images/players/david.png';
+
 import ResponsiveSlider from '../Components/Slider'
 import ONE from '../assets/images/slides/banner.png'
 import TWO from '../assets/images/slides/India-win.png'
 import THREE from '../assets/images/slides/win.jpg'
-import Nav from 'react-bootstrap/Nav';
-import ReactPlayer from 'react-player/youtube'
+
 import video from './cricket.mp4';
 import LiveScoreComponet from '../Components/Home/LiveScore'
 import AricleList from '../Components/Home/ArticleList'
-import { AnimationOnScroll } from 'react-animation-on-scroll';
+
 import ICCRanking from '../Components/IccRankings'
 import MatchSchedule from "../Components/MatchSchdule";
 import OtherGame from '../Components/OtherGame'
