@@ -182,6 +182,9 @@ function Home() {
   ]
 
   return (
+
+
+    
     <div style={{ marginBottom: 20 }} id="main-app">
       <div id='top'>
         <ResponsiveSlider slides={images} />
@@ -193,7 +196,8 @@ function Home() {
       {/* Schedule */}
       
        <div className='plain-section'>
-          <h2 className='heading'>Cricket Schedule</h2>
+       <div class="divider"><span></span><span>Cricket Schedule</span><span></span></div>
+          
         <MatchSchedule data={Data}/>
         </div>
         
@@ -202,16 +206,16 @@ function Home() {
         
       {/* Latest News and Articles */}
      
-        <div className='bg-section' style={{background:"#060606"  }}>
-          <h2 className='heading'>Latest News and Articles</h2>
+        <div className='bg-section' style={{background:'#323d94'}}>
+        <div class="divider"><span></span><span>Latest News and Articles</span><span></span></div>
           <AricleList />
         </div>
-     
+        
 
       {/* video  */}
       
         <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94',boxShadow:"none" }}>
-          <h2 className='heading'>Video Hub</h2>
+        <div class="divider"><span></span><span>Video Hub</span><span></span></div>
 
           <div class="containerv">
             <div class="main-box">
@@ -265,11 +269,11 @@ function Home() {
 
         </div>
     
-
+        
       {/* photos  */}
       
-        <div className='bg-section'>
-          <h2 className='heading'>Photos Gallery</h2>
+        <div className='bg-section' style={{background:'#323d94'}}>
+          <div class="divider"><span></span><span>Photos Gallery</span><span></span></div>
           <div class="containerv">
             <div class="main-box">
               <div class="box one">
@@ -322,8 +326,8 @@ function Home() {
 
       {/* ranking  */}
       <div className='bg-section-time-line' >
-          <h2 className='heading'>ICC Ranking</h2>
-    
+          
+          <div class="divider"><span></span><span>ICC Ranking</span><span></span></div>
        <ICCRanking />
       </div>
       
@@ -331,7 +335,8 @@ function Home() {
       {/* world timeline  */}
       
         <div className='bg-section-time-line' >
-          <h2 className='heading'>ODI WORLD CUP TIMELINE</h2>
+          
+          <div class="divider"><span></span><span>ODI WORLD CUP TIMELINE</span><span></span></div>
             <TimeLine />
 
           <Link>
@@ -344,7 +349,8 @@ function Home() {
       {/* Quiz  */}
       
         <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
-          <h2 className='heading'>Quiz - Ask an interesting question</h2>
+          
+          <div class="divider"><span></span><span>Quiz</span><span></span></div>
           <div className='quiz-section'>
             <div class="polaroid rotate_right">
               <i className='fa fa-group'> {" "} 60k + Participants</i>
@@ -382,7 +388,7 @@ function Home() {
 
       {/*cricket news Editorials */}
       
-        <div className='bg-section'>
+        {/* <div className='bg-section'>
           <h2 className='heading'>Cricket News and Editorials</h2>
           <div className='new-part'>
             <Row>
@@ -433,14 +439,15 @@ function Home() {
               </Col>
             </Row>
           </div>
-        </div>
+        </div> */}
 
       
 
       {/* India National Cricket Team */}
       
-        <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
-          <h2 className='heading'>India National Cricket Team</h2>
+        {/* <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
+          
+          <div class="divider"><span></span><span>India National Cricket Team</span><span></span></div>
           <Row className="team-part">
             <Col xs={4}>
               <img className='news-img' src={cricketimg2} width="80%" height="auto"></img>
@@ -459,7 +466,7 @@ function Home() {
               </div>
             </Col>
           </Row>
-        </div>
+        </div> */}
 
       
 
@@ -468,7 +475,8 @@ function Home() {
         <div className='bg-section'>
           <div className='d-flex justify-content-around '>
             <div className='see-more-home'>{" "}</div>
-            <h2 className='heading'>Our Cricket Teams</h2>
+            
+            <div class="divider"><span></span><span>Our Cricket Teams</span><span></span></div>
             <Link>
               <h3 className='see-more-home'>See More</h3>
             </Link>
@@ -494,8 +502,8 @@ function Home() {
 
       {/* Other Games*/}
         
-        <div className='bg-section'>
-          <h2 className='heading'>Other Games</h2>
+        <div className='bg-section' style={{background:'#323d94'}}>
+          <div class="divider"><span></span><span>Other Games</span><span></span></div>
          <OtherGame />
         </div>
        
