@@ -1,11 +1,11 @@
 import * as React from "react";
 
 import './index.css'
-import FootBall from "../../assets/svg/football.avif"
+import FootBall from "../../assets/images/football.gif"
 import Hockey from "../../assets/svg/1350146.avif"
 import Kabbdi from "../../assets/svg/sports-kabaddi.svg"
 import Tennis from "../../assets/svg/tennis.avif"
-import Wresling from "../../assets/svg/wresling.avif"
+
 
 
 

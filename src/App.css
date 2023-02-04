@@ -117,7 +117,7 @@
 }
 
 .bg-section {
-  background: #e6e9f3;
+  background: #ffffff;
   width: '100%';
   /* margin-top: 5px; */
   padding: 22px 65px 22px 65px;
@@ -126,8 +126,8 @@
 .plain-section {
 /*  background: #fff;*/
   width: '100%';
-  padding: 20px 60px 15px 60px;
-  margin: 15px 65px 15px 65px;
+  padding: 10px 60px 5px 60px;
+  margin: 5px 65px 5px 65px;
   border-radius: 20px;
 }
 

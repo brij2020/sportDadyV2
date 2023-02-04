@@ -13,7 +13,7 @@ const LiveScoreComponet = (props) => {
   return (
 
       <div className='bg-section' id="live">
-        <h2 className='heading' >Live Cricket Score</h2>
+        <div class="divider"><span></span><span>Live Cricket Score</span><span></span></div>
         <marquee behavior="alternate">
           <div className='d-flex hello'>
 
