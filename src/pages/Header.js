@@ -16,7 +16,8 @@ const Header = (props) => {
     const [isMobile, setMobile] = React.useState(false);
     const [isHamOpen, setHamBurger] = React.useState(false);
     const [ismwebOpen, setIsmWebOpen] = React.useState(false);
-
+    const [isSearch, setSearch] = React.useState(false);
+    const handleSearch = (d) => setSearch(d)
     const handleHamBurger = () => {
         const bodyTag = document.querySelector('#main-app');
         const navSec = document.querySelector('.main-navigation__wrapper')
@@ -1145,7 +1146,9 @@ const Header = (props) => {
                                     Download the Mobile App
                                 </a>
                             </li>
-                            <li className="linked-list__item"><a className="linked-list__link" href="#" id="search"><i class="fa fa-search"></i></a></li>
+                            <li className="linked-list__item" onClick={e => handleSearch(true)}>
+                            {!isSearch ? (<a className="linked-list__link" href="#" id="search"><i class="fa fa-search"></i></a>) : null}
+                            </li>
 
                             <li className="linked-list__item no-border u-show-desktop  ">
                                 <span className="linked-list__title">Explore ICC</span>
@@ -1228,12 +1231,12 @@ const Header = (props) => {
                     </a>
                 </div>
 
-                 <div className="search-form">
+                 <div className={`search-form ${isSearch ? 'active': '' }`}>
                     <form>
                         <input type="text" placeholder="Search" />
                     </form> 
                 </div>
-                <a className="close"><i className="fa fa-times"></i></a>
+                <a className={`close ${isSearch ? 'active': '' }`} onClick={e => handleSearch(false) }><i className="fa fa-times"></i></a>
                 <button className="hamburger js-sidebar-btn " type="button" aria-label="Menu"
                     aria-controls="sidebar-menu"
                     onClick={handleHamBurger}
@@ -1257,6 +1260,7 @@ const Header = (props) => {
                         <a className="sub-menu__link " href="/">
                             <i className="fa fa-fw fa-home" style={{ fontSize: "20px"}}></i>
                         </a>
+                        {/*
                         <a className="sub-menu__link " href="/livescore">
                             Scores
                         </a>
@@ -1266,10 +1270,17 @@ const Header = (props) => {
                         <a className="sub-menu__link "
                             href="#">
                             Awards
-                        </a>
+                        </a>*/}
+                       
+                       {!isSearch ? <a className="sub-menu__link" href="#" id="search" onClick={e => handleSearch(true)} ><i class="fa fa-search"></i></a>:null}
+                         <div className={`search-form ${isSearch ? 'active':''}`}>
+                            <form>
+                                    <input type="text" placeholder="Search" />
+                                </form> 
+                            </div>
+                            <a className={`close ${isSearch?'active':''}`} onClick={e => handleSearch(false)}><i className="fa fa-times"></i></a>
                     </nav>
-
-
+                   
                 </div>
 
                 <button className={`hamburger js-mobile-nav-btn m-nav-cross ${ismwebOpen ? 'is-active' : ''} `} onClick={handleMWebNavToggel} type="button" aria-label="Menu" aria-controls="mobile-menu">
@@ -2173,7 +2184,7 @@ const Header = (props) => {
                     </ul>
                     
                 </nav>
-               
+                
             </div>
         </section>
         <div className={`sidebar-nav js-navigation-sidebar u-hide-desktop ${isHamOpen ? 'is-open' : ""}`} data-widget="sidebar-navigation" data-initialised="true" aria-expanded="true" aria-hidden="true">
