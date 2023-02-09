@@ -51,10 +51,10 @@ const Header = (props) => {
 
         <div id="side-sticky-tab">
             <div>
-                <div class="textwidget">
-                    <div class="sticky-container">
-                        <div class="callout">
-                            <a class="support" href="/students/future/admissions/">Win to Cash</a>
+                <div className="textwidget">
+                    <div className="sticky-container">
+                        <div className="callout">
+                            <a className="support" href="/students/future/admissions/">Win to Chance</a>
                         </div>
                         <div class="slideout">
                             <div class="inner">
@@ -75,6 +75,7 @@ const Header = (props) => {
                 <a href="/" className="main-navigation__logo" title="label.returnToHomepage">
                     <img src={img} width="60" height="60" alt="logo" />
                 </a>
+                
                 <div className="main-navigation__desktop-navigation u-hide-desktop">
 
 
@@ -99,7 +100,7 @@ const Header = (props) => {
 
                             <li className="linked-list__item   ">
                                 <a className="linked-list__link  is-active" href="/">
-                                    Home
+                                <i className="fa fa-fw fa-home" style={{ fontSize: "25px"}}></i>
                                 </a>
                             </li>
 
@@ -1144,6 +1145,7 @@ const Header = (props) => {
                                     Download the Mobile App
                                 </a>
                             </li>
+                            <li className="linked-list__item"><a className="linked-list__link" href="#" id="search"><i class="fa fa-search"></i></a></li>
 
                             <li className="linked-list__item no-border u-show-desktop  ">
                                 <span className="linked-list__title">Explore ICC</span>
@@ -1226,6 +1228,12 @@ const Header = (props) => {
                     </a>
                 </div>
 
+                 <div className="search-form">
+                    <form>
+                        <input type="text" placeholder="Search" />
+                    </form> 
+                </div>
+                <a className="close"><i className="fa fa-times"></i></a>
                 <button className="hamburger js-sidebar-btn " type="button" aria-label="Menu"
                     aria-controls="sidebar-menu"
                     onClick={handleHamBurger}
@@ -1246,17 +1254,17 @@ const Header = (props) => {
 
 
                     <nav className="sub-menu">
-                        <a className="sub-menu__link " href="https://www.icc-cricket.com/homepage">
-                            Home
+                        <a className="sub-menu__link " href="/">
+                            <i className="fa fa-fw fa-home" style={{ fontSize: "20px"}}></i>
                         </a>
-                        <a className="sub-menu__link " href="https://www.icc-cricket.com/mens-schedule/list">
+                        <a className="sub-menu__link " href="/livescore">
                             Scores
                         </a>
-                        <a className="sub-menu__link " href="https://www.icc-cricket.com/rankings/mens/player-rankings/t20i">
+                        <a className="sub-menu__link " href="#">
                             Rankings
                         </a>
                         <a className="sub-menu__link "
-                            href="https://www.icc-cricket.com/awards/icc-awards-2022/mens-emerging-player-of-the-year-2022">
+                            href="#">
                             Awards
                         </a>
                     </nav>
@@ -1295,7 +1303,7 @@ const Header = (props) => {
 
                         <li className="linked-list__item   ">
                             <a className="linked-list__link " href="/homepage">
-                                Home
+                            <i className="fa fa-fw fa-home" style={{ fontSize: "20px"}}></i>
                             </a>
                         </li>
 
@@ -2163,7 +2171,9 @@ const Header = (props) => {
                             </div>
                         </li>
                     </ul>
+                    
                 </nav>
+               
             </div>
         </section>
         <div className={`sidebar-nav js-navigation-sidebar u-hide-desktop ${isHamOpen ? 'is-open' : ""}`} data-widget="sidebar-navigation" data-initialised="true" aria-expanded="true" aria-hidden="true">
@@ -2247,7 +2257,8 @@ const Header = (props) => {
                         </a>
                     </li>
                 </ul>
-            </div>
+               
+                </div>
 
         </div>
     </>
