@@ -44,16 +44,6 @@ const timeLine = [
 
 const TimeLine = (props) => {
 	const [cricketTimeLine, setCricketTimeLine] = React.useState(timeLine);
-	React.useState(() => {
-		
-		const fn = () => { 
-			document.querySelector('.slick-prev slick-arrow')[0].addEventListener('click', (t) => {
-				console.log('target', t)
-			})
-        }
-        setTimeout(fn ,1000)
-	},[])
-
 	return(
 	<div className="page">
 	  <div className="views">

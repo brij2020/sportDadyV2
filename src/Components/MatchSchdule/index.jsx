@@ -16,7 +16,7 @@ const MatchSchedule = (props) => {
             <div className="blog-slider__img">
                <div className='d-flex' style={{ 
                	flexDirection: "row",
-    			      marginTop: "95px"
+    			      marginTop: "30px"
                }}>
                 <img src={slide.img} style={{
                   width: "100px",

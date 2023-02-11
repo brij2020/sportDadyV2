@@ -40,6 +40,8 @@ import ICCRanking from '../Components/IccRankings'
 import MatchSchedule from "../Components/MatchSchdule";
 import OtherGame from '../Components/OtherGame'
 import TimeLine from '../Components/TimeLine'
+import LiveScore from '../Components/LiveScore'
+import CC from '../Components/LiveScoreSlider'
 function Home() {
 
   const [team, setTeam] = useState(true)
@@ -183,13 +185,17 @@ function Home() {
 
 
     
-    <div style={{ marginBottom: 20 }} id="main-app">
+    <div style={{ marginBottom: 20 }} id="main-app" >
       <div id='top'>
-        <ResponsiveSlider slides={images} />
+        <LiveScore slides={images} />
       </div>
 
       {/* live */}
-      <LiveScoreComponet />
+      {/*<LiveScoreComponet />*/}
+      <div id='top'>
+        <CC /> 
+
+      </div>
 
       {/* Schedule */}
       
