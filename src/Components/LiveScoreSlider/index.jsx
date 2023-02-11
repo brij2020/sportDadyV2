@@ -36,9 +36,19 @@ const CarouselWrapper = styled.div`
     filter: drop-shadow(0px 12px 30px rgba(50, 50, 50, 0.2));
 
     /* Total-width (including margin) + 1 additional margin */
+     /* Media Query for Mobile Devices */
+        @media (max-width: 480px) {
+            max-width: 98%;
+        }
+          
+        /* Media Query for low resolution  Tablets, Ipads */
+        @media (min-width: 481px) and (max-width: 767px) {
+            max-width: 98%;
+        }
     @media (min-width: 832px) {
       max-width: 704px;
     }
+   
 
     @media (min-width: 1088px) {
       max-width: 960px;

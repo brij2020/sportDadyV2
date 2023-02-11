@@ -6,7 +6,7 @@ import flag4 from '../../assets/icons/flag2.png';
 import { Link } from 'react-router-dom';
 const Card = () => {
   return (
-    <CardWrapper>
+    <div>
       <div className="content">
       <Link to="live-commentry">
         <div className='live-section'>
@@ -14,33 +14,40 @@ const Card = () => {
             <h4 style={{ fontWeight: "bold", color: 'GhostWhite', }}>
             ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
             </h4>
-            <h3 style={{ fontWeight: "bold", color: 'GhostWhite', marginTop: 20 }}>
-            United States vs Namibia,
-            </h3>
-            <p style={{ color: 'GhostWhite' }}>Nov 26  •  1:30 PM at Windhoek, Wanderers Cricket Ground</p>
+            
+          
             <div className='flag-contain'>
-            <div>
-                <img src={flag3} style={{ height: 50, width: 50 }}></img>
-                <p style={{ color: '#fff', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>173/3 (20)</p>
+            <div >
+                
+                <img src={flag3} style={{ height: 50, width: 50, }}></img>
+                <span className="country-code">IND</span>
+                <p style={{ color: '#fff', fontSize: 15, textAlign: 'center', paddingTop: 8 }}>173/3 (20)</p>
+               
             </div>
-            <h2 style={{ color: '#fff', alignSelf: 'center' }}>V/S</h2>
-            <div>
-                <img src={flag2} style={{ height: 50, width: 50 }}></img>
-                <p style={{ color: 'yellow', fontSize: 18, textAlign: 'center', paddingTop: 8, fontWeight: 'bold' }}>Innings Break</p>
+            <div >
+                <img src={flag2} style={{ height: 50, width: 50}}></img>
+                <span className="country-code">PAK</span>
+                <p style={{ color: 'yellow', fontSize: 15, textAlign: 'center', paddingTop: 8,  }}>Innings Break</p>
+              
             </div>
             </div>
+             
+              
         </div>
+
         </div>
     </Link>
       </div>
-    </CardWrapper>
+    </div>
   );
 };
 
 const CardWrapper = styled.div`
   border-radius: 8px;
   background: #f5f5f6;
-
+  .coyIzs {
+    background: none !important;
+  }
   .image-container {
     height: 168px;
     border-radius: 8px 8px 0 0;

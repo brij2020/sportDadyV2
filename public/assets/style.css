@@ -86,17 +86,33 @@ p.plain-list {
 }
 
 .live-card {
-    background: linear-gradient(to right, #07128d, #765e5e);
+    background: linear-gradient(to right, #111b95, #c70000bf);
     border-radius: 10px;
     padding: 22px;
     transform-origin: center;
 
+}
+@media (max-width: 480px) {
+    .live-card { padding: 10px;}
+}
+  
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+   .live-card { padding: 10px;}
+}
+.country-code {
+    color: #ffff;
+    color: #ffff;
+    font-weight: 600;
+    font-size: 21px;
+    padding: 10px;
 }
 
 .flag-contain {
     display: flex;
     justify-content: space-evenly;
     padding: 15px;
+    
 }
 
 .player-card {
@@ -3531,7 +3547,6 @@ p a:focus{
 [class^=flag-]{
     border-radius:.4rem;
     overflow:hidden;
-    border:.1rem solid #f2f3f7;
     box-sizing:content-box
 }
 [class^=flag-].no-border{
