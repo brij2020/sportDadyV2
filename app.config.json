@@ -1,0 +1,10 @@
+{
+  "apps" : [
+    {
+      "name"      : "sport daday web app",
+      "script"    : "npx",
+      "interpreter": "none",
+      "args": "serve -p 80 -T"
+    }
+  ]
+}

@@ -11,9 +11,9 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 const LiveScoreComponet = (props) => {
 
   return (
-    <AnimationOnScroll animateIn="animate__bounceInLeft ">
+
       <div className='bg-section' id="live">
-        <h2 className='heading' >Live Cricket Score</h2>
+        <div class="divider"><span></span><span>Live Cricket Score</span><span></span></div>
         <marquee behavior="alternate">
           <div className='d-flex mb-4'>
 
@@ -193,7 +193,7 @@ const LiveScoreComponet = (props) => {
           </div>
         </marquee>
       </div>
-    </AnimationOnScroll>
+   
   )
 }
 export default LiveScoreComponet;

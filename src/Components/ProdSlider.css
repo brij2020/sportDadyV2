@@ -71,9 +71,11 @@
 
   .d-block .w-100 .hh {
     height: 200px !important;
+    object-fit: cover;
   }
   img.d-block.w-100.hh {
     height: 200px !important;
+    object-fit: cover;
 }
   .slider-card {
     height: 200px !important;
