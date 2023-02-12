@@ -26,7 +26,7 @@ const ICCRanking = (props) => {
                         <div className="rankings__widget-header-container">
                          
 
-                            <a href="https://www.icc-cricket.com/rankings/mens/overview"
+                            <a 
                                 className="btn rankings__widget-header-button u-hide-tablet" title="View All Rankings">View
                                 All Rankings</a>
 
@@ -279,7 +279,7 @@ const ICCRanking = (props) => {
                                                             </div>
 
                                                             <div className="rankings-card__view-link">
-                                                                <a href="https://www.icc-cricket.com/rankings/mens/player-rankings/test/batting"
+                                                                <a 
                                                                     className="widget-header-link  "
                                                                     title="View <span className=''>Full Rankings</span>">
                                                                     View <span className=''>Full Rankings</span> <svg
@@ -503,7 +503,7 @@ const ICCRanking = (props) => {
                                                             </div>
 
                                                             <div className="rankings-card__view-link">
-                                                                <a href="https://www.icc-cricket.com/rankings/mens/player-rankings/test/bowling"
+                                                                <a 
                                                                     className="widget-header-link  "
                                                                     title="View <span className=''>Full Rankings</span>">
                                                                     View <span className=''>Full Rankings</span> <svg
@@ -728,7 +728,7 @@ const ICCRanking = (props) => {
                                                             </div>
 
                                                             <div className="rankings-card__view-link">
-                                                                <a href="https://www.icc-cricket.com/rankings/mens/player-rankings/test/all-rounder"
+                                                                <a 
                                                                     className="widget-header-link  "
                                                                     title="View <span className=''>Full Rankings</span>">
                                                                     View <span className=''>Full Rankings</span> <svg
@@ -963,7 +963,7 @@ const ICCRanking = (props) => {
                                                             </div>
 
                                                             <div className="rankings-card__view-link">
-                                                                <a href="https://www.icc-cricket.com/rankings/mens/player-rankings/odi/batting"
+                                                                <a 
                                                                     className="widget-header-link  "
                                                                     title="View <span className=''>Full Rankings</span>">
                                                                     View <span className=''>Full Rankings</span> <svg
@@ -1187,7 +1187,7 @@ const ICCRanking = (props) => {
                                                             </div>
 
                                                             <div className="rankings-card__view-link">
-                                                                <a href="https://www.icc-cricket.com/rankings/mens/player-rankings/odi/bowling"
+                                                                <a 
                                                                     className="widget-header-link  "
                                                                     title="View <span className=''>Full Rankings</span>">
                                                                     View <span className=''>Full Rankings</span> <svg
@@ -1413,7 +1413,7 @@ const ICCRanking = (props) => {
                                                             </div>
 
                                                             <div className="rankings-card__view-link">
-                                                                <a href="https://www.icc-cricket.com/rankings/mens/player-rankings/odi/all-rounder"
+                                                                <a 
                                                                     className="widget-header-link  "
                                                                     title="View <span className=''>Full Rankings</span>">
                                                                     View <span className=''>Full Rankings</span> <svg
@@ -1646,7 +1646,7 @@ const ICCRanking = (props) => {
                                                             </div>
 
                                                             <div className="rankings-card__view-link">
-                                                                <a href="https://www.icc-cricket.com/rankings/mens/player-rankings/t20i/batting"
+                                                                <a 
                                                                     className="widget-header-link  "
                                                                     title="View <span className=''>Full Rankings</span>">
                                                                     View <span className=''>Full Rankings</span> <svg
@@ -1870,7 +1870,7 @@ const ICCRanking = (props) => {
                                                             </div>
 
                                                             <div className="rankings-card__view-link">
-                                                                <a href="https://www.icc-cricket.com/rankings/mens/player-rankings/t20i/bowling"
+                                                                <a 
                                                                     className="widget-header-link  "
                                                                     title="View <span className=''>Full Rankings</span>">
                                                                     View <span className=''>Full Rankings</span> <svg
@@ -2104,7 +2104,7 @@ const ICCRanking = (props) => {
                                                             </div>
 
                                                             <div className="rankings-card__view-link">
-                                                                <a href="https://www.icc-cricket.com/rankings/mens/player-rankings/t20i/all-rounder"
+                                                                <a 
                                                                     className="widget-header-link  "
                                                                     title="View <span className=''>Full Rankings</span>">
                                                                     View <span className=''>Full Rankings</span> <svg
@@ -2343,7 +2343,7 @@ const ICCRanking = (props) => {
                                                             </div>
 
                                                             <div className="rankings-card__view-link">
-                                                                <a href="https://www.icc-cricket.com/rankings/womens/player-rankings/odi/batting"
+                                                                <a 
                                                                     className="widget-header-link  "
                                                                     title="View <span className=''>Full Rankings</span>">
                                                                     View <span className=''>Full Rankings</span> <svg
@@ -2567,7 +2567,7 @@ const ICCRanking = (props) => {
                                                             </div>
 
                                                             <div className="rankings-card__view-link">
-                                                                <a href="https://www.icc-cricket.com/rankings/womens/player-rankings/odi/bowling"
+                                                                <a 
                                                                     className="widget-header-link  "
                                                                     title="View <span className=''>Full Rankings</span>">
                                                                     View <span className=''>Full Rankings</span> <svg
@@ -2791,7 +2791,7 @@ const ICCRanking = (props) => {
                                                             </div>
 
                                                             <div className="rankings-card__view-link">
-                                                                <a href="https://www.icc-cricket.com/rankings/womens/player-rankings/odi/all-rounder"
+                                                                <a 
                                                                     className="widget-header-link  "
                                                                     title="View <span className=''>Full Rankings</span>">
                                                                     View <span className=''>Full Rankings</span> <svg
@@ -3024,7 +3024,7 @@ const ICCRanking = (props) => {
                                                             </div>
 
                                                             <div className="rankings-card__view-link">
-                                                                <a href="https://www.icc-cricket.com/rankings/womens/player-rankings/t20i/batting"
+                                                                <a 
                                                                     className="widget-header-link  "
                                                                     title="View <span className=''>Full Rankings</span>">
                                                                     View <span className=''>Full Rankings</span> <svg
@@ -3250,7 +3250,7 @@ const ICCRanking = (props) => {
                                                             </div>
 
                                                             <div className="rankings-card__view-link">
-                                                                <a href="https://www.icc-cricket.com/rankings/womens/player-rankings/t20i/bowling"
+                                                                <a 
                                                                     className="widget-header-link  "
                                                                     title="View <span className=''>Full Rankings</span>">
                                                                     View <span className=''>Full Rankings</span> <svg
@@ -3474,7 +3474,7 @@ const ICCRanking = (props) => {
                                                             </div>
 
                                                             <div className="rankings-card__view-link">
-                                                                <a href="https://www.icc-cricket.com/rankings/womens/player-rankings/t20i/all-rounder"
+                                                                <a 
                                                                     className="widget-header-link  "
                                                                     title="View <span className=''>Full Rankings</span>">
                                                                     View <span className=''>Full Rankings</span> <svg
@@ -3666,7 +3666,7 @@ const ICCRanking = (props) => {
                                                             </div>
 
                                                             <div className="rankings-card__view-link">
-                                                                <a href="https://www.icc-cricket.com/rankings/mens/team-rankings/test"
+                                                                <a 
                                                                     className="widget-header-link  "
                                                                     title="View <span className=''>Full Rankings</span>">
                                                                     View <span className=''>Full Rankings</span> <svg
@@ -3834,7 +3834,7 @@ const ICCRanking = (props) => {
                                                             </div>
 
                                                             <div className="rankings-card__view-link">
-                                                                <a href="https://www.icc-cricket.com/rankings/mens/team-rankings/odi"
+                                                                <a 
                                                                     className="widget-header-link  "
                                                                     title="View <span className=''>Full Rankings</span>">
                                                                     View <span className=''>Full Rankings</span> <svg
@@ -4002,7 +4002,7 @@ const ICCRanking = (props) => {
                                                             </div>
 
                                                             <div className="rankings-card__view-link">
-                                                                <a href="https://www.icc-cricket.com/rankings/mens/team-rankings/t20i"
+                                                                <a 
                                                                     className="widget-header-link  "
                                                                     title="View <span className=''>Full Rankings</span>">
                                                                     View <span className=''>Full Rankings</span> <svg
@@ -4182,7 +4182,7 @@ const ICCRanking = (props) => {
                                                             </div>
 
                                                             <div className="rankings-card__view-link">
-                                                                <a href="https://www.icc-cricket.com/rankings/womens/team-rankings/odi"
+                                                                <a 
                                                                     className="widget-header-link  "
                                                                     title="View <span className=''>Full Rankings</span>">
                                                                     View <span className=''>Full Rankings</span> <svg
@@ -4350,7 +4350,7 @@ const ICCRanking = (props) => {
                                                             </div>
 
                                                             <div className="rankings-card__view-link">
-                                                                <a href="https://www.icc-cricket.com/rankings/womens/team-rankings/t20i"
+                                                                <a 
                                                                     className="widget-header-link  "
                                                                     title="View <span className=''>Full Rankings</span>">
                                                                     View <span className=''>Full Rankings</span> <svg
