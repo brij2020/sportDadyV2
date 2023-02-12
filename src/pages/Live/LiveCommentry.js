@@ -265,9 +265,9 @@ function LiveCommentry() {
                     Perth Scorchers vs Melbourne Renegades, 52nd Match - Live Cricket Score, Commentary
                 </h1>
                 <div className='d-flex justify-content-around'>
-                    <p className='text'><strong>Series: </strong>Big Bash League 2022-23</p>
-                    <p className='text'><strong>Venue: </strong>Perth Stadium, Perth</p>
-                    <p className='text'><strong>Date & Time: </strong>Jan 22, 04:15 PM LOCAL</p>
+                    <p className='text l-text-info'><strong>Series: </strong>Big Bash League 2022-23</p>
+                    <p className='text l-text-info'><strong>Venue: </strong>Perth Stadium, Perth</p>
+                    <p className='text l-text-info'><strong>Date & Time: </strong>Jan 22, 04:15 PM LOCAL</p>
                 </div>
                 <Nav justify variant="tabs" defaultActiveKey="/home" className='mt-2'>
                     <Nav.Item id="tablinks" onmouseover="openCity(event, 'London')">
@@ -354,7 +354,7 @@ function LiveCommentry() {
                 {commentry == true ?
                     < div style={{ boxShadow: '1px 2px 9px #c93a3e', marginTop: 25, borderRadius: 40, padding: 10, marginBottom: 25 }}>
                         <div className='d-flex'>
-                            <div style={{ padding: 17 }}>
+                            <div style={{ padding: 17 }} className="web-score">
                                 <h2 className='black-head'>PRS 212/5 (20)</h2>
                                 <h2 className='gray-head'>MLR 202/5 (20)</h2>
                                 <p className='blue-text'>Perth Scorchers won by 10 runs</p>
@@ -363,6 +363,7 @@ function LiveCommentry() {
                                     <p className='text'>Cameron Bancroft</p>
                                 </div>
                             </div>
+
                             <div className='screen'>
                                 <div className='d-flex justify-content-between' style={{ padding: 10 }}>
                                     <div>
@@ -395,6 +396,15 @@ function LiveCommentry() {
                                 <p className='screen-text'>4 Run</p>
                             </div>
                         </div>
+                        <div style={{ padding: 17 }} className="mobile-score">
+                            <h2 className='black-head'>PRS 212/5 (20)</h2>
+                            <h2 className='gray-head'>MLR 202/5 (20)</h2>
+                            <p className='blue-text'>Perth Scorchers won by 10 runs</p>
+                            <div style={{ marginTop: 20 }}>
+                                <h5 className='black-head'>PLAYER OF THE MATCH</h5>
+                                <p className='text'>Cameron Bancroft</p>
+                            </div>
+                        </div>
                         <hr className='hr-line' />
                         {CommentaryData.map((item) => (
                             <div>
@@ -405,7 +415,7 @@ function LiveCommentry() {
                                         </p >
                                     </Col>
                                     <Col xs={11}>
-                                        <p className='text'>
+                                        <p className='text l-text'>
                                             {item.commentry}
                                         </p >
                                     </Col>
@@ -526,7 +536,7 @@ function LiveCommentry() {
                                                     </p >
                                                 </Col>
                                                 <Col xs={11}>
-                                                    <p className='text'>
+                                                    <p className='text l-text'>
                                                         {item.commentry}
                                                     </p >
                                                 </Col>
@@ -614,7 +624,7 @@ function LiveCommentry() {
                                         </div>
 
                                         <h4 style={{ backgroundColor: "GhostWhite", padding: 18, paddingLeft: 30, fontWeight: "bold", borderRadius: 30, margin: 5 }}>
-                                        Venue Guide
+                                            Venue Guide
                                         </h4>
                                         <div style={{ padding: 15, paddingLeft: 30 }}>
 
@@ -636,7 +646,7 @@ function LiveCommentry() {
                                         </div>
 
                                         <h4 style={{ backgroundColor: "GhostWhite", padding: 18, paddingLeft: 30, fontWeight: "bold", borderRadius: 30, margin: 5 }}>
-                                        Broadcast Guide
+                                            Broadcast Guide
                                         </h4>
                                         <div style={{ padding: 15, paddingLeft: 30 }}>
 
@@ -706,83 +716,157 @@ function LiveCommentry() {
                                         </div>
                                         :
                                         news == true ?
-                                            <div style={{ boxShadow: '1px 2px 9px #c93a3e', marginTop: 25, borderRadius: 40, paddingLeft: 30, paddingRight: 30, padding: 20, marginBottom: 25 }}>
-                                                <h2 className='heading'>Cricket News and Editorials</h2>
-                                                <div className='new-part'>
-                                                    <Row>
-                                                        <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
-                                                        </Col>
-                                                        <Col xs={8}>
-                                                            <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-                                                            </Link>
-                                                            <p style={{ textAlign: "start", color: "grey", }}>
-                                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                                                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                                                                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                                                                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                                                                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                                                                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                                                                classical Latin literature from 45 BC,
-                                                                <br />
-                                                            </p>
-                                                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                                                <p className='p-gray'>Nov 26 2022</p>
-                                                                <p className='see-more'><Link>View More</Link></p>
+                                            <div style={{ background: '#323d94' }}>
+                                                <div class="divider"><span></span><span>Latest News and Articles</span><span></span></div>
+
+                                                <section class="content-hero ">
+                                                    <div class="constraint-wrapper">
+                                                        <div class="content-hero__container">
+                                                            <div class="content-hero__block-layout content-hero__block-layout--lead-media-item">
+                                                                <div class="content-hero__item-container content-hero__item-container--lead-media-item" data-itemlist-id="3044774">
+                                                                    <article class="lead-media-item  lead-media-item--no-bg" data-widget="lazy-load-images" data-initialised="true">
+                                                                        <a class="lead-media-item__link" href="https://icc-cricket.com/news/3044774" title="Uncapped batter named in England limited-overs squads for Bangladesh tour">
+
+
+                                                                            <header class="lead-media-item__image-container">
+                                                                                <div class="lazy-image is-loaded">
+                                                                                    <div class="js-lazy-load u-observed lazy-image-wrapper is-loaded" data-picture-in-view="true">
+                                                                                        <picture class=" object-fit-cover-picture ">
+                                                                                            <source class="" srcset="https://resources.pulse.icc-cricket.com/photo-resources/2023/02/02/fe8196db-cafc-4f24-91d1-46d878285974/GettyImages-1461413884.jpg?width=360&amp;height=270, https://resources.pulse.icc-cricket.com/photo-resources/2023/02/02/fe8196db-cafc-4f24-91d1-46d878285974/GettyImages-1461413884.jpg?width=720&amp;height=540 2x" media="(max-width: 640px)" />
+                                                                                            <img class="js-faded-image fade-in-on-load object-fit-cover-picture__img is-loaded" src="https://resources.pulse.icc-cricket.com/photo-resources/2023/02/02/fe8196db-cafc-4f24-91d1-46d878285974/GettyImages-1461413884.jpg?width=1068&amp;height=600" alt="GettyImages-1461413884" />
+                                                                                        </picture></div>
+                                                                                </div>
+                                                                            </header>
+
+                                                                            <div class="lead-media-item__container">
+                                                                                <div class="lead-media-item__tag">
+                                                                                    <span class="lead-media-item__tag-text "></span>
+                                                                                </div>
+                                                                                <h1 class="lead-media-item__heading">Uncapped batter named in England limited-overs squads for Bangladesh tour</h1>
+                                                                                <div class="lead-media-item__meta">
+                                                                                    <time class="lead-media-item__date">20 hrs ago</time>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </a>
+                                                                    </article>
+                                                                </div>
                                                             </div>
-                                                        </Col>
-                                                    </Row>
-                                                </div>
-                                                <hr className='hr-line' />
-                                                <div className='new-part'>
-                                                    <Row>
-                                                        <Col xs={4}><img className='news-img' src={cricketimg2} width="80%" height="auto"></img>
-                                                        </Col>
-                                                        <Col xs={8}>
-                                                            <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-                                                            </Link>
-                                                            <p style={{ textAlign: "start", color: "grey", }}>
-                                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                                                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                                                                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                                                                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                                                                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                                                                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                                                                classical Latin literature from 45 BC,
-                                                                <br />
-                                                            </p>
-                                                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                                                <p className='p-gray'>Nov 26 2022</p>
-                                                                <p className='see-more'><Link>View More</Link></p>
+                                                            <div class="content-hero__block-layout content-hero__block-layout--cards">
+                                                                <div class="content-hero__item-container content-hero__item-container--cards" data-itemlist-id="3023928">
+
+
+                                                                    <article class="media-thumbnail   media-thumbnail--no-bg-responsive media-thumbnail--show-publish-date" data-widget="lazy-load-images" data-initialised="true">
+                                                                        <a class="media-thumbnail__link" href="https://icc-cricket.com/news/3023928" title="The final group of 100% Cricket Superstars is revealed">
+
+                                                                            <header class="media-thumbnail__image-container">
+                                                                                <div class="lazy-image is-loaded">
+                                                                                    <div class="js-lazy-load u-observed lazy-image-wrapper is-loaded" data-picture-in-view="true">
+                                                                                        <picture class=" object-fit-cover-picture ">
+                                                                                            <source class="" srcset="https://resources.pulse.icc-cricket.com/photo-resources/2023/02/02/e278d8f8-7087-44f3-bb30-51b36bac63de/16x9-4-.jpg?width=200&amp;height=112, https://resources.pulse.icc-cricket.com/photo-resources/2023/02/02/e278d8f8-7087-44f3-bb30-51b36bac63de/16x9-4-.jpg?width=400&amp;height=224 2x" media="(max-width: 640px)" />
+                                                                                            <img class="js-faded-image fade-in-on-load object-fit-cover-picture__img is-loaded" src="https://resources.pulse.icc-cricket.com/photo-resources/2023/02/02/e278d8f8-7087-44f3-bb30-51b36bac63de/16x9-4-.jpg?width=267&amp;height=150" alt="100% Cricket Superstars" />
+                                                                                        </picture></div>
+                                                                                </div>
+                                                                            </header>
+
+                                                                            <div class="media-thumbnail__meta">
+                                                                                <span class="media-thumbnail__tag ">100% Cricket</span>
+
+                                                                                <h1 class="media-thumbnail__heading">The final group of 100% Cricket Superstars is revealed</h1>
+
+                                                                                <time class="media-thumbnail__date">16 Jan 23</time>
+                                                                            </div>
+
+                                                                        </a>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="content-hero__item-container content-hero__item-container--cards" data-itemlist-id="3044497">
+
+
+                                                                    <article class="media-thumbnail   media-thumbnail--no-bg-responsive media-thumbnail--show-publish-date" data-widget="lazy-load-images" data-initialised="true">
+                                                                        <a class="media-thumbnail__link" href="https://icc-cricket.com/news/3044497" title="South Africa lose crucial points in race to direct Cricket World Cup qualification">
+
+                                                                            <header class="media-thumbnail__image-container">
+                                                                                <div class="lazy-image is-loaded">
+                                                                                    <div class="js-lazy-load u-observed lazy-image-wrapper is-loaded" data-picture-in-view="true">
+                                                                                        <picture class=" object-fit-cover-picture ">
+                                                                                            <source class="" srcset="https://resources.pulse.icc-cricket.com/photo-resources/2023/02/02/d463d288-0a04-46c0-bc84-3680fb54df29/GettyImages-1246713547.jpg?width=200&amp;height=112, https://resources.pulse.icc-cricket.com/photo-resources/2023/02/02/d463d288-0a04-46c0-bc84-3680fb54df29/GettyImages-1246713547.jpg?width=400&amp;height=224 2x" media="(max-width: 640px)" />
+                                                                                            <img class="js-faded-image fade-in-on-load object-fit-cover-picture__img is-loaded" src="https://resources.pulse.icc-cricket.com/photo-resources/2023/02/02/d463d288-0a04-46c0-bc84-3680fb54df29/GettyImages-1246713547.jpg?width=267&amp;height=150" alt="GettyImages-1246713547" />
+                                                                                        </picture></div>
+                                                                                </div>
+                                                                            </header>
+
+                                                                            <div class="media-thumbnail__meta">
+                                                                                <span class="media-thumbnail__tag ">South Africa news</span>
+
+                                                                                <h1 class="media-thumbnail__heading">South Africa lose crucial points in race to direct Cricket World Cup qualification</h1>
+
+                                                                                <time class="media-thumbnail__date">22 hrs ago</time>
+                                                                            </div>
+
+                                                                        </a>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="content-hero__item-container content-hero__item-container--cards" data-itemlist-id="3045161">
+                                                                    <article class="media-thumbnail   media-thumbnail--no-bg-responsive media-thumbnail--show-publish-date" data-widget="lazy-load-images" data-initialised="true">
+                                                                        <a class="media-thumbnail__link" href="https://icc-cricket.com/news/3045161" title="Key fast bowler returns to New Zealand's Test squad for home series against England">
+
+                                                                            <header class="media-thumbnail__image-container">
+                                                                                <div class="lazy-image is-loaded">
+                                                                                    <div class="js-lazy-load u-observed lazy-image-wrapper is-loaded" data-picture-in-view="true">
+
+                                                                                        <picture class=" object-fit-cover-picture ">
+                                                                                            <source class="" srcset="https://resources.pulse.icc-cricket.com/photo-resources/2023/02/02/b63ecb06-219d-4165-989d-048738516519/GettyImages-1289653243.jpg?width=200&amp;height=112, https://resources.pulse.icc-cricket.com/photo-resources/2023/02/02/b63ecb06-219d-4165-989d-048738516519/GettyImages-1289653243.jpg?width=400&amp;height=224 2x" media="(max-width: 640px)" />
+                                                                                            <img class="js-faded-image fade-in-on-load object-fit-cover-picture__img is-loaded" src="https://resources.pulse.icc-cricket.com/photo-resources/2023/02/02/b63ecb06-219d-4165-989d-048738516519/GettyImages-1289653243.jpg?width=267&amp;height=150" alt="GettyImages-1289653243" />
+                                                                                        </picture></div>
+                                                                                </div>
+                                                                            </header>
+
+                                                                            <div class="media-thumbnail__meta">
+                                                                                <span class="media-thumbnail__tag ">New Zealand news</span>
+
+                                                                                <h1 class="media-thumbnail__heading">Key fast bowler returns to New Zealand's Test squad for home series against England</h1>
+
+                                                                                <time class="media-thumbnail__date">15 hrs ago</time>
+                                                                            </div>
+
+                                                                        </a>
+                                                                    </article>
+                                                                </div>
+                                                                <div class="content-hero__item-container content-hero__item-container--cards" data-itemlist-id="3044682">
+
+
+                                                                    <article class="media-thumbnail   media-thumbnail--no-bg-responsive media-thumbnail--show-publish-date" data-widget="lazy-load-images" data-initialised="true">
+                                                                        <a class="media-thumbnail__link" href="https://icc-cricket.com/news/3044682" title="Everything you need to know about the ICC Women's T20 World Cup 2023">
+
+                                                                            <header class="media-thumbnail__image-container">
+                                                                                <div class="lazy-image is-loaded">
+                                                                                    <div class="js-lazy-load u-observed lazy-image-wrapper is-loaded" data-picture-in-view="true">
+
+                                                                                        <picture class=" object-fit-cover-picture ">
+                                                                                            <source class="" srcset="https://resources.pulse.icc-cricket.com/photo-resources/2023/01/21/8a40b32d-073b-46cd-95b7-03541edc82c4/GettyImages-1211253534.jpg?width=200&amp;height=112, https://resources.pulse.icc-cricket.com/photo-resources/2023/01/21/8a40b32d-073b-46cd-95b7-03541edc82c4/GettyImages-1211253534.jpg?width=400&amp;height=224 2x" media="(max-width: 640px)" />
+                                                                                            <img class="js-faded-image fade-in-on-load object-fit-cover-picture__img is-loaded" src="https://resources.pulse.icc-cricket.com/photo-resources/2023/01/21/8a40b32d-073b-46cd-95b7-03541edc82c4/GettyImages-1211253534.jpg?width=267&amp;height=150" alt="The Australian Women's T20 World Cup team celebrate after winning the ICC Women's T20 World Cup Final, at Federation Square on March 09, 2020 in Melbourne, Australia." />
+                                                                                        </picture></div>
+                                                                                </div>
+                                                                            </header>
+
+                                                                            <div class="media-thumbnail__meta">
+                                                                                <span class="media-thumbnail__tag ">Women's T20 World Cup 2023</span>
+
+                                                                                <h1 class="media-thumbnail__heading">Everything you need to know about the ICC Women's T20 World Cup 2023</h1>
+
+                                                                                <time class="media-thumbnail__date">20 hrs ago</time>
+                                                                            </div>
+
+                                                                        </a>
+                                                                    </article>
+                                                                </div>
                                                             </div>
-                                                        </Col>
-                                                    </Row>
-                                                </div>
-                                                <hr className='hr-line' />
-                                                <div className='new-part'>
-                                                    <Row>
-                                                        <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
-                                                        </Col>
-                                                        <Col xs={8}>
-                                                            <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-                                                            </Link>
-                                                            <p style={{ textAlign: "start", color: "grey", }}>
-                                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                                                                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                                                                a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                                                                remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                                                                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                                                                of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                                                                classical Latin literature from 45 BC,
-                                                                <br />
-                                                            </p>
-                                                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                                                <p className='p-gray'>Nov 26 2022</p>
-                                                                <p className='see-more'><Link>View More</Link></p>
-                                                            </div>
-                                                        </Col>
-                                                    </Row>
-                                                </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
                                             </div>
+
                                             :
 
                                             null
@@ -795,31 +879,3 @@ function LiveCommentry() {
     );
 }
 export default LiveCommentry;
-// https://dev.to/shubhamtiwari909/text-to-speech-in-reactjs-52ml
-
-// import React from 'react';
-// import 'bootstrap/dist/css/bootstrap.css';
-// import Tabs from 'react-bootstrap/Tabs';
-// import Tab from 'react-bootstrap/Tab';
-
-// export default function LiveCommentry() {
-//     return (
-//         <div style={{ display: 'block', width: 700, padding: 30 }}>
-//             <h4>React-Bootstrap Tab Component</h4>
-//             <Tabs defaultActiveKey="second">
-//                 <Tab eventKey="first" title="Dashboard" className='text'>
-//                     Hii, I am 1st tab content
-//                     Hii, I am 1st tab content
-//                     Hii, I am 1st tab content
-//                     Hii, I am 1st tab content
-//                 </Tab>
-//                 <Tab eventKey="second" title="Setting">
-//                     Hii, I am 2nd tab content
-//                 </Tab>
-//                 <Tab eventKey="third" title="Aboutus">
-//                     Hii, I am 3rd tab content
-//                 </Tab>
-//             </Tabs>
-//         </div>
-//     );
-// }

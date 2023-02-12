@@ -59,7 +59,7 @@ const Header = (props) => {
                         </div>
                         <div class="slideout">
                             <div class="inner">
-                                 <a href="/"> <img src={quiz} width="100" height="100" alt='quiz' ></img></a>
+                                <a href="/"> <img src={quiz} width="100" height="100" alt='quiz' ></img></a>
 
                             </div>
                         </div>
@@ -68,7 +68,8 @@ const Header = (props) => {
             </div>
         </div>
         <section className={`main-navigation__wrapper `} style={{
-            background:'#323d94'}}>
+            background: '#323d94'
+        }}>
 
             {/* desktop menu */}
             <div className="main-navigation__header u-hide-desktop">
@@ -76,7 +77,7 @@ const Header = (props) => {
                 <a href="/" className="main-navigation__logo" title="label.returnToHomepage">
                     <img src={img} width="60" height="60" alt="logo" />
                 </a>
-                
+
                 <div className="main-navigation__desktop-navigation u-hide-desktop">
 
 
@@ -101,7 +102,7 @@ const Header = (props) => {
 
                             <li className="linked-list__item   ">
                                 <a className="linked-list__link  is-active" href="/">
-                                <i className="fa fa-fw fa-home" style={{ fontSize: "25px"}}></i>
+                                    <i className="fa fa-fw fa-home" style={{ fontSize: "25px" }}></i>
                                 </a>
                             </li>
 
@@ -320,25 +321,25 @@ const Header = (props) => {
                                             </header>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="/rankings/mens/overview">
+                                                <a className="linked-list__link " >
                                                     Overview
                                                 </a>
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="/rankings/mens/team-rankings">
+                                                <a className="linked-list__link " >
                                                     Team Rankings
                                                 </a>
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="/rankings/mens/player-rankings">
+                                                <a className="linked-list__link " >
                                                     Players Rankings
                                                 </a>
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="/rankings/mens/rankings-predictor/test">
+                                                <a className="linked-list__link " >
                                                     Team Rankings Predictor
                                                 </a>
                                             </li>
@@ -383,7 +384,7 @@ const Header = (props) => {
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="/rankings/womens/player-rankings">
+                                                <a className="linked-list__link " >
                                                     Player Rankings
                                                 </a>
                                             </li>
@@ -543,43 +544,44 @@ const Header = (props) => {
                                             </header>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="https://www.icc-cricket.com/news/2914163">
+                                                <a className="linked-list__link " >
                                                     ICC Cricket World Cup
                                                 </a>
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="https://2022.t20worldcup.com">
+                                                <a className="linked-list__link " >
                                                     ICC T20 World Cup
                                                 </a>
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="/world-test-championship">
+                                                <a className="linked-list__link " href="">
                                                     ICC World Test Championship
                                                 </a>
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="/u19-world-cup/">
+                                                <a className="linked-list__link " >
                                                     ICC U19 Cricket World Cup
                                                 </a>
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="/cricket-world-cup-super-league/fixtures">
+                                                <a className="linked-list__link " >
                                                     ICC CWC Super League
                                                 </a>
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="/cricket-world-cup-challenge-league/news">
+                                                <a className="linked-list__link " 
+                                                >
                                                     ICC CWC Challenge League
                                                 </a>
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="/cricket-world-cup-league-two/news">
+                                                <a className="linked-list__link " >
                                                     ICC CWC League 2
                                                 </a>
                                             </li>
@@ -612,25 +614,26 @@ const Header = (props) => {
                                             </header>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="https://www.t20worldcup.com/">
+                                                <a className="linked-list__link " >
                                                     ICC T20 World Cup
                                                 </a>
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="https://www.cricketworldcup.com/">
+                                                <a className="linked-list__link " >
                                                     ICC Cricket World Cup
                                                 </a>
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="https://www.u19worldcup.com/">
+                                                <a className="linked-list__link " 
+                                                >
                                                     ICC U19 T20 World Cup
                                                 </a>
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="/womens-championship">
+                                                <a className="linked-list__link " >
                                                     ICC Women's Championship
                                                 </a>
                                             </li>
@@ -752,25 +755,25 @@ const Header = (props) => {
                                             </header>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="/rankings/mens/overview">
+                                                <a className="linked-list__link " >
                                                     Overview
                                                 </a>
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="/rankings/mens/team-rankings">
+                                                <a className="linked-list__link " >
                                                     Team Rankings
                                                 </a>
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="/rankings/mens/player-rankings">
+                                                <a className="linked-list__link " >
                                                     Players Rankings
                                                 </a>
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="/rankings/mens/rankings-predictor/test">
+                                                <a className="linked-list__link " >
                                                     Team Rankings Predictor
                                                 </a>
                                             </li>
@@ -815,7 +818,7 @@ const Header = (props) => {
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="/rankings/womens/player-rankings">
+                                                <a className="linked-list__link " >
                                                     Player Rankings
                                                 </a>
                                             </li>
@@ -978,7 +981,7 @@ const Header = (props) => {
                                             </header>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="/rankings/mens/overview">
+                                                <a className="linked-list__link " >
                                                     India
                                                 </a>
                                             </li>
@@ -996,7 +999,7 @@ const Header = (props) => {
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="/rankings/mens/rankings-predictor/test">
+                                                <a className="linked-list__link " >
                                                     Bangladesh
                                                 </a>
                                             </li>
@@ -1041,7 +1044,7 @@ const Header = (props) => {
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " href="/rankings/womens/player-rankings">
+                                                <a className="linked-list__link " >
                                                     Pakistan
                                                 </a>
                                             </li>
@@ -1147,7 +1150,7 @@ const Header = (props) => {
                                 </a>
                             </li>
                             <li className="linked-list__item" onClick={e => handleSearch(true)}>
-                            {!isSearch ? (<a className="linked-list__link" href="#" id="search"><i class="fa fa-search"></i></a>) : null}
+                                {!isSearch ? (<a className="linked-list__link" href="#" id="search"><i class="fa fa-search"></i></a>) : null}
                             </li>
 
                             <li className="linked-list__item no-border u-show-desktop  ">
@@ -1231,12 +1234,12 @@ const Header = (props) => {
                     </a>
                 </div>
 
-                 <div className={`search-form ${isSearch ? 'active': '' }`}>
+                <div className={`search-form ${isSearch ? 'active' : ''}`}>
                     <form>
                         <input type="text" placeholder="Search" />
-                    </form> 
+                    </form>
                 </div>
-                <a className={`close ${isSearch ? 'active': '' }`} onClick={e => handleSearch(false) }><i className="fa fa-times"></i></a>
+                <a className={`close ${isSearch ? 'active' : ''}`} onClick={e => handleSearch(false)}><i className="fa fa-times"></i></a>
                 <button className="hamburger js-sidebar-btn " type="button" aria-label="Menu"
                     aria-controls="sidebar-menu"
                     onClick={handleHamBurger}
@@ -1258,7 +1261,7 @@ const Header = (props) => {
 
                     <nav className="sub-menu">
                         <a className="sub-menu__link " href="/">
-                            <i className="fa fa-fw fa-home" style={{ fontSize: "20px"}}></i>
+                            <i className="fa fa-fw fa-home" style={{ fontSize: "20px" }}></i>
                         </a>
                         {/*
                         <a className="sub-menu__link " href="/livescore">
@@ -1271,16 +1274,16 @@ const Header = (props) => {
                             href="#">
                             Awards
                         </a>*/}
-                       
-                       {!isSearch ? <a className="sub-menu__link" href="#" id="search" onClick={e => handleSearch(true)} ><i class="fa fa-search"></i></a>:null}
-                         <div className={`search-form ${isSearch ? 'active':''}`}>
+
+                        {!isSearch ? <a className="sub-menu__link" href="#" id="search" onClick={e => handleSearch(true)} ><i class="fa fa-search"></i></a> : null}
+                        <div className={`search-form ${isSearch ? 'active' : ''}`}>
                             <form>
-                                    <input type="text" placeholder="Search" />
-                                </form> 
-                            </div>
-                            <a className={`close ${isSearch?'active':''}`} onClick={e => handleSearch(false)}><i className="fa fa-times"></i></a>
+                                <input type="text" placeholder="Search" />
+                            </form>
+                        </div>
+                        <a className={`close ${isSearch ? 'active' : ''}`} onClick={e => handleSearch(false)}><i className="fa fa-times"></i></a>
                     </nav>
-                   
+
                 </div>
 
                 <button className={`hamburger js-mobile-nav-btn m-nav-cross ${ismwebOpen ? 'is-active' : ''} `} onClick={handleMWebNavToggel} type="button" aria-label="Menu" aria-controls="mobile-menu">
@@ -1314,7 +1317,7 @@ const Header = (props) => {
 
                         <li className="linked-list__item   ">
                             <a className="linked-list__link " href="/homepage">
-                            <i className="fa fa-fw fa-home" style={{ fontSize: "20px"}}></i>
+                                <i className="fa fa-fw fa-home" style={{ fontSize: "20px" }}></i>
                             </a>
                         </li>
 
@@ -1540,25 +1543,25 @@ const Header = (props) => {
                                         </header>
 
                                         <li className="linked-list__item   ">
-                                            <a className="linked-list__link " href="/rankings/mens/overview">
+                                            <a className="linked-list__link " >
                                                 Overview
                                             </a>
                                         </li>
 
                                         <li className="linked-list__item   ">
-                                            <a className="linked-list__link " href="/rankings/mens/team-rankings">
+                                            <a className="linked-list__link " >
                                                 Team Rankings
                                             </a>
                                         </li>
 
                                         <li className="linked-list__item   ">
-                                            <a className="linked-list__link " href="/rankings/mens/player-rankings">
+                                            <a className="linked-list__link " >
                                                 Players Rankings
                                             </a>
                                         </li>
 
                                         <li className="linked-list__item   ">
-                                            <a className="linked-list__link " href="/rankings/mens/rankings-predictor/test">
+                                            <a className="linked-list__link " >
                                                 Team Rankings Predictor
                                             </a>
                                         </li>
@@ -1603,7 +1606,7 @@ const Header = (props) => {
                                         </li>
 
                                         <li className="linked-list__item   ">
-                                            <a className="linked-list__link " href="/rankings/womens/player-rankings">
+                                            <a className="linked-list__link " >
                                                 Player Rankings
                                             </a>
                                         </li>
@@ -1763,13 +1766,13 @@ const Header = (props) => {
                                         </header>
 
                                         <li className="linked-list__item   ">
-                                            <a className="linked-list__link " href="https://www.icc-cricket.com/news/2914163">
+                                            <a className="linked-list__link " >
                                                 ICC Cricket World Cup
                                             </a>
                                         </li>
 
                                         <li className="linked-list__item   ">
-                                            <a className="linked-list__link " href="https://2022.t20worldcup.com">
+                                            <a className="linked-list__link " >
                                                 ICC T20 World Cup
                                             </a>
                                         </li>
@@ -1781,25 +1784,26 @@ const Header = (props) => {
                                         </li>
 
                                         <li className="linked-list__item   ">
-                                            <a className="linked-list__link " href="/u19-world-cup/">
+                                            <a className="linked-list__link " >
                                                 ICC U19 Cricket World Cup
                                             </a>
                                         </li>
 
                                         <li className="linked-list__item   ">
-                                            <a className="linked-list__link " href="/cricket-world-cup-super-league/fixtures">
+                                            <a className="linked-list__link " >
                                                 ICC CWC Super League
                                             </a>
                                         </li>
 
                                         <li className="linked-list__item   ">
-                                            <a className="linked-list__link " href="/cricket-world-cup-challenge-league/news">
+                                            <a className="linked-list__link " 
+                                            >
                                                 ICC CWC Challenge League
                                             </a>
                                         </li>
 
                                         <li className="linked-list__item   ">
-                                            <a className="linked-list__link " href="/cricket-world-cup-league-two/news">
+                                            <a className="linked-list__link " >
                                                 ICC CWC League 2
                                             </a>
                                         </li>
@@ -1832,25 +1836,26 @@ const Header = (props) => {
                                         </header>
 
                                         <li className="linked-list__item   ">
-                                            <a className="linked-list__link " href="https://www.t20worldcup.com/">
+                                            <a className="linked-list__link " >
                                                 ICC T20 World Cup
                                             </a>
                                         </li>
 
                                         <li className="linked-list__item   ">
-                                            <a className="linked-list__link " href="https://www.cricketworldcup.com/">
+                                            <a className="linked-list__link " >
                                                 ICC Cricket World Cup
                                             </a>
                                         </li>
 
                                         <li className="linked-list__item   ">
-                                            <a className="linked-list__link " href="https://www.u19worldcup.com/">
+                                            <a className="linked-list__link " 
+                                            >
                                                 ICC U19 T20 World Cup
                                             </a>
                                         </li>
 
                                         <li className="linked-list__item   ">
-                                            <a className="linked-list__link " href="/womens-championship">
+                                            <a className="linked-list__link " >
                                                 ICC Women's Championship
                                             </a>
                                         </li>
@@ -1941,7 +1946,7 @@ const Header = (props) => {
                         </li>
 
                         <li className="linked-list__item   ">
-                            <a className="linked-list__link " href="https://www.icc-cricket.com/shop/">
+                            <a className="linked-list__link " >
                                 Shop
                             </a>
                         </li>
@@ -2029,7 +2034,7 @@ const Header = (props) => {
                                 </li>
 
                                 <li className="linked-list__item   ">
-                                    <a className="linked-list__link " href="https://www.icc-cricket.com/media-zone">
+                                    <a className="linked-list__link ">
                                         Online Media Zone
                                     </a>
                                 </li>
@@ -2113,7 +2118,7 @@ const Header = (props) => {
                         <li className="linked-list__item no-border u-show-desktop  ">
                             <span className="linked-list__title">Explore Sport Daday</span>
                         </li>
-                        
+
                         <li className="linked-list__item linked-list__item--promo u-show-desktop">
                             <section className="app-promo">
                                 <div className="app-promo__top">
@@ -2182,9 +2187,9 @@ const Header = (props) => {
                             </div>
                         </li>
                     </ul>
-                    
+
                 </nav>
-                
+
             </div>
         </section>
         <div className={`sidebar-nav js-navigation-sidebar u-hide-desktop ${isHamOpen ? 'is-open' : ""}`} data-widget="sidebar-navigation" data-initialised="true" aria-expanded="true" aria-hidden="true">
@@ -2248,7 +2253,7 @@ const Header = (props) => {
                         </a>
                     </li>
                     <li className="sidebar-nav__item  " data-label="Online Media Zone">
-                        <a className="sidebar-nav__link sidebar-nav__link--in-sidebar-nav" href="https://www.icc-cricket.com/media-zone">
+                        <a className="sidebar-nav__link sidebar-nav__link--in-sidebar-nav" >
                             Online Media Zone
                         </a>
                     </li>
@@ -2268,8 +2273,8 @@ const Header = (props) => {
                         </a>
                     </li>
                 </ul>
-               
-                </div>
+
+            </div>
 
         </div>
     </>

@@ -35,8 +35,11 @@ import THREE from '../assets/images/slides/win.jpg'
 import video from './cricket.mp4';
 import LiveScoreComponet from '../Components/Home/LiveScore'
 import AricleList from '../Components/Home/ArticleList'
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+import ICCRanking from '../Components/IccRankings';
+import Gamebox from '../Components/Home/Gamebox';
 
-import ICCRanking from '../Components/IccRankings'
+
 import MatchSchedule from "../Components/MatchSchdule";
 import OtherGame from '../Components/OtherGame'
 import TimeLine from '../Components/TimeLine'
@@ -184,7 +187,7 @@ function Home() {
   return (
 
 
-    
+
     <div style={{ marginBottom: 20 }} id="main-app" >
       <div id='top'>
         <LiveScore slides={images} />
@@ -193,254 +196,256 @@ function Home() {
       {/* live */}
       {/*<LiveScoreComponet />*/}
       <div id='top'>
-        <CC /> 
+        <CC />
 
       </div>
 
       {/* Schedule */}
-      
-       <div className='plain-section'>
-       <div class="divider"><span></span><span>Cricket Schedule</span><span></span></div>
-          
-        <MatchSchedule data={Data}/>
-        </div>
-        
-       
-       
-        
+
+      <div className='plain-section'>
+        <div class="divider"><span></span><span>Cricket Schedule</span><span></span></div>
+
+        <MatchSchedule data={Data} />
+      </div>
+
+
+
+
       {/* Latest News and Articles */}
-     
-        <div className='bg-section' style={{background:'#323d94'}}>
+
+      <div className='bg-section' style={{ background: '#323d94' }}>
         <div class="divider"><span></span><span>Latest News and Articles</span><span></span></div>
-          <AricleList />
-        </div>
-        
+        <AricleList />
+      </div>
+
 
       {/* video  */}
-      
-        <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94',boxShadow:"none" }}>
+
+      <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', boxShadow: "none" }}>
         <div class="divider"><span></span><span>Video Hub</span><span></span></div>
 
-          <div class="containerv">
-            <div class="main-box">
-              <div class="box one">
-                <video
-                  poster={img3}
-                  height={'100%'}
-                  width={'100%'}
-                  src={video} controls>
-                </video>
-              </div>
-              <div class="box two">
-                <video
-                  poster={img4}
-                  height={'100%'}
-                  width={'100%'}
-                  src={video} controls>
-                </video></div>
-              <div class="box three">  <video
-                poster={img7}
+        <div class="containerv">
+          <div class="main-box">
+            <div class="box one">
+              <video
+                poster={img3}
                 height={'100%'}
                 width={'100%'}
                 src={video} controls>
-              </video></div>
-              <div class="box four">  <video
-                poster={img9}
-                height={'100%'}
-                width={'100%'}
-                src={video} controls>
-              </video></div>
-              <div class="box five">  <video
-                poster={usteam}
-                height={'100%'}
-                width={'100%'}
-                src={video} controls>
-              </video></div>
-              <div class="box six">  <video
-                poster={newzteam}
-                height={'100%'}
-                width={'100%'}
-                src={video} controls>
-              </video></div>
-              <div class="box six">  <video
-                poster={cricketimg1}
-                height={'100%'}
-                width={'100%'}
-                src={video} controls>
-              </video></div>
+              </video>
             </div>
+            <div class="box two">
+              <video
+                poster={img4}
+                height={'100%'}
+                width={'100%'}
+                src={video} controls>
+              </video></div>
+            <div class="box three">  <video
+              poster={img7}
+              height={'100%'}
+              width={'100%'}
+              src={video} controls>
+            </video></div>
+            <div class="box four">  <video
+              poster={img9}
+              height={'100%'}
+              width={'100%'}
+              src={video} controls>
+            </video></div>
+            <div class="box five">  <video
+              poster={usteam}
+              height={'100%'}
+              width={'100%'}
+              src={video} controls>
+            </video></div>
+            <div class="box six">  <video
+              poster={newzteam}
+              height={'100%'}
+              width={'100%'}
+              src={video} controls>
+            </video></div>
+            <div class="box six">  <video
+              poster={cricketimg1}
+              height={'100%'}
+              width={'100%'}
+              src={video} controls>
+            </video></div>
           </div>
-
         </div>
-    
-        
+
+      </div>
+
+
       {/* photos  */}
-      
-        <div className='bg-section' style={{background:'#323d94'}}>
-          <div class="divider"><span></span><span>Photos Gallery</span><span></span></div>
-          <div class="containerv">
-            <div class="main-box">
-              <div class="box img-gal">
+
+      <div className='bg-section' style={{ background: '#323d94' }}>
+        <div class="divider"><span></span><span>Photos Gallery</span><span></span></div>
+        <div class="containerv">
+          <div class="main-box">
+            <div class="box img-gal">
               <img src={cricketimg1}
-                  height={"100%"}
-                  width={"100%"}
-                  
+                height={"100%"}
+                width={"100%"}
+
               >
-                </img>
-                <div class="image-caption">
-                  <p>
-                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
-                  </p>
-                  </div>
+              </img>
+              <div class="image-caption">
+                <p>
+                  This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                </p>
               </div>
-              <div class="box img-gal">
-                <img src={cricketimg2}
-                  
+            </div>
+            <div class="box img-gal">
+              <img src={cricketimg2}
 
-                  height={"100%"}
-                  width={"100%"}>
-                </img>
-                <div class="image-caption">
-                  <p>
-                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
-                  </p>
-                  </div>
-              </div>
-              <div class="box img-gal">
-                <img src={img3}
-                  
 
-                  height={"100%"}
-                  width={"100%"}>
-                </img>
-                <div class="image-caption">
-                  <p>
-                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
-                  </p>
-                  </div>
+                height={"100%"}
+                width={"100%"}>
+              </img>
+              <div class="image-caption">
+                <p>
+                  This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                </p>
               </div>
-              <div class="box img-gal">
-                <img src={img4}
-                  
+            </div>
+            <div class="box img-gal">
+              <img src={img3}
 
-                  height={"100%"}
-                  width={"100%"}>
-                </img>
-                <div class="image-caption">
-                  <p>
-                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
-                  </p>
-                  </div>
-              </div>
-              <div class="box five img-gal">
-                <img src={img7}
-                 
 
-                  height={"100%"}
-                  width={"100%"}>
-                </img>
-                <div class="image-caption">
-                  <p>
-                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
-                  </p>
-                  </div>
+                height={"100%"}
+                width={"100%"}>
+              </img>
+              <div class="image-caption">
+                <p>
+                  This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                </p>
               </div>
-              <div class="box six img-gal">
-                <img src={img9}
-                  
-                  height={"100%"}
-                  width={"100%"}>
-                </img>
-                <div class="image-caption">
-                  <p>
-                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
-                  </p>
-                  </div>
-              </div>
-              <div class="box six img-gal">
-                <img src={newzteam}
-                  
+            </div>
+            <div class="box img-gal">
+              <img src={img4}
 
-                  height={"100%"}
-                  width={"100%"}>
-                </img>
-                <div class="image-caption">
-                  <p>
-                    This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
-                  </p>
-                  </div>
+
+                height={"100%"}
+                width={"100%"}>
+              </img>
+              <div class="image-caption">
+                <p>
+                  This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                </p>
+              </div>
+            </div>
+            <div class="box five img-gal">
+              <img src={img7}
+
+
+                height={"100%"}
+                width={"100%"}>
+              </img>
+              <div class="image-caption">
+                <p>
+                  This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                </p>
+              </div>
+            </div>
+            <div class="box six img-gal">
+              <img src={img9}
+
+                height={"100%"}
+                width={"100%"}>
+              </img>
+              <div class="image-caption">
+                <p>
+                  This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                </p>
+              </div>
+            </div>
+            <div class="box six img-gal">
+              <img src={newzteam}
+
+
+                height={"100%"}
+                width={"100%"}>
+              </img>
+              <div class="image-caption">
+                <p>
+                  This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
+                </p>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-      
+
 
       {/* ranking  */}
       <div className='bg-section-time-line' >
-          
-          <div class="divider"><span></span><span>ICC Ranking</span><span></span></div>
-       <ICCRanking />
+
+        <div class="divider"><span></span><span>ICC Ranking</span><span></span></div>
+        <ICCRanking />
       </div>
-      
+
 
       {/* world timeline  */}
-      
-        <div className='bg-section-time-line' >
-          
-          <div class="divider"><span></span><span>ODI WORLD CUP TIMELINE</span><span></span></div>
-            <TimeLine />
 
-          <Link>
-            <h3 className='see-more-home'>See More</h3>
-          </Link>
-        </div>
+      <div className='bg-section-time-line' >
 
-     
+        <div class="divider"><span></span><span>ODI WORLD CUP TIMELINE</span><span></span></div>
+        <TimeLine />
 
+        <Link>
+          <h3 className='see-more-home'>See More</h3>
+        </Link>
+      </div>
+
+
+
+      <Gamebox />
+      {/* End Other Game Section   */}
       {/* Quiz  */}
-      
-        <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
-          
-          <div class="divider"><span></span><span>Quiz</span><span></span></div>
-          <div className='quiz-section'>
-            <div class="polaroid rotate_right">
-              <i className='fa fa-group'> {" "} 60k + Participants</i>
-              <h4 className='h4'>T20 Match 2022  Final Quiz.</h4>
-              <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
-            </div>
 
-            <div class="polaroid rotate_left">
-              <i className='fa fa-group '>{" "} 60k + Participants</i>
-              <h4 className='light-h4'>TATA IPL 2022  Final Quiz.</h4>
-              <p class="light-caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
-            </div>
+      <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
 
-            <div class="polaroid rotate_right">
-              <i className='fa fa-group'> {" "} 60k + Participants</i>
-              <h4 className='h4'>T20 Match 2022  Final Quiz.</h4>
-              <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
-            </div>
+        <div class="divider"><span></span><span>Quiz</span><span></span></div>
+        <div className='quiz-section'>
+          <div class="polaroid rotate_right">
+            <i className='fa fa-group'> {" "} 60k + Participants</i>
+            <h4 className='h4'>T20 Match 2022  Final Quiz.</h4>
+            <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
+          </div>
 
-            <div class="polaroid rotate_left">
-              <i className='fa fa-group '>{" "} 60k + Participants</i>
-              <h4 className='light-h4'>TATA IPL 2022  Final Quiz.</h4>
-              <p class="light-caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
-            </div>
+          <div class="polaroid rotate_left">
+            <i className='fa fa-group '>{" "} 60k + Participants</i>
+            <h4 className='light-h4'>TATA IPL 2022  Final Quiz.</h4>
+            <p class="light-caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
+          </div>
 
-            <div class="polaroid rotate_right">
-              <i className='fa fa-group'> {" "} 60k + Participants</i>
-              <h4 className='h4'>T20 Match 2022  Final Quiz.</h4>
-              <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
-            </div>
+          <div class="polaroid rotate_right">
+            <i className='fa fa-group'> {" "} 60k + Participants</i>
+            <h4 className='h4'>T20 Match 2022  Final Quiz.</h4>
+            <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
+          </div>
+
+          <div class="polaroid rotate_left">
+            <i className='fa fa-group '>{" "} 60k + Participants</i>
+            <h4 className='light-h4'>TATA IPL 2022  Final Quiz.</h4>
+            <p class="light-caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
+          </div>
+
+          <div class="polaroid rotate_right">
+            <i className='fa fa-group'> {" "} 60k + Participants</i>
+            <h4 className='h4'>T20 Match 2022  Final Quiz.</h4>
+            <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
           </div>
         </div>
+      </div>
 
-      
+
 
       {/*cricket news Editorials */}
-      
-        {/* <div className='bg-section'>
+
+      {/* <div className='bg-section'>
           <h2 className='heading'>Cricket News and Editorials</h2>
           <div className='new-part'>
             <Row>
@@ -493,11 +498,11 @@ function Home() {
           </div>
         </div> */}
 
-      
+
 
       {/* India National Cricket Team */}
-      
-        {/* <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
+
+      {/* <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
           
           <div class="divider"><span></span><span>India National Cricket Team</span><span></span></div>
           <Row className="team-part">
@@ -520,70 +525,70 @@ function Home() {
           </Row>
         </div> */}
 
-      
+
 
       {/* Our Cricket Teams */}
-      
-        <div className='bg-section'>
-          <div className='d-flex justify-content-around '>
-            <div className='see-more-home'>{" "}</div>
-            
-            <div class="divider"><span></span><span>Our Cricket Teams</span><span></span></div>
-            <Link>
-              <h3 className='see-more-home'>See More</h3>
-            </Link>
-          </div>
-          <div className='d-flex justify-content-around m-cr-team'>
-            <div className='team-img ourteam' style={{ width: '100%', height: '100%',marginTop:10 }}>
-              <img src={cricketimg1} width="100%" height="100%" ></img>
-              <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10, color:"#fff" }}>Indian Cricket Team Players</h2>
-            </div>
 
-            <div className='team-img ourteam' style={{ width: '100%', height: '100%',marginTop:10 }}>
-              <img src={usteam} width="100%" height="100%"  ></img>
-              <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10,color:"#fff" }}>Us Cricket Team Players</h2>
-            </div>
-            <div className='team-img ourteam' style={{ width: '100%', height: '100%',marginTop:10 }}>
-              <img src={newzteam} width="100%" height="100%"  ></img>
-              <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10, color:"#fff" }}>NewZeland Cricket Team Players</h2>
-            </div>
+      <div className='bg-section'>
+        <div className='d-flex justify-content-around '>
+          <div className='see-more-home'>{" "}</div>
 
-          </div>
+          <div class="divider"><span></span><span>Our Cricket Teams</span><span></span></div>
+          <Link>
+            <h3 className='see-more-home'>See More</h3>
+          </Link>
         </div>
-      
+        <div className='d-flex justify-content-around m-cr-team'>
+          <div className='team-img ourteam' style={{ width: '100%', height: '100%', marginTop: 10 }}>
+            <img src={cricketimg1} width="100%" height="100%" ></img>
+            <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10, color: "#fff" }}>Indian Cricket Team Players</h2>
+          </div>
+
+          <div className='team-img ourteam' style={{ width: '100%', height: '100%', marginTop: 10 }}>
+            <img src={usteam} width="100%" height="100%"  ></img>
+            <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10, color: "#fff" }}>Us Cricket Team Players</h2>
+          </div>
+          <div className='team-img ourteam' style={{ width: '100%', height: '100%', marginTop: 10 }}>
+            <img src={newzteam} width="100%" height="100%"  ></img>
+            <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10, color: "#fff" }}>NewZeland Cricket Team Players</h2>
+          </div>
+
+        </div>
+      </div>
+
 
       {/* Other Games*/}
-        
-        <div className='bg-section' style={{background:'#323d94'}}>
-          <div class="divider"><span></span><span>Other Games</span><span></span></div>
-         <OtherGame />
-        </div>
-       
+
+      <div className='bg-section' style={{ background: '#323d94' }}>
+        <div class="divider"><span></span><span>Other Games</span><span></span></div>
+        <OtherGame />
+      </div>
+
       {/* download app section  */}
       {/* <AnimationOnScroll animateIn="animate__jackInTheBox" > */}
-        <div className='bg-section'>
-          <div class="wrapper">
-            <a href="https://www.apple.com/in/app-store/" target={'_blank'} class="link-wrapper">
-              <div class="img-wrapper">
-                <img src={apple} />
-              </div>
-              <div class="content-wrapper">
-                <h6 style={{ paddingTop: 6, color: '#fff' }}>Download in the</h6>
-                <p style={{ color: '#fff' }}>App Store</p>
-              </div>
-            </a>
+      <div className='bg-section'>
+        <div class="wrapper">
+          <a href="https://www.apple.com/in/app-store/" target={'_blank'} class="link-wrapper">
+            <div class="img-wrapper">
+              <img src={apple} />
+            </div>
+            <div class="content-wrapper">
+              <h6 style={{ paddingTop: 6, color: '#fff' }}>Download in the</h6>
+              <p style={{ color: '#fff' }}>App Store</p>
+            </div>
+          </a>
 
-            <a href="https://play.google.com/store/apps" target={'_blank'} class="link-wrapper">
-              <div class="img-wrapper">
-                <img src={playstore} />
-              </div>
-              <div class="content-wrapper">
-                <h6 style={{ paddingTop: 6, color: '#fff' }}>Android app on</h6>
-                <p style={{ color: '#fff' }}>Google Play</p>
-              </div>
-            </a>
-          </div>
+          <a href="https://play.google.com/store/apps" target={'_blank'} class="link-wrapper">
+            <div class="img-wrapper">
+              <img src={playstore} />
+            </div>
+            <div class="content-wrapper">
+              <h6 style={{ paddingTop: 6, color: '#fff' }}>Android app on</h6>
+              <p style={{ color: '#fff' }}>Google Play</p>
+            </div>
+          </a>
         </div>
+      </div>
       {/*</AnimationOnScroll>*/}
 
     </div>
