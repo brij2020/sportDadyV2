@@ -59,7 +59,7 @@ const Header = (props) => {
                         </div>
                         <div class="slideout">
                             <div class="inner">
-                                <a href="/"> <img src={quiz} width="100" height="100" alt='quiz' ></img></a>
+                                 <a href="/quiz"> <img src={quiz} width="100" height="100" alt='quiz' ></img></a>
 
                             </div>
                         </div>

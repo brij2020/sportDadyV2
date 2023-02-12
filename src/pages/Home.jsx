@@ -45,6 +45,7 @@ import OtherGame from '../Components/OtherGame'
 import TimeLine from '../Components/TimeLine'
 import LiveScore from '../Components/LiveScore'
 import CC from '../Components/LiveScoreSlider'
+
 function Home() {
 
   const [team, setTeam] = useState(true)

@@ -7994,6 +7994,7 @@ p a:focus{
     .content-hero__block-layout--cards{
         overflow:auto
     }
+
 }
 @media (min-width:40em){
     .content-hero__block-layout--lead-media-item{

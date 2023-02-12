@@ -13,7 +13,7 @@ import News from "./pages/News/News";
 import Archives from "./pages/Archives/Archives";
 import PhotoGallery from './Components/Home/PhotoGallery';
 import LiveCommentry from './pages/Live/LiveCommentry';
-
+import Quiz from './pages/quiz'
 export default function App() {
   return (
     <BrowserRouter>
@@ -31,7 +31,11 @@ export default function App() {
         <Route path="team" element={<BrowserTeam />} />
         <Route path="news" element={<News />} />
         <Route path="archives" element={<Archives />} />
+        
         <Route path="gallery" element={<PhotoGallery />} />
+
+        <Route path="quiz" element={<Quiz />} />
+
       </Routes>
       <Footer />
     </BrowserRouter>
