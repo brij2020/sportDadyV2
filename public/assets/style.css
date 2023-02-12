@@ -111,12 +111,7 @@ p.plain-list {
 .flag-contain {
     display: flex;
     justify-content: space-between;
-    padding: 16px 0px 16px 0px;
-    border: none !important;
-    border-top: 2px solid #fff !important;
-    border-bottom: 2px solid #fff !important;
-    border-radius: 0% !important;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 .live-card {
     background: linear-gradient(to right, #111b95, #c70000bf);

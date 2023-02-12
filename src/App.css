@@ -242,25 +242,8 @@ div.rotate_left {
 }
 
 .live-section {
-  margin-top: 20px;
-  width: 380px !important;
-  height: 92% !important;
-  background: linear-gradient(to right, #000, #fb0f0f);
-  border-radius: 20px;
-  padding: 22px;
-  padding-top: 22px;
-  rotate: 1deg;
-  -webkit-box-reflect: below 7px linear-gradient(transparent, transparent, #0004);
-  transform-origin: center;
-  transform: perspective(761px) rotateY(21deg);
-  transition: 0.5s;
-}
-
-.live-section:hover {
-  box-shadow: 5px 5px 5px 5px #323d94;
-  cursor: pointer;
-  background: linear-gradient(to right, #323d94, #000);
-  transform: perspective(761px) rotateY(-6deg);
+  display: flex;
+  margin: 20px 10px 10px;
 }
 
 .see-more {
@@ -655,19 +638,8 @@ a.nav-link.active {
   }
 
   .live-section {
-    margin-top: 20px;
-    width: 370px !important;
-    height: 90% !important;
-    background: linear-gradient(to right, #000, #fb0f0f);
-    border-radius: 20px;
-    padding: 22px;
-    padding-top: 22px;
-    rotate: 1deg;
-    -webkit-box-reflect: below 7px linear-gradient(transparent, transparent, #0004);
-    transform-origin: center;
-    transform: perspective(761px) rotateY(21deg);
-    transition: 0.5s;
-    margin-left: 20px;
+      display: flex;
+    margin: 20px 10px 10px;
   }
 
   .web-score {

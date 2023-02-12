@@ -55,7 +55,7 @@ const Header = (props) => {
                 <div className="textwidget">
                     <div className="sticky-container">
                         <div className="callout">
-                            <a className="support" href="/students/future/admissions/">Win to Cash</a>
+                            <a className="support">Win to Cash</a>
                         </div>
                         <div class="slideout">
                             <div class="inner">

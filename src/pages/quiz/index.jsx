@@ -105,7 +105,7 @@ const Quiz  = (props) => {
 	}
 	console.log("isComplete", percentValue)
 	return (
-		<div className='plain-section' style={{'margin-bottom': "100px"}}>
+		<div className='plain-section' style={{'margin-bottom': "100px", boxShadow: "3px 2px 7px 0px #999494"}}>
 		<div className="quiz">
 		<div id="circle-container" className="animate__animated animate__fadeInDownBig svg-percent">
 	
