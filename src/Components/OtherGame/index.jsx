@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import './index.css'
-import FootBall from "../../assets/images/football.gif"
+import FootBall from "../../assets/svg/football.svg"
 import Hockey from "../../assets/svg/1350146.avif"
 import Kabbdi from "../../assets/svg/sports-kabaddi.svg"
 import Tennis from "../../assets/svg/tennis.avif"

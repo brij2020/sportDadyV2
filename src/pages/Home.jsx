@@ -45,6 +45,9 @@ import OtherGame from '../Components/OtherGame'
 import TimeLine from '../Components/TimeLine'
 import LiveScore from '../Components/LiveScore'
 import CC from '../Components/LiveScoreSlider'
+import img10 from '../assets/images/bg/pk.jpg';
+import img11 from '../assets/images/bg/tt.jpg';
+import img12 from '../assets/images/bg/5172658.jpg';
 
 function Home() {
 
@@ -214,8 +217,8 @@ function Home() {
 
       {/* Latest News and Articles */}
 
-      <div className='bg-section' style={{ background: '#323d94' }}>
-        <div class="divider"><span></span><span>Latest News and Articles</span><span></span></div>
+       <div className='bg-section' style={{ "background-image": `url(${img10})`,backgroundSize: "cover" }}> 
+        <div class="divider" ><span></span><span>Latest News and Articles</span><span></span></div>
         <AricleList />
       </div>
 
@@ -280,7 +283,7 @@ function Home() {
 
       {/* photos  */}
 
-      <div className='bg-section' style={{ background: '#323d94' }}>
+      <div className='bg-section' style={{ "background-image": `url(${img11})`,backgroundSize: "cover" }}>
         <div class="divider"><span></span><span>Photos Gallery</span><span></span></div>
         <div class="containerv">
           <div class="main-box">
@@ -399,10 +402,6 @@ function Home() {
           <h3 className='see-more-home'>See More</h3>
         </Link>
       </div>
-
-
-
-      <Gamebox />
       {/* End Other Game Section   */}
       {/* Quiz  */}
 
@@ -530,7 +529,7 @@ function Home() {
 
       {/* Our Cricket Teams */}
 
-      <div className='bg-section'>
+      <div className='bg-section' >
         <div className='d-flex justify-content-around '>
           <div className='see-more-home'>{" "}</div>
 
@@ -560,7 +559,9 @@ function Home() {
 
       {/* Other Games*/}
 
-      <div className='bg-section' style={{ background: '#323d94' }}>
+      <div className='bg-section' style={{ "background-image": `url(${img12})`,backgroundSize: "cover", "height": "auto",
+    "max-width": "100%",
+    "max-height": "100%" }}>
         <div class="divider"><span></span><span>Other Games</span><span></span></div>
         <OtherGame />
       </div>

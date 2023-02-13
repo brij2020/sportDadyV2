@@ -10,10 +10,12 @@ import img3 from '../../assets/images/img3.png';
 import img4 from '../../assets/images/img4.jpg';
 import img7 from '../../assets/images/img7.jpg';
 import img9 from '../../assets/images/img9.jpg';
+
+
 const AricleList = () => {
     return (
 
-        <section class="content-hero ">
+        <section class="content-hero " >
             <div class="constraint-wrapper">
                 <div class="content-hero__container">
                     <div class="content-hero__block-layout content-hero__block-layout--lead-media-item">

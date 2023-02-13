@@ -114,7 +114,7 @@ p.plain-list {
     margin-top: 10px;
 }
 .live-card {
-    background: linear-gradient(to right, #111b95, #c70000bf);
+/*    background: linear-gradient(to right, #111b95, #c70000bf);*/
     border-radius: 10px;
     padding: 22px;
     transform-origin: center;
@@ -10981,3 +10981,14 @@ body {
   div.content {
     padding: 0 !important;
   }
+ .testart::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: #1e3065e6;
+}

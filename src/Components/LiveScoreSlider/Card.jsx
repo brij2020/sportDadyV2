@@ -4,12 +4,15 @@ import flag2 from '../../assets/icons/nami.png';
 import flag3 from '../../assets/icons/flag1.png';
 import flag4 from '../../assets/icons/flag2.png';
 import { Link } from 'react-router-dom';
+import flag5 from '../../assets/images/bg/twoCard.jpg';
+
+
 const Card = () => {
   return (
     <div>
       <div className="content">
       <Link to="live-commentry">
-        <div className='live-section'>
+        <div className='live-section' style={{ "background-image": `url(${flag5})`,backgroundSize: "cover", borderRadius: "15px" }}>
         <div className='live-card'>
             <h4 style={{ fontWeight: "bold", color: 'GhostWhite', }}>
             ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
