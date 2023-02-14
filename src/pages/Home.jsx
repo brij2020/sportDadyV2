@@ -20,6 +20,27 @@ import flag3 from '../assets/icons/flag1.png';
 import flag4 from '../assets/icons/flag2.png';
 import flagW from '../assets/icons/teamW.jpeg';
 
+import teamI from '../assets/images/hdImage/india-team.jpg';
+import teamSA from '../assets/images/hdImage/teamSA.jpg';
+import teamAus from '../assets/images/hdImage/teamAus.jpg';
+
+
+
+
+import photoGal1 from '../assets/images/hdImage/sl.jpg';
+import photoGal2 from '../assets/images/hdImage/vk.jpg';
+import photoGal3 from '../assets/images/hdImage/dw.jpg';
+import photoGal4 from '../assets/images/hdImage/dgb.jpg';
+import photoGal5 from '../assets/images/hdImage/wo.jpg';
+import photoGal6 from '../assets/images/hdImage/wp.jpg';
+import photoGal7 from '../assets/images/hdImage/vkw.jpg';
+
+
+
+
+
+
+
 
 import newzteam from '../assets/images/teams/newzteam.jpeg';
 import usteam from '../assets/images/teams/usteam.jpg';
@@ -206,7 +227,7 @@ function Home() {
 
       {/* Schedule */}
 
-      <div className='plain-section'>
+      <div className='plain-section bg-m-plain-section'>
         <div class="divider"><span></span><span>Cricket Schedule</span><span></span></div>
 
         <MatchSchedule data={Data} />
@@ -225,14 +246,14 @@ function Home() {
 
       {/* video  */}
 
-      <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', boxShadow: "none" }}>
+      <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94' }}>
         <div class="divider"><span></span><span>Video Hub</span><span></span></div>
 
         <div class="containerv">
           <div class="main-box">
             <div class="box one">
               <video
-                poster={img3}
+                poster={img9}
                 height={'100%'}
                 width={'100%'}
                 src={video} controls>
@@ -240,7 +261,7 @@ function Home() {
             </div>
             <div class="box two">
               <video
-                poster={img4}
+                poster={img7}
                 height={'100%'}
                 width={'100%'}
                 src={video} controls>
@@ -288,10 +309,10 @@ function Home() {
         <div class="containerv">
           <div class="main-box">
             <div class="box img-gal">
-              <img src={cricketimg1}
+              <img src={photoGal1}
                 height={"100%"}
                 width={"100%"}
-
+                style={{ objectFit: "cover", backgroundPosition: 'center'}}
               >
               </img>
               <div class="image-caption">
@@ -301,9 +322,9 @@ function Home() {
               </div>
             </div>
             <div class="box img-gal">
-              <img src={cricketimg2}
+              <img src={photoGal2}
 
-
+                style={{ objectFit: "cover", backgroundPosition: 'center'}}
                 height={"100%"}
                 width={"100%"}>
               </img>
@@ -314,9 +335,9 @@ function Home() {
               </div>
             </div>
             <div class="box img-gal">
-              <img src={img3}
+              <img src={photoGal3}
 
-
+              style={{ objectFit: "cover", backgroundPosition: 'center'}}
                 height={"100%"}
                 width={"100%"}>
               </img>
@@ -327,9 +348,9 @@ function Home() {
               </div>
             </div>
             <div class="box img-gal">
-              <img src={img4}
+              <img src={photoGal4}
 
-
+                style={{ objectFit: "cover",backgroundPosition: 'center'}}
                 height={"100%"}
                 width={"100%"}>
               </img>
@@ -340,7 +361,8 @@ function Home() {
               </div>
             </div>
             <div class="box five img-gal">
-              <img src={img7}
+              <img src={photoGal5}
+                style={{ objectFit: "cover",backgroundPosition: 'center'}}
 
 
                 height={"100%"}
@@ -353,8 +375,8 @@ function Home() {
               </div>
             </div>
             <div class="box six img-gal">
-              <img src={img9}
-
+              <img src={photoGal6}
+                style={{ objectFit: "cover",backgroundPosition: 'center'}}
                 height={"100%"}
                 width={"100%"}>
               </img>
@@ -365,7 +387,7 @@ function Home() {
               </div>
             </div>
             <div class="box six img-gal">
-              <img src={newzteam}
+              <img src={photoGal7}
 
 
                 height={"100%"}
@@ -404,45 +426,7 @@ function Home() {
       </div>
       {/* End Other Game Section   */}
       {/* Quiz  */}
-
-      <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
-
-        <div class="divider"><span></span><span>Quiz</span><span></span></div>
-        <div className='quiz-section'>
-          <div class="polaroid rotate_right">
-            <i className='fa fa-group'> {" "} 60k + Participants</i>
-            <h4 className='h4'>T20 Match 2022  Final Quiz.</h4>
-            <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
-          </div>
-
-          <div class="polaroid rotate_left">
-            <i className='fa fa-group '>{" "} 60k + Participants</i>
-            <h4 className='light-h4'>TATA IPL 2022  Final Quiz.</h4>
-            <p class="light-caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
-          </div>
-
-          <div class="polaroid rotate_right">
-            <i className='fa fa-group'> {" "} 60k + Participants</i>
-            <h4 className='h4'>T20 Match 2022  Final Quiz.</h4>
-            <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
-          </div>
-
-          <div class="polaroid rotate_left">
-            <i className='fa fa-group '>{" "} 60k + Participants</i>
-            <h4 className='light-h4'>TATA IPL 2022  Final Quiz.</h4>
-            <p class="light-caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
-          </div>
-
-          <div class="polaroid rotate_right">
-            <i className='fa fa-group'> {" "} 60k + Participants</i>
-            <h4 className='h4'>T20 Match 2022  Final Quiz.</h4>
-            <p class="caption">Sint quia Recusandae officiees neque maiores is cupiditate tempora quiz</p>
-          </div>
-        </div>
-      </div>
-
-
-
+      
       {/*cricket news Editorials */}
 
       {/* <div className='bg-section'>
@@ -540,16 +524,16 @@ function Home() {
         </div>
         <div className='d-flex justify-content-around m-cr-team'>
           <div className='team-img ourteam' style={{ width: '100%', height: '100%', marginTop: 10 }}>
-            <img src={cricketimg1} width="100%" height="100%" ></img>
+            <img src={teamI} width="100%" height="100%" style={{ objectFit: 'contain', }}></img>
             <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10, color: "#fff" }}>Indian Cricket Team Players</h2>
           </div>
 
           <div className='team-img ourteam' style={{ width: '100%', height: '100%', marginTop: 10 }}>
-            <img src={usteam} width="100%" height="100%"  ></img>
-            <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10, color: "#fff" }}>Us Cricket Team Players</h2>
+            <img src={teamSA} width="100%" height="100%"  style={{ objectFit: 'contain', }} ></img>
+            <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10, color: "#fff" }}>South Africa Cricket Team Players</h2>
           </div>
           <div className='team-img ourteam' style={{ width: '100%', height: '100%', marginTop: 10 }}>
-            <img src={newzteam} width="100%" height="100%"  ></img>
+            <img src={teamAus} width="100%" height="100%" style={{ objectFit: 'contain', }} ></img>
             <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10, color: "#fff" }}>NewZeland Cricket Team Players</h2>
           </div>
 
