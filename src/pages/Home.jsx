@@ -18,7 +18,7 @@ import flag1 from '../assets/icons/us.png';
 import flag2 from '../assets/icons/nami.png';
 import flag3 from '../assets/icons/flag1.png';
 import flag4 from '../assets/icons/flag2.png';
-import flagW from '../assets/icons/teamW.jpeg';
+import flagW from '../assets/icons/teamW.png';
 
 import teamI from '../assets/images/hdImage/india-team.jpg';
 import teamSA from '../assets/images/hdImage/teamSA.jpg';
@@ -228,9 +228,9 @@ function Home() {
       </div>
 
       {/* Schedule */}
-      <div class="header-container"><h2>Cricket Schedule</h2></div>
+      
       <div className='plain-section bg-m-plain-section'>
-       
+      <div class="header-container"><h2>Cricket Schedule</h2></div>
         <MatchSchedule data={Data} />
       </div>
 
