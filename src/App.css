@@ -839,7 +839,13 @@ a.nav-link.active {
   }
 
 }
+.swiper-slide {
+    background: none !important;
+  }
+  .blog-slider__img {
+    background: none !important;
 
+  }
 @media all and (min-width:321px) and (max-width: 480px) {
 
   /* put your css styles in here */
@@ -880,6 +886,7 @@ a.nav-link.active {
     background: none !important;
 
   }
+  
 
   .main-box {
     height: 100%;
@@ -887,7 +894,7 @@ a.nav-link.active {
     grid-template-columns: repeat(2, 2fr);
     grid-template-rows: repeat(6, 1fr);
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 5px;
   }
 
 
