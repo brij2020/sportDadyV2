@@ -89,13 +89,13 @@
   }
 
   .slick-next {
+    top:50%;
     right: 0px;
     top: -20px;
   }
 
   .slick-prev {
-    left: 72vw;
-    top: -20px;
+    top: 50%;
     z-index: 300;
   }
 
@@ -103,6 +103,11 @@
   .slick-next {
     color: rgba(0, 0, 0, 0);
   }
+.timeline__item__content{
+  width: 100px !important;
+  height: 100px !important;
+}
+
 }
 
 @media only screen and (min-width: 1900px) {}
