@@ -3,6 +3,8 @@ import "./quiz.css"
 import 'animate.css';
 import CircularProgressBar from "../../Components/ProgressBar"
 
+import promoImage from '../../assets/images/bg/ze.jpg';
+
 const quizeLitsS = [
 			{
 				quiz: '1. Wich bacon?',
@@ -105,7 +107,7 @@ const Quiz  = (props) => {
 	}
 	console.log("isComplete", percentValue)
 	return (
-		<div className='plain-section' style={{'margin-bottom': "100px", boxShadow: "3px 2px 7px 0px #999494"}}>
+		<div className='plain-section'  style={{ "background-image": `url(${promoImage})`,backgroundSize: "cover",'margin-bottom': "100px", boxShadow: "3px 2px 7px 0px #999494"}}>
 		<div className="quiz">
 		<div id="circle-container" className="animate__animated animate__fadeInDownBig svg-percent">
 	
