@@ -554,7 +554,82 @@ function Home() {
         <OtherGame />
       </div>
 
-      {/* download app section  */}
+      {/* Start Quiz card form section  */}
+
+      {/* <div class="container">
+    <div class="card">
+      <h2>IPL</h2>
+      <i class="fas fa-arrow-right"></i>
+      <p>Participet in IPL.</p>
+      <div class="pic"></div>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+     
+      <button>
+      </button>
+    </div>
+      <div class="card card2">
+      <h2>World Cup</h2>
+      <i class="fas fa-arrow-right"></i>
+      <p>Participet in World Cup.</p>
+      <div class="pic"></div>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+     
+      <button>
+      </button>
+    </div>
+  </div> */}
+
+
+{/*Start download app section  */}
+
       {/* <AnimationOnScroll animateIn="animate__jackInTheBox" > */}
       <div className='bg-section'>
         <div class="wrapper">

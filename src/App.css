@@ -1582,9 +1582,232 @@ a.nav-link.active {
   z-index: -1;
 }
 }
+
+@media all and (min-width:360px) and (max-width: 740px) {
+
+  .header-container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .header-container h2 {
+    font-size: 14pt;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0px;
+    background: #fff;
+    z-index: 1;
+    display: inline-block;
+    padding: 0 25px;
+}
+.header-container h2:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  background-color: #000;
+  top: 10px;
+  z-index: -1;
+}
+}
 /* End Heading title section*/
 /* See more section*/
 .see-more {
 text-align: right!important;
 }
 /* End See more section*/
+
+/* Start Quiz card form section  */
+i {
+  opacity: 0;
+  font-size: 18px;
+  color: #fff;
+  will-change: transform;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+h2 {
+  pointer-events: none;
+}
+
+
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin: 5px;
+}
+.container .card {
+  position: relative;
+  width: 500px;
+  height: 200px;
+  background-color: #fff;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.container .card:before {
+  content: "";
+  z-index: 99;
+  position: absolute;
+  top: -10px;
+  left: 32px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background-color: #E6E5E1;
+}
+.container .card:after {
+  content: "";
+  z-index: 99;
+  position: absolute;
+  bottom: -10px;
+  left: 32px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background-color: #E6E5E1;
+}
+.container .card ul {
+  z-index: 99;
+  position: absolute;
+  left: 39px;
+  top: 5px;
+  list-style-type: none;
+}
+.container .card ul li {
+  width: 2px;
+  height: 2px;
+  border-radius: 2px;
+  margin: 6px 0;
+  background-color: #E6E5E1;
+}
+.container .card h2 {
+  z-index: 99;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  bottom: 0;
+  right: 130px;
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+}
+.container .card .fa-arrow-right {
+  z-index: 100;
+  position: absolute;
+  right: 75px;
+  bottom: 25px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.container .card p {
+  z-index: 99;
+  position: absolute;
+  top: 20px;
+  right: 70px;
+  color: #333;
+  opacity: 0.7;
+  font-size: 12px;
+  letter-spacing: 1px;
+  writing-mode: vertical-lr;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.container .card .pic {
+  z-index: 100;
+  width: 400px;
+  height: 200px;
+  background-image: url("https://ss-i.thgim.com/public/cricket/ipl/article38437860.ece/alternates/LANDSCAPE_170/TataIPLjpg");
+  background-size: 100% 100%;
+  filter: grayscale(100%);
+}
+.container .card .social {
+  position: absolute;
+  left: 60px;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 180px;
+  height: 64px;
+  border-radius: 80px;
+}
+.container .card .social i:nth-of-type(1) {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+.container .card .social i:nth-of-type(2) {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.container .card .social i:nth-of-type(3) {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.container .card .social i:nth-of-type(4) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.container .card:hover i {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.container .card button {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 30px;
+  height: 30px;
+  background-color: #DA4D1D;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  mix-blend-mode: hard-light;
+}
+.container .card button i {
+  font-size: 3rem;
+}
+.container .card:hover button {
+  transform: scale(16.5);
+}
+.container .card:hover p {
+  color: #fff;
+}
+.container .card:hover .pic {
+  filter: grayscale(0);
+}
+.container .card2 .pic {
+  background-image: url("https://resources.pulse.icc-cricket.com/photo-resources/2022/03/10/25729e77-3cda-429e-ae70-575319e5ed42/GettyImages-1372705281.jpg?width=440&height=248");
+}
+.container .card2 button {
+  background-color: #2b26c3;
+}
+
+.dr {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 100px;
+}
+/* End Quiz card form section  */
