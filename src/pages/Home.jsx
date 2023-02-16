@@ -233,18 +233,16 @@ function Home() {
       <div class="header-container"><h2>Cricket Schedule</h2></div>
         <MatchSchedule data={Data} />
       </div>
+      {/* Schedule End */}
 
 
-
-
-      {/* Latest News and Articles */}
-      <div class="header-container"><h2>Latest News and Articles</h2></div>
-       <div className='bg-section' style={{ "background-image": `url(${img10})`,backgroundSize: "cover" }}> 
-       <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
-        <AricleList />
+      {/* ranking  */}
+      <div class="header-container"><h2>ICC Ranking</h2></div>
+      <div className='bg-section-time-line' >
+        <ICCRanking />
       </div>
-
-
+      {/* END */}
+      
       {/* video  */}
       <div class="header-container"><h2>Video Hub</h2></div>
       <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94' }}>
@@ -407,13 +405,7 @@ function Home() {
 
 
 
-      {/* ranking  */}
-      <div class="header-container"><h2>ICC Ranking</h2></div>
-      <div className='bg-section-time-line' >
-
-        
-        <ICCRanking />
-      </div>
+      
 
 
       {/* world timeline  */}
@@ -427,90 +419,7 @@ function Home() {
           <h3 className='see-more-home'>See More</h3>
         </Link>
       </div>
-      {/* End Other Game Section   */}
-      {/* Quiz  */}
-      
-      {/*cricket news Editorials */}
-
-      {/* <div className='bg-section'>
-          <h2 className='heading'>Cricket News and Editorials</h2>
-          <div className='new-part'>
-            <Row>
-              <Col xs={4}><img className='news-img' src={cricketimg1} width="80%" height="auto"></img>
-              </Col>
-              <Col xs={8}>
-                <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-                </Link>
-                <p style={{ textAlign: "start", color: "grey", }}>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                  a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                  remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                  Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                  of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                  classical Latin literature from 45 BC,
-                  <br />
-                </p>
-                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <p className='p-gray'>Nov 26 2022</p>
-                  <p className='see-more'><Link>View More</Link></p>
-                </div>
-              </Col>
-            </Row>
-          </div>
-          <hr />
-          <div className='new-part'>
-            <Row>
-              <Col xs={4}><img className='news-img' src={cricketimg2} width="80%" height="auto"></img>
-              </Col>
-              <Col xs={8}>
-                <Link><h3 className='news-heading'>Rain threat looms large as India eye series-levelling win</h3>
-                </Link>
-                <p style={{ textAlign: "start", color: "grey", }}>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-                  a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-                  remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                  Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-                  of Lorem Ipsum. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                  classical Latin literature from 45 BC,
-                  <br />
-                </p>
-                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <p className='p-gray'>Nov 26 2022</p>
-                  <p className='see-more'><Link>View More</Link></p>
-                </div>
-              </Col>
-            </Row>
-          </div>
-        </div> */}
-
-
-
-      {/* India National Cricket Team */}
-
-      {/* <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94', }}>
-          
-          <div class="divider"><span></span><span>India National Cricket Team</span><span></span></div>
-          <Row className="team-part">
-            <Col xs={4}>
-              <img className='news-img' src={cricketimg2} width="80%" height="auto"></img>
-            </Col>
-            <Col xs={8}>
-              <p style={{ textAlign: "start", color: "grey" }}>
-                Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
-                Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
-                Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
-                Following their stunning victory in the first ODI, New Zealand will<br></br> be hoping to seal the series and fetch more valuable Super League points<br></br>
-              </p>
-              <br /> <br />
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <p className='p-gray'>Nov 26 2022</p>
-                <p className='see-more'><Link to='team'>View More</Link></p>
-              </div>
-            </Col>
-          </Row>
-        </div> */}
+      {/* End Other Game*/}
 
 
 
@@ -544,6 +453,12 @@ function Home() {
         </div>
       </div>
 
+       {/* Latest News and Articles */}
+      <div class="header-container"><h2>Latest News and Articles</h2></div>
+       <div className='bg-section' style={{ "background-image": `url(${img10})`,backgroundSize: "cover" }}> 
+       <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
+        <AricleList />
+      </div>
 
       {/* Other Games*/}
       <div class="header-container"><h2>Others Game</h2></div>
