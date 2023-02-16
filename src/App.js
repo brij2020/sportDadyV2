@@ -13,7 +13,7 @@ import News from "./pages/News/News";
 import Archives from "./pages/Archives/Archives";
 import PhotoGallery from './Components/Home/PhotoGallery';
 import LiveCommentry from './pages/Live/LiveCommentry';
-import Quiz from './pages/quiz'
+import Quiz from './pages/Quiz'
 export default function App() {
   return (
     <BrowserRouter>

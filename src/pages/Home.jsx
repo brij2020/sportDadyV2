@@ -212,23 +212,26 @@ function Home() {
   return (
 
 
-
+    
     <div style={{ marginBottom: 20 }} id="main-app" >
+      
       <div id='top'>
+
         <LiveScore slides={images} />
       </div>
 
       {/* live */}
       {/*<LiveScoreComponet />*/}
+      <div class="header-container"><h2>Live Score</h2></div>
       <div id='top'>
         <CC />
 
       </div>
 
       {/* Schedule */}
-
+      <div class="header-container"><h2>Cricket Schedule</h2></div>
       <div className='plain-section bg-m-plain-section'>
-        <div class="divider"><span></span><span>Cricket Schedule</span><span></span></div>
+       
 
         <MatchSchedule data={Data} />
       </div>
@@ -237,17 +240,17 @@ function Home() {
 
 
       {/* Latest News and Articles */}
-
+      <div class="header-container"><h2>Latest News and Articles</h2></div>
        <div className='bg-section' style={{ "background-image": `url(${img10})`,backgroundSize: "cover" }}> 
-        <div class="divider" ><span></span><span>Latest News and Articles</span><span></span></div>
+       <div ><a href='#'><p><u>See More</u></p></a></div>
         <AricleList />
       </div>
 
 
       {/* video  */}
-
+      <div class="header-container"><h2>Video Hub</h2></div>
       <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94' }}>
-        <div class="divider"><span></span><span>Video Hub</span><span></span></div>
+      <div ><a href='#'><p><u>See More</u></p></a></div>
 
         <div class="containerv">
           <div class="main-box">
@@ -303,9 +306,9 @@ function Home() {
 
 
       {/* photos  */}
-
+      <div class="header-container"><h2>Photos Gallery</h2></div>
       <div className='bg-section' style={{ "background-image": `url(${img11})`,backgroundSize: "cover" }}>
-        <div class="divider"><span></span><span>Photos Gallery</span><span></span></div>
+      <div ><a href='#'><p><u>See More</u></p></a></div>
         <div class="containerv">
           <div class="main-box">
             <div class="box img-gal">
@@ -406,18 +409,19 @@ function Home() {
 
 
       {/* ranking  */}
+      <div class="header-container"><h2>ICC Ranking</h2></div>
       <div className='bg-section-time-line' >
 
-        <div class="divider"><span></span><span>ICC Ranking</span><span></span></div>
+        
         <ICCRanking />
       </div>
 
 
       {/* world timeline  */}
-
+      <div class="header-container"><h2>ODI World Cup Timeline</h2></div>
       <div className='bg-section-time-line' >
 
-        <div class="divider"><span></span><span>ODI WORLD CUP TIMELINE</span><span></span></div>
+        
         <TimeLine />
 
         <Link>
@@ -512,12 +516,13 @@ function Home() {
 
 
       {/* Our Cricket Teams */}
-
+      <div class="header-container"><h2>Our Cricket Teams</h2></div>
       <div className='bg-section' >
+      <div ><a href='#'><p><u>See More</u></p></a></div>
         <div className='d-flex justify-content-around '>
           <div className='see-more-home'>{" "}</div>
 
-          <div class="divider"><span></span><span>Our Cricket Teams</span><span></span></div>
+          
           <Link>
             <h3 className='see-more-home'>See More</h3>
           </Link>
@@ -542,11 +547,11 @@ function Home() {
 
 
       {/* Other Games*/}
-
+      <div class="header-container"><h2>Others Game</h2></div>
       <div className='bg-section' style={{ "background-image": `url(${img12})`,backgroundSize: "cover", "height": "auto",
     "max-width": "100%",
     "max-height": "100%" }}>
-        <div class="divider"><span></span><span>Other Games</span><span></span></div>
+        
         <OtherGame />
       </div>
 

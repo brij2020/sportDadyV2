@@ -10,6 +10,7 @@ const CC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   return (
+    
     <CarouselWrapper className="carousel-container">
       <CarouselProvider
         visibleSlides={slideCount}
