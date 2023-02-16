@@ -1551,4 +1551,40 @@ a.nav-link.active {
   z-index: -1;
 }
 
+@media all and (min-width:400px) and (max-width: 768px) {
+  .header-container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .header-container h2 {
+    font-size: 14pt;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin: 0px;
+    background: #fff;
+    z-index: 1;
+    display: inline-block;
+    padding: 0 25px;
+}
+.header-container h2:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  background-color: #000;
+  top: 10px;
+  z-index: -1;
+}
+}
 /* End Heading title section*/
+/* See more section*/
+.see-more {
+text-align: right!important;
+}
+/* End See more section*/

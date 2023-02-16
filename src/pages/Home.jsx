@@ -221,8 +221,7 @@ function Home() {
       </div>
 
       {/* live */}
-      {/*<LiveScoreComponet />*/}
-      <div class="header-container"><h2>Live Score</h2></div>
+      {/*<LiveScoreComponet />*/}      
       <div id='top'>
         <CC />
 
@@ -232,7 +231,6 @@ function Home() {
       <div class="header-container"><h2>Cricket Schedule</h2></div>
       <div className='plain-section bg-m-plain-section'>
        
-
         <MatchSchedule data={Data} />
       </div>
 
@@ -242,7 +240,7 @@ function Home() {
       {/* Latest News and Articles */}
       <div class="header-container"><h2>Latest News and Articles</h2></div>
        <div className='bg-section' style={{ "background-image": `url(${img10})`,backgroundSize: "cover" }}> 
-       <div ><a href='#'><p><u>See More</u></p></a></div>
+       <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
         <AricleList />
       </div>
 
@@ -250,9 +248,10 @@ function Home() {
       {/* video  */}
       <div class="header-container"><h2>Video Hub</h2></div>
       <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94' }}>
-      <div ><a href='#'><p><u>See More</u></p></a></div>
+      
 
         <div class="containerv">
+        <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
           <div class="main-box">
             <div class="box one">
               <video
@@ -308,7 +307,7 @@ function Home() {
       {/* photos  */}
       <div class="header-container"><h2>Photos Gallery</h2></div>
       <div className='bg-section' style={{ "background-image": `url(${img11})`,backgroundSize: "cover" }}>
-      <div ><a href='#'><p><u>See More</u></p></a></div>
+      <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
         <div class="containerv">
           <div class="main-box">
             <div class="box img-gal">
@@ -518,15 +517,15 @@ function Home() {
       {/* Our Cricket Teams */}
       <div class="header-container"><h2>Our Cricket Teams</h2></div>
       <div className='bg-section' >
-      <div ><a href='#'><p><u>See More</u></p></a></div>
-        <div className='d-flex justify-content-around '>
+      <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
+        {/* <div className='d-flex justify-content-around '>
           <div className='see-more-home'>{" "}</div>
 
           
           <Link>
             <h3 className='see-more-home'>See More</h3>
           </Link>
-        </div>
+        </div> */}
         <div className='d-flex justify-content-around m-cr-team'>
           <div className='team-img ourteam' style={{ width: '100%', height: '100%', marginTop: 10 }}>
             <img src={teamI} width="100%" height="100%" style={{ objectFit: 'contain', }}></img>

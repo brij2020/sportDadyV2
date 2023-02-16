@@ -10,7 +10,7 @@ function Footer() {
     return (
         <>
             <div>
-                <div style={{ background: '#000', paddingLeft: 50 }}>
+                <div style={{ background: '#323d94', paddingLeft: 50 }}>
 
                     <div class="footer-social-link">
                         <h3 className='cont-heading'>Follow us</h3>
@@ -112,10 +112,10 @@ function Footer() {
                         </div>
                     </div>
 
-                    <div className='d-flex justify-content-start'>
+                    {/* <div className='d-flex justify-content-start'>
                         <input class="form-field" type="text" placeholder="Enter your E-mail" />
                         <button className='submit-btn'>Submit</button>
-                    </div>
+                    </div> */}
 
                 </div>
 
