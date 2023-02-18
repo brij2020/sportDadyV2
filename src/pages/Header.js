@@ -50,7 +50,7 @@ const Header = (props) => {
     // u-body-no-scroll
     return (<>
 
-        <div id="side-sticky-tab">
+        {/* <div id="side-sticky-tab">
             <div>
                 <div className="textwidget">
                     <div className="sticky-container">
@@ -66,9 +66,9 @@ const Header = (props) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */}
         <section className={`main-navigation__wrapper `} style={{
-            background: '#323d94'
+            background: 'rgb(0, 0, 0, 0.5)'
         }}>
 
             {/* desktop menu */}
@@ -574,7 +574,7 @@ const Header = (props) => {
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " 
+                                                <a className="linked-list__link "
                                                 >
                                                     ICC CWC Challenge League
                                                 </a>
@@ -626,7 +626,7 @@ const Header = (props) => {
                                             </li>
 
                                             <li className="linked-list__item   ">
-                                                <a className="linked-list__link " 
+                                                <a className="linked-list__link "
                                                 >
                                                     ICC U19 T20 World Cup
                                                 </a>
@@ -1796,7 +1796,7 @@ const Header = (props) => {
                                         </li>
 
                                         <li className="linked-list__item   ">
-                                            <a className="linked-list__link " 
+                                            <a className="linked-list__link "
                                             >
                                                 ICC CWC Challenge League
                                             </a>
@@ -1848,7 +1848,7 @@ const Header = (props) => {
                                         </li>
 
                                         <li className="linked-list__item   ">
-                                            <a className="linked-list__link " 
+                                            <a className="linked-list__link "
                                             >
                                                 ICC U19 T20 World Cup
                                             </a>
