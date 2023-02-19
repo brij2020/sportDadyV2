@@ -175,7 +175,8 @@ body {
   opacity: 1;
 }
 .timeline__item--active .timeline__item__year, .timeline__link:hover ~ .timeline__item__year {
-  color: green;
+  color: #ffffff ;
+
   font-size: 26px;
   font-weight: bold;
 }
@@ -214,13 +215,12 @@ body {
   top: 0;
   left: 25px;
   right: -30px;
-  height: 100%;
+  
   overflow: hidden;
   pointer-events: none;
   z-index: -1;
-  background: rgba(0, 0, 0, 0.2) url(http://testuje.cz/noise.png) repeat 0 0;
-  -webkit-clip-path: polygon(130px 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(130px 0, 100% 0, 100% 100%, 0 100%);
+  
+  
 }
 
 .timeline__path__triangle {
@@ -246,13 +246,13 @@ body {
 
 .timeline__path__triangle--static-2 {
   border-width: 260px 260px 0 260px;
-  border-color: rgba(255, 255, 255, 0.4) transparent transparent transparent;
+  border-color: #fff transparent transparent transparent;
   right: 0;
 }
 
 .timeline__path__triangle--static-3 {
   border-width: 0 260px 260px 260px;
-  border-color: transparent transparent rgba(255, 255, 255, 0.4) transparent;
+  border-color: transparent transparent #ffffff transparent;
   left: 30%;
   bottom: 0;
 }
@@ -260,7 +260,7 @@ body {
 .timeline__path__triangle--moving {
   position: absolute;
   border-width: 260px 260px 0 260px;
-  border-color: rgba(255, 255, 255, 0.2) transparent transparent transparent;
+  border-color: #fff transparent transparent transparent;
   left: 0;
   top: 0;
   transition: transform 3s ease-out;
@@ -273,7 +273,7 @@ body {
 }
 
 .views {
-  background: #91ccff;
+  background: linear-gradient(147deg, rgb(0, 0, 0) 40%, rgb(219, 0, 0) 60%) ;
 }
 
 .view__inner {
@@ -352,8 +352,8 @@ body {
   padding: 0;
   width: 9px;
   height: 9px;
-  border-top: 3px solid #b91a2f;
-  border-right: 3px solid #b91a2f;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
 /*  behavior: url(-ms-transform.htc);*/
   -moz-transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
@@ -365,7 +365,7 @@ body {
 #scroll-title {
   display: block;
   text-transform: uppercase;
-  color: #b91a2f;
+  color: #fff;
   font-family: Helvetica Neue, Helvetica, Arial;
   font-size: 14px;
   font-weight: bold;
@@ -387,7 +387,7 @@ body {
     margin-left: -2px;
     width: 4px;
     height: 86px;
-    background: #b91a2f;
+    background: #fff;
     content: ' ';
 }
 @-webkit-keyframes elasticus {
@@ -612,9 +612,9 @@ body {
   right: 20px;
 }
 #paschka:hover {
-  background: #232323;
+  background: #fff;
   transition: all 0.1s ease;
-  color: #f0f0f0;
+  color: #fff;
 }
 
 

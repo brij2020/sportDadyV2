@@ -229,10 +229,10 @@ function Home() {
 
       {/* Schedule */}
       
-      <div className='plain-section bg-m-plain-section'>
+      {/* <div className='plain-section bg-m-plain-section'> */}
       <div class="header-container"><h2>Cricket Schedule</h2></div>
         <MatchSchedule data={Data} />
-      </div>
+      ?
       {/* Schedule End */}
 
 
@@ -304,7 +304,7 @@ function Home() {
 
       {/* photos  */}
       <div class="header-container"><h2>Photos Gallery</h2></div>
-      <div className='bg-section' style={{ "background-image": `url(${img11})`,backgroundSize: "cover" }}>
+      <div className='bg-section' style={{ "background":'linear-gradient(0deg, #00121d, #ff0000)' ,backgroundSize: "cover" }}>
       <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
         <div class="containerv">
           <div class="main-box">
@@ -405,24 +405,6 @@ function Home() {
 
 
 
-      
-
-
-      {/* world timeline  */}
-      <div class="header-container"><h2>ODI World Cup Timeline</h2></div>
-      <div className='bg-section-time-line' >
-
-        
-        <TimeLine />
-
-        <Link>
-          <h3 className='see-more-home'>See More</h3>
-        </Link>
-      </div>
-      {/* End Other Game*/}
-
-
-
       {/* Our Cricket Teams */}
       <div class="header-container"><h2>Our Cricket Teams</h2></div>
       <div className='bg-section' >
@@ -451,27 +433,45 @@ function Home() {
           </div>
 
         </div>
-      </div>
+      </div> 
 
-       {/* Latest News and Articles */}
-      <div class="header-container"><h2>Latest News and Articles</h2></div>
-       <div className='bg-section' style={{ "background-image": `url(${img10})`,backgroundSize: "cover" }}> 
-       <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
-        <AricleList />
-      </div>
 
-      {/* Other Games*/}
-      <div class="header-container"><h2>Others Game</h2></div>
-      <div className='bg-section' style={{ "background-image": `url(${img12})`,backgroundSize: "cover", "height": "auto",
+      {/* world timeline  */}
+      <div class="header-container"><h2>ODI World Cup Timeline</h2></div>
+      <div className='bg-section-time-line' >
+
+        
+        <TimeLine />
+
+        <Link>
+          <h3 className='see-more-home'>See More</h3>
+        </Link>
+      </div>
+      {/* End Other Game*/}
+
+
+
+     
+{/* Other Games*/}
+<div class="header-container"><h2>Others Game</h2></div>
+      <div className='bg-section' style={{ "background":'',backgroundSize: "cover", "height": "auto",
     "max-width": "100%",
     "max-height": "100%" }}>
         
         <OtherGame />
       </div>
+       {/* Latest News and Articles */}
+      <div class="header-container"><h2>Latest News and Articles</h2></div>
+       <div className='bg-section' style={{ "background": 'linear-gradient(0deg, #00121d, #ff0000)',backgroundSize: "cover" }}> 
+       <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
+        <AricleList />
+      </div>
+
+      
 
       {/* Start Quiz card form section  */}
 
-      {/* <div class="container">
+       <div class="container">
     <div class="card">
       <h2>IPL</h2>
       <i class="fas fa-arrow-right"></i>
@@ -540,7 +540,7 @@ function Home() {
       <button>
       </button>
     </div>
-  </div> */}
+  </div> 
 
 
 {/*Start download app section  */}
