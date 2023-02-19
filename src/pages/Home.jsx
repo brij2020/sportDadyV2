@@ -49,9 +49,9 @@ import apple from '../assets/icons/apple.png';
 import playstore from '../assets/icons/playstore.png';
 
 import ResponsiveSlider from '../Components/Slider'
-import ONE from '../assets/images/slides/banner.png'
-import TWO from '../assets/images/slides/India-win.png'
-import THREE from '../assets/images/slides/win.jpg'
+import ONE from '../assets/images/slides/sd1.png'
+import TWO from '../assets/images/slides/sd2.png'
+import THREE from '../assets/images/slides/sd3.png'
 
 import video from './cricket.mp4';
 import LiveScoreComponet from '../Components/Home/LiveScore'
