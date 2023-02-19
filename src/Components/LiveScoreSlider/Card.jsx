@@ -4,42 +4,44 @@ import flag2 from '../../assets/icons/nami.png';
 import flag3 from '../../assets/icons/flag1.png';
 import flag4 from '../../assets/icons/flag2.png';
 import { Link } from 'react-router-dom';
-import flag5 from '../../assets/images/bg/twoCard.jpg';
+import flag6 from '../../assets/images/bg/twoCard.jpg';
+import flag5 from '../../assets/images/hdImage/l4.jpg'
+
 
 
 const Card = () => {
   return (
     <div>
       <div className="content">
-      <Link to="live-commentry">
-        <div className='live-section' style={{ "background-image": `url(${flag5})`,backgroundSize: "cover", borderRadius: "15px" }}>
-        <div className='live-card'>
-            <h4 style={{ fontWeight: "bold", color: 'GhostWhite', }}>
-            ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
-            </h4>
-            
-          
-            <div className='flag-contain'>
-            <div >
-                
-                <img src={flag3} style={{ height: 50, width: 50, }}></img>
-                <span className="country-code">IND</span>
-                <p style={{ color: '#fff', fontSize: 15, textAlign: 'center', paddingTop: 8 }}>173/3 (20)</p>
-               
-            </div>
-            <div >
-                <img src={flag2} style={{ height: 50, width: 50}}></img>
-                <span className="country-code">PAK</span>
-                <p style={{ color: 'yellow', fontSize: 15, textAlign: 'center', paddingTop: 8,  }}>Innings Break</p>
-              
-            </div>
-            </div>
-             
-              
-        </div>
+        <Link to="live-commentry">
+          <div className='live-section' style={{ "background-image": `url(${flag5})`, backgroundSize: "cover", borderRadius: "15px" }}>
+            <div className='live-card'>
+              <h4 style={{ fontWeight: "bold", color: 'GhostWhite', }}>
+                ICC CRICKET WORLD CUP LEAGUE TWO 2019-23
+              </h4>
 
-        </div>
-    </Link>
+
+              <div className='flag-contain'>
+                <div >
+
+                  <img src={flag3} style={{ height: 50, width: 50, }}></img>
+                  <span className="country-code">IND</span>
+                  <p style={{ color: '#fff', fontSize: 15, textAlign: 'center', paddingTop: 8 }}>173/3 (20)</p>
+
+                </div>
+                <div >
+                  <img src={flag2} style={{ height: 50, width: 50 }}></img>
+                  <span className="country-code">PAK</span>
+                  <p style={{ color: 'yellow', fontSize: 15, textAlign: 'center', paddingTop: 8, }}>Innings Break</p>
+
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+        </Link>
       </div>
     </div>
   );
