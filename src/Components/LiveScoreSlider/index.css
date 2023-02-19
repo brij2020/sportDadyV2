@@ -234,11 +234,28 @@ div.content {
   margin-bottom: 15px;
   transition: opacity 0.3s;
 }
+div .swiper-button-next {
+  border: none;
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    height: 20px;
+    line-height: 0;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    top: 42%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 20px;
+}
 @media screen and (max-width: 576px) {
   .news__title {
     font-size: 22px;
     margin-bottom: 10px;
   }
+  
 }
 .news__txt {
   margin: 10px 0;

@@ -4,15 +4,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
+// import 'swiper/css/navigation';
 
 import './index.css';
-import flag1 from '../../assets/icons/us.png';
-import flag2 from '../../assets/icons/nami.png';
-import flag3 from '../../assets/icons/flag1.png';
-import flag4 from '../../assets/icons/flag2.png';
-import { Link } from 'react-router-dom';
+
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper';
@@ -38,8 +34,7 @@ export default function LiveScore(props) {
           clickable: true,
         }}
         navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        onAutoplayTimeLeft={onAutoplayTimeLeft}
+        modules={[ Pagination, Navigation]}
         className="mySwiper"
       >
        {
