@@ -304,7 +304,7 @@ function Home() {
 
       {/* photos  */}
       <div class="header-container"><h2>Photos Gallery</h2></div>
-      <div className='bg-section' style={{ "background":'linear-gradient(0deg, #00121d, #ff0000)' ,backgroundSize: "cover" }}>
+      <div className='bg-section' style={{ "background":'linear-gradient(0deg, #000, #ff0000)' ,backgroundSize: "cover" }}>
       <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
         <div class="containerv">
           <div class="main-box">
@@ -462,7 +462,7 @@ function Home() {
       </div>
        {/* Latest News and Articles */}
       <div class="header-container"><h2>Latest News and Articles</h2></div>
-       <div className='bg-section' style={{ "background": 'linear-gradient(0deg, #00121d, #ff0000)',backgroundSize: "cover" }}> 
+       <div className='bg-section' style={{ "background": 'linear-gradient(0deg, #000, #ff0000)',backgroundSize: "cover" }}> 
        <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
         <AricleList />
       </div>
