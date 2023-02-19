@@ -10,7 +10,7 @@ function Footer() {
     return (
         <>
             <div>
-                <div style={{ background: '#323d94', paddingLeft: 50 }}>
+                <div style={{ background: '#000', paddingLeft: 50 }}>
 
                     <div class="footer-social-link">
                         <h3 className='cont-heading'>Follow us</h3>

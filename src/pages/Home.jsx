@@ -64,7 +64,7 @@ import Gamebox from '../Components/Home/Gamebox';
 import MatchSchedule from "../Components/MatchSchdule";
 import OtherGame from '../Components/OtherGame'
 import TimeLine from '../Components/TimeLine'
-import LiveScore from '../Components/LiveScore'
+import LiveScore from '../Components/Banner'
 import CC from '../Components/LiveScoreSlider'
 import img10 from '../assets/images/bg/pk.jpg';
 import img11 from '../assets/images/bg/tt.jpg';
@@ -239,7 +239,7 @@ function Home() {
 
       {/* Latest News and Articles */}
       <div class="header-container"><h2>Latest News and Articles</h2></div>
-       <div className='bg-section' style={{ "background-image": `url(${img10})`,backgroundSize: "cover" }}> 
+       <div className='bg-section' style={{ "background":'linear-gradient(147deg, #000 40%, #db0000 60%)',backgroundSize: "cover" }}> 
        <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
         <AricleList />
       </div>
@@ -306,7 +306,7 @@ function Home() {
 
       {/* photos  */}
       <div class="header-container"><h2>Photos Gallery</h2></div>
-      <div className='bg-section' style={{ "background-image": `url(${img11})`,backgroundSize: "cover" }}>
+      <div className='bg-section' style={{ "background":'linear-gradient(147deg, #000 40%, #db0000 60%)',backgroundSize: "cover" }}>
       <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
         <div class="containerv">
           <div class="main-box">
@@ -556,7 +556,7 @@ function Home() {
 
       {/* Start Quiz card form section  */}
 
-      {/* <div class="container">
+       <div class="container">
     <div class="card">
       <h2>IPL</h2>
       <i class="fas fa-arrow-right"></i>
@@ -625,7 +625,7 @@ function Home() {
       <button>
       </button>
     </div>
-  </div> */}
+  </div> 
 
 
 {/*Start download app section  */}
