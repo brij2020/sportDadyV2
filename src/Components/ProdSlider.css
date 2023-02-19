@@ -56,6 +56,9 @@
   right: 10px;
   font-size: 2rem;
 }
+img.d-block.w-100.hh {
+  border-radius: 0px !important;
+}
 
 @media only screen and (max-width: 600px) {
   .slider-card {
@@ -76,6 +79,7 @@
   img.d-block.w-100.hh {
     height: 200px !important;
     object-fit: cover;
+    border-radius: 0px !important;
 }
   .slider-card {
     height: 200px !important;
