@@ -5,7 +5,7 @@ import flag3 from '../../assets/icons/flag1.png';
 import flag4 from '../../assets/icons/flag2.png';
 import { Link } from 'react-router-dom';
 import flag6 from '../../assets/images/bg/twoCard.jpg';
-import flag5 from '../../assets/images/hdImage/l4.jpg'
+import flag5 from '../../assets/images/hdImage/14.png'
 
 
 
