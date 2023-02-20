@@ -1546,7 +1546,7 @@ a.nav-link.active {
   padding-bottom: 20px;
   margin-top: 20px;
   font-weight: 400;
-  display: inline-block;
+  /* display: -webkit-box; */
   position: relative;
 }
 .section-title:after,
@@ -1557,7 +1557,7 @@ a.nav-link.active {
 }
 .section-title:after {
   height: 2px;
-  background-color: rgba(252, 92, 15, 0.46);
+  background-color: rgb(219, 0, 0);
   left: 25%;
   right: 25%;
 }
@@ -1566,7 +1566,7 @@ a.nav-link.active {
   width: 15px;
   height: 15px;
   border: 3px solid #fff;
-  background-color: #fc5c0f;
+  background-color: rgb(219, 0, 0);
   left: 50%;
   transform: translatex(-50%);
   bottom: -6px;

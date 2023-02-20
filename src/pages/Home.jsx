@@ -230,21 +230,21 @@ function Home() {
       {/* Schedule */}
       
       {/* <div className='plain-section bg-m-plain-section'> */}
-      <div class="section-title"><h2>Cricket Schedule</h2></div>
+      <div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Cricket Schedule</h2></div>
         <MatchSchedule data={Data} />
       ?
       {/* Schedule End */}
 
 
       {/* ranking  */}
-      <div class="section-title"><h2>ICC Ranking</h2></div>
+      <div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>ICC Ranking</h2></div>
       <div className='bg-section-time-line' >
         <ICCRanking />
       </div>
       {/* END */}
       
       {/* video  */}
-      <div class="section-title"><h2>Video Hub</h2></div>
+      <div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Video Hub</h2></div>
       <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94' }}>
       
 
@@ -303,7 +303,7 @@ function Home() {
 
 
       {/* photos  */}
-      <div class="section-title"><h2>Photos Gallery</h2></div>
+      <div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Photos Gallery</h2></div>
       <div className='bg-section' style={{ "background":'linear-gradient(0deg, #000, #ff0000)' ,backgroundSize: "cover" }}>
       <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
         <div class="containerv">
@@ -406,7 +406,7 @@ function Home() {
 
 
       {/* Our Cricket Teams */}
-      <div class="section-title"><h2>Our Cricket Teams</h2></div>
+      <div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Our Cricket Teams</h2></div>
       <div className='bg-section' >
       <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
         {/* <div className='d-flex justify-content-around '>
@@ -437,7 +437,7 @@ function Home() {
       
 
       {/* world timeline  */}
-      <div class="section-title"><h2>ODI World Cup Timeline</h2></div>
+      <div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>ODI World Cup Timeline</h2></div>
       <div className='bg-section-time-line' >
 
         
@@ -453,7 +453,7 @@ function Home() {
 
      
 {/* Other Games*/}
-<div class="section-title"><h2>Others Game</h2></div>
+<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Others Game</h2></div>
       <div className='bg-section' style={{ "background":'',backgroundSize: "cover", "height": "auto",
     "max-width": "100%",
     "max-height": "100%" }}>
@@ -461,7 +461,7 @@ function Home() {
         <OtherGame />
       </div>
        {/* Latest News and Articles */}
-      <div class="section-title"><h2>Latest News and Articles</h2></div>
+      <div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Latest News and Articles</h2></div>
        <div className='bg-section' style={{ "background": 'linear-gradient(0deg, #000, #ff0000)',backgroundSize: "cover" }}> 
        <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
         <AricleList />
@@ -470,7 +470,7 @@ function Home() {
       
 
       {/* Start Quiz card form section  */}
-      <div class="section-title"><h2>Participate in Lucky Draw</h2></div>
+      <div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Participate in Lucky Draw</h2></div>
        <div class="container">
     <div class="card">
       <h2>IPL</h2>
@@ -548,7 +548,7 @@ function Home() {
 
       {/* <AnimationOnScroll animateIn="animate__jackInTheBox" > */}
       <div className='bg-section'>
-      <div class="section-title"><h2>Download the Android & iOS App</h2></div>
+      <div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Download the Android & iOS App</h2></div>
         <div class="wrapper">
           <a href="https://www.apple.com/in/app-store/" target={'_blank'} class="link-wrapper">
             <div class="img-wrapper">
