@@ -168,6 +168,7 @@ body {
 .timeline__item__year {
   position: absolute;
   top: 40px;
+  color: #fff;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -273,13 +274,14 @@ body {
 }
 
 .views {
-  background: linear-gradient(147deg, rgb(0, 0, 0) 40%, rgb(219, 0, 0) 60%) ;
+  background: linear-gradient(0deg, rgb(0, 0, 0), rgb(255, 0, 0)) ;
 }
 
 .view__inner {
   display: flex;
   width: 100%;
   height: 40%;
+  color: #fff;
   align-items: center;
   justify-content: center;
 }
