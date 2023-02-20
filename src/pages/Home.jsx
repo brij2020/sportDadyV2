@@ -49,9 +49,9 @@ import apple from '../assets/icons/apple.png';
 import playstore from '../assets/icons/playstore.png';
 
 import ResponsiveSlider from '../Components/Slider'
-import ONE from '../assets/images/slides/sd1.png'
-import TWO from '../assets/images/slides/sd2.png'
-import THREE from '../assets/images/slides/sd3.png'
+import ONE from '../assets/images/slides/sd1.png';
+import TWO from '../assets/images/slides/sd2.png';
+import THREE from '../assets/images/slides/sd1.png';
 
 import video from './cricket.mp4';
 import LiveScoreComponet from '../Components/Home/LiveScore'
@@ -62,10 +62,10 @@ import Gamebox from '../Components/Home/Gamebox';
 
 
 import MatchSchedule from "../Components/MatchSchdule";
-import OtherGame from '../Components/OtherGame'
-import TimeLine from '../Components/TimeLine'
-import LiveScore from '../Components/LiveScore'
-import CC from '../Components/LiveScoreSlider'
+import OtherGame from '../Components/OtherGame';
+import TimeLine from '../Components/TimeLine';
+import LiveScore from '../Components/LiveScore';
+import CC from '../Components/LiveScoreSlider';
 import img10 from '../assets/images/bg/pk.jpg';
 import img11 from '../assets/images/bg/tt.jpg';
 import img12 from '../assets/images/bg/5172658.jpg';
@@ -230,21 +230,21 @@ function Home() {
       {/* Schedule */}
       
       {/* <div className='plain-section bg-m-plain-section'> */}
-      <div class="header-container"><h2>Cricket Schedule</h2></div>
+      <div class="section-title"><h2>Cricket Schedule</h2></div>
         <MatchSchedule data={Data} />
       ?
       {/* Schedule End */}
 
 
       {/* ranking  */}
-      <div class="header-container"><h2>ICC Ranking</h2></div>
+      <div class="section-title"><h2>ICC Ranking</h2></div>
       <div className='bg-section-time-line' >
         <ICCRanking />
       </div>
       {/* END */}
       
       {/* video  */}
-      <div class="header-container"><h2>Video Hub</h2></div>
+      <div class="section-title"><h2>Video Hub</h2></div>
       <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94' }}>
       
 
@@ -303,7 +303,7 @@ function Home() {
 
 
       {/* photos  */}
-      <div class="header-container"><h2>Photos Gallery</h2></div>
+      <div class="section-title"><h2>Photos Gallery</h2></div>
       <div className='bg-section' style={{ "background":'linear-gradient(0deg, #000, #ff0000)' ,backgroundSize: "cover" }}>
       <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
         <div class="containerv">
@@ -406,7 +406,7 @@ function Home() {
 
 
       {/* Our Cricket Teams */}
-      <div class="header-container"><h2>Our Cricket Teams</h2></div>
+      <div class="section-title"><h2>Our Cricket Teams</h2></div>
       <div className='bg-section' >
       <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
         {/* <div className='d-flex justify-content-around '>
@@ -437,7 +437,7 @@ function Home() {
 
 
       {/* world timeline  */}
-      <div class="header-container"><h2>ODI World Cup Timeline</h2></div>
+      <div class="section-title"><h2>ODI World Cup Timeline</h2></div>
       <div className='bg-section-time-line' >
 
         
@@ -453,7 +453,7 @@ function Home() {
 
      
 {/* Other Games*/}
-<div class="header-container"><h2>Others Game</h2></div>
+<div class="section-title"><h2>Others Game</h2></div>
       <div className='bg-section' style={{ "background":'',backgroundSize: "cover", "height": "auto",
     "max-width": "100%",
     "max-height": "100%" }}>
@@ -461,7 +461,7 @@ function Home() {
         <OtherGame />
       </div>
        {/* Latest News and Articles */}
-      <div class="header-container"><h2>Latest News and Articles</h2></div>
+      <div class="section-title"><h2>Latest News and Articles</h2></div>
        <div className='bg-section' style={{ "background": 'linear-gradient(0deg, #000, #ff0000)',backgroundSize: "cover" }}> 
        <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
         <AricleList />
@@ -470,7 +470,7 @@ function Home() {
       
 
       {/* Start Quiz card form section  */}
-
+      <div class="section-title"><h2>Participate in Lucky Draw</h2></div>
        <div class="container">
     <div class="card">
       <h2>IPL</h2>
@@ -547,6 +547,7 @@ function Home() {
 
       {/* <AnimationOnScroll animateIn="animate__jackInTheBox" > */}
       <div className='bg-section'>
+      <div class="section-title"><h2>Download the Android & iOS App</h2></div>
         <div class="wrapper">
           <a href="https://www.apple.com/in/app-store/" target={'_blank'} class="link-wrapper">
             <div class="img-wrapper">
