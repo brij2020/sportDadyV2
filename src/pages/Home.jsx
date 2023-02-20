@@ -49,9 +49,9 @@ import apple from '../assets/icons/apple.png';
 import playstore from '../assets/icons/playstore.png';
 
 import ResponsiveSlider from '../Components/Slider'
-import ONE from '../assets/images/slides/sd1.png';
-import TWO from '../assets/images/slides/sd2.png';
-import THREE from '../assets/images/slides/sd1.png';
+import ONE from '../assets/images/slides/sd2.png';
+import TWO from '../assets/images/slides/sd1.png';
+import THREE from '../assets/images/slides/sd4.png';
 
 import video from './cricket.mp4';
 import LiveScoreComponet from '../Components/Home/LiveScore'
@@ -219,7 +219,7 @@ function Home() {
 
         <LiveScore slides={images} />
       </div>
-
+      <div class="grad-bar"></div>
       {/* live */}
       {/*<LiveScoreComponet />*/}      
       <div id='top'>
@@ -402,7 +402,7 @@ function Home() {
           </div>
         </div>
       </div>
-
+      <div class="grad-bar"></div>
 
 
       {/* Our Cricket Teams */}
@@ -434,7 +434,7 @@ function Home() {
 
         </div>
       </div> 
-
+      
 
       {/* world timeline  */}
       <div class="section-title"><h2>ODI World Cup Timeline</h2></div>
@@ -466,7 +466,7 @@ function Home() {
        <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
         <AricleList />
       </div>
-
+<div class="grad-bar"></div>
       
 
       {/* Start Quiz card form section  */}
@@ -540,8 +540,9 @@ function Home() {
       <button>
       </button>
     </div>
+    
   </div> 
-
+  
 
 {/*Start download app section  */}
 
