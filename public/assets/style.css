@@ -5469,7 +5469,7 @@ p a:focus{
     bottom:0;
     width:36rem;
     z-index:110;
-    background:rgb(0,0,0,0.8));
+    background:rgb(0,0,0,0.8);
     border-left:.1rem solid hsla(0,0%,100%,.1);
     overflow:auto
 }
