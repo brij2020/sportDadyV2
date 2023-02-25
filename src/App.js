@@ -14,6 +14,9 @@ import Archives from "./pages/Archives/Archives";
 import PhotoGallery from './Components/Home/PhotoGallery';
 import LiveCommentry from './pages/Live/LiveCommentry';
 import Quiz from './pages/quiz'
+import PhotoListPage from './pages/PhotoList'
+import PhotoDetailPage from './pages/Photos/PhotoStory';
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -31,10 +34,11 @@ export default function App() {
         <Route path="team" element={<BrowserTeam />} />
         <Route path="news" element={<News />} />
         <Route path="archives" element={<Archives />} />
-        
-        <Route path="gallery" element={<PhotoGallery />} />
-
         <Route path="quiz" element={<Quiz />} />
+        <Route path="photos-stories" element={<PhotoListPage />} />
+        
+        <Route path="gallery" element={<PhotoDetailPage />} />
+        
 
       </Routes>
       <Footer />

@@ -305,7 +305,7 @@ function Home() {
       {/* photos  */}
       <div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Photos Gallery</h2></div>
       <div className='bg-section' style={{ "background":'linear-gradient(0deg, #000, #ff0000)' ,backgroundSize: "cover" }}>
-      <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
+      <div ><a href='/photos-stories'><p class="see-more"><u>View More</u></p></a></div>
         <div class="containerv">
           <div class="main-box">
             <div class="box img-gal">
