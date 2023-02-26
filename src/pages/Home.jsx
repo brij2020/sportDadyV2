@@ -220,7 +220,7 @@ function Home() {
 
         <LiveScore slides={images} />
       </div>
-      <div class="grad-bar"></div>
+      {/*<div class="grad-bar"></div>*/}
       {/* live */}
       {/*<LiveScoreComponet />*/}      
       <div id='top'>
@@ -228,6 +228,7 @@ function Home() {
         <CC />
 
       </div>
+        <div className="devider" />
 
       {/* Schedule */}
       
@@ -235,7 +236,7 @@ function Home() {
       {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Cricket Schedule</h2></div>*/}
       <Heading primaryHeading={'Cricket Schedule'} ballImageLeftPercent={25}/>
         <MatchSchedule data={Data} />
-      ?
+      <div className="devider" />
       {/* Schedule End */}
 
 
@@ -245,7 +246,9 @@ function Home() {
       <div className='bg-section-time-line' >
         <ICCRanking />
       </div>
+      <div className="devider" />
       {/* END */}
+
       
       {/* video  */}
       <Heading primaryHeading={'Video Hub'} ballImageLeftPercent={35}/>
@@ -306,13 +309,14 @@ function Home() {
         </div>
 
       </div>
+      <div className="devider" />
 
 
       {/* photos  */}
       <Heading primaryHeading={'Photos Gallery'} ballImageLeftPercent={28} />
 
       {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Photos Gallery</h2></div>*/}
-      <div className='bg-section' style={{ "background":'linear-gradient(0deg, #000, #ff0000)' ,backgroundSize: "cover" }}>
+      <div className='bg-section' style={{ "background":'linear-gradient(0deg, #000, #ff0000)' ,backgroundSize: "cover", marginBottom: "14px" }}>
       <div ><a href='/photos-stories'><p class="see-more"><u>View More</u></p></a></div>
         <div class="containerv">
           <div class="main-box">
@@ -410,7 +414,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <div class="grad-bar"></div>
+      <div className="devider" />
 
 
       {/* Our Cricket Teams */}
@@ -445,7 +449,7 @@ function Home() {
 
         </div>
       </div> 
-      
+      <div className="devider" />
 
       {/* world timeline  */}
       <Heading primaryHeading={'ODI World Cup Timeline'} ballImageLeftPercent={15}/>
@@ -460,6 +464,7 @@ function Home() {
           <h3 className='see-more-home'>See More</h3>
         </Link>
       </div>
+      <div className="devider" />
       {/* End Other Game*/}
 
 
@@ -475,15 +480,16 @@ function Home() {
         
         <OtherGame />
       </div>
+      <div className="devider" />
        {/* Latest News and Articles */}
       <Heading primaryHeading={'Latest News and Articles'} ballImageLeftPercent={17} />
 
       {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Latest News and Articles</h2></div>*/}
-       <div className='bg-section' style={{ "background": 'linear-gradient(0deg, #000, #ff0000)',backgroundSize: "cover" }}> 
+       <div className='bg-section' style={{ "background": 'linear-gradient(0deg, #000, #ff0000)',backgroundSize: "cover", marginBottom: "15px"}}> 
        <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
         <AricleList />
       </div>
-<div class="grad-bar"></div>
+<div className="devider" />
       
 
       {/* Start Quiz card form section  */}

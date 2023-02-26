@@ -8,6 +8,7 @@ const Heading = props => {
 	console.log("test ", ballImageLeftPercent, `${ballImageLeftPercent}% !important`)
 	return(
 		<Intersection>
+		
 		<div class="section-title">
 			<h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>{primaryHeading}</h2>
 

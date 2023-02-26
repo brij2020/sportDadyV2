@@ -47,10 +47,14 @@ span > img {
     0% {
         opacity: 0;
         transform: translateX(-70%);
+        background: red;
+        opacity: .06;
     }
 
     80% {
         transform: translateX(20%);
+        opacity: .5;
+
     }
     
     100% {
@@ -58,4 +62,14 @@ span > img {
         transform: translate(20%);
     }
 
+}
+
+.devider{
+     width: 95%;
+    margin-left: 2%;
+    height: 6px;
+    margin-bottom: 30px!important;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #ebebeb, #ebebeb, #ebebeb);
+    background: #ebebeb;
 }
