@@ -189,7 +189,7 @@
     top: calc(50% - 16px);
     left: calc(50% - 35vh - 16px);
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #666666;
     overflow: hidden;
     opacity: 0.85;
     transition: opacity 0.25s ease;
@@ -203,12 +203,24 @@
     cursor: pointer;
     position: absolute;
     top: calc(50% - 16px);
-    left: calc(50% + 35vh - 16px);
+    left: calc(50% + 35vh - 16px);;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #8e8989;
     overflow: hidden;
     opacity: 0.85;
     transition: opacity 0.25s ease;
+  }
+  @media (max-width: 767px) {
+    #pgt-prev-slide {
+      left: 10px;
+    }
+    #pgt-next-slide {
+      left: 88% !important;
+    }
+    .tp-section {
+      padding-top: -10px;
+    }
+
   }
   
   #pgt-prev-slide::before,
@@ -219,8 +231,8 @@
     width: 12px;
     height: 12px;
     top: 10px;
-    border-right: 4px solid #555;
-    border-bottom: 4px solid #555;
+    border-right: 4px solid #fff;
+    border-bottom: 4px solid #fff;
   }
   
   #pgt-prev-slide::before {
@@ -240,12 +252,12 @@
   
   #pgt-prev-slide:hover::before,
   #pgt-next-slide:hover::before {
-    border-right-color: #043cb7;
-    border-bottom-color: #043cb7;
+    border-right-color: #fff;
+    border-bottom-color: #fff;
   }
   
-  body.mobile #prev-slide,
-  body.mobile #next-slide {
+  body.mobile #pgt-prev-slide,
+  body.mobile #pgt-next-slide {
     display: none;
   }
   
@@ -501,11 +513,15 @@
   .context-menu-container > .button {
     display: block;
     position: absolute;
-    bottom: -5px;
+/*    bottom: -5px;*/
     right: 0;
-    width: 50px;
-    height: 50px;
-  }
+/*    width: 50px;*/
+/*    height: 50px;*/
+      width: 85px;
+      border-radius: 10px;
+      padding: 0 !important; 
+      background-color: #ff2d2dd1 !important;
+  }   
   
   @media (min-width: 640px) {
     .context-menu-container > .button {
@@ -515,6 +531,9 @@
   @media (min-width: 768px) {
     .context-menu-container > .button {
       right: 10px;
+    }
+    .tp-section {
+      padding-top: 3%;
     }
   }
   @media (min-width: 1024px) {
@@ -613,6 +632,7 @@
   .hide-slide {
     opacity: 0;
     overflow: hidden;
+    display: none;
   }
   .hide-slide-progress{
 
@@ -738,8 +758,6 @@
   }
 
 /* Zoom in out Animation  */
-
-
 .pgt-slide > img {
 
   text-align:center;
@@ -767,6 +785,46 @@
 }
 
 /* Foot Note for images  */
+
+.slideUp {
+  top:40px;
+  left:10px;
+  animation: slideUp ease .9s forwards 1.2s;
+}
+ .pgt-gradient  {
+  overflow: hidden;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* text animation up */
+
+.pgt-gradient h3, .slideUp {
+  position: relative;
+  font-size: 25px;
+  opacity:0;
+}
+
+.pgt-gradient h3 {
+  top:40px;
+  font-weight: bold;
+  animation: slideUp ease .98s forwards;
+}
+
+
+
+
+@keyframes slideUp {
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-40px);opacity:1;}
+}
+
+
+/*End */
+
+
 .pgt-gradient {
   padding: 10px;
   display: flex;
@@ -779,51 +837,51 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
-  border-top: dashed 1px #fff;
+  background-image:linear-gradient(to bottom, rgb(225 3 3 / 84%), rgb(0 0 0 / 83%));;
+/*  border-top: dashed 1px #fff;*/
   border-width: 1px 0 0 0;
-  border-image-source: url('../../assets/icons/border-dash.png');
+/*  border-image-source: url('../../assets/icons/border-dash.png');*/
   border-image-slice: 1;
   border-image-repeat: round;
   width: 100%;
-  min-height: 18%;
+  min-height: 15%;
   box-sizing: border-box;
   
 }
 
 .pgt-gradient h3 {
   color: #fff !important;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 22px;
   font-family: "Lato", sans-serif;
   margin-bottom: 10px;
   flex-basis: 100%;
   min-height: 40px;
-  text-align: left
+  text-align: center;
 }
 
 /* Zoom in Keyframes */
 @-webkit-keyframes zoomin {
   0% {transform: scale(1);}
-  50% {transform: scale(1.1);}
+  50% {transform: scale(1.2);}
   100% {transform: scale(1);}
 }
 @keyframes zoomin {
   0% {transform: scale(1);}
-  50% {transform: scale(1.1);}
+  50% {transform: scale(1.2);}
   100% {transform: scale(1);}
 } /*End of Zoom in Keyframes */
 
 /* Zoom out Keyframes */
 @-webkit-keyframes zoomout {
   0% {transform: scale(1);}
-  50% {transform: scale(0.67);}
+  50% {transform: scale(0.8);}
   100% {transform: scale(1);}
 }
 @keyframes zoomout {
     0% {transform: scale(1);}
-  50% {transform: scale(0.67);}
+  50% {transform: scale(0.8);}
   100% {transform: scale(1);}
 }/*End of Zoom out Keyframes */
 
