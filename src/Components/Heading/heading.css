@@ -1,0 +1,61 @@
+
+div .section-title {
+  animation: customScale 1s ease-in-out 3s 1 forwards;
+}
+
+
+
+div .section-title > span img {
+  position: absolute;
+/*    left: 49%;*/
+    bottom: -5px;
+    z-index: 2;
+  -webkit-animation: section-animation 3s infinite;
+  animation: section-animation 3s infinite;
+}
+div .head-main span.yellow-bg-big img {
+  bottom: 15px;
+  width: 120%;
+  -webkit-animation: section-animation-2 3s infinite;
+  animation: section-animation-2 3s infinite;
+}
+div .head-maine span.yellow-bg-sm img {
+  bottom: 10px;
+  width: 120%;
+  -webkit-animation: section-animation-2 3s infinite;
+  animation: section-animation-2 3s infinite;
+}
+span > img {
+-webkit-animation:spin 4s linear infinite  !important;
+    -moz-animation:spin 4s linear infinite  !important;
+    animation:spin 4s linear infinite !important;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.section-title span  {
+    display: block;
+    
+   /*  Animation decalaration   */
+    animation-name: moveInRight;
+    animation-duration: 3s;
+      -webkit-animation: moveInRight 3s infinite;
+  animation: moveInRight 3s infinite;
+}
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-70%);
+    }
+
+    80% {
+        transform: translateX(20%);
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translate(20%);
+    }
+
+}

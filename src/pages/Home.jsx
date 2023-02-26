@@ -69,7 +69,7 @@ import CC from '../Components/LiveScoreSlider';
 import img10 from '../assets/images/bg/pk.jpg';
 import img11 from '../assets/images/bg/tt.jpg';
 import img12 from '../assets/images/bg/5172658.jpg';
-
+import Heading from "../Components/Heading"
 function Home() {
 
   const [team, setTeam] = useState(true)
@@ -213,8 +213,9 @@ function Home() {
 
 
     
+    
     <div style={{ marginBottom: 20 }} id="main-app" >
-      
+       
       <div id='top'>
 
         <LiveScore slides={images} />
@@ -223,6 +224,7 @@ function Home() {
       {/* live */}
       {/*<LiveScoreComponet />*/}      
       <div id='top'>
+        <Heading primaryHeading={'Live Score'} ballImageLeftPercent={38}/>
         <CC />
 
       </div>
@@ -230,21 +232,25 @@ function Home() {
       {/* Schedule */}
       
       {/* <div className='plain-section bg-m-plain-section'> */}
-      <div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Cricket Schedule</h2></div>
+      {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Cricket Schedule</h2></div>*/}
+      <Heading primaryHeading={'Cricket Schedule'} ballImageLeftPercent={25}/>
         <MatchSchedule data={Data} />
       ?
       {/* Schedule End */}
 
 
       {/* ranking  */}
-      <div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>ICC Ranking</h2></div>
+      {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>ICC Ranking</h2></div>*/}
+      <Heading primaryHeading={'ICC Ranking'}  ballImageLeftPercent={35}/>
       <div className='bg-section-time-line' >
         <ICCRanking />
       </div>
       {/* END */}
       
       {/* video  */}
-      <div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Video Hub</h2></div>
+      <Heading primaryHeading={'Video Hub'} ballImageLeftPercent={35}/>
+
+      {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Video Hub</h2></div>*/}
       <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94' }}>
       
 
@@ -303,7 +309,9 @@ function Home() {
 
 
       {/* photos  */}
-      <div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Photos Gallery</h2></div>
+      <Heading primaryHeading={'Photos Gallery'} ballImageLeftPercent={28} />
+
+      {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Photos Gallery</h2></div>*/}
       <div className='bg-section' style={{ "background":'linear-gradient(0deg, #000, #ff0000)' ,backgroundSize: "cover" }}>
       <div ><a href='/photos-stories'><p class="see-more"><u>View More</u></p></a></div>
         <div class="containerv">
@@ -406,7 +414,10 @@ function Home() {
 
 
       {/* Our Cricket Teams */}
-      <div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Our Cricket Teams</h2></div>
+      
+      <Heading primaryHeading={'Our Cricket Teams'} ballImageLeftPercent={23}/>
+
+      {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Our Cricket Teams</h2></div>*/}
       <div className='bg-section' >
       <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
         {/* <div className='d-flex justify-content-around '>
@@ -437,7 +448,9 @@ function Home() {
       
 
       {/* world timeline  */}
-      <div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>ODI World Cup Timeline</h2></div>
+      <Heading primaryHeading={'ODI World Cup Timeline'} ballImageLeftPercent={15}/>
+
+      {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>ODI World Cup Timeline</h2></div>*/}
       <div className='bg-section-time-line' >
 
         
@@ -453,7 +466,9 @@ function Home() {
 
      
 {/* Other Games*/}
-<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Others Game</h2></div>
+      <Heading primaryHeading={'Others Game'} ballImageLeftPercent={32} />
+
+{/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Others Game</h2></div>*/}
       <div className='bg-section' style={{ "background":'',backgroundSize: "cover", "height": "auto",
     "max-width": "100%",
     "max-height": "100%" }}>
@@ -461,7 +476,9 @@ function Home() {
         <OtherGame />
       </div>
        {/* Latest News and Articles */}
-      <div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Latest News and Articles</h2></div>
+      <Heading primaryHeading={'Latest News and Articles'} ballImageLeftPercent={17} />
+
+      {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Latest News and Articles</h2></div>*/}
        <div className='bg-section' style={{ "background": 'linear-gradient(0deg, #000, #ff0000)',backgroundSize: "cover" }}> 
        <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
         <AricleList />
