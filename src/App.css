@@ -1543,7 +1543,7 @@ a.nav-link.active {
 .section-title {
   font-size: 28px;
   margin-bottom: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   margin-top: 20px;
   font-weight: 400;
   /* display: -webkit-box; */
