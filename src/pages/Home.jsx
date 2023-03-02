@@ -70,6 +70,7 @@ import img10 from '../assets/images/bg/pk.jpg';
 import img11 from '../assets/images/bg/tt.jpg';
 import img12 from '../assets/images/bg/5172658.jpg';
 import Heading from "../Components/Heading"
+
 function Home() {
 
   const [team, setTeam] = useState(true)
@@ -223,26 +224,35 @@ function Home() {
       {/*<div class="grad-bar"></div>*/}
       {/* live */}
       {/*<LiveScoreComponet />*/}      
-      <div id='top'>
-        <Heading primaryHeading={'Live Score'} ballImageLeftPercent={38}/>
-        <CC />
 
-      </div>
-        <div className="devider" />
+        <div id='top' >
+          
+          <CC />
+
+        </div>
+  
+      <div className="devider" />
 
       {/* Schedule */}
       
       {/* <div className='plain-section bg-m-plain-section'> */}
       {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Cricket Schedule</h2></div>*/}
-      <Heading primaryHeading={'Cricket Schedule'} ballImageLeftPercent={25}/>
+      {/*<Heading primaryHeading={'Cricket Schedule'} ballImageLeftPercent={25} />*/}
+        <div id="top" style={{boxShadow: `rgb(50 61 148) 1px 2px 9px`,
+         
+         }}
+         className="cricket-schedule"
+         >
         <MatchSchedule data={Data} />
+        </div>
+        
       <div className="devider" />
       {/* Schedule End */}
 
 
       {/* ranking  */}
       {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>ICC Ranking</h2></div>*/}
-      <Heading primaryHeading={'ICC Ranking'}  ballImageLeftPercent={35}/>
+      {/*<Heading primaryHeading={'ICC Ranking'}  ballImageLeftPercent={35}/>*/}
       <div className='bg-section-time-line' >
         <ICCRanking />
       </div>

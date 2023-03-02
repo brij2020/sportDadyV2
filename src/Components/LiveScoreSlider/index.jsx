@@ -3,15 +3,24 @@ import { CarouselProvider } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import CarouselSlider from "./CarouselSlider";
 import styled from "styled-components";
+import { useIntersectionObserver } from 'react-intersection-observer-hook';
+import Heading from "../Heading"
 
 const CC = () => {
   //no of slide to be visible
   const [slideCount, setSlideCount] = useState(2);
   const [currentSlide, setCurrentSlide] = useState(0);
+  // const divRef = React.useRef(null)
+ const [divRef, { entry }] = useIntersectionObserver();
+  const isVisible = entry && entry.isIntersecting;
 
+  React.useEffect(() => {
+    console.log(`The component is ${isVisible ? 'visible' : 'not visible'}.`, isVisible);
+  }, [isVisible])
   return (
-    
-    <CarouselWrapper className="carousel-container">
+    <>
+    <Heading primaryHeading={'Live Score'} ballImageLeftPercent={20} visibility={isVisible}/>
+    <CarouselWrapper className="carousel-container" ref={divRef}>
       <CarouselProvider
         visibleSlides={slideCount}
         totalSlides={6}
@@ -27,7 +36,7 @@ const CC = () => {
         />
       </CarouselProvider>
     </CarouselWrapper>
-  );
+  </>);
 };
 
 const CarouselWrapper = styled.div`

@@ -5,15 +5,15 @@ div .section-title {
 
 
 
-div .section-title > span img {
+div .section-title > span img  {
   position: absolute;
-/*    left: 49%;*/
-    bottom: -5px;
+    bottom: -8px;
     z-index: 2;
   -webkit-animation: section-animation 3s infinite;
   animation: section-animation 3s infinite;
 }
-div .head-main span.yellow-bg-big img {
+
+div .head-main span.yellow-bg-big img, {
   bottom: 15px;
   width: 120%;
   -webkit-animation: section-animation-2 3s infinite;
@@ -26,7 +26,7 @@ div .head-maine span.yellow-bg-sm img {
   animation: section-animation-2 3s infinite;
 }
 span > img {
--webkit-animation:spin 4s linear infinite  !important;
+-webkit-animation:spin 4s linear infinite !important;
     -moz-animation:spin 4s linear infinite  !important;
     animation:spin 4s linear infinite !important;
 }
@@ -40,36 +40,57 @@ span > img {
    /*  Animation decalaration   */
     animation-name: moveInRight;
     animation-duration: 3s;
-      -webkit-animation: moveInRight 3s infinite;
-  animation: moveInRight 3s infinite;
+      -webkit-animation: moveInRight 3s 1;
+  animation: moveInRight 3s 1;
 }
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(-70%);
+        transform:  translateX(-70%);
         background: red;
-        opacity: .06;
+/*        opacity: .06;*/
     }
 
-    80% {
-        transform: translateX(20%);
-        opacity: .5;
+    50% {
+        transform:  translateX(2%);
+/*        opacity: .5;*/
 
     }
     
     100% {
-        opacity: 1;
-        transform: translate(20%);
+/*        opacity: -1;*/
+        transform:  translateX(-1%);
     }
+
 
 }
 
 .devider{
-     width: 95%;
+    width: 95%;
     margin-left: 2%;
     height: 6px;
     margin-bottom: 30px!important;
     border-radius: 20px;
-    background: linear-gradient(90deg, #ebebeb, #ebebeb, #ebebeb);
-    background: #ebebeb;
+    background: linear-gradient(90deg, #2a2626bf, #e30e0e, #261313b5);
+
 }
+
+canvas {
+        display: block;
+        left: 59%;
+        margin: -169px 0 0 -202px;
+        position: absolute;
+/*        top: 50%;*/
+        transform: rotateZ(-90deg);
+        z-index: -1;
+}
+
+/*canvas {
+    display: block;
+    left: 58%;
+    margin: -153px -4px -16px -212px;
+    position: absolute;
+    top: 50%;
+    transform: rotateZ(-90deg);
+    z-index: -1;
+}*/

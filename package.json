@@ -17,6 +17,7 @@
     "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
     "react-image-gallery": "^1.2.11",
+    "react-intersection-observer-hook": "^2.1.0",
     "react-photo-gallery": "^8.0.0",
     "react-player": "^2.11.0",
     "react-router-dom": "^6.4.3",

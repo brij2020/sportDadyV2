@@ -1,52 +1,26 @@
-import { useRef, useState, useEffect, createElement } from 'react'
-import type {
-  FC,
-  ReactNode,
-  ReactHTML,
-  DetailedHTMLProps,
-  HTMLAttributes
-} from 'react'
+import { useEffect, useState, useRef } from 'react';
 
-const Intersection = ({
-  children,
-  as = 'div',
-  keepRender = true,
-  root,
+const useIntersect = ({
+  root = null,
   rootMargin,
-  threshold,
-  ...props
+  threshold = 0
 }) => {
-  const [isShow, setShow] = useState(false)
-  const ref = useRef(null)
 
+  const [ entry, updateEntry ] = useState({});
+  const [ node, setNode ] = useState(null);
+  const observer =  useRef(null);
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry], obs) => {
-        if (entry.isIntersecting) {
-          setShow(true)
-          if (keepRender && ref.current) {
-            obs.unobserve(ref.current)
-          }
-        } else {
-          setShow(false)
-        }
-      },
-      { root, rootMargin, threshold }
-    )
+    if(observer.current) observer.current.disconnect();
+    observer.current = new window.IntersectionObserver(
+      ([entry]) => updateEntry(entry),{
+        root,
+        rootMargin,
+        threshold
+      }
+      )
+  },[node, root, rootMargin, threshold])
 
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => observer.disconnect()
-  }, [keepRender, root, rootMargin, threshold])
-
-  return (
-    <>
-      {createElement(as, { ref, ...props })}
-      {isShow && children}
-    </>
-  )
+  return [entry,setNode]
 }
 
-export default Intersection
+export default useIntersect;

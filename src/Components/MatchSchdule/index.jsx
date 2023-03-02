@@ -1,40 +1,51 @@
 import * as React from 'react';
+import { useIntersectionObserver } from 'react-intersection-observer-hook';
+import Heading from "../Heading"
 
 const MatchSchedule = (props) => {
+ const [divRef, { entry }] = useIntersectionObserver();
+  const isVisible = entry && entry.isIntersecting;
 
+  React.useEffect(() => {
+    console.log(`The component is ${isVisible ? 'visible' : 'not visible'}.`, isVisible);
+  }, [isVisible])
 
-	return(
-		 <div className="blog-slider">
+	return(<>
+    <Heading primaryHeading={'Cricket Schedule'} ballImageLeftPercent={4} visibility={isVisible}/>
+
+		 <div className="blog-slider" ref={divRef}>
         <div className="blog-slider__wrp swiper-wrapper">
 
         {
         	props?.data?.map((slide, i)=> {
-        		console.log('slide', slide)
+        
         			return(
         				<>
-			    <div className="blog-slider__item swiper-slide">
-            <div className="blog-slider__img">
+			       <div className="blog-slider__item swiper-slide">
+                <div className="blog-slider__img">
                <div className='d-flex' style={{ 
-               	flexDirection: "row",
-    			      marginTop: "30px"
+               	flexDirection: "row"
                }}>
                 <img src={slide.img} style={{
-                  width: "100px",
-                  height: "100px",
+                  width: "90px",
+                  height: "90px",
                   marginLeft: "28px",
+                  marginTop: "50px",
                       borderRadius: 80
                 }}></img>
                 <h4 style={{
                   alignSelf: 'center',
-                  marginRight: 5,
-                  marginTop: 5
+                  paddingTop:"20%",
+                  margin:"auto",
+                  fontWeight: 600
                 }}>
                   V/S
                 </h4>
                 <img src={slide.img2} style={{
-                  width: "100px",
-                  height: "100px",
+                  width: "90px",
+                  height: "90px",
                   marginRight: "5px",
+                  marginTop: "50px",
                   borderRadius: 80
                 
                 }}></img>
@@ -59,7 +70,7 @@ const MatchSchedule = (props) => {
         <div className="blog-slider__pagination"></div>
       </div>
 
-	)
+	</>)
 } 
 
 export default MatchSchedule;

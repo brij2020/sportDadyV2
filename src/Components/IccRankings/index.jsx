@@ -1,4 +1,6 @@
 import * as React from 'react';
+import Heading from "../Heading"
+import { useIntersectionObserver } from 'react-intersection-observer-hook';
 
 // import "./icc-ranking.css"
 const ICCRanking = (props) => {
@@ -16,8 +18,17 @@ const ICCRanking = (props) => {
     const handleTest = () => setFormat(0);
     const handleOdi = () => setFormat(1);
     const handleT20 = () => setFormat(2);
-	return (
-	 <div className="body-content js-body-content">
+     const [divRef, { entry }] = useIntersectionObserver();
+  const isVisible = entry && entry.isIntersecting;
+
+  React.useEffect(() => {
+    console.log(`The component is ${isVisible ? 'visible' : 'not visible'}.`, isVisible);
+  }, [isVisible])
+
+	return (<>
+          <Heading primaryHeading={'ICC Ranking'} ballImageLeftPercent={15} visibility={isVisible}/>
+
+	 <div className="body-content js-body-content" ref={divRef}>
         <main id="main-content">
            
             <section className="rankings" data-widget="rankings" data-script="icc-cricket_rankings">
@@ -4379,7 +4390,7 @@ const ICCRanking = (props) => {
         </main>
 
     </div>
-	)
+	</>)
 }
 
 export default ICCRanking;
