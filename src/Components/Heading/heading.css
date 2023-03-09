@@ -7,13 +7,13 @@ div .section-title {
 
 div .section-title > span img  {
   position: absolute;
-    bottom: -8px;
+    bottom: -15px;
     z-index: 2;
   -webkit-animation: section-animation 3s infinite;
   animation: section-animation 3s infinite;
 }
 
-div .head-main span.yellow-bg-big img, {
+div .head-main span.yellow-bg-big img {
   bottom: 15px;
   width: 120%;
   -webkit-animation: section-animation-2 3s infinite;
@@ -25,7 +25,7 @@ div .head-maine span.yellow-bg-sm img {
   -webkit-animation: section-animation-2 3s infinite;
   animation: section-animation-2 3s infinite;
 }
-span > img {
+span > .ball-image {
 -webkit-animation:spin 4s linear infinite !important;
     -moz-animation:spin 4s linear infinite  !important;
     animation:spin 4s linear infinite !important;
@@ -85,6 +85,59 @@ canvas {
         z-index: -1;
 }
 
+
+
+.section-heading-large {
+  position: relative;
+  margin-bottom: 20px
+}
+
+.section-heading-large a {
+  text-decoration: none
+}
+
+.section-heading-large a:hover {
+  text-decoration: none;
+  color: #ff6125
+}
+
+.section-heading-large:after {
+  border-bottom: 6px solid #e8e7e7;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  width: 100%;
+  z-index: -1
+}
+
+.section-heading-large h2 {
+  margin-bottom: 0;
+  line-height: 1;
+  background: #fff;
+  text-transform: uppercase;
+  display: inline;
+  padding: 0 12px 0 15px;
+  position: relative;
+  font-size: 30px;
+  font-weight: 700
+}
+
+.section-heading-large h2:before {
+  width: 6px;
+  height: 70%;
+  top: 15%;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #ff0000
+}
+
+.section-heading-large.small h2 {
+  font-size: 21px;
+  padding: 0 5px 0 15px
+}
 /*canvas {
     display: block;
     left: 58%;

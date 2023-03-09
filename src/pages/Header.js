@@ -1261,6 +1261,7 @@ const Header = (props) => {
 
 
                     <nav className="sub-menu">
+                    <div class="logo-brand-home"><a href="/"><img src="https://cdn.wionews.com/images/wion-logo.png" class="img-fluid" height="40" width="150" /></a></div>
                         <a className="sub-menu__link " href="/">
                             <i className="fa fa-fw fa-home" style={{ fontSize: "20px" }}></i>
                         </a>
@@ -1275,6 +1276,14 @@ const Header = (props) => {
                             href="#">
                             Awards
                         </a>*/}
+                        <div class="burger-menu-set belliconAdd">
+                       
+                            <div class="hum-menuBell">
+                            <a id="bell-btn1"> 
+                            <i class="fa fa-bell">
+                            </i></a></div>
+                               
+                    </div>
 
                         {!isSearch ? <a className="sub-menu__link" href="#" id="search" onClick={e => handleSearch(true)} ><i class="fa fa-search"></i></a> : null}
                         <div className={`search-form ${isSearch ? 'active' : ''}`}>
@@ -2280,45 +2289,11 @@ const Header = (props) => {
         </div>
      
 
-    <div className="m-nav">
-    <nav class="nav nav--icons">
-      <ul>
-        <li>
-          <a href="#home">
-            <svg class="icon icon-home" viewBox="0 0 24 24" width="24" height="24">
-                <path fill="currentColor" d="M21.6 8.2l-9-7c-0.4-0.3-0.9-0.3-1.2 0l-9 7c-0.3 0.2-0.4 0.5-0.4 0.8v11c0 1.7 1.3 3 3 3h14c1.7 0 3-1.3 3-3v-11c0-0.3-0.1-0.6-0.4-0.8zM14 21h-4v-8h4v8zM20 20c0 0.6-0.4 1-1 1h-3v-9c0-0.6-0.4-1-1-1h-6c-0.6 0-1 0.4-1 1v9h-3c-0.6 0-1-0.4-1-1v-10.5l8-6.2 8 6.2v10.5z"></path>
-            </svg>
-            <span>Home</span>
-          </a>
-        </li>
-        <li>
-          <a href="#news">
-            <svg class="icon icon-news" viewBox="0 0 24 24" width="24" height="24">
-                <path fill="currentColor" d="M17 2h-10c-1.7 0-3 1.3-3 3v16c0 0.4 0.2 0.7 0.5 0.9s0.7 0.1 1-0.1l6.4-4.6 6.4 4.6c0.2 0.1 0.4 0.2 0.6 0.2s0.3 0 0.5-0.1c0.3-0.2 0.5-0.5 0.5-0.9v-16c0.1-1.7-1.2-3-2.9-3zM18 19.1l-5.4-3.9c-0.2-0.1-0.4-0.2-0.6-0.2s-0.4 0.1-0.6 0.2l-5.4 3.9v-14.1c0-0.6 0.4-1 1-1h10c0.6 0 1 0.4 1 1v14.1z"></path>
-            </svg>
-            <span>News</span>
-          </a>
-        </li>
-        <li>
-          <a href="#profile">
-            <svg class="icon icon-profile" viewBox="0 0 24 24" width="24" height="24">
-              <g fill="currentColor">
-                <path d="M16 14h-8c-2.8 0-5 2.2-5 5v2c0 0.6 0.4 1 1 1s1-0.4 1-1v-2c0-1.7 1.3-3 3-3h8c1.7 0 3 1.3 3 3v2c0 0.6 0.4 1 1 1s1-0.4 1-1v-2c0-2.8-2.2-5-5-5z"></path>
-                <path d="M12 12c2.8 0 5-2.2 5-5s-2.2-5-5-5-5 2.2-5 5 2.2 5 5 5zM12 4c1.7 0 3 1.3 3 3s-1.3 3-3 3-3-1.3-3-3 1.3-3 3-3z"></path>
-              </g>
-            </svg>
-            <span>Profile</span>    
-          </a>
-        </li>
-        <li>
-          <a href="#search">
-            <i class="fa-thin fa-video"></i>
-            <span>Videos</span>    
-          </a>
-        </li>
-      </ul>
-    </nav>
-    </div>
+        <div id="btm-navbar" class="fVywg btnav-height" style={{"bottom": "0px"}}>
+            <a href="/" class="_2uBiG" clink="y">
+                <svg xmlns="https://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><path d="M20.4 9.758c.374-.412.338-1.043-.08-1.41L11.085.27c-.419-.367-1.09-.359-1.5.017L.32 8.78c-.41.376-.43 1.007-.044 1.408l.232.242c.385.4 1.008.448 1.39.106l.693-.62v9.077c0 .557.45 1.008 1.007 1.008H7.21c.557 0 1.008-.45 1.008-1.008v-6.35h4.606v6.35c-.008.557.39 1.008.947 1.008h3.827c.556 0 1.008-.451 1.008-1.008v-8.95l.427.376c.235.207.73.04 1.104-.371l.263-.289z" transform="translate(-190.000000, -128.000000) translate(0.000000, 42.000000) translate(180.000000, 81.000000) translate(10.000000, 5.000000)"></path></svg>home</a>
+                <a href="/live-tv" class=" _2Jp9T " clink="y"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="17" viewBox="0 0 24 17"><g fill="none" fill-rule="evenodd"><g fill="#EA2318"><g><path fill-rule="nonzero" d="M23.083.033H.698C.313.033 0 .346 0 .732v12.86c0 .387.313.7.698.7h8.73v1.278H7.544c-.386 0-.698.312-.698.698 0 .386.312.699.698.699h8.693c.386 0 .699-.313.699-.699 0-.386-.313-.698-.699-.698h-1.884V14.29h8.73c.386 0 .698-.312.698-.698V.732c0-.386-.312-.699-.698-.699zM12.957 15.57h-2.132V14.29h2.132v1.279zm9.428-2.675H1.397V1.43h20.988v11.465z" transform="translate(-300 -13) translate(300 13)"></path><path d="M9.563 4.25L9.563 10.328 15.938 7.468z" transform="translate(-300 -13) translate(300 13)"></path></g></g></g></svg>live tv</a>
+                <div class="ypkGD"><a href="/short-videos/neil-bhatt-amp-aishwarya-sharma-enjoy-at-ankita-lokhande-amp-vicky-jain039s-holi-bash-reels-98524217" clink="y"><img src="/assets/images/shorts-outline-Black.gif" alt="short video" />Short videos</a></div><a href="/web-stories" class="" clink="y"><svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" opacity=".8"><circle stroke="#0A0A0A" cx="7.5" cy="7.5" r="7"></circle><g fill="#0A0A0A"><path d="M5 4h5v7H5zM11 5h1v5h-1zM3 5h1v5H3z"></path></g></g></svg> Photos</a></div>
     </>
     )
 }

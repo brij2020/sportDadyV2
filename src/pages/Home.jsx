@@ -70,7 +70,7 @@ import img10 from '../assets/images/bg/pk.jpg';
 import img11 from '../assets/images/bg/tt.jpg';
 import img12 from '../assets/images/bg/5172658.jpg';
 import Heading from "../Components/Heading"
-
+import Video from '../Components/Videos/index'
 function Home() {
 
   const [team, setTeam] = useState(true)
@@ -262,9 +262,9 @@ function Home() {
       
       {/* video  */}
       <Heading primaryHeading={'Video Hub'} ballImageLeftPercent={35}/>
-
+         <Video />
       {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Video Hub</h2></div>*/}
-      <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94' }}>
+      {/* <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94' }}>
       
 
         <div class="containerv">
@@ -318,7 +318,8 @@ function Home() {
           </div>
         </div>
 
-      </div>
+      </div> */}
+      
       <div className="devider" />
 
 
