@@ -68,9 +68,7 @@ const Header = (props) => {
                 </div>
             </div>
         </div> */}
-        <section className={`main-navigation__wrapper `} style={{
-            background: 'rgb(0, 0, 0, 0.5)'
-        }}>
+        <section className={`main-navigation__wrapper `} >
 
             {/* desktop menu */}
             <div className="main-navigation__header u-hide-desktop">
@@ -1261,10 +1259,16 @@ const Header = (props) => {
 
 
                     <nav className="sub-menu">
-                    <div class="logo-brand-home"><a href="/"><img src="https://cdn.wionews.com/images/wion-logo.png" class="img-fluid" height="40" width="150" /></a></div>
-                        <a className="sub-menu__link " href="/">
+                    <div class="logo-brand-home"><a href="/"><img src="https://cdn.wionews.com/images/wion-logo.png" class="img-fluid" height="40" width="150" 
+                        style={{
+                            height: "50px",
+                            padding: "10px 25px 0px"
+                        }}
+                    
+                    /></a></div>
+                        {/* <a className="sub-menu__link " href="/">
                             <i className="fa fa-fw fa-home" style={{ fontSize: "20px" }}></i>
-                        </a>
+                        </a> */}
                         {/*
                         <a className="sub-menu__link " href="/livescore">
                             Scores
@@ -1280,18 +1284,22 @@ const Header = (props) => {
                        
                             <div class="hum-menuBell">
                             <a id="bell-btn1"> 
-                            <i class="fa fa-bell">
+                            <i class="fa fa-bell" style={{fontSize: 25,
+                                color: "red",
+                                position: "absolute",
+                                right: "17%",
+                                top: "25%"}}>
                             </i></a></div>
                                
                     </div>
 
-                        {!isSearch ? <a className="sub-menu__link" href="#" id="search" onClick={e => handleSearch(true)} ><i class="fa fa-search"></i></a> : null}
-                        <div className={`search-form ${isSearch ? 'active' : ''}`}>
+                        {/*!isSearch ? <a className="sub-menu__link" href="#" id="search" onClick={e => handleSearch(true)} ><i class="fa fa-search"></i></a> : null*/}
+                        {/* <div className={`search-form ${isSearch ? 'active' : ''}`}>
                             <form>
                                 <input type="text" placeholder="Search" />
                             </form>
                         </div>
-                        <a className={`close ${isSearch ? 'active' : ''}`} onClick={e => handleSearch(false)}><i className="fa fa-times"></i></a>
+                        <a className={`close ${isSearch ? 'active' : ''}`} onClick={e => handleSearch(false)}><i className="fa fa-times"></i></a> */}
                     </nav>
 
                 </div>

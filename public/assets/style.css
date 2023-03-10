@@ -9115,7 +9115,7 @@ p a:focus{
         border-radius:.4rem;
         position:absolute;
         right:.8rem;
-        bottom:.8rem
+        bottom:1.2rem
     }
     .main-navigation__social-container{
         padding:.8rem 0;
@@ -11021,3 +11021,14 @@ body {
     background-color: #1e3065e6;
 }
 
+
+@media screen and (max-width: 767px) {
+    .main-navigation__sub-menu {
+      white-space: nowrap;
+      overflow-x: scroll;
+      border-top: 1px solid #c7c5c5;
+      border-bottom: 1px solid #c7c5c5;
+      background: #fff;
+      box-shadow: 0 3px 8px #dcdcdc;
+    }
+  }

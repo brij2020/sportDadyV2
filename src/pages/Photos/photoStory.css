@@ -1,5 +1,5 @@
   
-  main {
+  .body-content, .js-body-content  {
     position: relative;
     text-align: center;
     display: block;

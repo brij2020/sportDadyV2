@@ -1,5 +1,6 @@
 import * as React from 'react';
-import './videoList.css'
+import './videoList.css';
+import { LoadMore } from '../../Components/LoadMore'
 const VideoList = (props) => {
     return (
         <section>
@@ -74,6 +75,7 @@ const VideoList = (props) => {
                     </div>
                 </section>
             </div>
+            <LoadMore />
             <div class=""></div>
             <div class="oBcDZ" id="btf1">
                 <div style={{"visibility":"visible"}} class="_2Mjds  bggrayAd ">

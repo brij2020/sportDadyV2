@@ -230,7 +230,7 @@ p.vid-text {
 }
 @media screen and (max-width: 767px) {
     .video-home-section .video-section-big .play-btn {
-        top: 33%
+        top: 25%
     }
 
     .section-heading-large .in-text-items {
@@ -395,3 +395,29 @@ p.vid-text {
         max-width: 100%
     }
 }
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 4) {
+    /* CSS */
+
+    .video-home-section .video-section-big .play-btn {
+        top: 28%;
+    }
+}
+
+
+     @media only screen and (min-width: 390px) {
+        .video-home-section .video-section-big .play-btn {
+            top: 27%;
+        }  
+     }
+     @media only screen 
+    and (device-width : 414px) 
+    and (device-height : 896px) 
+    and (-webkit-device-pixel-ratio : 2) {
+
+        .video-home-section .video-section-big .play-btn {
+            top: 26%;
+        }
+     }
+     

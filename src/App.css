@@ -1729,7 +1729,7 @@ section.cardWrapper {
 /* End See more section*/
 
 /* Start Quiz card form section  */
-i {
+/* i {
   opacity: 0;
   font-size: 18px;
   color: #fff;
@@ -1738,7 +1738,7 @@ i {
   transform: scale(0.1);
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-}
+} */
 
 h2 {
   pointer-events: none;
@@ -2035,24 +2035,15 @@ h2 {
   transform: translate3d(0, 0, 0);
 }
 
-.m-nav {
-  display: none;
-}
-
-@media (max-width: 767px) {
-  .m-nav {
-    display: block;
-  }
-}
-
 /* 
+  Bottom navigation 
  */
 
 .fVywg {
   position: fixed;
   width: 100%;
   height: 66px;
-  background-color: var(--bgWhite);
+  background-color: white;
   z-index: 999;
   bottom: 0;
   justify-content: space-between;
