@@ -16,6 +16,7 @@ import LiveCommentry from './pages/Live/LiveCommentry';
 import Quiz from './pages/quiz'
 import PhotoListPage from './pages/PhotoList'
 import PhotoDetailPage from './pages/Photos/PhotoStory';
+import VideoList from './pages/VideoList';
 
 export default function App() {
   return (
@@ -38,6 +39,8 @@ export default function App() {
         <Route path="photos-stories" element={<PhotoListPage />} />
         
         <Route path="gallery" element={<PhotoDetailPage />} />
+        <Route path="videos" element={<VideoList />} />
+
         
 
       </Routes>
