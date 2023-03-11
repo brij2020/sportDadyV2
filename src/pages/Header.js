@@ -1323,12 +1323,16 @@ const Header = (props) => {
                         </a>
                         <span className="js-mobile-nav-btn" onClick={handleMWebNavToggel} aria-label="button">
 
-                            <img src={closeSVG} alt="iconClose" className="icon linked-list__header-close-icn" />
+                            {/* <img src={closeSVG} alt="iconClose" className="icon linked-list__header-close-icn" /> */}
                             {/*<svg className="icon linked-list__header-close-icn" aria-hidden="true">
                                 <use xmlnsXlink="http://www.w3.org/1999/xlink"
                                     xlinkHref="/resources/prod/v8.28.5/i/svg-output/icons.svg#icn-cross"></use>
                             </svg>
                             */}
+                            <i class="fa fa-times" aria-hidden="true" style={{
+                                    color: "white",
+                                    fontSize: "20px"
+                            }}></i>
                         </span>
                     </header>
                     <ul className="linked-list js-dynamic-list">
@@ -2300,8 +2304,8 @@ const Header = (props) => {
         <div id="btm-navbar" class="fVywg btnav-height" style={{"bottom": "0px"}}>
             <a href="/" class="_2uBiG" clink="y">
                 <svg xmlns="https://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><path d="M20.4 9.758c.374-.412.338-1.043-.08-1.41L11.085.27c-.419-.367-1.09-.359-1.5.017L.32 8.78c-.41.376-.43 1.007-.044 1.408l.232.242c.385.4 1.008.448 1.39.106l.693-.62v9.077c0 .557.45 1.008 1.007 1.008H7.21c.557 0 1.008-.45 1.008-1.008v-6.35h4.606v6.35c-.008.557.39 1.008.947 1.008h3.827c.556 0 1.008-.451 1.008-1.008v-8.95l.427.376c.235.207.73.04 1.104-.371l.263-.289z" transform="translate(-190.000000, -128.000000) translate(0.000000, 42.000000) translate(180.000000, 81.000000) translate(10.000000, 5.000000)"></path></svg>home</a>
-                <a href="/live-tv" class=" _2Jp9T " clink="y"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="17" viewBox="0 0 24 17"><g fill="none" fill-rule="evenodd"><g fill="#EA2318"><g><path fill-rule="nonzero" d="M23.083.033H.698C.313.033 0 .346 0 .732v12.86c0 .387.313.7.698.7h8.73v1.278H7.544c-.386 0-.698.312-.698.698 0 .386.312.699.698.699h8.693c.386 0 .699-.313.699-.699 0-.386-.313-.698-.699-.698h-1.884V14.29h8.73c.386 0 .698-.312.698-.698V.732c0-.386-.312-.699-.698-.699zM12.957 15.57h-2.132V14.29h2.132v1.279zm9.428-2.675H1.397V1.43h20.988v11.465z" transform="translate(-300 -13) translate(300 13)"></path><path d="M9.563 4.25L9.563 10.328 15.938 7.468z" transform="translate(-300 -13) translate(300 13)"></path></g></g></g></svg>live tv</a>
-                <div class="ypkGD"><a href="/short-videos/neil-bhatt-amp-aishwarya-sharma-enjoy-at-ankita-lokhande-amp-vicky-jain039s-holi-bash-reels-98524217" clink="y"><img src="/assets/images/shorts-outline-Black.gif" alt="short video" />Short videos</a></div><a href="/web-stories" class="" clink="y"><svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" opacity=".8"><circle stroke="#0A0A0A" cx="7.5" cy="7.5" r="7"></circle><g fill="#0A0A0A"><path d="M5 4h5v7H5zM11 5h1v5h-1zM3 5h1v5H3z"></path></g></g></svg> Photos</a></div>
+                <a href="/live-tv" class=" _2Jp9T " clink="y"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="17" viewBox="0 0 24 17"><g fill="none" fill-rule="evenodd"><g fill="#EA2318"><g><path fill-rule="nonzero" d="M23.083.033H.698C.313.033 0 .346 0 .732v12.86c0 .387.313.7.698.7h8.73v1.278H7.544c-.386 0-.698.312-.698.698 0 .386.312.699.698.699h8.693c.386 0 .699-.313.699-.699 0-.386-.313-.698-.699-.698h-1.884V14.29h8.73c.386 0 .698-.312.698-.698V.732c0-.386-.312-.699-.698-.699zM12.957 15.57h-2.132V14.29h2.132v1.279zm9.428-2.675H1.397V1.43h20.988v11.465z" transform="translate(-300 -13) translate(300 13)"></path><path d="M9.563 4.25L9.563 10.328 15.938 7.468z" transform="translate(-300 -13) translate(300 13)"></path></g></g></g></svg>live Score</a>
+                <div class="ypkGD"><a href="/short-videos/neil-bhatt-amp-aishwarya-sharma-enjoy-at-ankita-lokhande-amp-vicky-jain039s-holi-bash-reels-98524217" clink="y"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDIzIDIyIj4KICAgIDxwYXRoIGZpbGw9IiM3Mjc2ODIiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSIjRkZGIiBzdHJva2Utd2lkdGg9Ii4yIiBkPSJNNC42MTQgMjEuMDEyaDE0LjU1MmEzLjYxOCAzLjYxOCAwIDAgMCAzLjYxNC0zLjYxNFY2LjQ2YTMuNjE4IDMuNjE4IDAgMCAwLTMuNjE0LTMuNjE0aC0xLjg5OVYxaC0xLjMxMnYxLjg0Nkg3LjgwOFYxSDYuNDk1djEuODQ2SDQuNjE0QTMuNjE4IDMuNjE4IDAgMCAwIDEgNi40NnYxMC45MzhhMy42MTggMy42MTggMCAwIDAgMy42MTQgMy42MTR6TTE5LjE2MiAxOS43SDQuNjE0YTIuMzIzIDIuMzIzIDAgMCAxLTIuMzE5LTIuMzJWOC41NmgxOS4xOXY4LjgzOGEyLjMyMyAyLjMyMyAwIDAgMS0yLjMxOSAyLjMybC0uMDA0LS4wMTh6TTQuNjE0IDQuMTRoMS44OTl2MS4wNjRoMS4zMTJWNC4xNGg4LjE0N3YxLjA2NGgxLjMxM1Y0LjE0aDEuODk5YTIuMzIzIDIuMzIzIDAgMCAxIDIuMzE4IDIuMzJ2LjgwNEgyLjI5NXYtLjhBMi4zMjMgMi4zMjMgMCAwIDEgNC42MTQgNC4xNHoiLz4KPC9zdmc+Cg==" alt="short video" />Schedule</a></div><a href="/photos-stories" class="" clink="y"><svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" opacity=".8"><circle stroke="#0A0A0A" cx="7.5" cy="7.5" r="7"></circle><g fill="#0A0A0A"><path d="M5 4h5v7H5zM11 5h1v5h-1zM3 5h1v5H3z"></path></g></g></svg>Gallary</a></div>
     </>
     )
 }

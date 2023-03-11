@@ -11032,3 +11032,7 @@ body {
       box-shadow: 0 3px 8px #dcdcdc;
     }
   }
+
+  .d-flex {
+    padding-left: 0!important
+  }
