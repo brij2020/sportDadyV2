@@ -210,7 +210,7 @@ background: linear-gradient(135deg, rgba(76,76,76,1) 0%,rgba(89,89,89,1) 12%,rgb
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   border-radius: 4px;
   position: relative;
-  left: 10%;
+  left: 22%;
 }
 .logo-lv {
   position: absolute;
@@ -304,6 +304,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
   }
   .live-tv-page {
     padding-top: 20px !important;
+  }
+  .stand-base{
+    left: 10%;
   }
 
 }
