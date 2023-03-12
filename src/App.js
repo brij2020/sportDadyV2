@@ -44,7 +44,7 @@ export default function App() {
         <Route path="videos" element={<VideoList />} />
         <Route path="fixtures1" element={<Card /> } />
         <Route path="fixtures" element={<ScheduleList /> } />
-        <Route path="livetv" element={<LiveTv /> } />
+        <Route path="live-score" element={<LiveTv /> } />
       </Routes>
       <Footer />
     </BrowserRouter>
