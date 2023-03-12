@@ -17,6 +17,8 @@ import Quiz from './pages/quiz'
 import PhotoListPage from './pages/PhotoList'
 import PhotoDetailPage from './pages/Photos/PhotoStory';
 import VideoList from './pages/VideoList';
+import Card from "./Components/Card";
+import ScheduleList from './pages/ScheduleListPage'
 
 export default function App() {
   return (
@@ -40,6 +42,9 @@ export default function App() {
         
         <Route path="gallery" element={<PhotoDetailPage />} />
         <Route path="videos" element={<VideoList />} />
+        <Route path="fixtures1" element={<Card /> } />
+        <Route path="fixtures" element={<ScheduleList /> } />
+
 
         
 
