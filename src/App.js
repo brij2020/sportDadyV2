@@ -19,7 +19,7 @@ import PhotoDetailPage from './pages/Photos/PhotoStory';
 import VideoList from './pages/VideoList';
 import Card from "./Components/Card";
 import ScheduleList from './pages/ScheduleListPage'
-
+import LiveTv from './pages/LiveTv'
 export default function App() {
   return (
     <BrowserRouter>
@@ -44,10 +44,7 @@ export default function App() {
         <Route path="videos" element={<VideoList />} />
         <Route path="fixtures1" element={<Card /> } />
         <Route path="fixtures" element={<ScheduleList /> } />
-
-
-        
-
+        <Route path="livetv" element={<LiveTv /> } />
       </Routes>
       <Footer />
     </BrowserRouter>
