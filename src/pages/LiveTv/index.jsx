@@ -1,7 +1,11 @@
 import * as React from 'react';
 import PageHeading from '../../Components/pageHead';
 import './liveTv.css'
+import LiveCommentry from './LiveCommentry';
 
+import ScoreCard from './ScoreCard';
+
+// import './liveCommentry.css'
 const LiveTv = (props) => {
     const [liveTvOn, setLiveTive] = React.useState(false)
     const onLiveScore = (e) => {
@@ -46,6 +50,8 @@ const LiveTv = (props) => {
                 {/* <button type="button" class="btn top-navigate power" id="power"></button> */}
                 <div role='button' onClick={onLiveScore} class={`btn top-navigate power ${liveTvOn?' power-on':''}`} id="power"></div>
             </div>
+            <ScoreCard />
+            <LiveCommentry />
         </div>
     </>
     )
