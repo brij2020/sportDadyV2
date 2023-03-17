@@ -1,13 +1,22 @@
 import * as React from 'react';
 import './liveCommentry.css'
 const LiveCommentry = () => {
+   const [isCommentry, setICurrent] = React.useState(true);
+   const eventOnLink = (e) => {
+      console.log(e.target?.className)
+      if(e.target?.className === 'ct' ) {
+         setICurrent(true)
+      } else {
+         setICurrent(false)
+      }
+   }
     return (
         <div class="mcContainer">
    {/* Full Scorecard Menu Section */} 
    <div class="tabLinkscontainer">
       <ul id="scorecardTabs" class="mcTabs no-scrollbar">
-         <li class="current" ng-class="{'current' : scorecardType == 'international' &amp;&amp; internationalPulseMatches != 1}" ng-show="commentary_menu &amp;&amp; IsMatchLive &amp;&amp; internationalPulseMatches != 1 &amp;&amp; scorecardType == 'international'" data-tab="commentPage" ng-click="scorecardTabsChange('commentPage')"> <span>Commentary </span> </li>
-         <li class="" ng-class="{'current' : scorecardType != 'international' || internationalPulseMatches == 1}" data-tab="fullScoreContent" ng-click="scorecardTabsChange('fullScoreContent')"> <span>Scorecard </span> </li>
+         <li class={`${ isCommentry ?  'current': ''} `}  onClick={eventOnLink} ng-class="{'current' : scorecardType == 'international' &amp;&amp; internationalPulseMatches != 1}" ng-show="commentary_menu &amp;&amp; IsMatchLive &amp;&amp; internationalPulseMatches != 1 &amp;&amp; scorecardType == 'international'" data-tab="commentPage" ng-click="scorecardTabsChange('commentPage')"> <span className='ct'>Commentary </span> </li>
+         <li class={`${ !isCommentry ?  'current': ''} `} onClick={eventOnLink} ng-class="{'current' : scorecardType != 'international' || internationalPulseMatches == 1}" data-tab="fullScoreContent" ng-click="scorecardTabsChange('fullScoreContent')"> <span className='cd'>Scorecard </span> </li>
          {/* <li class="" ng-show="showVideos" data-tab="videostreamPage" ng-click="scorecardTabsChange('videostreamPage')"> <span>Videos </span> </li>
          <li class="current" ng-show="photostream_menu || scorecardType == 'international'" data-tab="photostreamPage" ng-click="scorecardTabsChange('photostreamPage')"> <span>Photos </span> </li>
          <li class="" data-tab="matchDetailsContent"> <span class="showMobOnly">Match Details </span> </li>
@@ -16,7 +25,7 @@ const LiveCommentry = () => {
       </ul>
    </div>
    {/* Full Scorecard Section */} 
-   <div id="fullScoreContent" class="mcTabContent" ng-class="{'current' : scorecardType != 'international' || internationalPulseMatches == 1}">
+   <div id="fullScoreContent" class={`mcTabContent ${!isCommentry ? 'current' : ''}`} ng-class="{'current' : scorecardType != 'international' || internationalPulseMatches == 1}">
       {/* Panel Header */} 
       <div class="scorecardHeader">
          <select class="mcSelectDefault inningsList ng-pristine ng-untouched ng-valid ng-not-empty" data-ng-options="innData.name for innData in inningsList track by innData.innNo" data-ng-model="selectedInnList" data-ng-change="constructScoreCard(matchSummary.MatchID,'dropdownInnChange','innchange')">
@@ -739,7 +748,7 @@ const LiveCommentry = () => {
       {/* END Right Panel */} 
    </div>
    {/*commentary block*/} 
-   <div id="commentPage" class="mcTabContent current" ng-class="{'current' : scorecardType == 'international' &amp;&amp; internationalPulseMatches != 1}">
+   <div id="commentPage" class={`mcTabContent ${isCommentry ? 'current' : ''}`} ng-class="{'current' : scorecardType == 'international' &amp;&amp; internationalPulseMatches != 1}">
       {/* Panel Header */} 
       <div class="scorecardHeader">
          <select class="mcSelectDefault inningsList commentryinningsList ng-pristine ng-valid ng-not-empty ng-touched" data-ng-options="innData.name for innData in inningsList track by innData.innNo" data-ng-model="selectedCInnList" data-ng-change="constructScoreCard(matchSummary.MatchID,'dropdownCInnChange','innchange')">

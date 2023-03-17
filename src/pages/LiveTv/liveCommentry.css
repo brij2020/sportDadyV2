@@ -1,3 +1,9 @@
+:root{
+    --RED: rgb(230, 51, 0);
+    --BR_RED: 20px;
+    --LNEAR_BG: linear-gradient( #f30606 ,#040a50);
+}
+
 @media screen and (min-width: 1650px) and (max-width:3048px) {
     .hero-slide-left .hero-card {
         height:500px
@@ -10234,7 +10240,7 @@ display: inline-block; vertical-align: middle; margin: 0 1px; }
 .endOverInfo p.secondChild i.bgWicket, #byb__comment .cmdOver.bgWicket { background: #cf362f; color: #fff;}
 .endOverInfo p.secondChild i.bgNoball, #byb__comment .cmdOver.bgNoball { background: #7b6d65; color: #fff;}
 .endOverInfo p.secondChild i.bgWide, #byb__comment .cmdOver.bgWide  { background: #bc760d; color: #fff;}
-.endOverInfo p.totRun { padding: 10px 20px; font-weight: 700; color: #ffffff; font-size: 18px; background: rgba(255,255,255,0.15); }
+.endOverInfo p.totRun { padding: 10px 20px; font-weight: 700; color: #ffffff; font-size: 18px; background: var(--RED); border-radius: var(--BR_RED); }
 
 #byb__comment .cmdEvent.bgFour { background: rgba(19,139,203,0.25);}
 #byb__comment .cmdEvent.bgSix{ background: rgba(48, 239, 50, 0.3);}
@@ -10278,7 +10284,7 @@ background-image: linear-gradient(45deg, transparent 50%, #fff 50%), linear-grad
 .innScore span { font-weight: 400; margin-left: 10px; }
 
 /* Scorecard Table */
-.mcRowHead , .mcFallWicket h4 { font-size: 12px; line-height: 14px; display: flex; align-items: center; overflow: hidden; 
+.mcRowHead , .mcFallWicket h4 { font-size: 11px; line-height: 14px; display: flex; align-items: center; overflow: hidden; 
 text-transform: uppercase; border: 0 none; background: #121f2b; color: #fff; padding: 10px; }
 .mcRowHead .tt { font-size: 16px; font-weight: 600; }
 .mcRowHead .icon-play::before { font-size: 9px; }
@@ -11290,7 +11296,9 @@ ul.eventToggler { margin: 0 0 20px 0; }
 
 /* Scorecard Header */
 .scorecardHeader { flex-direction: column; margin-bottom: 10px; }
-.scorecardHeader .inningsList { width: 100%; margin-bottom: 10px; color: #0071c6; border: 1px solid #c3c3c3; background-color: #ffffff;
+.scorecardHeader .inningsList { width: 100%; margin-bottom: 10px; 
+    color: #0071c6; border: 1px solid #c3c3c3; 
+    background-color: #ffffff;
 background-image: linear-gradient(45deg, transparent 50%, #223d84 50%), linear-gradient(135deg, #223d84 50%, transparent 50%);  }
 
 /* Scorecard - BattingCard & BowlingCard */
@@ -11871,8 +11879,8 @@ background: -moz-radial-gradient(#fff,#eee); background: -o-radial-gradient(#fff
 #scoreBox .tournament--name {  font-size: 14px; line-height: 20px; font-weight: 500; margin-bottom: 5px; letter-spacing: 0.02em; color:#ffffff; }
 #overStreamMC .dataStreamSMIPL { background: rgba(255,255,255,0.1); }
 .mcRowHead, .mcFallWicket h4, .partnerChart h4 { font-weight: 700; background-image: -webkit-gradient( linear ,left top, left bottom ,from(#050a5b) ,to(#050b5f));
-background-image: -o-linear-gradient( #050a5b ,#050b5f); background-image: linear-gradient( #050a5b ,#050b5f); }
-.scorecardHeader .inningsList { width: 100%; height: 38px; border: 0; font-weight: 600; background-color: #18184A; 
+background-image: -o-linear-gradient( #050a5b ,#050b5f); background-image: var(--LNEAR_BG); border-radius:var(--BR_RED);}
+.scorecardHeader .inningsList { width: 100%; height: 46px; border: 0; font-weight: 600; background-color: var(--RED); border-radius: var(--BR_RED);
 color: #ffffff; background-image: linear-gradient(45deg, transparent 50%, #ffffff 50%), linear-gradient(135deg, #ffffff 50%, transparent 50%);text-transform:inherit;}
 select.mcSelectDefault, input.mcSearchDefault { color: #052839;  box-shadow: none; }
 #wagonWheelContent select.batsmenFilter, #wagonWheelContent select.bowlerFilter { width: 200px; }
@@ -11943,10 +11951,14 @@ ul.otherLinks li.newsView-icon a:hover, ul.otherLinks li.newsView-icon a:focus {
 .innOverInfo { display: none; }
 .endOverInfo { overflow: hidden; background: linear-gradient(91.86deg, #18184A 20.56%, #19378A 42.01%, #18184A 104.66%);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 10px; padding: 10px; }
-.endOverInfo p.firstChild, .endOverInfo p.totRun { background: #EF4123; padding: 2px 20px; 
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+.endOverInfo p.firstChild, .endOverInfo p.totRun { 
+    /* background: #EF4123; */
+     padding: 2px 20px; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    border-radius: var(--BR_RED);
+}
 .endOverInfo p.firstChild { font-size: 16px; font-weight: 700; color: #ffffff; padding: 2px 15px; border-top-left-radius: 8px; border-bottom-left-radius: 8px;  }
-.endOverInfo p.totRun { border-top-right-radius: 8px; border-bottom-right-radius: 8px; 
+.endOverInfo p.totRun { border-top-right-radius: 20px; border-bottom-right-radius: 20px; 
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
 .endOverInfo p.secondChild i.mcBall {width: 32px;height: 32px; color: #18184A; background: rgba(255,255,255,1);  
 font-size: 16px; font-weight: 700; line-height: 34px; margin: 0 2px; }
@@ -11961,12 +11973,12 @@ font-size: 16px; font-weight: 700; line-height: 34px; margin: 0 2px; }
 #byb__comment{ border:0 none; box-shadow:none; background: none; }
 
 #byb__comment .cmdEvent{ position:relative; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);align-items: start;
-border-radius: 10px; margin-top: 10px;  margin-bottom: 10px;  padding: 20px 10px; border: 1px solid #18184A; }
-#byb__comment .cmdEvent:last-child { border: 1px solid #18184A; }
+border-radius: 15px; margin-top: 15px;  margin-bottom: 10px;  padding: 20px 10px; border: 1px solid #00000e2e; }
+#byb__comment .cmdEvent:last-child { border: 1px solid var(--RED); }
 #byb__comment .cmdEvent.bgWide, #byb__comment .cmdEvent.bgWicket,
 #byb__comment .cmdEvent.bgNoball, #byb__comment .cmdEvent.bgSix,
 #byb__comment .cmdEvent.bgFour { background: #ffffff; }
-#byb__comment .cmdEvent .cmdOver { background: #18184A; color: #fff; font-weight: 600; line-height: 1;
+#byb__comment .cmdEvent .cmdOver { background: var(--RED); color: #fff; font-weight: 600; line-height: 1;
 display: flex; flex-direction: row-reverse; justify-content: center; align-items: center; margin-right: 5%;  padding: 0 0 0 15px; border-top-right-radius: 30px;
 border-bottom-right-radius: 30px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
 #byb__comment .cmdEvent .cmdOver i.mcBall { width: 30px; height: 30px; font-weight: 700; font-size: 14px; line-height: 30px; color: #18184A; background: #fff;  margin-left: 10px; } 
@@ -12103,15 +12115,25 @@ align-items: center;}
 */
 
 /*New update */
-.smscorecardwidget .widget, #fullScoreContent #leftPanel { border-top: 7px solid #050a5b; }
+.smscorecardwidget .widget, #fullScoreContent #leftPanel { 
+    box-shadow: rgb(0 0 0 / 40%) 0px 2px 4px, rgb(0 0 0 / 30%) 0px 7px 13px -3px, rgb(0 0 0 / 20%) 0px -3px 0px;
+    border-top: transparent !important;
+}
 .current-match-container { padding: 0 !important; }
 
 .mcRowData img { display: none; }
 .mcRowData img.active { display: block;width:50px;height:50px;margin-left:5px; }
-.mcRowData .mcRowData-Inner { position: relative; border-bottom: 2px solid #fff; color: #050A5C; }
+.mcRowData .mcRowData-Inner { position: relative; border-bottom: 2px solid #fff; color: #050A5C;
+    position: relative;
+    border-bottom: 2px solid #100000;
+    color: #050A5C;
+    border-top: 2px solid #ff0000;
+    border-radius: 25px;
+    margin-bottom: 6px;
+}
 .mcRowData .plyData { color: #000000; }
-.mcRowData .mcRowData-Inner:first-child::before {content: "";display: block;width: .15rem;background: #6499ff;position: absolute;top: 0; left: 0; bottom: 0;}
-.mcRowData .mcRowData-Inner:first-child::after {content: "";display: block;width: .1rem;background: #6499ff;position: absolute;top: 0; right: 0; bottom: 0;}
+/* .mcRowData .mcRowData-Inner:first-child::before {content: "";display: block;width: .15rem;background: #6499ff;position: absolute;top: 10%; left: 0; bottom: 10%;}
+.mcRowData .mcRowData-Inner:first-child::after {content: "";display: block;width: .1rem;background: #6499ff;position: absolute;top: 10%; right: 0; bottom: 10%;} */
 .mcRowHead, .mcFallWicket h4, .partnerChart h4 { margin-bottom: 5px; }
 .mcRowData .playerName {font-weight: 600; }
 .sc-pnam span.dismissalSmall { font-size: 12px; }
@@ -12597,7 +12619,7 @@ ul.fixtureSquad-list li span.p11-fb img { width:12px; margin-left: 10px; }
 @media (max-width:40em) {
 	#commentPage, #fullScoreContent, #wagonWheelContent { background: #ffffff; border-radius: 10px; }
 	#commentPage, #videostreamPage, #photostreamPage, #wagonWheelContent, #fullScoreContent { padding:5px }
-	#fullScoreContent #leftPanel { box-shadow: none; background: transparent; padding: 12px 8px; }
+	#fullScoreContent #leftPanel {  background: transparent; padding: 12px 8px; }
 	#wagonWheelContent { margin: 0 10px; }
 	select.innsFilter { background-color: #18184A; }
 	.mcRowData img.active { width: 40px; height: 40px; }
@@ -12620,16 +12642,18 @@ ul.fixtureSquad-list li span.p11-fb img { width:12px; margin-left: 10px; }
 	#commentPage .scorecardHeader { flex-direction: column; }
 	.mcSelectDefault.inningsList { margin-bottom: 10px !important; }
 	
-	.innOverInfo {color: #fff; display: flex; align-items: center; justify-content: space-between; width: 100%; padding:5px; }
+	.innOverInfo {color: #fff; display: flex; align-items: center; justify-content: space-between; width: 100%; padding:10px; }
 	.innOverInfo p { color: #ffffff; margin: 0; padding: 0; font-weight: 600; font-size: 14px; line-height: 22px; text-transform: uppercase; }
-	.endOverInfo, .innOverInfo{ background: #18184A; flex-direction: row; border-radius: 5px; box-shadow: none; }
-	.endOverInfo { padding: 0; margin: 10px 0; }
+	.endOverInfo, .innOverInfo{ background-image: var(--LNEAR_BG); flex-direction: row; border-radius: 5px; box-shadow: none; }
+	.endOverInfo { padding: 8px; margin: 10px 0; border-radius: var(--BR_RED);}
 	.endOverInfo p { margin: 0; line-height: 1; }
 	.endOverInfo p.firstChild { margin-left: 5px; background: transparent; padding: 0; font-size: 12px; font-weight: 600; line-height: 1; }
-	.endOverInfo p.totRun { font-size: 14px; line-height: 20px;  padding: 5px 6px;  border-radius: 5px; }
-	.endOverInfo p.secondChild i.mcBall { width: 20px; height: 20px; font-size:10px; line-height: 20px; margin: 0 1px; }
+	.endOverInfo p.totRun { font-size: 14px; line-height: 20px;  padding: 5px 6px;  border-radius: 20px; }
+	.endOverInfo p.secondChild i.mcBall { 
+        width: 20px; height: 20px; font-size:10px; line-height: 20px; margin: 0 1px; 
+    }
 
-	#byb__comment .cmdEvent { border-radius: 5px; margin: 0 0 5px; padding: 0 10px; align-items: self-start; min-height: 70px; }
+	#byb__comment .cmdEvent { border-radius: 15px; margin: 0 0 5px; padding: 0 10px; align-items: self-start; min-height: 70px; margin-bottom: 10px;}
 	#byb__comment .cmdEvent:last-child { margin: 0; }
 	#byb__comment .cmdEvent .cmdOver { font-size: 12px; padding: 5px 0 0; flex-direction: column-reverse; border-top-left-radius: 0; border-top-right-radius: 0;
 	border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; }
@@ -12659,6 +12683,10 @@ ul.fixtureSquad-list li span.p11-fb img { width:12px; margin-left: 10px; }
 	#fullScoreContent { clear: both; overflow: hidden; margin: 0 10px;}
 	#videostreamPage .statsSubMenu { margin-top: 10px; }
 	.inningsTabsList.mobinningsTabsList .inningsTabsTeamName {margin-right: 8px; }
+    .innOverInfo {
+        background-color: var(--RED);
+        border-radius: var(--BR_RED);
+    }
 }
 
 /* 639 */
@@ -12686,7 +12714,7 @@ ul.fixtureSquad-list li span.p11-fb img { width:12px; margin-left: 10px; }
 	#mob_Wagonwheel { margin: 0 auto; }
 	#wagonWheelContent .switch_data { width: 100%; }
 	.scorecardHeader .inningsList { width: 100%; }
-	#scoreBox .tName { font-weight: }
+
 	#scoreBox .matchSummary, #scoreBox .tName, 
 	#scoreBox .tournament--name, #scoreBox .matchDate, #scoreBox .matchVenue, .mcExtras{ font-size: 12px; }
 	#scoreBox .tournament--name { line-height: 18px; }
