@@ -157,7 +157,7 @@ const PhotoStory = (props) => {
                                 contentType !== 'video' ? (
                                     <div className={`bar ${i === activeIndex ? 'seen animate' : ''}`} data-index={`${i}`} key={ids}><span style={{ "animation-duration": `${timeOut}ms` }}></span></div>
                                 ) : (
-                                    <div className={`bar video ${i === activeIndex ? 'seen animate' : ''}`} data-index={`${i}`} key={ids}><span style={{ "animation-duration": `${timeOut}ms` }}></span></div>
+                                    <div className={`bar video-pgt ${i === activeIndex ? 'seen animate' : ''}`} data-index={`${i}`} key={ids}><span style={{ "animation-duration": `${timeOut}ms` }}></span></div>
                                 ))
                         })
                     }

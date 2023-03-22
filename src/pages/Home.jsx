@@ -261,68 +261,12 @@ function Home() {
 
       
       {/* video  */}
-      <Heading primaryHeading={'Video Hub'} ballImageLeftPercent={35}/>
-         <Video />
-      {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Video Hub</h2></div>*/}
-      {/* <div className='plain-section' style={{ boxShadow: '1px 2px 9px #323d94' }}>
       
-
-        <div class="containerv">
-        <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
-          <div class="main-box">
-            <div class="box one">
-              <video
-                poster={img9}
-                height={'100%'}
-                width={'100%'}
-                src={video} controls>
-              </video>
-            </div>
-            <div class="box two">
-              <video
-                poster={img7}
-                height={'100%'}
-                width={'100%'}
-                src={video} controls>
-              </video></div>
-            <div class="box three">  <video
-              poster={img7}
-              height={'100%'}
-              width={'100%'}
-              src={video} controls>
-            </video></div>
-            <div class="box four">  <video
-              poster={img9}
-              height={'100%'}
-              width={'100%'}
-              src={video} controls>
-            </video></div>
-            <div class="box five">  <video
-              poster={usteam}
-              height={'100%'}
-              width={'100%'}
-              src={video} controls>
-            </video></div>
-            <div class="box six">  <video
-              poster={newzteam}
-              height={'100%'}
-              width={'100%'}
-              src={video} controls>
-            </video></div>
-            <div class="box six">  <video
-              poster={cricketimg1}
-              height={'100%'}
-              width={'100%'}
-              src={video} controls>
-            </video></div>
-          </div>
-        </div>
-
-      </div> */}
+        <Video />
       
+      {/* END */}
+
       <div className="devider" />
-
-
       {/* photos  */}
       <Heading primaryHeading={'Photos Gallery'} ballImageLeftPercent={28} />
 

@@ -10,7 +10,7 @@ import closeSVG from '../assets/svg/close_icon.svg'
 import rArrow from '../assets/svg/r-arrow.svg'
 import quiz from '../assets/images/quiz.gif'
 import VideoSvg from "../assets/svg/icons8-circled-play-100.png"
-
+import LOGO_WHITE from '../assets/logo/logo.png'
 
 
 const Header = (props) => {
@@ -1259,10 +1259,10 @@ const Header = (props) => {
 
 
                     <nav className="sub-menu">
-                    <div class="logo-brand-home"><a href="/"><img src="https://cdn.wionews.com/images/wion-logo.png" class="img-fluid" height="40" width="150" 
+                    <div class="logo-brand-home"><a href="/"><img src={LOGO_WHITE} class="img-fluid" height="40" width="150" 
                         style={{
                             height: "50px",
-                            padding: "10px 25px 0px"
+                            padding:  "10px 25px 0px"
                         }}
                     
                     /></a></div>

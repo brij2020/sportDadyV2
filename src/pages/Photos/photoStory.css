@@ -186,7 +186,7 @@
     text-align: center;
     cursor: pointer;
     position: absolute;
-    top: calc(50% - 16px);
+    top: calc(50% - 150px);
     left: calc(50% - 35vh - 16px);
     border-radius: 50%;
     background-color: #666666;
@@ -202,7 +202,7 @@
     text-align: center;
     cursor: pointer;
     position: absolute;
-    top: calc(50% - 16px);
+    top: calc(50% - 150px);
     left: calc(50% + 35vh - 16px);;
     border-radius: 50%;
     background-color: #8e8989;
