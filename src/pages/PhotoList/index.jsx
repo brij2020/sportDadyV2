@@ -1,28 +1,40 @@
 import * as React from 'react'
 import "./photoList.css"
-import LOGO from "../../assets/logo/logo-trans.png"
+import LOGO from "../../assets/logo/logo-trans.png";
+import PageHeading from '../../Components/pageHead'
+import PGT_CRICK from '../../assets/images/indvsA.jpg';
+import SECOND_PICK from '../../assets/images/web-saec.jpg';
+import THIRD_PICK from '../../assets/images/1_c.jpeg';
+import FOURTH_PICK from '../../assets/images/ind.jpg';
+import FIVE_PICK from '../../assets/images/hind.jpg';
+
+
+
+
 const PhotoListPage = (props) => {
 
     return (<>
         <section class="pgt-container">
 
             <section class="mainContainer">
-                {/* <div class="breadcrumbs">
+                
+                <div class="breadcrumbs">
                 <a href="/">Home</a>
                 <span>/</span>
                 Web Stories
 
-            </div> */}
+            </div> 
 
                 <section id="dataHolder" class="main-webstories">
-                    <div class="secHdg">
+                    {/* <div class="secHdg">
                         <span class="hdgTexure"></span>
                         <div class="hdgStyle">
                             <span>[</span>
                             <h1>Web Stories</h1>
                             <span>]</span>
                         </div>
-                    </div>
+                    </div> */}
+                    <PageHeading heading="Web Stories" />
                     <div class="web-stories">
                         <ul>
                             <li>
@@ -32,7 +44,7 @@ const PhotoListPage = (props) => {
                                         <div class="iconofwebstoires">
                                             <span class="webstories-icon"></span>
                                         </div>
-                                        <img src="https://images1.livehindustan.com/uploadimage/library/2023/02/24/4_3/9_16_2/nikki_tamboli_in_embellished_outfits_1677231516.jpg"
+                                        <img src={PGT_CRICK}
                                             alt="nikki tamboli in embellished outfits"
                                             title="nikki tamboli in embellished outfits" />
                                         <div class="gradient">
@@ -51,7 +63,7 @@ const PhotoListPage = (props) => {
                                         <div class="iconofwebstoires">
                                             <span class="webstories-icon"></span>
                                         </div>
-                                        <img src="https://images1.livehindustan.com/uploadimage/library/2023/02/24/4_3/9_16_2/best_online_fps_games_for_android_1677225682.jpeg"
+                                        <img src={SECOND_PICK}
                                             alt="best online fps games for android"
                                             title="best online fps games for android" />
                                         <div class="gradient">
@@ -70,7 +82,7 @@ const PhotoListPage = (props) => {
                                         <div class="iconofwebstoires">
                                             <span class="webstories-icon"></span>
                                         </div>
-                                        <img src="https://images1.livehindustan.com/uploadimage/library/2023/02/24/4_3/9_16_2/quick_ways_to_get_rid_of_whiteheads_1677225357.jpg"
+                                        <img src={ THIRD_PICK }
                                             alt="quick ways to get rid of whiteheads"
                                             title="quick ways to get rid of whiteheads" />
                                         <div class="gradient">
@@ -89,7 +101,7 @@ const PhotoListPage = (props) => {
                                         <div class="iconofwebstoires">
                                             <span class="webstories-icon"></span>
                                         </div>
-                                        <img src="https://images1.livehindustan.com/uploadimage/library/2023/02/24/4_3/9_16_2/janhvi_to_shanaya_celeb_inspired_blue_outfits_1677222327.jpg"
+                                        <img src={FOURTH_PICK}
                                             alt="janhvi to shanaya celeb-inspired blue outfits"
                                             title="janhvi to shanaya celeb-inspired blue outfits" />
                                         <div class="gradient">
@@ -108,7 +120,7 @@ const PhotoListPage = (props) => {
                                         <div class="iconofwebstoires">
                                             <span class="webstories-icon"></span>
                                         </div>
-                                        <img src="https://images1.livehindustan.com/uploadimage/library/2023/02/24/4_3/9_16_2/8_travel_destinations_for_spring_lovers_1677220809.jpg"
+                                        <img src={FIVE_PICK}
                                             alt="8 travel destinations for spring lovers"
                                             title="8 travel destinations for spring lovers" />
                                         <div class="gradient">

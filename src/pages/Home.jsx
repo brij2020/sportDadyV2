@@ -23,10 +23,6 @@ import flagW from '../assets/icons/teamW.png';
 import teamI from '../assets/images/hdImage/india-team.jpg';
 import teamSA from '../assets/images/hdImage/teamSA.jpg';
 import teamAus from '../assets/images/hdImage/teamAus.jpg';
-
-
-
-
 import photoGal1 from '../assets/images/hdImage/sl.jpg';
 import photoGal2 from '../assets/images/hdImage/vk.jpg';
 import photoGal3 from '../assets/images/hdImage/dw.jpg';
@@ -34,16 +30,6 @@ import photoGal4 from '../assets/images/hdImage/dgb.jpg';
 import photoGal5 from '../assets/images/hdImage/wo.jpg';
 import photoGal6 from '../assets/images/hdImage/wp.jpg';
 import photoGal7 from '../assets/images/hdImage/vkw.jpg';
-
-
-
-
-
-
-
-
-import newzteam from '../assets/images/teams/newzteam.jpeg';
-import usteam from '../assets/images/teams/usteam.jpg';
 
 import apple from '../assets/icons/apple.png';
 import playstore from '../assets/icons/playstore.png';
@@ -59,8 +45,6 @@ import AricleList from '../Components/Home/ArticleList'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import ICCRanking from '../Components/IccRankings';
 import Gamebox from '../Components/Home/Gamebox';
-
-
 import MatchSchedule from "../Components/MatchSchdule";
 import OtherGame from '../Components/OtherGame';
 import TimeLine from '../Components/TimeLine';
@@ -72,11 +56,6 @@ import img12 from '../assets/images/bg/5172658.jpg';
 import Heading from "../Components/Heading"
 import Video from '../Components/Videos/index'
 function Home() {
-
-  const [team, setTeam] = useState(true)
-  const [batting, setBatting] = useState(false)
-  const [bowling, setBowling] = useState(false)
-  const [allRounder, setAllRounder] = useState(false)
 
   const images = [
     { url: ONE },

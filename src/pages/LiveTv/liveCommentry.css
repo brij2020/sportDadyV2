@@ -12568,7 +12568,6 @@ and (max-device-width : 667px) {
 }
 
 /***** match notes ***********/
-.widget.matchNotes{	}
 .widget.matchNotes .matchNotesList{
 	font-size: 13px;
 	line-height: 22px;
