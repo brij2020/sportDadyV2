@@ -49,18 +49,22 @@
   border-radius: 10px 10px 10px 10px;
   display: block;
   margin: 0 auto;
-  width: 80%;
+  width: 85%;
   padding: 20px;
   background-color: #fff;
   margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 500;
 }
+
 .q input[type=radio] + label span:hover {
   background-color: #DCEEFA;
   color: #000;
 }
 .q input[type=radio]:checked + label span {
-  background-color: #249DD4;
+  /* background-color: #249DD4; */
   color: #fff;
+  background-image:  linear-gradient(to bottom, #ff0909f5, #1d0202c6);
 }
 .q input[type=radio] {
   position: absolute;
@@ -73,17 +77,19 @@
 }
 .q .next {
 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgb(253 253 253);
-    border-radius: 15px 15px 15px 15px;
-    border: none;
-    color: #31a2d5;
-    font-size: 17px;
-    font-weight: 600;
-    padding: 9px 100px;
-    text-transform: uppercase;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(253 253 253);
+  border-radius: 15px 15px 15px 15px;
+  border: none;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 15px 100px;
+  text-transform: uppercase;
+  background-image: linear-gradient(to bottom, #ff0909f5, #1d0202c6);
+
 }
 
 .disabled {
@@ -93,7 +99,7 @@
 .end {
   text-align: center;
   font-family: Helvetica, arial, sans-serif;
-  font-size: 50px;
+  font-size: 30px;
   color: #047E3C;
 }
 

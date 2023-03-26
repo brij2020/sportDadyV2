@@ -55,6 +55,8 @@ import img11 from '../assets/images/bg/tt.jpg';
 import img12 from '../assets/images/bg/5172658.jpg';
 import Heading from "../Components/Heading"
 import Video from '../Components/Videos/index'
+import QuizeLit from '../Components/QuizList'
+  
 function Home() {
 
   const images = [
@@ -427,78 +429,9 @@ function Home() {
       
 
       {/* Start Quiz card form section  */}
-      <div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Participate in Lucky Draw</h2></div>
-       <div class="container">
-    <div class="card">
-      <h2>IPL</h2>
-      <i class="fas fa-arrow-right"></i>
-      <p>Participet in IPL.</p>
-      <div class="pic"></div>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-     
-      <button>
-      </button>
+      <div className='bg-section-quize' style={{ marginBottom:"20px"}}>
+        <QuizeLit />
     </div>
-      <div class="card card2">
-      <h2>World Cup</h2>
-      <i class="fas fa-arrow-right"></i>
-      <p>Participet in World Cup.</p>
-      <div class="pic"></div>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-     
-      <button>
-      </button>
-    </div>
-    
-  </div> 
   
 
 {/*Start download app section  */}

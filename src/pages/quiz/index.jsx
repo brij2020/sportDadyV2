@@ -7,44 +7,86 @@ import promoImage from '../../assets/images/bg/ze.jpg';
 
 const quizeLitsS = [
 			{
-				quiz: '1. Wich bacon?',
+				quiz: '1. Virat Kohli Nick Name ?',
 				id: "q1",
 				isActive: true,
 				options:[
 				{	id:"a",
-					ans: "Turkey bacon",
+					ans: "Chahin",
 				},
 				
 				{	id:"b",
-					ans: "Canadian bacon"
+					ans: "Mahi"
 				}
 				,
 				{	id:"c",
-					ans: "American bacon"
+					ans: "Chikoo"
 				},
 				{	id:"d",
-					ans: "American bacon"
+					ans: "Master Blaster"
 				}
 				]
 			},
 			{
-				quiz: '2. How much?',
+				quiz: '2. First Double Century Made By?',
 				id: "q2",
 				isActive: false,
 				options:[
 				{	id:"aa",
-					ans: "Turkey bacon",
+					ans: "Rohit Sharma",
 				},
 				
 				{	id:"bb",
-					ans: "Canadian bacon"
-				}
+					ans: "Virendra Shehvag"
+				}	
 				,
 				{	id:"ccc",
-					ans: "American bacon"
+					ans: "Sachin"
 				},
 				{	id:"ddd",
-					ans: "American bacon"
+					ans: "Ishan Kishan"
+				}
+				]
+			},
+			{
+				quiz: '3. WWWC-2011 win by which country?',
+				id: "q3",
+				isActive: false,
+				options:[
+				{	id:"aaa",
+					ans: "Austrelia",
+				},
+				
+				{	id:"bba",
+					ans: "West Indies"
+				}
+				,
+				{	id:"cccc",
+					ans: "India"
+				},
+				{	id:"dddd",
+					ans: "Pakistan"
+				}
+				]
+			},
+			{
+				quiz: '4. How many players in T20 Match?',
+				id: "q4",
+				isActive: false,
+				options:[
+				{	id:"aaaa",
+					ans: "10",
+				},
+				
+				{	id:"bbaa",
+					ans: "11"
+				}
+				,
+				{	id:"ccccc",
+					ans: "14"
+				},
+				{	id:"ddddd",
+					ans: "15"
 				}
 				]
 			}
@@ -101,13 +143,14 @@ const Quiz  = (props) => {
 			
 			setQuizList(mQuizList)
 		}
+		console.log('nextId', nextId)
  		setPercent(percent);
 		setQuizCount(quizCount+1)
 		
 	}
 	console.log("isComplete", percentValue)
 	return (
-		<div className='plain-section'  style={{ "background-image": `url(${promoImage})`,backgroundSize: "cover",'margin-bottom': "100px", boxShadow: "3px 2px 7px 0px #999494"}}>
+		<div className='plain-section'  style={{ 'margin-bottom': "100px", boxShadow: "3px 2px 7px 0px #999494"}}>
 		<div className="quiz">
 		<div id="circle-container" className="animate__animated animate__fadeInDownBig svg-percent">
 	
@@ -115,7 +158,7 @@ const Quiz  = (props) => {
 		    selectedValue={percentValue}
 		    maxValue={100}
 		    radius={100}
-		    activeStrokeColor='#0f4fff'
+		    activeStrokeColor='#ff0000'
 		    withGradient
 		/>
 		</div>
