@@ -5286,7 +5286,7 @@ p a:focus{
     height:100%;
     display:block;
     position:absolute;
-    top:-5px;
+    top:0;
     left:0;
     -o-object-fit:cover;
     object-fit:cover;
