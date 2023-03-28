@@ -1,0 +1,125 @@
+._YVis.IEy0a .hoid1 {
+    bottom: 0;
+    position: absolute;
+}
+
+._YVis.IEy0a .hoid1 {
+    bottom: 0;
+    position: absolute;
+}
+
+._YVis.IEy0a .hoid1>figcaption {
+    position: relative;
+}
+._YVis.IEy0a .hoid1>figcaption {
+    position: relative;
+}
+@media screen and (max-width: 767px), screen and (orientation: landscape) and (max-width: 1000px) {
+    ._YVis.IEy0a figcaption {
+        font-size: calc(13.33333px + .83333vw);
+        font-weight: 700;
+        height: auto;
+        line-height: calc(21.33333px + .83333vw);
+        margin: 0 4px 12px;
+        padding: 0 10px;
+    }
+
+}
+._YVis.IEy0a figcaption {
+    bottom: 0;
+    color: white;
+    margin: 0 20px 12px;
+    position: absolute;
+    text-shadow: 0 2px 8px rgba(26,26,26,.4);
+    z-index: 2;
+}
+@media screen and (max-width: 767px), screen and (orientation: landscape) and (max-width: 1000px) {
+
+    ._YVis.IEy0a figcaption {
+        font-size: calc(13.33333px + .83333vw);
+        font-weight: 700;
+        height: auto;
+        line-height: calc(21.33333px + .83333vw);
+        margin: 0 4px 12px;
+        padding: 0 10px;
+    }
+}
+._YVis.IEy0a figcaption {
+    bottom: 0;
+    color: white;
+    margin: 0 20px 12px;
+    position: absolute;
+    text-shadow: 0 2px 8px rgba(26,26,26,.4);
+    z-index: 2;
+}
+@media screen and (max-width: 767px), screen and (orientation: landscape) and (max-width: 1000px) {
+    ._YVis figcaption {
+        flex: 2;
+        height: 66px;
+        margin: -4px 16px 0 0;
+    }
+
+}
+._YVis figcaption {
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: var(--primary-dark-color);
+    display: -webkit-box;
+    font-size: calc(13px + .625vw);
+    font-weight: 600;
+    letter-spacing: -.2px;
+    line-height: calc(19.33333px + .83333vw);
+    overflow: hidden;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+@media screen and (max-width: 767px), screen and (orientation: landscape) and (max-width: 1000px) {
+    ._YVis figcaption {
+        flex: 2;
+        height: 66px;
+        margin: -4px 16px 0 0;
+    }
+
+}
+._YVis figcaption {
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: var(--primary-dark-color);
+    display: -webkit-box;
+    font-size: calc(13px + .625vw);
+    font-weight: 600;
+    letter-spacing: -.2px;
+    line-height: calc(19.33333px + .83333vw);
+    overflow: hidden;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+
+
+._YVis.IEy0a {
+    border: none;
+    padding-bottom: 0;
+    position: relative;
+} 
+@media screen and (max-width: 767px), screen and (orientation: landscape) and (max-width: 1000px) {
+    ._YVis.IEy0a {
+        /* margin: 0 16px; */
+        min-height: 80px;
+    }
+
+}
+
+._YVis.IEy0a {
+    border: none;
+    padding-bottom: 0;
+}
+.yCs_c {
+    background: linear-gradient(to bottom, #f3010a63, #00000057);
+}

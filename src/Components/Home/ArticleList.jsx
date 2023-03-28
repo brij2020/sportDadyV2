@@ -21,7 +21,7 @@ const AricleList = () => {
                     <div class="content-hero__block-layout content-hero__block-layout--lead-media-item">
                         <div class="content-hero__item-container content-hero__item-container--lead-media-item" data-itemlist-id="3044774">
                             <article class="lead-media-item  lead-media-item--no-bg" data-widget="lazy-load-images" data-initialised="true">
-                                <a class="lead-media-item__link" href="https://icc-cricket.com/news/3044774" title="Uncapped batter named in England limited-overs squads for Bangladesh tour">
+                                <a class="lead-media-item__link" href="/articleshow" title="Uncapped batter named in England limited-overs squads for Bangladesh tour">
 
 
                                     <header class="lead-media-item__image-container">
@@ -58,7 +58,7 @@ const AricleList = () => {
 
 
                             <article class="media-thumbnail   media-thumbnail--no-bg-responsive media-thumbnail--show-publish-date" data-widget="lazy-load-images" data-initialised="true">
-                                <a class="media-thumbnail__link" href="https://icc-cricket.com/news/3023928" title="The final group of 100% Cricket Superstars is revealed">
+                                <a class="media-thumbnail__link" href="/articleshow" title="The final group of 100% Cricket Superstars is revealed">
 
                                     <header class="media-thumbnail__image-container">
                                         <div class="lazy-image is-loaded">

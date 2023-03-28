@@ -56,7 +56,7 @@ import img12 from '../assets/images/bg/5172658.jpg';
 import Heading from "../Components/Heading"
 import Video from '../Components/Videos/index'
 import QuizeLit from '../Components/QuizList'
-  
+
 function Home() {
 
   const images = [
@@ -194,39 +194,37 @@ function Home() {
   return (
 
 
-    
-    
+
+
     <div style={{ marginBottom: 20 }} id="main-app" >
-       
+
       <div id='top'>
 
         <LiveScore slides={images} />
       </div>
       {/*<div class="grad-bar"></div>*/}
       {/* live */}
-      {/*<LiveScoreComponet />*/}      
+      {/*<LiveScoreComponet />*/}
 
-        <div id='top' >
-          
-          <CC />
+      <div id='top' >
 
-        </div>
-  
+        <CC />
+
+      </div>
+
       <div className="devider" />
 
       {/* Schedule */}
-      
+
       {/* <div className='plain-section bg-m-plain-section'> */}
       {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Cricket Schedule</h2></div>*/}
       {/*<Heading primaryHeading={'Cricket Schedule'} ballImageLeftPercent={25} />*/}
-        <div id="top" style={{boxShadow: `rgb(50 61 148) 1px 2px 9px`,
-         
-         }}
-         className="cricket-schedule"
-         >
+      <div id="top" style={{ boxShadow: `rgb(50 61 148) 1px 2px 9px` }}
+        className="cricket-schedule"
+      >
         <MatchSchedule data={Data} />
-        </div>
-        
+      </div>
+
       <div className="devider" />
       {/* Schedule End */}
 
@@ -240,11 +238,11 @@ function Home() {
       <div className="devider" />
       {/* END */}
 
-      
+
       {/* video  */}
-      
-        <Video />
-      
+
+      <Video />
+
       {/* END */}
 
       <div className="devider" />
@@ -252,15 +250,15 @@ function Home() {
       <Heading primaryHeading={'Photos Gallery'} ballImageLeftPercent={28} />
 
       {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Photos Gallery</h2></div>*/}
-      <div className='bg-section' style={{ "background":'linear-gradient(0deg, #000, #ff0000)' ,backgroundSize: "cover", marginBottom: "14px" }}>
-      <div ><a href='/photos-stories'><p class="see-more"><u>View More</u></p></a></div>
+      <div className='bg-section' style={{ "background": 'linear-gradient(0deg, #000, #ff0000)', backgroundSize: "cover", marginBottom: "14px" }}>
+        {/* <div ><a href='/photos-stories'><p class="see-more"><u>View More</u></p></a></div> */}
         <div class="containerv">
           <div class="main-box">
             <div class="box img-gal">
               <img src={photoGal1}
                 height={"100%"}
                 width={"100%"}
-                style={{ objectFit: "cover", backgroundPosition: 'center'}}
+                style={{ objectFit: "cover", backgroundPosition: 'center' }}
               >
               </img>
               <div class="image-caption">
@@ -272,7 +270,7 @@ function Home() {
             <div class="box img-gal">
               <img src={photoGal2}
 
-                style={{ objectFit: "cover", backgroundPosition: 'center'}}
+                style={{ objectFit: "cover", backgroundPosition: 'center' }}
                 height={"100%"}
                 width={"100%"}>
               </img>
@@ -285,7 +283,7 @@ function Home() {
             <div class="box img-gal">
               <img src={photoGal3}
 
-              style={{ objectFit: "cover", backgroundPosition: 'center'}}
+                style={{ objectFit: "cover", backgroundPosition: 'center' }}
                 height={"100%"}
                 width={"100%"}>
               </img>
@@ -298,7 +296,7 @@ function Home() {
             <div class="box img-gal">
               <img src={photoGal4}
 
-                style={{ objectFit: "cover",backgroundPosition: 'center'}}
+                style={{ objectFit: "cover", backgroundPosition: 'center' }}
                 height={"100%"}
                 width={"100%"}>
               </img>
@@ -310,7 +308,7 @@ function Home() {
             </div>
             <div class="box five img-gal">
               <img src={photoGal5}
-                style={{ objectFit: "cover",backgroundPosition: 'center'}}
+                style={{ objectFit: "cover", backgroundPosition: 'center' }}
 
 
                 height={"100%"}
@@ -324,7 +322,7 @@ function Home() {
             </div>
             <div class="box six img-gal">
               <img src={photoGal6}
-                style={{ objectFit: "cover",backgroundPosition: 'center'}}
+                style={{ objectFit: "cover", backgroundPosition: 'center' }}
                 height={"100%"}
                 width={"100%"}>
               </img>
@@ -349,17 +347,19 @@ function Home() {
             </div>
           </div>
         </div>
+        <div className="more-news " style={{ margin: "23px 0 10px" }}>
+          <a href="/photos-stories" style={{ border: 'none' }}>More Photos</a></div>
       </div>
       <div className="devider" />
 
 
       {/* Our Cricket Teams */}
-      
-      <Heading primaryHeading={'Our Cricket Teams'} ballImageLeftPercent={23}/>
+
+      <Heading primaryHeading={'Our Cricket Teams'} ballImageLeftPercent={23} />
 
       {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Our Cricket Teams</h2></div>*/}
       <div className='bg-section' >
-      <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
+
         {/* <div className='d-flex justify-content-around '>
           <div className='see-more-home'>{" "}</div>
 
@@ -375,7 +375,7 @@ function Home() {
           </div>
 
           <div className='team-img ourteam' style={{ width: '100%', height: '100%', marginTop: 10 }}>
-            <img src={teamSA} width="100%" height="100%"  style={{ objectFit: 'contain', }} ></img>
+            <img src={teamSA} width="100%" height="100%" style={{ objectFit: 'contain', }} ></img>
             <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10, color: "#fff" }}>South Africa Cricket Team Players</h2>
           </div>
           <div className='team-img ourteam' style={{ width: '100%', height: '100%', marginTop: 10 }}>
@@ -384,61 +384,69 @@ function Home() {
           </div>
 
         </div>
-      </div> 
+        <div className="more-news">
+          <a href="/videos">More Cricket Team</a></div>
+        <noscript></noscript>
+
+      </div>
       <div className="devider" />
 
       {/* world timeline  */}
-      <Heading primaryHeading={'ODI World Cup Timeline'} ballImageLeftPercent={15}/>
+      <Heading primaryHeading={'ODI World Cup Timeline'} ballImageLeftPercent={15} />
 
       {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>ODI World Cup Timeline</h2></div>*/}
       <div className='bg-section-time-line' >
 
-        
+
         <TimeLine />
 
-        <Link>
-          <h3 className='see-more-home'>See More</h3>
-        </Link>
+        <div className="more-news">
+          <a href="/videos">More TimeLine </a></div>
       </div>
       <div className="devider" />
       {/* End Other Game*/}
 
 
 
-     
-{/* Other Games*/}
+
+      {/* Other Games*/}
       <Heading primaryHeading={'Others Game'} ballImageLeftPercent={32} />
 
-{/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Others Game</h2></div>*/}
-      <div className='bg-section' style={{ "background":'',backgroundSize: "cover", "height": "auto",
-    "max-width": "100%",
-    "max-height": "100%" }}>
-        
+      {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Others Game</h2></div>*/}
+      <div className='bg-section' style={{
+        "background": '', backgroundSize: "cover", "height": "auto",
+        "max-width": "100%",
+        "max-height": "100%"
+      }}>
+
         <OtherGame />
       </div>
       <div className="devider" />
-       {/* Latest News and Articles */}
+      {/* Latest News and Articles */}
       <Heading primaryHeading={'Latest News and Articles'} ballImageLeftPercent={17} />
 
       {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Latest News and Articles</h2></div>*/}
-       <div className='bg-section' style={{ "background": 'linear-gradient(0deg, #000, #ff0000)',backgroundSize: "cover", marginBottom: "15px"}}> 
-       <div ><a href='#'><p class="see-more"><u>View More</u></p></a></div>
+      <div className='bg-section' style={{ "background": 'linear-gradient(0deg, #000, #ff0000)', backgroundSize: "cover", marginBottom: "15px" }}>
+
         <AricleList />
+        <div className="more-news " style={{ margin: "23px 0 10px" }}>
+          <a href="/articles" style={{ border: 'none' }}>More Articles</a></div>
+
       </div>
-<div className="devider" />
-      
+      <div className="devider" />
+
 
       {/* Start Quiz card form section  */}
-      <div className='bg-section-quize' style={{ marginBottom:"20px"}}>
+      <div className='bg-section-quize' style={{ marginBottom: "20px" }}>
         <QuizeLit />
-    </div>
-  
+      </div>
 
-{/*Start download app section  */}
+
+      {/*Start download app section  */}
 
       {/* <AnimationOnScroll animateIn="animate__jackInTheBox" > */}
       <div className='bg-section'>
-      <div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Download the Android & iOS App</h2></div>
+        <div class="section-title"><h2 style={{ textAlign: "center", fontSize: "28px", fontWeight: "700", color: "#000" }}>Download the Android & iOS App</h2></div>
         <div class="wrapper">
           <a href="https://www.apple.com/in/app-store/" target={'_blank'} class="link-wrapper">
             <div class="img-wrapper">

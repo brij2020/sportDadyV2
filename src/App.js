@@ -20,6 +20,10 @@ import VideoList from './pages/VideoList';
 import Card from "./Components/Card";
 import ScheduleList from './pages/ScheduleListPage'
 import LiveTv from './pages/LiveTv'
+import Articles from './pages/ArticleList'
+import ArticleShow from './pages/ArticleShow'
+
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -45,6 +49,9 @@ export default function App() {
         <Route path="fixtures1" element={<Card /> } />
         <Route path="fixtures" element={<ScheduleList /> } />
         <Route path="live-score" element={<LiveTv /> } />
+        <Route path="articles" element={<Articles />} />
+        <Route path="articleshow" element={<ArticleShow />} />
+
       </Routes>
       <Footer />
     </BrowserRouter>

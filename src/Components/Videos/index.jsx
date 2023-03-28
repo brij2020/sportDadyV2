@@ -289,7 +289,8 @@ const Video = () => {
                                     ><a  href="/videos/biden-going-back-on-promises-to-fight-climate-change-activists-rally-against-alaska-oil-project-569392">Biden going back on promises to fight climate change? Activists rally against Alaska oil project</a></p></div></a></div>
                                    
                 <div className="more-news">
-        <a href="/videos">More Videos</a></div></div></div></div></section>
+        <a href="/videos">More Videos</a></div>
+        </div></div></div></section>
     )
 }
 

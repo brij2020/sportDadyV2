@@ -1432,7 +1432,7 @@ td,th{
     position:relative!important
 }
 .match-card__summary.theme:before,button.theme:before,li.theme:before,span.theme:before{
-    content:"";
+    
     display:block;
     width:3.2rem;
     height:3.2rem;
@@ -4948,8 +4948,6 @@ p a:focus{
     overflow:hidden;
     transition:background .25s ease;
     background:linear-gradient(118.35deg,hsla(0,0%,100%,.12),hsla(0,0%,100%,.05) 57.29%);
-    -webkit-backdrop-filter:blur(1rem);
-    backdrop-filter:blur(1rem)
 }
 .media-thumbnail-horizontal:focus{
     background:hsla(0,0%,100%,.1)
@@ -5028,10 +5026,10 @@ p a:focus{
     flex-direction:column
 }
 .media-thumbnail-horizontal__tag{
-    font-size:1.2rem;
-    color:hsla(0,0%,100%,.8);
+    font-size:1.7rem;
     margin-bottom:.8rem;
-    display:inline-block
+    display:inline-block;
+    font-weight: 600;
 }
 .media-thumbnail-horizontal__tag.theme{
     padding-left:2.4rem!important
@@ -5044,7 +5042,6 @@ p a:focus{
 }
 .media-thumbnail-horizontal__heading{
     line-height:1.8rem;
-    color:#fff;
     font-family:Hind Siliguri,Arial,Helvetica Neue,Helvetica,sans-serif;
     font-weight:400;
     line-height:1.1;
@@ -5054,21 +5051,26 @@ p a:focus{
     text-overflow:ellipsis;
     max-height:5.28rem;
     display:-webkit-box;
-    -webkit-line-clamp:3
+    -webkit-line-clamp:3;
+    margin-left: 20px;
 }
 .media-thumbnail-horizontal__date{
     margin-top:auto;
-    color:hsla(0,0%,100%,.6)
+    font-size: 13px;
+    margin-left: 20px;
 }
 @media (max-width:39.99em){
     .media-thumbnail-horizontal{
-        width:100%;
-        margin:0;
-        padding:.8rem 0;
-        border-bottom:.1rem solid hsla(0,0%,100%,.1);
-        background:none;
-        border-radius:0;
-        height:auto
+        width: 100%;
+        margin: 0;
+        padding: 0.8rem 0;
+        /* border-bottom: 0.1rem solid hsla(0,0%,100%,.1); */
+        background: none;
+        border-radius: 0;
+        height: auto;
+        box-shadow: 1px 2px 9px #323d94;
+        height: 95%;
+        border-radius: 15px;
     }
     .media-thumbnail-horizontal__container{
         padding:0
@@ -5284,7 +5286,7 @@ p a:focus{
     height:100%;
     display:block;
     position:absolute;
-    top:0;
+    top:-5px;
     left:0;
     -o-object-fit:cover;
     object-fit:cover;
