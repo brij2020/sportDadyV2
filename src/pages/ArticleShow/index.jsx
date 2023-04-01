@@ -3,6 +3,12 @@ import './articleShow.css';
 import { articledetailAction } from '../../store/slice/artlist/article.slice'
 import { useDispatch, useSelector } from 'react-redux';
 import dayjs from 'dayjs';
+import WhatAppIcon from '../../assets/icons/shareIcon/whtsapp.svg';
+import InAppIcon from '../../assets/icons/shareIcon/in.svg';
+import FbAppIcon from '../../assets/icons/shareIcon/fb.svg';
+
+
+
 const ArticleShow = (props) => {
 
 
@@ -26,19 +32,19 @@ const ArticleShow = (props) => {
     return (
         <section class="article-section">
             <div class="container">
-                <div class="row">
+                <div class="row artshow">
                     <div class="col-sm-9 col-12">
 
                         <div class="article-heading">
                             <h1 style={{ fontSize: '25px' }}>{detail?.Title}</h1>
                         </div>
-                        <div class="row">
+                        <div class="row artshow">
                             <div class="col-sm-8 col-md-9 col-12">
-                                <div class="new-loc-date-stamp">
-                                    <div><span class="statebullet">India, Delhi &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class="new-loc-date-stamp" style={{ paddingBottom: "10px" }}>
+                                    <div><span class="statebullet">Noida, Sec 40, UP- India &nbsp;
                                     </span>
                                         <span>
-                                            Updated: {dayjs(detail?.updatedAt)?.format('HH MMM YYYY | hh:mm A')}IST
+                                            Updated: {dayjs(detail?.updatedAt)?.format('HH MMM YYYY | hh:mm A')} IST
                                         </span>
                                     </div>
                                     <div> </div>
@@ -46,39 +52,36 @@ const ArticleShow = (props) => {
                             </div>
                             <div class="col-sm-4 col-md-3 col-12">
                                 <div class="article-share-data">
-                                    <div class="social-icon-circle" style={{ opacity: -1 }}>
-                                        <a href="whatsapp://send?text=https://www.wionews.com/world/us-multiple-casualties-in-school-shooting-in-nashville-assailant-dead-576358" rel="noreferrer" data-action="share/whatsapp/share">
+                                    <div class="social-icon-circle" >
+                                        <a rel="noreferrer" data-action="share/whatsapp/share">
                                             <span className='span-art'>
                                                 <span className='span-span-as'>
-                                                    <img alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e" className='cals-social-image' /></span>
-                                                <img alt="Share On WhatsApp" src="/assets/images/whtsapp.svg?imwidth=64" decoding="async" data-nimg="intrinsic" class="thumb-whtsapp" className='cls-fig' srcset="/assets/images/whtsapp.svg?imwidth=32 1x, /assets/images/whtsapp.svg?imwidth=64 2x" />
+                                                    <img alt="" aria-hidden="true" src={WhatAppIcon} className='cals-social-image' /></span>
+                                                <img alt="Share On WhatsApp" src={WhatAppIcon} decoding="async" data-nimg="intrinsic" className="thumb-whtsapp cls-fig" srcset={WhatAppIcon} />
+
                                                 <noscript></noscript>
                                             </span>
                                         </a>
-                                        <a rel="noreferrer" target="_blank" href="http://www.facebook.com/sharer.php?u=https://www.wionews.com/world/us-multiple-casualties-in-school-shooting-in-nashville-assailant-dead-576358">
+
+                                        <a rel="noreferrer" data-action="share/whatsapp/share">
                                             <span className='span-art'>
                                                 <span className='span-span-as'>
-                                                    <img alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e" className='cals-social-image' /></span>
-                                                <img alt="Share On Facebook" src="/assets/images/fb.svg?imwidth=64" decoding="async" data-nimg="intrinsic" class="thumb-fb" className='cls-fig' srcset="/assets/images/fb.svg?imwidth=32 1x, /assets/images/fb.svg?imwidth=64 2x" />
+                                                    <img alt="" aria-hidden="true" src={InAppIcon} className='cals-social-image' /></span>
+                                                <img alt="Share On WhatsApp" src={InAppIcon} decoding="async" data-nimg="intrinsic" className="thumb-in cls-fig" srcset={InAppIcon} />
+
                                                 <noscript></noscript>
                                             </span>
                                         </a>
-                                        <a rel="noreferrer" target="_blank" href="https://twitter.com/intent/tweet?url=https://www.wionews.com/world/us-multiple-casualties-in-school-shooting-in-nashville-assailant-dead-576358&amp;t=WIOnews">
+                                        <a rel="noreferrer" data-action="share/whatsapp/share">
                                             <span className='span-art'>
                                                 <span className='span-span-as'>
-                                                    <img alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e" className='cals-social-image' /></span>
-                                                <img alt="Share On Twitter" src="/assets/images/twitter.svg?imwidth=64" decoding="async" data-nimg="intrinsic" class="thumb-twitter" className='cls-fig' srcset="/assets/images/twitter.svg?imwidth=32 1x, /assets/images/twitter.svg?imwidth=64 2x" />
+                                                    <img alt="" aria-hidden="true" src={FbAppIcon} className='cals-social-image' /></span>
+                                                <img alt="Share On WhatsApp" src={FbAppIcon} decoding="async" data-nimg="intrinsic" className="thumb-fb cls-fig" srcset={FbAppIcon} />
+
                                                 <noscript></noscript>
                                             </span>
                                         </a>
-                                        <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.wionews.com/world/us-multiple-casualties-in-school-shooting-in-nashville-assailant-dead-576358&amp;t=WIOnews">
-                                            <span className='span-art'>
-                                                <span className='span-span-as'>
-                                                    <img alt="" aria-hidden="true" src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%2732%27%20height=%2732%27/%3e" className='cals-social-image' /></span>
-                                                <img alt="Share On Linkedin" src="/assets/images/in.svg?imwidth=64" decoding="async" data-nimg="intrinsic" class="thumb-in" className='cls-fig' srcset="/assets/images/in.svg?imwidth=32 1x, /assets/images/in.svg?imwidth=64 2x" />
-                                                <noscript></noscript>
-                                            </span>
-                                        </a>
+
 
                                     </div>
                                 </div>
@@ -93,7 +96,7 @@ const ArticleShow = (props) => {
                                         detail?.thumb
                                     } className='cals-social-image' /></span>
                                     <img alt="" srcset={detail?.thumb} decoding="async" data-nimg="intrinsic" class="img-fluid" className='cls-fig' /></span></div>
-                                <div class="img-stamp">
+                                <div class="img-stamp" style={{ display: 'none' }}>
                                     <div class="img-copy">
                                         <p><i class="fa fa-cameras"></i>
                                             <div style={{ "min-height": "auto;" }}>
@@ -110,15 +113,15 @@ const ArticleShow = (props) => {
                                     <div class="story-hightligsummry">
                                         <p>
                                             <strong>
-                                                <div><p>{detail?.summary}&nbsp;</p>
+                                                <div><p style={{ color: 'white' }}>{detail?.summary}&nbsp;</p>
                                                 </div></strong></p>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row artshow" >
                                     <div class="col-sm-9 col-12 order-sm-last">
                                         <div class="article-main-data">
                                             <div>
-                                                <p>{detail?.Article}.&nbsp;</p>
+                                                <p className="pb-show">{detail?.Article}.&nbsp;</p>
                                             </div>
                                             <div class="ads-box-300x250">
                                                 <div class="ads-placeholder-internal">
@@ -223,10 +226,10 @@ const ArticleShow = (props) => {
                                                                             </picture>
                                                                         </div>
                                                                     </div>
-                                                                </header>
-                                                            </div>
-                                                        </a>
-                                                     </article>
+                                                                    </header>
+                                                                </div>
+                                                            </a>
+                                                        </article>
                                                     )
                                                 }) : null
                                             }
