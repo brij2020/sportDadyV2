@@ -5026,7 +5026,7 @@ p a:focus{
     flex-direction:column
 }
 .media-thumbnail-horizontal__tag{
-    font-size:1.7rem;
+    font-size: 15px;
     margin-bottom:.8rem;
     display:inline-block;
     font-weight: 600;
@@ -5197,7 +5197,7 @@ p a:focus{
 }
 .media-thumbnail__date{
     position:absolute;
-    bottom:1.2rem;
+    bottom:0.5rem;
     color:hsla(0,0%,100%,.6);
     font-size:1.2rem;
     line-height:1;
@@ -7973,7 +7973,7 @@ p a:focus{
     z-index:0;
     overflow-x:scroll;
     display:flex;
-    padding:0 1.6rem
+    padding:8px 0em;
 }
 .content-hero__item-container--cards{
     margin-right:.8rem

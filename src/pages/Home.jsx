@@ -55,9 +55,17 @@ import img11 from '../assets/images/bg/tt.jpg';
 import img12 from '../assets/images/bg/5172658.jpg';
 import Heading from "../Components/Heading"
 import Video from '../Components/Videos/index'
-import QuizeLit from '../Components/QuizList'
+import QuizeLit from '../Components/QuizList';
+
+import { homeDataAction } from '../store/slice/home/home.slice'
+import { useDispatch, useSelector } from 'react-redux';
 
 function Home() {
+
+  const dispatch = useDispatch();
+  React.useState(() => {
+    dispatch(homeDataAction())
+  },[])
 
   const images = [
     { url: ONE },
@@ -427,8 +435,11 @@ function Home() {
 
       {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Latest News and Articles</h2></div>*/}
       <div className='bg-section' style={{ "background": 'linear-gradient(0deg, #000, #ff0000)', backgroundSize: "cover", marginBottom: "15px" }}>
+       
+        <AricleList 
+          
+        />
 
-        <AricleList />
         <div className="more-news " style={{ margin: "23px 0 10px" }}>
           <a href="/articles" style={{ border: 'none' }}>More Articles</a></div>
 

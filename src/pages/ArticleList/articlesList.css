@@ -122,4 +122,6 @@
 }
 .yCs_c {
     background: linear-gradient(to bottom, #f3010a63, #00000057);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
