@@ -218,3 +218,7 @@ display: block; max-width: 100%; width: initial; height: initial; background: no
 .pb-show {
     color: #000 !important;
 }
+
+.icon-play_arrow-filled:before {
+    content: "\e969";
+}

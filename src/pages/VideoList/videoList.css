@@ -61,7 +61,8 @@
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    overflow: hidden
+    overflow: hidden;
+    color: #000;
 }
 
 ._2g6Ty h1 {
@@ -147,7 +148,8 @@
 ._17N4N ._2g6Ty p {
     font-size: 1.325rem;
     font-weight: 600;
-    line-height: 1.33
+    line-height: 1.33;
+    color: #000;
 }
 
 ._17N4N ._2tpi2 {
@@ -991,4 +993,11 @@ div.oBcDZ ._1Sv1C>[id*=google_ads_iframe] {
     margin-bottom: 20px;
     border-radius: 4px;
     color: #fff
+}
+
+.time-icon {
+    bottom:42px !important;
+    font-size: .75rem !important;
+    right: -8px !important;
+    background-color: transparent
 }

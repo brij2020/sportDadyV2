@@ -28,9 +28,16 @@
     border-radius: 50px;
 }
 
+.section-heading-large:after {
+    border-bottom: 6px solid red !important;
+}
+.section-heading-large h2:before {
+    background: red !important;
+}
 @media screen and (max-width: 767px) {
     .section-heading-large h2 {
         font-size: 20px;
+        color: #222;
     }
 
     .more-news {
@@ -72,5 +79,6 @@
         display: block;
         width: 100%;
     }
+
 
 }

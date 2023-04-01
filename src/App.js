@@ -22,6 +22,9 @@ import ScheduleList from './pages/ScheduleListPage'
 import LiveTv from './pages/LiveTv'
 import Articles from './pages/ArticleList'
 import ArticleShow from './pages/ArticleShow'
+import VideoShowPage from './pages/VideoList/videoShow'
+
+
 
 
 export default function App() {
@@ -51,6 +54,8 @@ export default function App() {
         <Route path="live-score" element={<LiveTv /> } />
         <Route path="articles" element={<Articles />} />
         <Route path="articleshow" element={<ArticleShow />} />
+        <Route path="videoshow" element={<VideoShowPage />} />
+
 
       </Routes>
       <Footer />

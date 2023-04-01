@@ -6,10 +6,10 @@ const  API_PATH_CONST = require('../../../apiServices/apiPath')
 /**
  * Listing APi
  */
-const getArticleListAction = createAsyncThunk(
-    'artList/dataStatus',
+const getVideoListAction = createAsyncThunk(
+    'videoList/dataStatus',
     async (query, thunkAPI ) => {
-        const response = await axiosInstance.get(API_PATH_CONST?.ART_LIST_API);
+        const response = await axiosInstance.get(API_PATH_CONST?.VIDEOS_LIST_API + `&pageno=${query?.pageno}&perpage=${query?.perpage}`);
         if(response?.data?.status) {
             return response.data.response
         } else {
@@ -20,21 +20,21 @@ const getArticleListAction = createAsyncThunk(
     }
 )
 //create reducer slice 
-const artListSlice = createSlice({
-    name: 'articleList',
+const videoListSlice = createSlice({
+    name: 'videoList',
     initialState:{ data:{ }, loading: false},
     reducers:{},
     extraReducers: builder => {
-        builder.addCase(getArticleListAction.fulfilled, (state,action) => {
+        builder.addCase(getVideoListAction.fulfilled, (state,action) => {
             state.data = action.payload;
             state.loading = false;
             state.status = true;
         })
-        builder.addCase(getArticleListAction.pending, (state,{ payload }) => {
+        builder.addCase(getVideoListAction.pending, (state,{ payload }) => {
             state.loading = true;
             state.status = false;
         })
-        builder.addCase(getArticleListAction.rejected, (state,{ payload}) => {
+        builder.addCase(getVideoListAction.rejected, (state,{ payload}) => {
             state.loading = false;
             state.status = false;
  
@@ -47,10 +47,10 @@ const artListSlice = createSlice({
 /**
  * Detail APi
  */
-const articledetailAction = createAsyncThunk(
-    'artDetail/dataStatus',
+const videoDetailAction = createAsyncThunk(
+    'videoDetail/dataStatus',
     async (cmsId, thunkAPI ) => {
-        const response = await axiosInstance.get(API_PATH_CONST?.ART_DETAIL_API + `&cmsuid=${cmsId}` );
+        const response = await axiosInstance.get(API_PATH_CONST?.VIDEOS_DETAIL_API + `&cmsuid=${cmsId}` );
         if(response?.data?.status) {
             return response.data.response
         } else {
@@ -61,21 +61,21 @@ const articledetailAction = createAsyncThunk(
     }
 )
 //create reducer slice 
-const articleDetailSlice = createSlice({
-    name: 'artdetail',
+const videoDetailSlice = createSlice({
+    name: 'videoDetail',
     initialState:{ data:{ }, loading: false},
     reducers:{},
     extraReducers: builder => {
-        builder.addCase(articledetailAction.fulfilled, (state,action) => {
+        builder.addCase(videoDetailAction.fulfilled, (state,action) => {
             state.data = action.payload;
             state.loading = false;
             state.status = true;
         })
-        builder.addCase(articledetailAction.pending, (state,{ payload }) => {
+        builder.addCase(videoDetailAction.pending, (state,{ payload }) => {
             state.loading = true;
             state.status = false;
         })
-        builder.addCase(articledetailAction.rejected, (state,{ payload}) => {
+        builder.addCase(videoDetailAction.rejected, (state,{ payload}) => {
             state.loading = false;
             state.status = false;
  
@@ -85,14 +85,14 @@ const articleDetailSlice = createSlice({
 
 
 // exporting Reducers
-const artListReducer = artListSlice.reducer;
-const artDetailReducer = articleDetailSlice.reducer;
+const videoListReducer = videoListSlice.reducer;
+const videoDetailReducer = videoDetailSlice.reducer;
 
 
 
 export {
-    artListReducer,
-    artDetailReducer,
-    getArticleListAction,
-    articledetailAction
+    videoListReducer,
+    videoDetailReducer,
+    getVideoListAction,
+    videoDetailAction
 }

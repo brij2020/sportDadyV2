@@ -13,7 +13,7 @@ const AricleList = (props) => {
         list = homeData?.data?.sections?.sport_daday_news_article;
 
     }
-    console.log('daa', list)
+    
     return (
 
         <section class="content-hero " >

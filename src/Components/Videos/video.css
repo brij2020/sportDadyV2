@@ -109,6 +109,8 @@ a:hover {
 }
 .video-home-section .video-section-big {
     background-color: #000;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 .video-home-section .video-news-list {
     padding: 20px 0 10px;
@@ -178,7 +180,8 @@ p.vid-text {
 }
 
 .section-heading-large a {
-    text-decoration: none
+    text-decoration: none;
+    color: #222 !important
 }
 
 .section-heading-large a:hover {
@@ -281,6 +284,12 @@ p.vid-text {
     .more-news {
         display: block;
         width: 100%;
+    }
+    .video-small-list {
+        margin-top: 10px;
+    }
+    .video-home-section .video-small-list a  {
+        margin-bottom: 10px !important;
     }
 
 }
