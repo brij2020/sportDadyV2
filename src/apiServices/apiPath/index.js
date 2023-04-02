@@ -3,5 +3,7 @@ module.exports =  {
     ART_LIST_API: '/request/articlelist?origin=m',
     ART_DETAIL_API: '/request/articleshow?origin=m',
     VIDEOS_LIST_API: '/request/videolist?origin=m',
-    VIDEOS_DETAIL_API: '/request/videolshow?origin=m'
+    VIDEOS_DETAIL_API: '/request/videolshow?origin=m',
+    PHOTO_LST_API: '/request/photos?origin=m',
+    PHOTO_DETAIL:'/request/photoshow?origin=m'
 }

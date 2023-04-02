@@ -14,7 +14,7 @@ const VideoList = (props) => {
         }))
     }, [])
     const articleList = useSelector(s => s?.videoListReducer);
-    console.log('articleList', articleList)
+    
     let list = [];
    
     if (articleList?.status && articleList?.data) {

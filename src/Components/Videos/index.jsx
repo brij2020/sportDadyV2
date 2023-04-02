@@ -111,7 +111,7 @@ const Video = () => {
                                                             padding: "0px",
                                                             maxWidth: "100%"
                                                         }}>
-                                                            <img alt="" aria-hidden="true" src={PlayIcon}
+                                                            {/* <img alt="" aria-hidden="true" src={PlayIcon}
                                                                 style={{
                                                                     "display": 'block',
                                                                     maxWidth: "100%",
@@ -122,22 +122,23 @@ const Video = () => {
                                                                     border: "0px",
                                                                     margin: '0px',
                                                                     padding: "0px"
-                                                                }} /></span>
+                                                                }} /> */}
+                                                                </span>
                                                         <img alt="play-icon" src={PlayIcon} decoding="async" data-nimg="intrinsic"
                                                             style={{
-                                                                "position": "sticky",
+                                        
                                                                 inset: "0px",
                                                                 boxSizing: "border-box",
                                                                 padding: "0px",
                                                                 border: "none",
                                                                 margin: "auto",
                                                                 display: "block",
-                                                                width: "0px",
-                                                                height: "0px",
+                                                                height: "50px",
                                                                 minWidth: "100%",
                                                                 maxWidth: "100%",
                                                                 minHeight: "100%",
-                                                                maxHeight: "100%"
+                                                                maxHeight: "100%",
+                                                                'margin-top': "50%"
                                                             }} srcset={PlayIcon} /><noscript></noscript>
                                                     </span></div><a href="/videos/ukraine-vows-to-keep-defending-bakhmut-amid-constant-attacks-by-russian-forces-569397"><p>{
                                                         v_art?.summary}</p>

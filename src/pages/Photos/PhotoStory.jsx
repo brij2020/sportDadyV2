@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { useState } from 'react';
 import './photoStory.css'
-import slides from './Mockey'
-
+// import slides from './Mockey'
+import { photoDetailAction } from '../../store/slice/photo/photo.slice'
+import { useDispatch, useSelector } from 'react-redux';
 function toaster(message, type, timeout = 5000) {
     const body = document.body;
 
@@ -32,9 +33,34 @@ const PhotoStory = (props) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [contextMenuIsOpen, setContextMenuState] = useState(false);
     const timer = React.useRef(null); 
+    const dispatch = useDispatch();
+    let articleDetail = {};
+
+    let imageSlides = []
+    let params = new URL(document.location).searchParams;
+    let articleId = params.get("cmsuid");
+    React.useEffect(() => {
+        dispatch(photoDetailAction(articleId))
+    }, [])
+    const articleList = useSelector(s => s?.photoDetailReducer);
+    if (articleList && articleList?.status) {
+        articleDetail = articleList?.data?.data
+        if(articleDetail && Array.isArray(articleDetail?.images)) {
+            imageSlides =  articleDetail?.images?.map(slide => { 
+                let _slide = JSON.parse(JSON.stringify(slide))
+                _slide['timeOut'] = "4000"; 
+                return _slide } )
+        }
+    }
+
+    console.log('articleDetail', articleDetail)
+
+
+
+
     const next = () => {
 
-        if (activeIndex + 1 > slides.length - 1) {
+        if (activeIndex + 1 > imageSlides.length - 1) {
             setActiveIndex(0);
 
         } else {
@@ -124,13 +150,13 @@ const PhotoStory = (props) => {
                 <div className="daily-stories__outer" >
                     <div className="daily-stories__container">
                         {
-                            slides && slides.map(({ url, ids, timeOut, contentType } = { url: '', ids: '90K', timeOut: "0", contentType: "" }, i) => {
+                            imageSlides && imageSlides.map(({ thumb:url, id, timeOut, contentType, caption, formats, static:staticpath } = { url: '', ids: '90K', timeOut: "0", contentType: "" }, i) => {
                                 
                                 return (
-                                    <div className={`pgt-slide ${i === activeIndex ? 'v-slide active' : 'hide-slide'}`} data-timeout={`${timeOut}`} key={ids} >
+                                    <div className={`pgt-slide ${i === activeIndex ? 'v-slide active' : 'hide-slide'}`} data-timeout={`${timeOut}`} key={id} >
                                         {
                                             contentType !== 'video' ? (
-                                                <img src={url} alt={ids} title="Title 1" 
+                                                <img src={staticpath + formats?.large?.url } alt={id} title="Title 1" 
                                                 style={{
                                                 "object-fit": "contain"
                                                 }}
@@ -139,7 +165,7 @@ const PhotoStory = (props) => {
                                                 <video src={url} preload="true" muted="muted" />
                                             )
                                         }
-                                         <div className="pgt-gradient"><h3>Nikki Tamboli In Embellished Outfits</h3></div>
+                                         <div className="pgt-gradient"><h3>{caption}</h3></div>
                                     </div>
 
                                 )
@@ -152,7 +178,7 @@ const PhotoStory = (props) => {
 
                 <div className="progress-bars" data-count="4">
                     {
-                        slides && slides.map(({ url, ids, timeOut, contentType } = { url: '', ids: '90K', timeOut: "0", contentType: "" }, i) => {
+                         imageSlides &&  imageSlides.map(({ thumb:url, id:ids, timeOut, contentType, summary } = { url: '', ids: '90K', timeOut: "0", contentType: "" }, i) => {
                             return (
                                 contentType !== 'video' ? (
                                     <div className={`bar ${i === activeIndex ? 'seen animate' : ''}`} data-index={`${i}`} key={ids}><span style={{ "animation-duration": `${timeOut}ms` }}></span></div>

@@ -1,56 +1,29 @@
 import * as React from 'react'
 import "./photoList.css"
 import LOGO from "../../assets/logo/logo-trans.png";
-import PageHeading from '../../Components/pageHead'
 import { useDispatch, useSelector } from 'react-redux';
-import { getPhotoListAction } from '../../store/slice/photo/photo.slice'
-import dayjs from 'dayjs';
-import { LoadMore } from '../../Components/LoadMore'
 
-
-
-const PhotoListPage = (props) => {
-    const dispatch = useDispatch();
-
-    React.useEffect(() => {
-        dispatch(getPhotoListAction({
-            pageno: 1,
-            perpage: 10
-        }))
-    }, [])
-    const articleList = useSelector(s => s?.photoListReducer);
+// sport_daday_photo_gallary
+const PhotoListHome = (props) => {
+    const homeData = useSelector(s => s?.homeReducer);
     let list = [];
-    if (articleList?.status && articleList?.data) {
-        list = articleList?.data?.data
+
+    if (homeData?.data?.sections?.sport_daday_photo_gallary) {
+        list = homeData?.data?.sections?.sport_daday_photo_gallary;
 
     }
-    console.log('photo lois', list)
+
     return (<>
         <section class="pgt-container">
 
-            <section class="mainContainer">
-
-                {/* <div class="breadcrumbs">
-                <a href="/">Home</a>
-                <span>/</span>
-                Web Stories
-
-            </div>  */}
+            <section class="mainContainer" style={{ marginBottom: '0px' }}>
 
                 <section id="dataHolder" class="main-webstories">
-                    {/* <div class="secHdg">
-                        <span class="hdgTexure"></span>
-                        <div class="hdgStyle">
-                            <span>[</span>
-                            <h1>Web Stories</h1>
-                            <span>]</span>
-                        </div>
-                    </div> */}
-                    <PageHeading heading="Web Stories" />
-                    <div class="web-stories">
+
+                    <div class="web-stories" style={{ margin: "auto" }}>
                         <ul>
                             {
-                                list && Array.isArray(list) ? list?.map(photo => {
+                                list && Array.isArray(list) ? list?.slice(1, 5)?.map(photo => {
                                     return (
                                         <li key={photo?.id}>
                                             <div class="webstories-item">
@@ -65,7 +38,7 @@ const PhotoListPage = (props) => {
                                                         title="nikki tamboli in embellished outfits" />
                                                     <div class="gradient">
                                                         <h3>{photo?.summary}</h3>
-                                                        <div class="time">{dayjs(photo?.updatedAt)?.format('HH MMM YY')}</div>
+                                                        <div class="time">Feb 24, 2023</div>
                                                         <img class="logo-img" src={LOGO}
                                                             alt="hindustan times" title="hindustan times" />
                                                     </div>
@@ -78,9 +51,10 @@ const PhotoListPage = (props) => {
                                 )
                                     : null
                             }
+
+
                         </ul>
                     </div>
-                    <LoadMore />
                 </section>
             </section>
         </section>
@@ -90,4 +64,4 @@ const PhotoListPage = (props) => {
     )
 }
 
-export default PhotoListPage;
+export default PhotoListHome;

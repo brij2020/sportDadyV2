@@ -47,7 +47,7 @@ export default function App() {
         <Route path="quiz" element={<Quiz />} />
         <Route path="photos-stories" element={<PhotoListPage />} />
         
-        <Route path="gallery" element={<PhotoDetailPage />} />
+        <Route path="photoshow" element={<PhotoDetailPage />} />
         <Route path="videos" element={<VideoList />} />
         <Route path="fixtures1" element={<Card /> } />
         <Route path="fixtures" element={<ScheduleList /> } />

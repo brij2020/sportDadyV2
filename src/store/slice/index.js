@@ -5,12 +5,18 @@ import { artListReducer,
 import {
     videoDetailReducer, videoListReducer
 } from './video/video.slice'
+import {
+    photoListReducer,
+    photoDetailReducer
+} from './photo/photo.slice'
 
 const rootReducers = combineReducers({
     homeReducer,
     artListReducer,
     artDetailReducer,
     videoListReducer,
-    videoDetailReducer
+    videoDetailReducer,
+    photoListReducer,
+    photoDetailReducer
 })
 export default rootReducers

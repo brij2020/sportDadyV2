@@ -56,7 +56,7 @@ import img12 from '../assets/images/bg/5172658.jpg';
 import Heading from "../Components/Heading"
 import Video from '../Components/Videos/index'
 import QuizeLit from '../Components/QuizList';
-
+import PhotoListHome from '../pages/PhotoList/HomePhtots'
 import { homeDataAction } from '../store/slice/home/home.slice'
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -258,106 +258,14 @@ function Home() {
       <Heading primaryHeading={'Photos Gallery'} ballImageLeftPercent={28} />
 
       {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Photos Gallery</h2></div>*/}
-      <div className='bg-section' style={{ "background": 'linear-gradient(0deg, #000, #ff0000)', backgroundSize: "cover", marginBottom: "14px" }}>
-        {/* <div ><a href='/photos-stories'><p class="see-more"><u>View More</u></p></a></div> */}
-        <div class="containerv">
-          <div class="main-box">
-            <div class="box img-gal">
-              <img src={photoGal1}
-                height={"100%"}
-                width={"100%"}
-                style={{ objectFit: "cover", backgroundPosition: 'center' }}
-              >
-              </img>
-              <div class="image-caption">
-                <p>
-                  This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
-                </p>
-              </div>
-            </div>
-            <div class="box img-gal">
-              <img src={photoGal2}
-
-                style={{ objectFit: "cover", backgroundPosition: 'center' }}
-                height={"100%"}
-                width={"100%"}>
-              </img>
-              <div class="image-caption">
-                <p>
-                  This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
-                </p>
-              </div>
-            </div>
-            <div class="box img-gal">
-              <img src={photoGal3}
-
-                style={{ objectFit: "cover", backgroundPosition: 'center' }}
-                height={"100%"}
-                width={"100%"}>
-              </img>
-              <div class="image-caption">
-                <p>
-                  This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
-                </p>
-              </div>
-            </div>
-            <div class="box img-gal">
-              <img src={photoGal4}
-
-                style={{ objectFit: "cover", backgroundPosition: 'center' }}
-                height={"100%"}
-                width={"100%"}>
-              </img>
-              <div class="image-caption">
-                <p>
-                  This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
-                </p>
-              </div>
-            </div>
-            <div class="box five img-gal">
-              <img src={photoGal5}
-                style={{ objectFit: "cover", backgroundPosition: 'center' }}
-
-
-                height={"100%"}
-                width={"100%"}>
-              </img>
-              <div class="image-caption">
-                <p>
-                  This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
-                </p>
-              </div>
-            </div>
-            <div class="box six img-gal">
-              <img src={photoGal6}
-                style={{ objectFit: "cover", backgroundPosition: 'center' }}
-                height={"100%"}
-                width={"100%"}>
-              </img>
-              <div class="image-caption">
-                <p>
-                  This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
-                </p>
-              </div>
-            </div>
-            <div class="box six img-gal">
-              <img src={photoGal7}
-
-
-                height={"100%"}
-                width={"100%"}>
-              </img>
-              <div class="image-caption">
-                <p>
-                  This is an awesome caption about a picture. You could put anything here for someone to read. They would love reading more text about nothing.
-                </p>
-              </div>
-            </div>
-          </div>
+      <section class="video-home-section" style={{ "padding": "10px;"}}>
+        <div class="container-video-pgt">
+          <PhotoListHome />
         </div>
         <div className="more-news " style={{ margin: "23px 0 10px" }}>
-          <a href="/photos-stories" style={{ border: 'none' }}>More Photos</a></div>
-      </div>
+          <a href="/photos-stories" style={{ border: 'none' }}>More Photos</a>
+        </div>
+      </section>
       <div className="devider" />
 
 
