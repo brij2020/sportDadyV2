@@ -150,13 +150,13 @@ const PhotoStory = (props) => {
                 <div className="daily-stories__outer" >
                     <div className="daily-stories__container">
                         {
-                            imageSlides && imageSlides.map(({ thumb:url, id, timeOut, contentType, caption, formats, static:staticpath } = { url: '', ids: '90K', timeOut: "0", contentType: "" }, i) => {
+                            imageSlides && imageSlides.map(({ thumb:url, id, timeOut, contentType, caption, formats, static:staticpath,summary } = { url: '', ids: '90K', timeOut: "0", contentType: "" }, i) => {
                                 
                                 return (
                                     <div className={`pgt-slide ${i === activeIndex ? 'v-slide active' : 'hide-slide'}`} data-timeout={`${timeOut}`} key={id} >
                                         {
                                             contentType !== 'video' ? (
-                                                <img src={staticpath + formats?.large?.url } alt={id} title="Title 1" 
+                                                <img src={url } alt={id} title={summary}
                                                 style={{
                                                 "object-fit": "contain"
                                                 }}
