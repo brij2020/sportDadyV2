@@ -1,7 +1,10 @@
 import * as React from 'react';
 import "./index.css"
+import { useSelector } from 'react-redux';
+
 
 import IndiaFlag from "../../assets/svg/india.jpg"
+
 import PakFlag  from "../../assets/icons/flag2.png"
 const timeLine = [
 {
@@ -43,18 +46,28 @@ const timeLine = [
 
 
 const TimeLine = (props) => {
+	const homeData = useSelector(s => s?.homeReducer);
+    let list = [];
+   
+    if (homeData?.data?.sections?.sport_daday_event_time_Line) {
+        list = homeData?.data?.sections?.sport_daday_event_time_Line?.slice(0,5);
+
+    }
+	console.log('lime lite ', list)
 	const [cricketTimeLine, setCricketTimeLine] = React.useState(timeLine);
+	// list = timeLine
 	return(
 	<div className="page">
 	  <div className="views">
 	  {
-	  	cricketTimeLine &&  cricketTimeLine.map((yearSlide, i) => {
+	  	list &&  list.map((yearSlide, i) => {
+			console.log(yearSlide)
 	  		return(
 		  			<div className="view view--1">
 		      <div className="view__inner">
-		        <h2 style={{"font-size": "100px"}}>{yearSlide?.year}</h2>
+		        <h2 style={{"font-size": "100px"}}>{yearSlide?.Year?.split('-')?.[0]}</h2>
 		        <div>
-		        <lable>{yearSlide?.lable}</lable>
+		        <lable>{yearSlide?.Final_Match_Heighlight}</lable>
 		        </div>
 		      </div>
 		    </div>
@@ -71,13 +84,13 @@ const TimeLine = (props) => {
 	      <ul className="timeline__list">
 
 	      {
-	      	cricketTimeLine && cricketTimeLine.map((slide,i) => {
+	      	list && list.map((slide,i) => {
 	      		return(<li className={ `timeline__item ${ i == 0 ? 'timeline__item--active' : '' }` } key={i}>
 	        	<a className="timeline__link" href="#">
 	            	<div className="timeline__item__point"></div>
 	            </a>
 		          <div className="timeline__item__content">
-		          		<img className="timeline__item__thumb" src={slide?.flag}/>
+		          		<img className="timeline__item__thumb" src={slide?.thumb_teamA}/>
 		          		<div className="timeline__item__shadow"></div>       
 				</div>
 				 <div id="wrapper" class={`arrow-wrapper`}>
@@ -92,7 +105,7 @@ const TimeLine = (props) => {
 						</div>
 					  </div>
 		          </div>
-		          <div className="timeline__item__year">{slide?.year}</div>
+		          <div className="timeline__item__year">{slide?.Year?.split('-')?.[0]}</div>
 	        </li>)
 	      	})
 	      }
