@@ -1,6 +1,10 @@
 import * as React from 'react';
 import "./index.css"
 import { useSelector } from 'react-redux';
+import { Swiper, SwiperSlide,  } from 'swiper/react';
+
+import SwiperCore,{ Pagination, Navigation, Autoplay} from 'swiper';
+import 'swiper/css';
 
 
 import IndiaFlag from "../../assets/svg/india.jpg"
@@ -48,80 +52,56 @@ const timeLine = [
 const TimeLine = (props) => {
 	const homeData = useSelector(s => s?.homeReducer);
     let list = [];
+	const [cricketTimeLine, setCricketTimeLine] = React.useState(list);
+	const [ list_, setlist] = React.useState([])
    
     if (homeData?.data?.sections?.sport_daday_event_time_Line) {
-        list = homeData?.data?.sections?.sport_daday_event_time_Line?.slice(0,5);
-
+        list = homeData?.data?.sections?.sport_daday_event_time_Line;
     }
-	console.log('lime lite ', list)
-	const [cricketTimeLine, setCricketTimeLine] = React.useState(timeLine);
-	// list = timeLine
+	
+	const static_ = 'http://52.205.83.44:1337';
+	
 	return(
-	<div className="page">
-	  <div className="views">
-	  {
-	  	list &&  list.map((yearSlide, i) => {
-			console.log(yearSlide)
-	  		return(
-		  			<div className="view view--1">
-		      <div className="view__inner">
-		        <h2 style={{"font-size": "100px"}}>{yearSlide?.Year?.split('-')?.[0]}</h2>
-		        <div>
-		        <lable>{yearSlide?.Final_Match_Heighlight}</lable>
-		        </div>
-		      </div>
-		    </div>
-	  			)
-	  	})
-	  }
-	  
-	    
-	  
-	  </div>
-	  <div className="timeline__wrapper">
-	    <div className="timeline">
-	    {/*<a className="timeline__all-cars" href="#">All cars</a> */}
-	      <ul className="timeline__list">
-
-	      {
-	      	list && list.map((slide,i) => {
-	      		return(<li className={ `timeline__item ${ i == 0 ? 'timeline__item--active' : '' }` } key={i}>
-	        	<a className="timeline__link" href="#">
-	            	<div className="timeline__item__point"></div>
-	            </a>
-		          <div className="timeline__item__content">
-		          		<img className="timeline__item__thumb" src={slide?.thumb_teamA}/>
-		          		<div className="timeline__item__shadow"></div>       
+	<>
+		<div class="containerTimeLine">
+			
+			<div class="timeline">
+				<div class="swiper-container">
+				<div class="swiper-wrapper">
+					{
+						list && list?.map(o => {
+							return(
+								<div class="swiper-slide" 
+									key={ o?.id }	
+								
+									
+									>
+									<img 
+									src={static_ + o?.thumb}
+									style={{
+										backgroundPosition: 'center !important;',
+										backgroundSize: 'contain;',
+										backgroundRepeat: 'no-repeat !important;'
+									}} 
+									/>
+									<div class="swiper-slide-content">
+										<span class="timeline-year">{
+										o?.Year?.split("-")?.[0]
+									}</span>
+										<h6 class="timeline-title">{o?.event_Name }</h6>
+										<p class="timeline-text">{o?.Final_Match_Heighlight}</p>
+									</div>
+								</div>
+							)
+						})
+					}
 				</div>
-				 <div id="wrapper" class={`arrow-wrapper`}>
-					  <div id="wrapper-inner">
-						<div id="scroll-down">
-					  <span class="arrow-down">
-					 
-					  </span>
-					  <span id="scroll-title">
-					    
-					  </span>
-						</div>
-					  </div>
-		          </div>
-		          <div className="timeline__item__year">{slide?.Year?.split('-')?.[0]}</div>
-	        </li>)
-	      	})
-	      }
-	        
-	     
-	     
-	      </ul>
-	      {/*<a className="timeline__exit" href="#">Exit</a>*/}
-	      <div className="timeline__path">
-	        <div className="timeline__path__triangle timeline__path__triangle--moving"></div>
-	        <div className="timeline__path__triangle timeline__path__triangle--static-1"></div>
-	        <div className="timeline__path__triangle timeline__path__triangle--static-2"></div>
-	        <div className="timeline__path__triangle timeline__path__triangle--static-3"></div>
-	      </div>
-	    </div>
-	  </div>
-	</div>)
+				<div class="time-line swiper-button-prev"></div>
+				<div class="time-line swiper-button-next"></div>
+				<div class="time-line swiper-pagination"></div>
+				</div>
+			</div>
+		</div>
+	</>)
 }
 export default TimeLine;

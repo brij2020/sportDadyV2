@@ -842,7 +842,7 @@ a.nav-link.active {
 }
 
 .swiper-slide {
-  background: none !important;
+  /* background: none !important; */
 }
 
 .blog-slider__img {
@@ -886,7 +886,7 @@ a.nav-link.active {
   }
 
   .swiper-slide {
-    background: none !important;
+    /* background: none !important; */
   }
 
   .blog-slider__img {
@@ -1012,7 +1012,7 @@ a.nav-link.active {
   }
 
   .swiper-slide {
-    background: none !important;
+    /* background: none !important; */
   }
 
   .blog-slider__img {
