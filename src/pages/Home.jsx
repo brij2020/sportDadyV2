@@ -59,7 +59,7 @@ import QuizeLit from '../Components/QuizList';
 import PhotoListHome from '../pages/PhotoList/HomePhtots'
 import { homeDataAction } from '../store/slice/home/home.slice'
 import { useDispatch, useSelector } from 'react-redux';
-
+import PhotoSkeleton from '../Components/Skelton/PhotoSkeleton'
 function Home() {
 
   const dispatch = useDispatch();
@@ -258,9 +258,12 @@ function Home() {
       <Heading primaryHeading={'Photos Gallery'} ballImageLeftPercent={28} />
 
       {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Photos Gallery</h2></div>*/}
+      
       <section class="video-home-section" style={{ "padding": "10px;"}}>
         <div class="container-video-pgt">
-          <PhotoListHome />
+          <PhotoListHome /> 
+          
+          
         </div>
         <div className="more-news " style={{ margin: "23px 0 10px" }}>
           <a href="/photos-stories" style={{ border: 'none' }}>More Photos</a>

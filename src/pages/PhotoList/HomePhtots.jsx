@@ -2,9 +2,13 @@ import * as React from 'react'
 import "./photoList.css"
 import LOGO from "../../assets/logo/logo-trans.png";
 import { useDispatch, useSelector } from 'react-redux';
+import LazyImage from '../../Components/LazyImage';
+import dayjs from 'dayjs';
+import PhotoSkeleton from '../../Components/Skelton/PhotoSkeleton'
 
 // sport_daday_photo_gallary
 const PhotoListHome = (props) => {
+    const [imgLoad, setImageLoaded ] = React.useState(false)
     const homeData = useSelector(s => s?.homeReducer);
     let list = [];
 
@@ -12,7 +16,8 @@ const PhotoListHome = (props) => {
         list = homeData?.data?.sections?.sport_daday_photo_gallary;
 
     }
-
+    const ul_ref  = React.useRef(null)
+    
     return (<>
         <section class="pgt-container">
 
@@ -21,24 +26,31 @@ const PhotoListHome = (props) => {
                 <section id="dataHolder" class="main-webstories">
 
                     <div class="web-stories" style={{ margin: "auto" }}>
-                        <ul>
+                        <ul ref = { ul_ref}>
                             {
                                 list && Array.isArray(list) ? list?.slice(1, 5)?.map(photo => {
                                     return (
                                         <li key={photo?.id}>
-                                            <div class="webstories-item">
+                                            <div class={`webstories-item ${!imgLoad ? 'skeleton-gray card-skltn' : ''}`} >
                                                 <a href={`/photoshow?cmsuid=${photo?.id}`}
-                                                    onclick="ga('set','dimension49','Section page'); ga('set','dimension53','web stories'); ga('send', 'event', 'Web Stories - Widget','1', 'https://www.hindustantimes.com/web-stories/nikki-tamboli-in-embellished-outfits-_NP13hJ8J0Jj6MbiPD_j');">
+                                                    className={`${!imgLoad ? 'skeleton-white' : ''} `}
+                                                    >
                                                     <div class="iconofwebstoires">
                                                         <span class="webstories-icon"></span>
                                                     </div>
-                                                    <img src={photo?.thumb}
+                                                    <LazyImage 
+                                                        src={photo?.thumb}
+                                                        ref={ ul_ref} 
+                                                        st={{ 'object-fit': 'cover' }}
+                                                        loadImageState = { setImageLoaded }
+                                                    />
+                                                    {/* <img src={photo?.thumb}
                                                         style={{ 'object-fit': 'cover' }}
                                                         alt="nikki tamboli in embellished outfits"
-                                                        title="nikki tamboli in embellished outfits" />
+                                                        title="nikki tamboli in embellished outfits" /> */}
                                                     <div class="gradient">
                                                         <h3>{photo?.summary}</h3>
-                                                        <div class="time">Feb 24, 2023</div>
+                                                        <div class="time">{dayjs(photo?.updatedAt)?.format('HH MMM YY')}</div>
                                                         <img class="logo-img" src={LOGO}
                                                             alt="hindustan times" title="hindustan times" />
                                                     </div>
@@ -46,10 +58,26 @@ const PhotoListHome = (props) => {
                                             </div>
                                         </li>
                                     )
-                                }
-
+                                })
+                                : null
+                            }
+                            {
+                                !Object.keys(homeData?.data)?.length ?  (
+                                    [1,2,3,4]?.map(photo => {
+                                        return (
+                                            <>
+                                            <li key={photo?.id}>
+                                            <div class="webstories-item pgt-seltn">
+                                                
+                                                <PhotoSkeleton />
+                                                
+                                                </div>
+                                            </li>
+                                            </>
+                                            )}
+                                    )
                                 )
-                                    : null
+                                : ''
                             }
 
 
