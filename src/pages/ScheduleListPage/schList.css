@@ -80,3 +80,7 @@
     }
 
 }
+
+.schedule-item > .card-pgt-skltn {
+    width: 90% !important;
+}

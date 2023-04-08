@@ -15,15 +15,13 @@ const MatchSchedule = (props) => {
   const [divRef, { entry }] = useIntersectionObserver();
   const isVisible = entry && entry.isIntersecting;
 
-  React.useEffect(() => {
-    // console.log(`The component is ${isVisible ? 'visible' : 'not visible'}.`, isVisible);
-  }, [isVisible])
 
   const homeData = useSelector(s => s?.homeReducer);
   let scheduleList = [];
  
   if (Array.isArray(homeData?.data?.sections?.sport_daday_cricket_schedule)) {
-    scheduleList = homeData?.data?.sections?.sport_daday_cricket_schedule?.slice();
+    
+    scheduleList = homeData?.data?.sections?.sport_daday_cricket_schedule?.slice(0,6);
     
   }
   React.useEffect(() => {
