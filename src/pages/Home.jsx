@@ -59,7 +59,6 @@ import QuizeLit from '../Components/QuizList';
 import PhotoListHome from '../pages/PhotoList/HomePhtots'
 import { homeDataAction } from '../store/slice/home/home.slice'
 import { useDispatch, useSelector } from 'react-redux';
-import PhotoSkeleton from '../Components/Skelton/PhotoSkeleton'
 function Home() {
 
   const dispatch = useDispatch();

@@ -7,48 +7,6 @@ import SwiperCore,{ Pagination, Navigation, Autoplay} from 'swiper';
 import 'swiper/css';
 
 
-import IndiaFlag from "../../assets/svg/india.jpg"
-
-import PakFlag  from "../../assets/icons/flag2.png"
-const timeLine = [
-{
-	lable: "India wins by 10 runs",
-	wcountry: "India",
-	rcountry: "Pakistan",
-	year: "2007",
-	flag: IndiaFlag
-},
-{
-	lable: "Pakistan wins by 10 runs",
-	wcountry: "England",
-	rcountry: "Pakistan",
-	year: "2009",
-	flag: PakFlag
-},
-{
-	lable: "Pakistan wins by 10 runs",
-	wcountry: "England",
-	rcountry: "Pakistan",
-	year: "2011",
-	flag: PakFlag
-}, {
-	lable: "Pakistan wins by 10 runs",
-	wcountry: "England",
-	rcountry: "Pakistan",
-	year: "2013",
-	flag: PakFlag
-}, 
-{
-	lable: "Pakistan wins by 10 runs",
-	wcountry: "England",
-	rcountry: "Pakistan",
-	year: "2015",
-	flag: PakFlag
-}
-]
-
-
-
 const TimeLine = (props) => {
 	const homeData = useSelector(s => s?.homeReducer);
     let list = [];
@@ -59,6 +17,36 @@ const TimeLine = (props) => {
         list = homeData?.data?.sections?.sport_daday_event_time_Line;
     }
 	
+	React.useEffect(() => {
+		setTimeout(()=>{
+			var timelineSwiper = new SwiperCore ('.timeline .swiper-container', {
+				direction: 'vertical',
+				loop: false,
+				speed: 1600,
+				pagination: '.swiper-pagination',
+				paginationBulletRender: function (swiper, index, className) {
+				var year = document.querySelectorAll('.swiper-slide')[index].getAttribute('data-year');
+				return '<span class="' + className + '">' + year + '</span>';
+				},
+				modules: [Navigation, Pagination],
+				paginationClickable: true,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				  },
+				// nextButton: '.swiper-button-next',
+				// prevButton: '.swiper-button-prev',
+				
+				breakpoints: {
+				768: {
+					direction: 'horizontal',
+				}
+				}
+			});
+	  },200)
+
+	},[list])
+	console.log('text', list)
 	const static_ = 'http://52.205.83.44:1337';
 	
 	return(

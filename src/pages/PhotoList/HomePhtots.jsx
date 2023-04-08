@@ -2,8 +2,8 @@ import * as React from 'react'
 import "./photoList.css"
 import LOGO from "../../assets/logo/logo-trans.png";
 import { useDispatch, useSelector } from 'react-redux';
-import LazyImage from '../../Components/LazyImage';
 import dayjs from 'dayjs';
+import LazyImage from '../../Components/LazyImage';
 import PhotoSkeleton from '../../Components/Skelton/PhotoSkeleton'
 
 // sport_daday_photo_gallary
