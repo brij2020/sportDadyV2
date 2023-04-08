@@ -9,6 +9,9 @@ import {
     photoListReducer,
     photoDetailReducer
 } from './photo/photo.slice'
+import {
+    scheduleListReducer
+} from './schedule/schedule.slice'
 
 const rootReducers = combineReducers({
     homeReducer,
@@ -17,6 +20,7 @@ const rootReducers = combineReducers({
     videoListReducer,
     videoDetailReducer,
     photoListReducer,
-    photoDetailReducer
+    photoDetailReducer,
+    scheduleListReducer
 })
 export default rootReducers
