@@ -6,8 +6,8 @@ import Anchor from '../Anchor'
 import dayjs from 'dayjs';
 // import required modules
 import SwiperCore,{ Pagination, Navigation, Autoplay} from 'swiper';
-import '../Card/fixtures.css'
 import './index.css'
+import '../Card/fixtures.css'
 const utc = require('dayjs/plugin/utc')
 dayjs.extend(utc)
 

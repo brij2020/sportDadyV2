@@ -116,87 +116,6 @@ function Home() {
     }
   }, [])
 
-  const Data2 = [
-    {
-      matches: 'New Zealand vs India, 2nd ODI',
-      player: 'Seddon Park, Hamilton',
-      date_2: '01:30 AM GMT / 02:30 PM LOCAL',
-      date: '7:00 AM',
-    },
-    {
-      matches: 'New Zealand vs India, 2nd ODI',
-      player: 'Seddon Park, Hamilton',
-      date_2: '01:30 AM GMT / 02:30 PM LOCAL',
-      date: '7:00 AM',
-    },
-  ]
-
-  const Data3 = [
-    {
-      srNo: '1',
-      img: flag3,
-      matches: '19',
-      points: '2,418',
-      rating: '128',
-      country: 'India'
-    },
-    {
-      srNo: '2',
-      img: flag4,
-      matches: '19',
-      points: '2,418',
-      rating: '128',
-      country: 'Pakistan'
-    },
-    {
-      srNo: '3',
-      img: flag1,
-      matches: '19',
-      points: '2,418',
-      rating: '128',
-      country: 'America'
-    },
-    {
-      srNo: '4',
-      img: flag4,
-      matches: '19',
-      points: '2,418',
-      rating: '128',
-      country: 'England'
-    },
-    {
-      srNo: '5',
-      img: flag3,
-      matches: '19',
-      points: '2,418',
-      rating: '128',
-      country: 'New Zealand'
-    },
-    {
-      srNo: '6',
-      img: flag3,
-      matches: '19',
-      points: '2,418',
-      rating: '128',
-      country: 'West Indies'
-    },
-    {
-      srNo: '7',
-      img: flag2,
-      matches: '19',
-      points: '2,418',
-      rating: '128',
-      country: 'Banladesh'
-    },
-    {
-      srNo: '8',
-      img: flag2,
-      matches: '19',
-      points: '2,418',
-      rating: '128',
-      country: 'Namibia'
-    },
-  ]
 
   return (
 
@@ -346,9 +265,7 @@ function Home() {
       {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Latest News and Articles</h2></div>*/}
       <div className='bg-section' style={{ "background": 'linear-gradient(0deg, #000, #ff0000)', backgroundSize: "cover", marginBottom: "15px" }}>
        
-        <AricleList 
-          
-        />
+        <AricleList />
 
         <div className="more-news " style={{ margin: "23px 0 10px" }}>
           <a href="/articles" style={{ border: 'none' }}>More Articles</a></div>

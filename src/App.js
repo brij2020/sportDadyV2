@@ -1,30 +1,21 @@
+import * as React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Series from "./pages/BrowserSeries/Series";
+
 import Header from "./pages/Header";
 import Footer from "./pages/Footer";
-import Video from "./pages/Video";
-import Player from "./pages/BrowserPlayer/Player";
-import PlayerInfo from "./pages/BrowserPlayer/PlayerInfo";
-import BrowserTeam from "./pages/BrowserTeam/Team"
-import Schedule from "./pages/Schedule";
-import LiveScore from "./pages/Live/LiveScore";
-import News from "./pages/News/News";
-import Archives from "./pages/Archives/Archives";
-import PhotoGallery from './Components/Home/PhotoGallery';
-import LiveCommentry from './pages/Live/LiveCommentry';
-import Quiz from './pages/quiz'
-import PhotoListPage from './pages/PhotoList'
-import PhotoDetailPage from './pages/Photos/PhotoStory';
-import VideoList from './pages/VideoList';
-import Card from "./Components/Card";
-import ScheduleList from './pages/ScheduleListPage'
-import LiveTv from './pages/LiveTv'
-import Articles from './pages/ArticleList'
-import ArticleShow from './pages/ArticleShow'
-import VideoShowPage from './pages/VideoList/videoShow'
+import Loader from './Components/Loader/loader'
 
-
+const  PhotoListPage = React.lazy(()=> import('./pages/PhotoList'));
+const PhotoDetailPage = React.lazy(()=> import('./pages/Photos/PhotoStory'));
+const VideoList = React.lazy(()=> import('./pages/VideoList'));
+const Card = React.lazy(()=> import("./Components/Card"));
+const ScheduleList = React.lazy(()=> import('./pages/ScheduleListPage'));
+const LiveTv = React.lazy(()=> import('./pages/LiveTv'));
+const Articles = React.lazy(()=> import('./pages/ArticleList')); 
+const ArticleShow = React.lazy(()=> import('./pages/ArticleShow')); 
+const VideoShowPage = React.lazy(()=> import('./pages/VideoList/videoShow')); 
+const Quiz = React.lazy(() => import('./pages/quiz'));
+const Home = React.lazy(() => import('./pages/Home'))
 
 
 export default function App() {
@@ -32,31 +23,71 @@ export default function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="series" element={<Series />} />
-        <Route path="video" element={<Video />} />
-        <Route path="player" element={<Player />} />
-        <Route path="player-info" element={<PlayerInfo />} />
-        <Route path="team" element={<BrowserTeam />} />
-        <Route path="schedule" element={<Schedule />} />
-        <Route path="live-commentry" element={<LiveCommentry />} />
-        <Route path="livescore" element={<LiveScore />} />
-        <Route path="team" element={<BrowserTeam />} />
-        <Route path="news" element={<News />} />
-        <Route path="archives" element={<Archives />} />
-        <Route path="quiz" element={<Quiz />} />
-        <Route path="photos-stories" element={<PhotoListPage />} />
-        
-        <Route path="photoshow" element={<PhotoDetailPage />} />
-        <Route path="videos" element={<VideoList />} />
-        <Route path="fixtures1" element={<Card /> } />
-        <Route path="fixtures" element={<ScheduleList /> } />
-        <Route path="live-score" element={<LiveTv /> } />
-        <Route path="articles" element={<Articles />} />
-        <Route path="articleshow" element={<ArticleShow />} />
-        <Route path="videoshow" element={<VideoShowPage />} />
 
-
+        <Route path="/" element={
+            <React.Suspense fallback={<Loader isLoading={true}/>}>
+              <Home />
+            </React.Suspense>
+          }
+        />
+         <Route path="photos-stories" element={
+            <React.Suspense fallback={<Loader isLoading={true}/>}>
+              <PhotoListPage />
+            </React.Suspense>
+          }
+        />
+        <Route path="photoshow" element={
+            <React.Suspense fallback={<Loader isLoading={true}/>}>
+              <PhotoDetailPage />
+            </React.Suspense>
+          }
+        />
+        <Route path="videos" element={
+            <React.Suspense fallback={<Loader isLoading={true}/>}>
+              <VideoList />
+            </React.Suspense>
+          }
+        />
+        <Route path="fixtures" element={
+            <React.Suspense fallback={<Loader isLoading={true}/>}>
+              <ScheduleList />
+            </React.Suspense>
+          }
+        />
+       <Route path="live-score" element={
+            <React.Suspense fallback={<Loader isLoading={true}/>}>
+              <LiveTv />
+            </React.Suspense>
+          }
+        />
+      <Route path="articles" element={
+            <React.Suspense fallback={<Loader isLoading={true}/>}>
+              <Articles />
+            </React.Suspense>
+          }
+        />
+      <Route path="articleshow" element={
+            <React.Suspense fallback={<Loader isLoading={true}/>}>
+              <ArticleShow />
+            </React.Suspense>
+          }
+        />
+      <Route path="videoshow" element={
+            <React.Suspense fallback={<Loader isLoading={true}/>}>
+              <VideoShowPage />
+            </React.Suspense>
+          }
+        />
+         <Route path="quiz" element={
+            <React.Suspense fallback={<Loader isLoading={true}/>}>
+              <Quiz />
+            </React.Suspense>
+          }
+        />
+      <Route path="cards" element={
+        <Card />
+      }
+      />
       </Routes>
       <Footer />
     </BrowserRouter>
