@@ -1,8 +1,9 @@
 import axios from "axios";
+let defaultPROD_API = 'http://44.203.200.73'
+ defaultPROD_API = 'http://localhost:8090'
 
-console.log(process.env)
 const axiosInstance = axios.create({
-    baseURL: 'http://44.203.200.73',
+    baseURL:  defaultPROD_API ,
   });
 
 export {

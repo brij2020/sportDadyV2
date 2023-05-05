@@ -15,12 +15,20 @@ import styled from "styled-components";
 import Arrow from "../../assets/svg/arrow.svg";
 import Card from "./Card";
 import useWindowSize from "../../hooks/windowSize";
+import { useSelector } from 'react-redux';
 
 const CarouselSlider = ({ setSlideCount, setCurrentSlide }) => {
   const screenWidth = useWindowSize();
 
   //pure-react-carousel context
   const carouselContext = useContext(CarouselContext);
+  const homeData = useSelector(s => s?.homeReducer);
+  let list = [];
+ 
+  if (homeData?.data?.sections?.sport_daday_live_score) {
+      list = homeData?.data?.sections?.sport_daday_live_score?.scorecard ?? []      ;
+
+  }
 
   useEffect(() => {
     const updateCarouselSlide = (slideToBeVisible) => {
@@ -55,7 +63,17 @@ const CarouselSlider = ({ setSlideCount, setCurrentSlide }) => {
   return (
     <Wrapper>
       <Slider>
-        <Slide index={0} className="slide">
+          {
+            list ? list?.map(( scard, index) => {
+              return (
+                <Slide index={0} className="slide" key={ Date.now() + index }>
+                  <Card index={0}  scard={ scard }/>
+                </Slide>
+              )
+            })
+            : null
+          }
+        {/* <Slide index={0} className="slide">
           <Card index={0} />
         </Slide>
         <Slide index={1}>
@@ -72,7 +90,7 @@ const CarouselSlider = ({ setSlideCount, setCurrentSlide }) => {
         </Slide>
         <Slide index={5}>
           <Card />
-        </Slide>
+        </Slide> */}
       </Slider>
       <div className="controls">
         <ButtonBack className="btn-arrow reverse-arrow">

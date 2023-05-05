@@ -443,15 +443,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', end
   animation: shiver 1s linear .5s infinite;
 }
 #text-live-score {
-  position: absolute;
+  /* position: absolute; */
   color: #ededed;
   text-align: left;
-  font-weight: 200;
+  font-weight: 400;
   text-transform: uppercase;
   font-size: 30px;
   animation: shiver 1s linear .5s infinite;
   top: 44%;
   left: 17%;
+  /* position: absolute; */
+  color: #eb0505;
+  text-align: left;
+  font-weight: 00;
+  text-transform: uppercase;
+  font-size: 50px;
+  animation: shiver 1s linear .5s infinite;
+  top: 44%;
+  left: 33%;
+  text-align: center;
 
 }
 

@@ -2,7 +2,6 @@ import * as React from 'react';
 import './liveCommentry.css'
 const LiveCommentry = (props) => {
    const [isCommentry, setICurrent] = React.useState(true);
-   const { getRunOnBall } = props;
    const eventOnLink = (e) => {
       console.log(e.target?.className)
       if (e.target?.className === 'ct') {
@@ -30,12 +29,12 @@ const LiveCommentry = (props) => {
    const { miniScore } = props;
 
    const { batsmanStriker = defaultBatter, batsmanNonStriker = defaultBatter
-      , bowlerNonStriker = defaultBowler, bowlerStriker = defaultBowler,
+      , bowlerNonStriker = defaultBowler, bowlerStriker = defaultBowler
+
 
    } = miniScore ?? { batsmanStriker: undefined, batsmanNonStriker: undefined, bowlerNonStriker: undefined, bowlerStriker: undefined };
-   const { commentryList = [] } = props ?? { commentryList: [] }
-   console.log('commentryList', commentryList);
-   let summary = [];
+
+
    return (
       <div class="mcContainer">
          {/* Full Scorecard Menu Section */}
@@ -52,7 +51,7 @@ const LiveCommentry = (props) => {
          {/* Full Scorecard Section */}
          <div id="fullScoreContent" class={`mcTabContent ${!isCommentry ? 'current' : ''}`} ng-class="{'current' : scorecardType != 'international' || internationalPulseMatches == 1}">
             {/* Panel Header */}
-            <div class="scorecardHeader" style={{ display: "none" }}>
+            <div class="scorecardHeader" style={{ display: "none"}}>
                <select class="mcSelectDefault inningsList ng-pristine ng-untouched ng-valid ng-not-empty" data-ng-options="innData.name for innData in inningsList track by innData.innNo" data-ng-model="selectedInnList" data-ng-change="constructScoreCard(matchSummary.MatchID,'dropdownInnChange','innchange')">
                   <option label="Australia 1st Innings" value="1">Australia 1st Innings</option>
                   <option label="India 1st Innings" value="2">India 1st Innings</option>
@@ -90,7 +89,7 @@ const LiveCommentry = (props) => {
             </div>
             {/* Left Panel */}
             <div id="leftPanel" class="col s12 m12 l8">
-               <div class="scorecardHeader" style={{ display: 'none' }}>
+               <div class="scorecardHeader"  style={{ display: 'none'}}>
                   <span id="printScorecardIcon" ng-show="scorecardPrint == 'true' &amp;&amp; printScoreData.length > 0" title="Print Scorecard" class="ng-hide"></span> {/* ngIf: extras.FallWickets != 10  */}
                   <div class="innScore vclickable ng-binding ng-scope" ng-click="playInnVideo(battingCard[0].InningsNo)" ng-if="extras.FallWickets != 10 ">
                      3/0 (6.0 Overs) {/* ngIf: matchSummary.MatchType != 'Multi Day' */}
@@ -351,9 +350,9 @@ const LiveCommentry = (props) => {
                         <div class="mcGrid_2 icon-play mini-score-bowl" >O </div>
                         {/* ngIf: matchSummary.MatchType != 'Twenty20 Match' */}
                         {
-                           bowlerStriker?.med ? (<div class="mcGrid_2 icon-play  hide-on-small-only ng-scope mini-score-bowl" >Md </div>) : null
+                           bowlerStriker?.med ? (<div class="mcGrid_2 icon-play  hide-on-small-only ng-scope mini-score-bowl" >Md </div>) : null 
                         }
-
+                        
                         {/* end ngIf: matchSummary.MatchType != 'Twenty20 Match' */}
                         <div class="mcGrid_2 icon-play mini-score-bowl" >R </div>
                         <div class="mcGrid_2 icon-play mini-score-bowl" >WKT </div>
@@ -377,9 +376,9 @@ const LiveCommentry = (props) => {
                            <div class="mcGrid_2 icon-play btRuns vclickable ng-binding" >{bowlerStriker?.overs}</div>
                            {/* ngIf: matchSummary.MatchType != 'Twenty20 Match' */}
                            {
-                              bowlerStriker?.med ? (<div class="mcGrid_2 icon-play vclickable hide-on-small-only ng-binding ng-scope" >{bowlerStriker?.med}</div>) : null
+                              bowlerStriker?.med ? ( <div class="mcGrid_2 icon-play vclickable hide-on-small-only ng-binding ng-scope" >{bowlerStriker?.med}</div>) : null
                            }
-
+                          
                            {/* end ngIf: matchSummary.MatchType != 'Twenty20 Match' */}
                            <div class="mcGrid_2 icon-play vclickable ng-binding" >{bowlerStriker?.runs}</div>
                            <div class="mcGrid_2 icon-play vclickable ng-binding pvclickable novideo" >{bowlerStriker?.wickets ?? 0}</div>
@@ -427,7 +426,7 @@ const LiveCommentry = (props) => {
                         <div class="mcGrid_6 alignC plyData">
                            <div class="mcGrid_2 icon-play btRuns vclickable ng-binding">{bowlerNonStriker?.overs}</div>
                            {/* ngIf: matchSummary.MatchType != 'Twenty20 Match' */}
-
+                           
                            {/* end ngIf: matchSummary.MatchType != 'Twenty20 Match' */}
                            {
                               bowlerNonStriker?.med ? (<div class="mcGrid_2 icon-play vclickable hide-on-small-only ng-binding ng-scope" ng-class="{novideo : bowlingCardResult.Maidens == '0'}" ng-if="matchSummary.MatchType != 'Twenty20 Match'" ng-click="playVideo(bowlingCardResult.PlayerID,'maiden')" ng-bind="bowlingCardResult.Maidens">{bowlerNonStriker?.med}</div>) : null
@@ -465,7 +464,7 @@ const LiveCommentry = (props) => {
                      </div>
                   </div>
                   {/* end ngIf: bowlingCardResult.PlayerName != '' && bowlingCardResult.PlayerName != '0' */}{/* end ngRepeat: bowlingCardResult in bowlingCard */}{/* ngIf: bowlingCardResult.PlayerName != '' && bowlingCardResult.PlayerName != '0' */}
-                  <div class="mcRowData playerWagonBowling ng-scope" ng-repeat="bowlingCardResult in bowlingCard" ng-if="bowlingCardResult.PlayerName != '' &amp;&amp; bowlingCardResult.PlayerName != '0'" style={{ display: 'none' }}>
+                  <div class="mcRowData playerWagonBowling ng-scope" ng-repeat="bowlingCardResult in bowlingCard" ng-if="bowlingCardResult.PlayerName != '' &amp;&amp; bowlingCardResult.PlayerName != '0'" style={{ display:'none'}}>
                      <div class="mcRowData-Inner">
                         <div class="mcGrid_6 sc-first-row vclickable" ng-click="playVideo(bowlingCardResult.PlayerID,'bowlerall')">
                            {/* ngIf: isNotNull(bowlingCardResult.PlayerImage) */}<img class="ng-scope active" ng-class="{'active' : scorecardType == 'international' &amp;&amp; !internationalArchive}" ng-if="isNotNull(bowlingCardResult.PlayerImage)" ng-src="https://scores.bcci.tv/matchcentre/playerimages/UA4od4di5h167585700047.png" onerror="this.src = basePath+'images/player-thumb.jpg';" title="" alt="" src="https://scores.bcci.tv/matchcentre/playerimages/UA4od4di5h167585700047.png" />{/* end ngIf: isNotNull(bowlingCardResult.PlayerImage) */} {/* ngIf: !isNotNull(bowlingCardResult.PlayerImage) */}
@@ -522,9 +521,9 @@ const LiveCommentry = (props) => {
                   <ul class="partnerContent">
                      {/* ngRepeat: data in PartnerShipRuns */}
                      <li ng-repeat="data in PartnerShipRuns" class="ng-scope">
-                        <div class="partners-name vclickable" ng-click="playPartnership('striker',data.StrikerID,data.NonStrikerID)"> <span class="prName ng-binding">{batsmanStriker?.name} </span> <span class="prScore ng-binding">0 <i class="ng-binding">(18)</i> </span> </div>
+                        <div class="partners-name vclickable" ng-click="playPartnership('striker',data.StrikerID,data.NonStrikerID)"> <span class="prName ng-binding">{ batsmanStriker?.name} </span> <span class="prScore ng-binding">0 <i class="ng-binding">(18)</i> </span> </div>
                         <div class="parters-chart">
-                           <div class="prTot vclickable" ng-click="playPartnership('all',data.StrikerID,data.NonStrikerID)">Partnership - <span class="ng-binding">{miniScore?.partnership} </span> </div>
+                           <div class="prTot vclickable" ng-click="playPartnership('all',data.StrikerID,data.NonStrikerID)">Partnership - <span class="ng-binding">{ miniScore?.partnership} </span> </div>
                            <div class="bar-wrap">
                               <div class="indv-bar hrz-bg1" style={{ "width": "0%" }}></div>
                               {/* ngIf: data.ExtraWid != 0 */}
@@ -788,7 +787,7 @@ const LiveCommentry = (props) => {
          {/*commentary block*/}
          <div id="commentPage" class={`mcTabContent ${isCommentry ? 'current' : ''}`} ng-class="{'current' : scorecardType == 'international' &amp;&amp; internationalPulseMatches != 1}">
             {/* Panel Header */}
-            <div class="scorecardHeader" style={{ display: 'none' }}>
+            <div class="scorecardHeader" style={{ display: 'none'}}>
                <select class="mcSelectDefault inningsList commentryinningsList ng-pristine ng-valid ng-not-empty ng-touched" data-ng-options="innData.name for innData in inningsList track by innData.innNo" data-ng-model="selectedCInnList" data-ng-change="constructScoreCard(matchSummary.MatchID,'dropdownCInnChange','innchange')">
                   <option label="Australia 1st Innings" value="1">Australia 1st Innings</option>
                   <option label="India 1st Innings" value="2">India 1st Innings</option>
@@ -850,7 +849,7 @@ const LiveCommentry = (props) => {
                      <div class="mcRowData-Inner">
                         <div class="mcGrid_7 sc-first-row">
                            {/* ngIf: isNotNull(CurrentStrikerData.PlayerImage) */}
-                           <img class="ng-scope active" src="https://scores.bcci.tv/matchcentre/playerimages/slbPvyM5zi16766163481050.png" />{/* end ngIf: isNotNull(CurrentStrikerData.PlayerImage) */} {/* ngIf: !isNotNull(CurrentStrikerData.PlayerImage) */}
+                           <img class="ng-scope active"  src="https://scores.bcci.tv/matchcentre/playerimages/slbPvyM5zi16766163481050.png" />{/* end ngIf: isNotNull(CurrentStrikerData.PlayerImage) */} {/* ngIf: !isNotNull(CurrentStrikerData.PlayerImage) */}
                            <div class="sc-pnam">
                               <span class="playerName vclickable ng-binding" ng-click="playVideo(CurrentStrikerData.PlayerID,'all')">{batsmanStriker?.name} </span> {/* ngIf: matchSummary.CurrentStrikerID == CurrentStrikerData.PlayerID */}
                               <icon class="strikerIcon ng-scope" ng-if="matchSummary.CurrentStrikerID == CurrentStrikerData.PlayerID"></icon>
@@ -870,15 +869,15 @@ const LiveCommentry = (props) => {
                   <div class="mcRowData playerWagonBatting stricker">
                      <div class="mcRowData-Inner">
                         <div class="mcGrid_7 sc-first-row">
-                           {/* ngIf: isNotNull(CurrentNonStrikerData.PlayerImage) */}<img class="ng-scope active" src="https://scores.bcci.tv/matchcentre/playerimages/yOqhwq86Ir167585734037.png" />{/* end ngIf: isNotNull(CurrentNonStrikerData.PlayerImage) */} {/* ngIf: !isNotNull(CurrentNonStrikerData.PlayerImage) */}
-                           <div class="sc-pnam"> <span class="playerName vclickable ng-binding" ng-click="playVideo(CurrentNonStrikerData.PlayerID,'all')">{batsmanNonStriker?.name} </span>
-                              <span class="dismissalSmall vclickable ng-binding pvclickable" ng-class="{pvclickable : checkVideoclickables('wicket')}" ng-click="playVideo(CurrentNonStrikerData.PlayerID,'wicket')" ng-bind="CurrentNonStrikerData.OutDesc">not out</span> </div>
+                           {/* ngIf: isNotNull(CurrentNonStrikerData.PlayerImage) */}<img class="ng-scope active"  src="https://scores.bcci.tv/matchcentre/playerimages/yOqhwq86Ir167585734037.png" />{/* end ngIf: isNotNull(CurrentNonStrikerData.PlayerImage) */} {/* ngIf: !isNotNull(CurrentNonStrikerData.PlayerImage) */}
+                           <div class="sc-pnam"> <span class="playerName vclickable ng-binding" ng-click="playVideo(CurrentNonStrikerData.PlayerID,'all')">{batsmanNonStriker?.name} </span> 
+                           <span class="dismissalSmall vclickable ng-binding pvclickable" ng-class="{pvclickable : checkVideoclickables('wicket')}" ng-click="playVideo(CurrentNonStrikerData.PlayerID,'wicket')" ng-bind="CurrentNonStrikerData.OutDesc">not out</span> </div>
                         </div>
                         <div class="mcGrid_5 alignC plyData">
                            <div class="mcGrid_3 icon-play btRuns vclickable ng-binding" ng-class="{novideo : CurrentNonStrikerData.Runs=='0'}" ng-click="playVideo(CurrentNonStrikerData.PlayerID,'runs')" ng-bind="CurrentNonStrikerData.Runs">{batsmanNonStriker?.runs}</div>
                            <div class="mcGrid_3 icon-play vclickable ng-binding" ng-class="{novideo : CurrentNonStrikerData.Balls=='0'}" ng-click="playVideo(CurrentNonStrikerData.PlayerID,'all')" ng-bind="CurrentNonStrikerData.Balls">{batsmanNonStriker?.balls}</div>
                            <div class="mcGrid_3 icon-play vclickable ng-binding pvclickable novideo" ng-class="{pvclickable : checkVideoclickables('four'),novideo : CurrentNonStrikerData.Fours=='0'}" ng-click="playVideo(CurrentNonStrikerData.PlayerID,'four')" ng-bind="CurrentNonStrikerData.Fours">{batsmanNonStriker?.fours ?? 0}</div>
-                           <div class="mcGrid_3 icon-play vclickable ng-binding pvclickable novideo" ng-class="{pvclickable : checkVideoclickables('six'),novideo : CurrentNonStrikerData.Sixes=='0'}" ng-click="playVideo(CurrentNonStrikerData.PlayerID,'six')" ng-bind="CurrentNonStrikerData.Sixes">{batsmanNonStriker?.sixes ?? 0}</div>
+                           <div class="mcGrid_3 icon-play vclickable ng-binding pvclickable novideo" ng-class="{pvclickable : checkVideoclickables('six'),novideo : CurrentNonStrikerData.Sixes=='0'}" ng-click="playVideo(CurrentNonStrikerData.PlayerID,'six')" ng-bind="CurrentNonStrikerData.Sixes">{ batsmanNonStriker?.sixes ?? 0}</div>
                            {/*<div class="mcGrid_2" ng-bind="CurrentNonStrikerData.StrikeRate"></div> */}
                         </div>
                      </div>
@@ -930,7 +929,7 @@ const LiveCommentry = (props) => {
             {/* end ngIf: IsMatchEnd != 1 && scorecardType == 'international' && internationalPulseMatches != 1 && (matchInn == matchSummary.CurrentInnings || matchInn == '') */}
             <div id="cmdBlockSmipl" class="col s12 m12 l8  l12" ng-class="{'l12' : matchNotes == undefined || matchNotes.length == 0 || matchNotes == '','widget':matchNotes.length > 0 &amp;&amp; windowWdt > 480}" >
                {/* ngIf: ((postMatchCommentary != undefined && postMatchCommentary !='') || (matchSummary.PostMatchCommentary != undefined && matchSummary.PostMatchCommentary !='')) && (matchInn == matchSummary.CurrentInnings || matchInn == '') */}
-               <div class="prepostMatchCommentry ng-scope" ng-if="((postMatchCommentary != undefined &amp;&amp; postMatchCommentary !='') || (matchSummary.PostMatchCommentary != undefined &amp;&amp; matchSummary.PostMatchCommentary !='')) &amp;&amp; (matchInn == matchSummary.CurrentInnings || matchInn == '')" style={{ display: 'none' }}>
+               <div class="prepostMatchCommentry ng-scope" ng-if="((postMatchCommentary != undefined &amp;&amp; postMatchCommentary !='') || (matchSummary.PostMatchCommentary != undefined &amp;&amp; matchSummary.PostMatchCommentary !='')) &amp;&amp; (matchInn == matchSummary.CurrentInnings || matchInn == '')" style={{ display:'none'}}>
                   <p class="ppCmd">
                      <svg enable-background="new 0 0 475.082 475.081" version="1.1" viewBox="0 0 475.08 475.08" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg">
                         <path d="m164.45 219.27h-63.954c-7.614 0-14.087-2.664-19.417-7.994-5.327-5.33-7.994-11.801-7.994-19.417v-9.132c0-20.177 7.139-37.401 21.416-51.678 14.276-14.272 31.503-21.411 51.678-21.411h18.271c4.948 0 9.229-1.809 12.847-5.424 3.616-3.617 5.424-7.898 5.424-12.847v-36.548c0-4.948-1.809-9.233-5.424-12.85-3.617-3.612-7.898-5.424-12.847-5.424h-18.271c-19.797 0-38.684 3.858-56.673 11.563-17.987 7.71-33.545 18.132-46.68 31.267-13.134 13.129-23.553 28.688-31.262 46.677-7.709 17.987-11.564 36.879-11.564 56.674v200.99c0 15.235 5.327 28.171 15.986 38.834 10.66 10.657 23.606 15.985 38.832 15.985h109.64c15.225 0 28.167-5.328 38.828-15.985 10.657-10.663 15.987-23.599 15.987-38.834v-109.63c0-15.232-5.33-28.168-15.994-38.832-10.656-10.656-23.603-15.986-38.828-15.986z"></path>
@@ -948,107 +947,465 @@ const LiveCommentry = (props) => {
                </div>
                {/* end ngIf: ((postMatchCommentary != undefined && postMatchCommentary !='') || (matchSummary.PostMatchCommentary != undefined && matchSummary.PostMatchCommentary !='')) && (matchInn == matchSummary.CurrentInnings || matchInn == '') */} {/* ngIf: IsMatchEnd == 1 && preMatchCommentary != undefined && preMatchCommentary !='' && false */} {/* ngRepeat: (key, list) in overHistory */}
                <div id="byb__comment" ng-repeat="(key, list) in overHistory" class="ng-scope">
-                  <div class="tabLinkscontainer">
-                     <ul id="scorecardTabs" class="mcTabs no-scrollbar">
-                        <li class={`current`} data-tab="commentPage" ng-click="scorecardTabsChange('commentPage')"> <span className='ct'>Live Commentary  </span> </li>
-                     </ul>
+                  <div class="endOverInfo">
+                     <p class="firstChild ng-binding">Over 6</p>
+                     <p class="secondChild">
+                        {/* ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="5.6">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="5.5">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="5.4">1</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="5.3">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="5.2">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="5.1">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}
+                     </p>
+                     {/* <p class="totRun alignR fr" ng-if="IsMatchEnd == 0">{{list[0].TotalRuns}}/{{list[0].TotalWickets}}</p> */} {/* <p class="totRun alignR fr" ng-if="list[list.length - 1].BallID != ''">{{list[list.length - 1].TotalRuns}}/{{list[list.length - 1].TotalWickets}}</p> */} {/* ngIf: list[0].BallID != '' */}
+                     <p class="totRun alignR fr ng-binding ng-scope" ng-if="list[0].BallID != ''">3/0</p>
+                     {/* end ngIf: list[0].BallID != '' */} {/* ngIf: list[0].BallID == '' */}
                   </div>
-
-                  {
-                     commentryList?.map(
-                        ({commentary}
-                     , index) => {
-                        
-                        summary = commentary?.overSep?.overSummary?.split(" ")
-                        summary = summary?.slice(0, summary.length - 1)
-                       
-                        return (<>
-                           {
-                              commentary?.ballNbr % 6  === 0 ? (
-                                 <div class="endOverInfo" key={'over' + commentary?.timestamp}>
-                                    <p class="firstChild ng-binding">Over {commentary?.ballNbr / 6}</p>
-                                    <p class="secondChild">
-                                       {
-                                          summary?.map((summ) => <i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="5.6">{summ}</i>)
-                                       }
-                                       {/* <i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="5.6">0</i>
-                                 <i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="5.5">0</i>
-                                 <i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="5.4">1</i>
-                                 <i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="5.3">0</i>
-                                 <i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="5.2">0</i>
-                                 <i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="5.1">0</i> */}
-
-                                    </p>
-                                    {/* <p class="totRun alignR fr" ng-if="IsMatchEnd == 0">{{list[0].TotalRuns}}/{{list[0].TotalWickets}}</p> */} {/* <p class="totRun alignR fr" ng-if="list[list.length - 1].BallID != ''">{{list[list.length - 1].TotalRuns}}/{{list[list.length - 1].TotalWickets}}</p> */} {/* ngIf: list[0].BallID != '' */}
-                                    <p class="totRun alignR fr ng-binding ng-scope" ng-if="list[0].BallID != ''">{
-                                       commentary?.overSep?.score}/{commentary?.overSep?.wickets}</p>
-                                    {/* end ngIf: list[0].BallID != '' */} {/* ngIf: list[0].BallID == '' */}
-                                 </div>
-                              ) : null
-                           }
-
-                           {
-                              typeof commentary?.ballNbr !== 'undefined' ? (
-                                 <div class={`cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall`} ng-repeat="overHistoryData in list" key={'over 1' + commentary?.timestamp} >
-                                    {/* ngIf: overHistoryData.BallID !='' */}
-                                    <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''">
-                                       <i class={`ovRun mcBall mcBall mcBall mcBall mcBall mcBall
-                                       ${commentary?.eventType?.split(',')?.includes('WICKET') ? 'css-wicket' : commentary?.eventType?.split(',')?.includes('SIX') ? 'css-six' : commentary?.eventType?.split(',')?.eventType === 'FOUR' ? 'css-four' : ''}
-                                    `}>
-                                          {
-                                             commentary?.eventType === 'WICKET' ? "W" : commentary?.eventType?.includes('SIX') ? 6 : commentary?.eventType === 'FOUR' ? 4 : getRunOnBall(commentary?.commtxt?.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ' ')?.replace(/B0/g, ' '))
-
-                                          }</i> {commentary?.overNum} </p>
-                                    {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
-                                    <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">
-                                       <p>{commentary?.commtxt?.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ' ')?.replace(/B0/g, ' ')}
-
-                                       </p>
-                                    </div>
-
-                                    <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
-                                    {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
-                                 </div>
-
-                              ) : commentary?.eventType?.split(',')?.includes("NONE") && commentary?.commtxt?.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ' ')?.replace(/B0/g, ' ')?.length > 5 ? (
-                                 <div class="prepostMatchCommentry ng-scope mint-comment" ng-if="((postMatchCommentary != undefined &amp;&amp; postMatchCommentary !='') || (matchSummary.PostMatchCommentary != undefined &amp;&amp; matchSummary.PostMatchCommentary !='')) &amp;&amp; (matchInn == matchSummary.CurrentInnings || matchInn == '')" key={'over 2' + commentary?.timestamp}>
-                                    <p class="ppCmd">
-                                       <svg enable-background="new 0 0 475.082 475.081" version="1.1" viewBox="0 0 475.08 475.08" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="m164.45 219.27h-63.954c-7.614 0-14.087-2.664-19.417-7.994-5.327-5.33-7.994-11.801-7.994-19.417v-9.132c0-20.177 7.139-37.401 21.416-51.678 14.276-14.272 31.503-21.411 51.678-21.411h18.271c4.948 0 9.229-1.809 12.847-5.424 3.616-3.617 5.424-7.898 5.424-12.847v-36.548c0-4.948-1.809-9.233-5.424-12.85-3.617-3.612-7.898-5.424-12.847-5.424h-18.271c-19.797 0-38.684 3.858-56.673 11.563-17.987 7.71-33.545 18.132-46.68 31.267-13.134 13.129-23.553 28.688-31.262 46.677-7.709 17.987-11.564 36.879-11.564 56.674v200.99c0 15.235 5.327 28.171 15.986 38.834 10.66 10.657 23.606 15.985 38.832 15.985h109.64c15.225 0 28.167-5.328 38.828-15.985 10.657-10.663 15.987-23.599 15.987-38.834v-109.63c0-15.232-5.33-28.168-15.994-38.832-10.656-10.656-23.603-15.986-38.828-15.986z"></path>
-                                          <path d="m459.1 235.26c-10.656-10.656-23.599-15.986-38.828-15.986h-63.953c-7.61 0-14.089-2.664-19.41-7.994-5.332-5.33-7.994-11.801-7.994-19.417v-9.132c0-20.177 7.139-37.401 21.409-51.678 14.271-14.272 31.497-21.411 51.682-21.411h18.267c4.949 0 9.233-1.809 12.848-5.424 3.613-3.617 5.428-7.898 5.428-12.847v-36.548c0-4.948-1.814-9.233-5.428-12.85-3.614-3.612-7.898-5.424-12.848-5.424h-18.267c-19.808 0-38.691 3.858-56.685 11.563-17.984 7.71-33.537 18.132-46.672 31.267-13.135 13.129-23.559 28.688-31.265 46.677-7.707 17.987-11.567 36.879-11.567 56.674v200.99c0 15.235 5.332 28.171 15.988 38.834 10.657 10.657 23.6 15.985 38.828 15.985h109.63c15.229 0 28.171-5.328 38.827-15.985 10.664-10.663 15.985-23.599 15.985-38.834v-109.63c1e-3 -15.233-5.321-28.168-15.978-38.832z"></path>
-                                       </svg>
-                                    </p>
-                                    <div class="ppText ng-binding ng-scope" ng-if="matchSummary.PostMatchCommentary != undefined &amp;&amp; matchSummary.PostMatchCommentary !=''" ng-bind-html="matchSummary.PostMatchCommentary | to_trusted" >
-                                       <p><strong style={{ color: '#3EB489' }}>Commentary Mints :&nbsp;</strong><strong>
-                                          <span style={{ "color": "#f39c12" }}>{commentary?.commtxt?.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ' ')?.replace(/B0/g, ' ')}</span></strong></p>
-                                    </div>
-                                 </div>
-                              ) : commentary?.eventType?.split(',')?.includes("NONE")  && commentary?.commentaryFormats?.[1]?.value?.[0] ? (
-                                 <div class="prepostMatchCommentry ng-scope mint-comment" ng-if="((postMatchCommentary != undefined &amp;&amp; postMatchCommentary !='') || (matchSummary.PostMatchCommentary != undefined &amp;&amp; matchSummary.PostMatchCommentary !='')) &amp;&amp; (matchInn == matchSummary.CurrentInnings || matchInn == '')" key={'over 3' + commentary?.timestamp} >
-                                    <p class="ppCmd">
-                                       <svg enable-background="new 0 0 475.082 475.081" version="1.1" viewBox="0 0 475.08 475.08" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg">
-                                          <path d="m164.45 219.27h-63.954c-7.614 0-14.087-2.664-19.417-7.994-5.327-5.33-7.994-11.801-7.994-19.417v-9.132c0-20.177 7.139-37.401 21.416-51.678 14.276-14.272 31.503-21.411 51.678-21.411h18.271c4.948 0 9.229-1.809 12.847-5.424 3.616-3.617 5.424-7.898 5.424-12.847v-36.548c0-4.948-1.809-9.233-5.424-12.85-3.617-3.612-7.898-5.424-12.847-5.424h-18.271c-19.797 0-38.684 3.858-56.673 11.563-17.987 7.71-33.545 18.132-46.68 31.267-13.134 13.129-23.553 28.688-31.262 46.677-7.709 17.987-11.564 36.879-11.564 56.674v200.99c0 15.235 5.327 28.171 15.986 38.834 10.66 10.657 23.606 15.985 38.832 15.985h109.64c15.225 0 28.167-5.328 38.828-15.985 10.657-10.663 15.987-23.599 15.987-38.834v-109.63c0-15.232-5.33-28.168-15.994-38.832-10.656-10.656-23.603-15.986-38.828-15.986z"></path>
-                                          <path d="m459.1 235.26c-10.656-10.656-23.599-15.986-38.828-15.986h-63.953c-7.61 0-14.089-2.664-19.41-7.994-5.332-5.33-7.994-11.801-7.994-19.417v-9.132c0-20.177 7.139-37.401 21.409-51.678 14.271-14.272 31.497-21.411 51.682-21.411h18.267c4.949 0 9.233-1.809 12.848-5.424 3.613-3.617 5.428-7.898 5.428-12.847v-36.548c0-4.948-1.814-9.233-5.428-12.85-3.614-3.612-7.898-5.424-12.848-5.424h-18.267c-19.808 0-38.691 3.858-56.685 11.563-17.984 7.71-33.537 18.132-46.672 31.267-13.135 13.129-23.559 28.688-31.265 46.677-7.707 17.987-11.567 36.879-11.567 56.674v200.99c0 15.235 5.332 28.171 15.988 38.834 10.657 10.657 23.6 15.985 38.828 15.985h109.63c15.229 0 28.171-5.328 38.827-15.985 10.664-10.663 15.985-23.599 15.985-38.834v-109.63c1e-3 -15.233-5.321-28.168-15.978-38.832z"></path>
-                                       </svg>
-                                    </p>
-                                    <div class="ppText ng-binding ng-scope" ng-if="matchSummary.PostMatchCommentary != undefined &amp;&amp; matchSummary.PostMatchCommentary !=''" ng-bind-html="matchSummary.PostMatchCommentary | to_trusted" >
-                                       <p><strong style={{ color: '#3EB489' }}>Commentary Mints :&nbsp;</strong><strong>
-                                          <span style={{ "color": "#f39c12" }}>{
-                                             commentary?.commentaryFormats?.[1]?.value?.[0]?.value?.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, ' ')?.replace(/B0/g, ' ')
-                                          }</span></strong></p>
-                                    </div>
-                                 </div>
-                              ) : null
-                           }
-
-
-                        </>)
-
-                     })
-                  }
-
+                  {/* ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 5.6 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">
+                        <p>Mohammad Shami bowling to Matthew Kuhnemann, short of good length ball, pitching outside off stump, Matthew Kuhnemann plays a defensive shot on back foot, no run, and that brings us to the end of the day. <strong>Stumps on Day 4!</strong></p>
+                     </div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 5.5 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Mohammad Shami bowling to Matthew Kuhnemann, short of good length ball, pitching outside off stump, Matthew Kuhnemann uncomfortably  plays a defensive shot on back foot, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">1</i> 5.4 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Mohammad Shami bowling to Travis Head, short of good length ball, pitching outside off stump, Travis Head plays an aggressive on drive off the back foot for a single</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 5.3 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Mohammad Shami bowling to Travis Head, short of good length ball, pitching outside off stump, Travis Head uncomfortably  plays a defensive shot on back foot, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 5.2 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Mohammad Shami bowling to Travis Head, short of good length ball, pitching outside off stump, Travis Head plays a forward defensive shot, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 5.1 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">
+                        <p><span style={{ "color": "#2980b9" }}><strong>Seam introduced into the attack!</strong></span> Mohammad Shami bowling to Travis Head, short of good length ball, pitching outside off stump, Travis Head plays a defensive shot on back foot, no run</p>
+                     </div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
                </div>
-
+               {/* end ngRepeat: (key, list) in overHistory */}
+               <div id="byb__comment" ng-repeat="(key, list) in overHistory" class="ng-scope">
+                  <div class="endOverInfo">
+                     <p class="firstChild ng-binding">Over 5</p>
+                     <p class="secondChild">
+                        {/* ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="4.6">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="4.5">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="4.4">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="4.3">1</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="4.2">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="4.1">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}
+                     </p>
+                     {/* <p class="totRun alignR fr" ng-if="IsMatchEnd == 0">{{list[0].TotalRuns}}/{{list[0].TotalWickets}}</p> */} {/* <p class="totRun alignR fr" ng-if="list[list.length - 1].BallID != ''">{{list[list.length - 1].TotalRuns}}/{{list[list.length - 1].TotalWickets}}</p> */} {/* ngIf: list[0].BallID != '' */}
+                     <p class="totRun alignR fr ng-binding ng-scope" ng-if="list[0].BallID != ''">2/0</p>
+                     {/* end ngIf: list[0].BallID != '' */} {/* ngIf: list[0].BallID == '' */}
+                  </div>
+                  {/* ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 4.6 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravichandran Ashwin bowling to Matthew Kuhnemann, good length ball, pitching outside off stump, Matthew Kuhnemann uncomfortably  plays a forward defensive shot, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 4.5 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravichandran Ashwin bowling to Matthew Kuhnemann, full length ball, pitching outside leg stump, Matthew Kuhnemann plays a forward defensive shot, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 4.4 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravichandran Ashwin bowling to Matthew Kuhnemann, good length ball, pitching outside leg stump, Matthew Kuhnemann plays a forward defensive shot, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">1</i> 4.3 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravichandran Ashwin bowling to Travis Head, good length ball, pitching on off stump, Travis Head plays a defensive back foot push for a single</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 4.2 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravichandran Ashwin bowling to Travis Head, full length ball, pitching on off stump, Travis Head plays a forward defensive shot, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 4.1 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravichandran Ashwin bowling to Travis Head, good length ball, pitching on middle stump, Travis Head plays a defensive back foot push, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+               </div>
+               {/* end ngRepeat: (key, list) in overHistory */}
+               <div id="byb__comment" ng-repeat="(key, list) in overHistory" class="ng-scope">
+                  <div class="endOverInfo">
+                     <p class="firstChild ng-binding">Over 4</p>
+                     <p class="secondChild">
+                        {/* ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="3.6">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="3.5">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="3.4">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="3.3">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="3.2">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="3.1">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}
+                     </p>
+                     {/* <p class="totRun alignR fr" ng-if="IsMatchEnd == 0">{{list[0].TotalRuns}}/{{list[0].TotalWickets}}</p> */} {/* <p class="totRun alignR fr" ng-if="list[list.length - 1].BallID != ''">{{list[list.length - 1].TotalRuns}}/{{list[list.length - 1].TotalWickets}}</p> */} {/* ngIf: list[0].BallID != '' */}
+                     <p class="totRun alignR fr ng-binding ng-scope" ng-if="list[0].BallID != ''">1/0</p>
+                     {/* end ngIf: list[0].BallID != '' */} {/* ngIf: list[0].BallID == '' */}
+                  </div>
+                  {/* ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 3.6 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">
+                        <p>Ravindra Jadeja bowling to Matthew Kuhnemann, good length ball, pitching outside off stump, Matthew Kuhnemann plays a forward defensive shot, no run. Another maiden over!</p>
+                     </div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 3.5 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravindra Jadeja bowling to Matthew Kuhnemann, full length ball, pitching outside off stump, Matthew Kuhnemann plays a forward defensive shot, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 3.4 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravindra Jadeja bowling to Matthew Kuhnemann, good length ball, pitching outside off stump, Matthew Kuhnemann plays a forward defensive shot, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 3.3 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravindra Jadeja bowling to Matthew Kuhnemann, good length ball, pitching outside off stump, Matthew Kuhnemann uncomfortably  plays a forward defensive shot, no run, Appeal from the fielding side</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 3.2 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravindra Jadeja bowling to Matthew Kuhnemann, good length ball, pitching outside off stump, Matthew Kuhnemann plays a forward defensive shot, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 3.1 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravindra Jadeja bowling to Matthew Kuhnemann, good length ball, pitching outside off stump, Matthew Kuhnemann uncomfortably  plays a defensive forward push, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+               </div>
+               {/* end ngRepeat: (key, list) in overHistory */}
+               <div id="byb__comment" ng-repeat="(key, list) in overHistory" class="ng-scope">
+                  <div class="endOverInfo">
+                     <p class="firstChild ng-binding">Over 3</p>
+                     <p class="secondChild">
+                        {/* ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="2.6">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="2.5">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="2.4">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="2.3">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="2.2">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="2.1">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}
+                     </p>
+                     {/* <p class="totRun alignR fr" ng-if="IsMatchEnd == 0">{{list[0].TotalRuns}}/{{list[0].TotalWickets}}</p> */} {/* <p class="totRun alignR fr" ng-if="list[list.length - 1].BallID != ''">{{list[list.length - 1].TotalRuns}}/{{list[list.length - 1].TotalWickets}}</p> */} {/* ngIf: list[0].BallID != '' */}
+                     <p class="totRun alignR fr ng-binding ng-scope" ng-if="list[0].BallID != ''">1/0</p>
+                     {/* end ngIf: list[0].BallID != '' */} {/* ngIf: list[0].BallID == '' */}
+                  </div>
+                  {/* ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 2.6 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">
+                        <p>Ravichandran Ashwin bowling to Travis Head, good length ball, pitching outside off stump, Travis Head plays a defensive shot on back foot, no run. Consecutive maidens by Ashwin!</p>
+                     </div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 2.5 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravichandran Ashwin bowling to Travis Head, good length ball, pitching on off stump, Travis Head plays a defensive back foot push, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 2.4 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravichandran Ashwin bowling to Travis Head, good length ball, pitching outside off stump, Travis Head plays an aggressive cover drive on the front foot, straight to the fielder </div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 2.3 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravichandran Ashwin bowling to Travis Head, good length ball, pitching on leg stump, Travis Head plays a defensive back foot push, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 2.2 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravichandran Ashwin bowling to Travis Head, short of good length ball, pitching outside off stump, Travis Head plays a defensive back foot push, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 2.1 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravichandran Ashwin bowling to Travis Head, good length ball, pitching outside off stump, Travis Head plays a defensive forward push, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+               </div>
+               {/* end ngRepeat: (key, list) in overHistory */}
+               <div id="byb__comment" ng-repeat="(key, list) in overHistory" class="ng-scope">
+                  <div class="endOverInfo">
+                     <p class="firstChild ng-binding">Over 2</p>
+                     <p class="secondChild">
+                        {/* ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="1.6">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="1.5">1</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="1.4">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="1.3">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="1.2">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="1.1">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}
+                     </p>
+                     {/* <p class="totRun alignR fr" ng-if="IsMatchEnd == 0">{{list[0].TotalRuns}}/{{list[0].TotalWickets}}</p> */} {/* <p class="totRun alignR fr" ng-if="list[list.length - 1].BallID != ''">{{list[list.length - 1].TotalRuns}}/{{list[list.length - 1].TotalWickets}}</p> */} {/* ngIf: list[0].BallID != '' */}
+                     <p class="totRun alignR fr ng-binding ng-scope" ng-if="list[0].BallID != ''">1/0</p>
+                     {/* end ngIf: list[0].BallID != '' */} {/* ngIf: list[0].BallID == '' */}
+                  </div>
+                  {/* ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 1.6 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravindra Jadeja bowling to Matthew Kuhnemann, good length ball, pitching outside off stump, Matthew Kuhnemann plays a forward defensive shot, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">1</i> 1.5 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">
+                        <p>Ravindra Jadeja bowling to Travis Head, good length ball, pitching on off stump, Travis Head plays an aggressive front foot flick for a single. First runs on the board for Australia!</p>
+                     </div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 1.4 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravindra Jadeja bowling to Travis Head, good length ball, pitching outside off stump, Travis Head plays a forward defensive shot, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 1.3 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravindra Jadeja bowling to Travis Head, full length ball, pitching outside off stump, Travis Head plays a defensive forward push, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 1.2 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '')" ng-bind-html="overHistoryData.Commentry | to_trusted">Ravindra Jadeja bowling to Travis Head, full length ball, pitching outside off stump, Travis Head uncomfortably  plays a defensive forward push, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 1.1 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">
+                        <p><span style={{ "color": "#2980b9" }}><strong>Ravindra Jadeja to share the new ball with Ashwin! </strong></span>Bowling to Travis Head, full length ball, pitching outside off stump, Travis Head plays a defensive forward push, no run</p>
+                     </div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+               </div>
+               {/* end ngRepeat: (key, list) in overHistory */}
+               <div id="byb__comment" ng-repeat="(key, list) in overHistory" class="ng-scope">
+                  <div class="endOverInfo">
+                     <p class="firstChild ng-binding">Over 1</p>
+                     <p class="secondChild">
+                        {/* ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="0.6">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="0.5">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="0.4">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="0.3">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="0.2">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}{/* ngIf: overHistoryData.BallID !='' */}<i ng-repeat="overHistoryData in list" ng-if="overHistoryData.BallID !=''" class="mcBall mcBall mcBall mcBall mcBall mcBall" title="0.1">0</i>{/* end ngIf: overHistoryData.BallID !='' */}{/* end ngRepeat: overHistoryData in list */}
+                     </p>
+                     {/* <p class="totRun alignR fr" ng-if="IsMatchEnd == 0">{{list[0].TotalRuns}}/{{list[0].TotalWickets}}</p> */} {/* <p class="totRun alignR fr" ng-if="list[list.length - 1].BallID != ''">{{list[list.length - 1].TotalRuns}}/{{list[list.length - 1].TotalWickets}}</p> */} {/* ngIf: list[0].BallID != '' */}
+                     <p class="totRun alignR fr ng-binding ng-scope" ng-if="list[0].BallID != ''">0/0</p>
+                     {/* end ngIf: list[0].BallID != '' */} {/* ngIf: list[0].BallID == '' */}
+                  </div>
+                  {/* ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 0.6 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">
+                        <p>Ravichandran Ashwin bowling to Matthew Kuhnemann, full length ball, pitching outside off stump, Matthew Kuhnemann plays a forward defensive shot, no run. Ashwin starts with a maiden!</p>
+                     </div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 0.5 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravichandran Ashwin bowling to Matthew Kuhnemann, full length ball, pitching outside off stump, Matthew Kuhnemann plays a forward defensive shot, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 0.4 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravichandran Ashwin bowling to Matthew Kuhnemann, good length ball, pitching outside off stump, Matthew Kuhnemann plays a forward defensive shot and is beaten</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 0.3 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravichandran Ashwin bowling to Matthew Kuhnemann, full length ball, pitching outside off stump, Matthew Kuhnemann plays a forward defensive shot, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 0.2 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */}
+                     <div class="cmdText ng-binding ng-scope" ng-if="overHistoryData.BallID !='' &amp;&amp; overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '' &amp;&amp; (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted">Ravichandran Ashwin bowling to Matthew Kuhnemann, full length ball, pitching outside off stump, Matthew Kuhnemann plays a forward defensive shot, no run</div>
+                     {/* end ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+                  <div class="cmdEvent fourCmd mcBall mcBall mcBall mcBall mcBall mcBall" ng-repeat="overHistoryData in list">
+                     {/* ngIf: overHistoryData.BallID !='' */}
+                     <p class="cmdOver mcBall mcBall mcBall mcBall mcBall mcBall" ng-if="overHistoryData.BallID !=''"> <i class="ovRun mcBall mcBall mcBall mcBall mcBall mcBall">0</i> 0.1 </p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '' && (overHistoryData.OverImage == undefined || overHistoryData.OverImage == '') */} {/* ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */}
+                     <div class="overManualCommentary overCommentaryWithImage ng-scope" ng-if="overHistoryData.OverImage != undefined &amp;&amp; overHistoryData.OverImage != '' &amp;&amp; overHistoryData.BallID !=''">
+                        <div class="ppText">
+                           <div class="imgComment"> <img ng-src="https://scores.bcci.tv/matchcentre/commentaryFiles/Australia-tour-of-India-Test-series-2022-23/India-VS-Australia-(09-Mar-2023)/File_3-1-288301.png" ng-click="showCommentaryImgPreview(overHistoryData.OverImage)" src="https://scores.bcci.tv/matchcentre/commentaryFiles/Australia-tour-of-India-Test-series-2022-23/India-VS-Australia-(09-Mar-2023)/File_3-1-288301.png" /> </div>
+                           {/* ngIf: (overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '') */}
+                           <div ng-if="(overHistoryData.UPDCommentry != undefined &amp;&amp; overHistoryData.UPDCommentry != '')" ng-bind-html="overHistoryData.UPDCommentry | to_trusted" class="overCommentaryText cmdText ng-binding ng-scope">
+                              <p><strong>Nightwatchman Matthew Kuhnemann walks in to bat alongside Travis Head! Ravichandran Ashwin to start the proceedings with the ball! </strong>Bowling to Matthew Kuhnemann, good length ball, pitching outside off stump, Matthew Kuhnemann plays a forward defensive shot, no run</p>
+                           </div>
+                           {/* end ngIf: (overHistoryData.UPDCommentry != undefined && overHistoryData.UPDCommentry != '') */} {/* ngIf: overHistoryData.Commentry != '' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */}
+                        </div>
+                     </div>
+                     {/* end ngIf: overHistoryData.OverImage != undefined && overHistoryData.OverImage != '' && overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID !='' && (overHistoryData.UPDCommentry == undefined || overHistoryData.UPDCommentry == '') */} {/* ngIf: overHistoryData.BallID !='' */}
+                     <p ng-if="overHistoryData.BallID !=''" class="cmdOver icon-play vclickable cmdPlay ng-scope"></p>
+                     {/* end ngIf: overHistoryData.BallID !='' */} {/* ngIf: overHistoryData.BallID =='' */}
+                  </div>
+                  {/* end ngRepeat: overHistoryData in list */}
+               </div>
                {/* end ngRepeat: (key, list) in overHistory */} {/* ngIf: ((preMatchCommentary != undefined && preMatchCommentary !='') || (matchSummary.PreMatchCommentary != undefined && matchSummary.PreMatchCommentary !='')) && (matchInn == 1 || matchInn == '') && currentInnText == 'Innings1' */} {/* ngIf: IsMatchEnd == 1 && postMatchCommentary != undefined && postMatchCommentary !='' && false */}
             </div>
             {/* ngIf: matchNotes.length > 0 */}

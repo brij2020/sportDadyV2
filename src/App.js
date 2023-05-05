@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Series from "./pages/BrowserSeries/Series";
@@ -24,10 +25,11 @@ import Articles from './pages/ArticleList'
 import ArticleShow from './pages/ArticleShow'
 import VideoShowPage from './pages/VideoList/videoShow'
 
-
+// import {SocketContext, socket} from './socket';
 
 
 export default function App() {
+ 
   return (
     <BrowserRouter>
       <Header />
@@ -52,6 +54,16 @@ export default function App() {
         <Route path="fixtures1" element={<Card /> } />
         <Route path="fixtures" element={<ScheduleList /> } />
         <Route path="live-score" element={<LiveTv /> } />
+          
+          {/* <Route path="live-score" element={
+            
+            <SocketContext.Provider value={socket}>
+              <LiveTv /> 
+        
+            </SocketContext.Provider>
+          
+          } /> */}
+
         <Route path="articles" element={<Articles />} />
         <Route path="articleshow" element={<ArticleShow />} />
         <Route path="videoshow" element={<VideoShowPage />} />

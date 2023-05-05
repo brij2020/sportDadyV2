@@ -5,5 +5,6 @@ module.exports =  {
     VIDEOS_LIST_API: '/request/videolist?origin=m',
     VIDEOS_DETAIL_API: '/request/videolshow?origin=m',
     PHOTO_LST_API: '/request/photos?origin=m',
-    PHOTO_DETAIL:'/request/photoshow?origin=m'
+    PHOTO_DETAIL:'/request/photoshow?origin=m',
+    LIVE_SCORE: '/api/live-score?origin=m'
 }

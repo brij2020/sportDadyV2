@@ -9,7 +9,8 @@ import flag5 from '../../assets/images/hdImage/14.png'
 
 
 
-const Card = () => {
+const Card = (props) => {
+  console.log('props', props)
   return (
     <div>
       <div className="content">

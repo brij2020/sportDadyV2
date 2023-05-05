@@ -10,6 +10,9 @@ import {
     photoDetailReducer
 } from './photo/photo.slice'
 
+import {
+    liveScoreReducer
+} from './liveScore/liveScore.slice'
 const rootReducers = combineReducers({
     homeReducer,
     artListReducer,
@@ -17,6 +20,7 @@ const rootReducers = combineReducers({
     videoListReducer,
     videoDetailReducer,
     photoListReducer,
-    photoDetailReducer
+    photoDetailReducer,
+    liveScoreReducer
 })
 export default rootReducers
