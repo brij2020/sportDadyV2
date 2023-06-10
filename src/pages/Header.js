@@ -11,14 +11,23 @@ import rArrow from '../assets/svg/r-arrow.svg'
 import quiz from '../assets/images/quiz.gif'
 import VideoSvg from "../assets/svg/icons8-circled-play-100.png"
 import LOGO_WHITE from '../assets/logo/logo.png'
-
+import useCurrentPath from '../hooks/currentUrlPath'
+import { 
+    HomeIcon,
+    LiveScoreIcon,
+    PhotoGallaryIcon,
+    ScheduleIcon
+} from './btmNavSvgs'
 
 const Header = (props) => {
     const [isMobile, setMobile] = React.useState(false);
     const [isHamOpen, setHamBurger] = React.useState(false);
     const [ismwebOpen, setIsmWebOpen] = React.useState(false);
     const [isSearch, setSearch] = React.useState(false);
-    const handleSearch = (d) => setSearch(d)
+    const current_path = useCurrentPath()
+    const handleSearch = (d) => setSearch(d);
+
+    const [bottomNavItems, setBottomNav] = React.useState([]);
     const handleHamBurger = () => {
         const bodyTag = document.querySelector('#main-app');
         const navSec = document.querySelector('.main-navigation__wrapper')
@@ -48,6 +57,23 @@ const Header = (props) => {
         console.log("hello")
         setIsmWebOpen(!ismwebOpen)
     }
+    let _bottomNavItems = [{ link:"/",_class: '', isactive: true, label:'Home', icon: HomeIcon },{ link:"/live-score",_class: '', isactive: false, label:'Live Score', icon:LiveScoreIcon },
+    { link:"/fixtures",_class: '', isactive: false, label:'Schedule', icon:ScheduleIcon },  { link:"/photos-stories",_class: '', isactive: false, label:'Schedule', icon:PhotoGallaryIcon }];
+    React.useEffect(() => {
+        let mf_btm_nav = _bottomNavItems.map(btmNav => {
+            if(btmNav.link === current_path) {
+                btmNav._class = '_2uBiG'
+                btmNav.isactive = true
+            } else{
+                btmNav._class = ''
+                btmNav.isactive = false
+            }
+            return btmNav
+        })
+
+        setBottomNav(mf_btm_nav)
+    },[current_path])
+    console.log('bottomNavItems', bottomNavItems, current_path)
     // u-body-no-scroll
     return (<>
 
@@ -2299,13 +2325,40 @@ const Header = (props) => {
             </div>
 
         </div>
-     
-
-        <div id="btm-navbar" class="fVywg btnav-height" style={{"bottom": "0px"}}>
-            <a href="/" class="_2uBiG" clink="y">
-                <svg xmlns="https://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><path d="M20.4 9.758c.374-.412.338-1.043-.08-1.41L11.085.27c-.419-.367-1.09-.359-1.5.017L.32 8.78c-.41.376-.43 1.007-.044 1.408l.232.242c.385.4 1.008.448 1.39.106l.693-.62v9.077c0 .557.45 1.008 1.007 1.008H7.21c.557 0 1.008-.45 1.008-1.008v-6.35h4.606v6.35c-.008.557.39 1.008.947 1.008h3.827c.556 0 1.008-.451 1.008-1.008v-8.95l.427.376c.235.207.73.04 1.104-.371l.263-.289z" transform="translate(-190.000000, -128.000000) translate(0.000000, 42.000000) translate(180.000000, 81.000000) translate(10.000000, 5.000000)"></path></svg>home</a>
-                <a href="/live-score" class=" _2Jp9T " clink="y"><svg xmlns="https://www.w3.org/2000/svg" width="24" height="17" viewBox="0 0 24 17"><g fill="none" fill-rule="evenodd"><g fill="#EA2318"><g><path fill-rule="nonzero" d="M23.083.033H.698C.313.033 0 .346 0 .732v12.86c0 .387.313.7.698.7h8.73v1.278H7.544c-.386 0-.698.312-.698.698 0 .386.312.699.698.699h8.693c.386 0 .699-.313.699-.699 0-.386-.313-.698-.699-.698h-1.884V14.29h8.73c.386 0 .698-.312.698-.698V.732c0-.386-.312-.699-.698-.699zM12.957 15.57h-2.132V14.29h2.132v1.279zm9.428-2.675H1.397V1.43h20.988v11.465z" transform="translate(-300 -13) translate(300 13)"></path><path d="M9.563 4.25L9.563 10.328 15.938 7.468z" transform="translate(-300 -13) translate(300 13)"></path></g></g></g></svg>live Score</a>
-                <div class="ypkGD"><a href="/fixtures" clink="y"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDIzIDIyIj4KICAgIDxwYXRoIGZpbGw9IiM3Mjc2ODIiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSIjRkZGIiBzdHJva2Utd2lkdGg9Ii4yIiBkPSJNNC42MTQgMjEuMDEyaDE0LjU1MmEzLjYxOCAzLjYxOCAwIDAgMCAzLjYxNC0zLjYxNFY2LjQ2YTMuNjE4IDMuNjE4IDAgMCAwLTMuNjE0LTMuNjE0aC0xLjg5OVYxaC0xLjMxMnYxLjg0Nkg3LjgwOFYxSDYuNDk1djEuODQ2SDQuNjE0QTMuNjE4IDMuNjE4IDAgMCAwIDEgNi40NnYxMC45MzhhMy42MTggMy42MTggMCAwIDAgMy42MTQgMy42MTR6TTE5LjE2MiAxOS43SDQuNjE0YTIuMzIzIDIuMzIzIDAgMCAxLTIuMzE5LTIuMzJWOC41NmgxOS4xOXY4LjgzOGEyLjMyMyAyLjMyMyAwIDAgMS0yLjMxOSAyLjMybC0uMDA0LS4wMTh6TTQuNjE0IDQuMTRoMS44OTl2MS4wNjRoMS4zMTJWNC4xNGg4LjE0N3YxLjA2NGgxLjMxM1Y0LjE0aDEuODk5YTIuMzIzIDIuMzIzIDAgMCAxIDIuMzE4IDIuMzJ2LjgwNEgyLjI5NXYtLjhBMi4zMjMgMi4zMjMgMCAwIDEgNC42MTQgNC4xNHoiLz4KPC9zdmc+Cg==" alt="short video" />Schedule</a></div><a href="/photos-stories" class="" clink="y"><svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" opacity=".8"><circle stroke="#0A0A0A" cx="7.5" cy="7.5" r="7"></circle><g fill="#0A0A0A"><path d="M5 4h5v7H5zM11 5h1v5h-1zM3 5h1v5H3z"></path></g></g></svg>Gallary</a></div>
+        {/* Bottom Navigation */}
+        {
+            
+            Array.isArray(bottomNavItems) && (bottomNavItems).length > 0 ? (
+                <div id="btm-navbar" class="fVywg btnav-height" style={{"bottom": "0px"}}>
+                    {
+                    bottomNavItems?.map(({ link, _class, icon:Icon, label})=> (<>
+                    <a href={link} class={_class} clink="y">
+                        <Icon />
+                        {label}
+                    </a>
+                    </>))
+                    }
+                </div>
+            
+            
+            ) :(<>
+        
+            <div id="btm-navbar" class="fVywg btnav-height" style={{"bottom": "0px"}}>
+                <a href="/" class="_2uBiG" clink="y">
+                    <svg xmlns="https://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><path d="M20.4 9.758c.374-.412.338-1.043-.08-1.41L11.085.27c-.419-.367-1.09-.359-1.5.017L.32 8.78c-.41.376-.43 1.007-.044 1.408l.232.242c.385.4 1.008.448 1.39.106l.693-.62v9.077c0 .557.45 1.008 1.007 1.008H7.21c.557 0 1.008-.45 1.008-1.008v-6.35h4.606v6.35c-.008.557.39 1.008.947 1.008h3.827c.556 0 1.008-.451 1.008-1.008v-8.95l.427.376c.235.207.73.04 1.104-.371l.263-.289z" transform="translate(-190.000000, -128.000000) translate(0.000000, 42.000000) translate(180.000000, 81.000000) translate(10.000000, 5.000000)"></path></svg>
+                    home</a>
+                <a href="/live-score" class=" _2Jp9T " clink="y">
+                    <svg xmlns="https://www.w3.org/2000/svg" width="24" height="17" viewBox="0 0 24 17"><g fill="none" fill-rule="evenodd"><g fill="#EA2318"><g><path fill-rule="nonzero" d="M23.083.033H.698C.313.033 0 .346 0 .732v12.86c0 .387.313.7.698.7h8.73v1.278H7.544c-.386 0-.698.312-.698.698 0 .386.312.699.698.699h8.693c.386 0 .699-.313.699-.699 0-.386-.313-.698-.699-.698h-1.884V14.29h8.73c.386 0 .698-.312.698-.698V.732c0-.386-.312-.699-.698-.699zM12.957 15.57h-2.132V14.29h2.132v1.279zm9.428-2.675H1.397V1.43h20.988v11.465z" transform="translate(-300 -13) translate(300 13)"></path><path d="M9.563 4.25L9.563 10.328 15.938 7.468z" transform="translate(-300 -13) translate(300 13)"></path></g></g></g></svg>
+                live Score</a>
+                
+                    <a href="/fixtures" clink="y">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDIzIDIyIj4KICAgIDxwYXRoIGZpbGw9IiM3Mjc2ODIiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSIjRkZGIiBzdHJva2Utd2lkdGg9Ii4yIiBkPSJNNC42MTQgMjEuMDEyaDE0LjU1MmEzLjYxOCAzLjYxOCAwIDAgMCAzLjYxNC0zLjYxNFY2LjQ2YTMuNjE4IDMuNjE4IDAgMCAwLTMuNjE0LTMuNjE0aC0xLjg5OVYxaC0xLjMxMnYxLjg0Nkg3LjgwOFYxSDYuNDk1djEuODQ2SDQuNjE0QTMuNjE4IDMuNjE4IDAgMCAwIDEgNi40NnYxMC45MzhhMy42MTggMy42MTggMCAwIDAgMy42MTQgMy42MTR6TTE5LjE2MiAxOS43SDQuNjE0YTIuMzIzIDIuMzIzIDAgMCAxLTIuMzE5LTIuMzJWOC41NmgxOS4xOXY4LjgzOGEyLjMyMyAyLjMyMyAwIDAgMS0yLjMxOSAyLjMybC0uMDA0LS4wMTh6TTQuNjE0IDQuMTRoMS44OTl2MS4wNjRoMS4zMTJWNC4xNGg4LjE0N3YxLjA2NGgxLjMxM1Y0LjE0aDEuODk5YTIuMzIzIDIuMzIzIDAgMCAxIDIuMzE4IDIuMzJ2LjgwNEgyLjI5NXYtLjhBMi4zMjMgMi4zMjMgMCAwIDEgNC42MTQgNC4xNHoiLz4KPC9zdmc+Cg==" alt="short video" />Schedule</a>
+                
+                    <a href="/photos-stories" class="" clink="y">
+                        <svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" opacity=".8"><circle stroke="#0A0A0A" cx="7.5" cy="7.5" r="7"></circle><g fill="#0A0A0A"><path d="M5 4h5v7H5zM11 5h1v5h-1zM3 5h1v5H3z"></path></g></g></svg>Gallary</a>
+                </div>
+            </>)
+        }
     </>
     )
 }

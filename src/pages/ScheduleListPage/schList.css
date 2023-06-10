@@ -26,7 +26,9 @@
  .cb-schdl-nvtb ::-webkit-scrollbar {
     display: block;
  }
- 
+ .cb-schdl-nvtb  > .active {
+    background: #028062;
+ }
 
 .cb-schdl {
     padding: 0 10px;
@@ -80,3 +82,4 @@
     }
 
 }
+
