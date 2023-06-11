@@ -17,9 +17,6 @@ import {
     scheduleListReducer
 } from './schedule/schedule.slice'
 
-import {
-    liveScoreReducer
-} from './liveScore/liveScore.slice'
 const rootReducers = combineReducers({
     homeReducer,
     artListReducer,
