@@ -24,6 +24,9 @@ import LiveTv from './pages/LiveTv'
 import Articles from './pages/ArticleList'
 import ArticleShow from './pages/ArticleShow'
 import VideoShowPage from './pages/VideoList/videoShow'
+import LiveChat from './pages/LiveTv/liveChat';
+
+
 
 // import {SocketContext, socket} from './socket';
 
@@ -67,6 +70,8 @@ export default function App() {
         <Route path="articles" element={<Articles />} />
         <Route path="articleshow" element={<ArticleShow />} />
         <Route path="videoshow" element={<VideoShowPage />} />
+        <Route path="chat" element={<LiveChat />} />
+
 
 
       </Routes>

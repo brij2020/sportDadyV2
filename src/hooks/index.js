@@ -13,5 +13,4 @@ const useGetQuery = (queryname) => {
     return [queryValue, setCustomQuery]
 } 
 
-export { useGetQuery
-} 
+export { useGetQuery } 

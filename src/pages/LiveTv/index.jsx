@@ -56,7 +56,7 @@ const LiveTv = (props) => {
 const getData = async () => {
     try {
         console.log('matchId', matchId)
-      dispatch(liveScoreAction({matchId}));   
+    //   dispatch(liveScoreAction({matchId}));   
     } catch (e) {
       console.log(e);
     }
