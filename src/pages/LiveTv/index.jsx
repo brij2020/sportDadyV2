@@ -55,8 +55,8 @@ const LiveTv = (props) => {
 
 const getData = async () => {
     try {
-
-      dispatch(liveScoreAction(matchId));   
+        console.log('matchId', matchId)
+      dispatch(liveScoreAction({matchId}));   
     } catch (e) {
       console.log(e);
     }
@@ -66,7 +66,7 @@ const getData = async () => {
     getData();
     const intervalCall = setInterval(() => {
       getData();
-    }, 10000 );
+    }, 30000 );
     
 
     return () => {

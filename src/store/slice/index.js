@@ -16,6 +16,10 @@ import {
 import {
     scheduleListReducer
 } from './schedule/schedule.slice'
+
+import {
+    liveScoreReducer
+} from './liveScore/liveScore.slice'
 const rootReducers = combineReducers({
     homeReducer,
     artListReducer,
@@ -24,7 +28,7 @@ const rootReducers = combineReducers({
     videoDetailReducer,
     photoListReducer,
     photoDetailReducer,
-    liveScoreReducer,
-    scheduleListReducer
+    scheduleListReducer,
+    liveScoreReducer
 })
 export default rootReducers
