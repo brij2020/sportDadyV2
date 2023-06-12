@@ -58,8 +58,11 @@ const ICCRanking = (props) => {
                                     <div className="rankings__filters-gender">
                                         <button className={`rankings__panel-button js-stats-players-men ${isMen ? 'is-active': '' }`}
                                             title="Show Mens Stats" onClick={handleMenState} >Mens</button>
-                                        <button className={`rankings__panel-button js-stats-players-women ${!isMen ? 'is-active' : ''}`}
-                                            title="Show Womens Stats" onClick={ handleWomanState }>Womens</button>
+                                            {
+                                                format === 0 ?  ('') : ( <button className={`rankings__panel-button js-stats-players-women ${!isMen ? 'is-active' : ''}`}
+                                                title="Show Womens Stats" onClick={ handleWomanState }>Womens</button>)
+                                            }
+                                       
                                     </div>
                                     <div className="rankings__filters-type">
                                         {
