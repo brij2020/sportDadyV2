@@ -25,8 +25,7 @@ const makeAudio = (file) => {
         pause
     }
 }
-module.exports = {
-    getDayName,
-    makeAudio
-
+module.exports =  {
+    makeAudio,
+    getDayName
 }
