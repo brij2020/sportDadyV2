@@ -26,7 +26,7 @@ const Header = (props) => {
     const [isSearch, setSearch] = React.useState(false);
     const current_path = useCurrentPath()
     const handleSearch = (d) => setSearch(d);
-
+    const hRef = React.useRef(null);
     const [bottomNavItems, setBottomNav] = React.useState([]);
     const handleHamBurger = () => {
         const bodyTag = document.querySelector('#main-app');
@@ -74,7 +74,13 @@ const Header = (props) => {
         setBottomNav(mf_btm_nav)
     },[current_path])
     console.log('bottomNavItems', bottomNavItems, current_path)
+ 
     // u-body-no-scroll
+    React.useEffect(() => {
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth'});
+        }, (1000));
+      },[current_path])
     return (<>
 
         {/* <div id="side-sticky-tab">
@@ -94,7 +100,7 @@ const Header = (props) => {
                 </div>
             </div>
         </div> */}
-        <section className={`main-navigation__wrapper `} >
+        <section className={`main-navigation__wrapper `}    ref={hRef}>
 
             {/* desktop menu */}
             <div className="main-navigation__header u-hide-desktop">

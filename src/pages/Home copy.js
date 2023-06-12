@@ -79,12 +79,12 @@ function Home() {
     },
 
   ]
-  React.useEffect(() => {
-    let xButtonTop = document.querySelector('#topBtn');
-    if (xButtonTop) {
-      xButtonTop.click()
-    }
-  }, [])
+  // React.useEffect(() => {
+  //   let xButtonTop = document.querySelector('#topBtn');
+  //   if (xButtonTop) {
+  //     xButtonTop.click()
+  //   }
+  // }, [])
 
   const Data2 = [
     {

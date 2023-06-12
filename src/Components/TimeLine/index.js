@@ -5,7 +5,8 @@ import { Swiper, SwiperSlide,  } from 'swiper/react';
 
 import SwiperCore,{ Pagination, Navigation, Autoplay} from 'swiper';
 import 'swiper/css';
-
+import { useIntersectionObserver } from 'react-intersection-observer-hook';
+import Heading from "../../Components/Heading"
 
 const TimeLine = (props) => {
 	const homeData = useSelector(s => s?.homeReducer);
@@ -16,6 +17,12 @@ const TimeLine = (props) => {
     if (homeData?.data?.sections?.sport_daday_event_time_Line) {
         list = homeData?.data?.sections?.sport_daday_event_time_Line;
     }
+	const [divRef, { entry }] = useIntersectionObserver();
+    const isVisible = entry && entry.isIntersecting;
+
+    React.useEffect(() => {
+        console.log(`The component is ${isVisible ? 'visible' : 'not visible'}.`, isVisible);
+    }, [isVisible])
 	
 	React.useEffect(() => {
 		setTimeout(()=>{
@@ -46,11 +53,13 @@ const TimeLine = (props) => {
 	  },200)
 
 	},[list])
-	console.log('text', list)
+
 	const static_ = 'http://52.205.83.44:1337';
 	
 	return(
 	<>
+	<section className="video-home-section" style={{ padding: "5px 5px 5px", "border-raduis": "10px" }} ref={divRef}>
+		<Heading primaryHeading={'ODI World Cup Timeline'} ballImageLeftPercent={5}  visibility={isVisible}/>
 		<div class="containerTimeLine">
 			
 			<div class="timeline">
@@ -90,6 +99,10 @@ const TimeLine = (props) => {
 				</div>
 			</div>
 		</div>
+
+        <div className="more-news">
+          <a href="/videos">More TimeLine </a></div>
+		</section>
 	</>)
 }
 export default TimeLine;

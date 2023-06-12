@@ -4,7 +4,8 @@ import { getVideoListAction } from '../../store/slice/video/video.slice'
 import { useDispatch, useSelector } from 'react-redux';
 import dayjs from 'dayjs'
 import PlayIcon from '../../assets/icons/play.svg';
-
+import { useIntersectionObserver } from 'react-intersection-observer-hook';
+import Heading from "../Heading"
 
 
 const Video = () => {
@@ -15,14 +16,24 @@ const Video = () => {
     if (homeData?.data?.sections?.sport_daday_vidoehub) {
         list = homeData?.data?.sections?.sport_daday_vidoehub;
     }
-    console.log('api video lsit', list)
+
+    const [divRef, { entry }] = useIntersectionObserver();
+    const isVisible = entry && entry.isIntersecting;
+  
+    React.useEffect(() => {
+      console.log(`The component is ${isVisible ? 'visible' : 'not visible'}.`, isVisible);
+    }, [isVisible])
+
+
     return (
-        <section className="video-home-section" style={{ padding: "10px 10px 10px", "border-raduis": "10px" }}>
+        <section className="video-home-section" style={{ padding: "10px 10px 10px", "border-raduis": "10px" }} ref={divRef}>
             <div className="container-video">
                 <div className="row">
                     <div className="col-sm-12 col-12">
                         <div className="section-heading-large">
-                            <h2><a href="/videos">Videos</a></h2>
+                            {/* <h2><a href="/videos">Videos</a></h2> */}
+                            <Heading primaryHeading={'Videos'} ballImageLeftPercent={15} visibility={isVisible}/>
+
                             <div className="in-text-items pull-right">
                                 <a href="/videos">More Videos</a>
                                 <span className="arrow"> »</span>

@@ -30,6 +30,7 @@
 
 .section-heading-large:after {
     border-bottom: 6px solid red !important;
+    border-radius: 12px;
 }
 .section-heading-large h2:before {
     background: red !important;

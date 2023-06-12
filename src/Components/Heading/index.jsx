@@ -34,10 +34,7 @@ const Heading = props => {
 		    				
 					</span>):(null)
 			}
-        <div className="in-text-items pull-right">
-            <a href="/videos">More {primaryHeading}</a>
-            <span className="arrow"> »</span>
-        </div>
+        
     </div>
 		{/* <div class="section-title" > 
 			<h2  style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}} >{primaryHeading}</h2> */}

@@ -59,6 +59,7 @@ import QuizeLit from '../Components/QuizList';
 import PhotoListHome from '../pages/PhotoList/HomePhtots'
 import { homeDataAction } from '../store/slice/home/home.slice'
 import { useDispatch, useSelector } from 'react-redux';
+import Team from '../Components/OurCricket'
 function Home() {
 
   const dispatch = useDispatch();
@@ -109,12 +110,12 @@ function Home() {
     },
 
   ]
-  React.useEffect(() => {
-    let xButtonTop = document.querySelector('#topBtn');
-    if (xButtonTop) {
-      xButtonTop.click()
-    }
-  }, [])
+  // React.useEffect(() => {
+  //   let xButtonTop = document.querySelector('#topBtn');
+  //   if (xButtonTop) {
+  //     xButtonTop.click()
+  //   }
+  // }, [])
 
   const Data2 = [
     {
@@ -223,9 +224,6 @@ function Home() {
 
       {/* Schedule */}
 
-      {/* <div className='plain-section bg-m-plain-section'> */}
-      {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Cricket Schedule</h2></div>*/}
-      {/*<Heading primaryHeading={'Cricket Schedule'} ballImageLeftPercent={25} />*/}
       <div id="top" style={{ boxShadow: `rgb(50 61 148) 1px 2px 9px` }}
         className="cricket-schedule"
       >
@@ -237,8 +235,7 @@ function Home() {
 
 
       {/* ranking  */}
-      {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>ICC Ranking</h2></div>*/}
-      {/*<Heading primaryHeading={'ICC Ranking'}  ballImageLeftPercent={35}/>*/}
+      
       <div className='bg-section-time-line' >
         <ICCRanking />
       </div>
@@ -254,73 +251,29 @@ function Home() {
 
       <div className="devider" />
       {/* photos  */}
-      <Heading primaryHeading={'Photos Gallery'} ballImageLeftPercent={28} />
-
-      {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Photos Gallery</h2></div>*/}
-      
-      <section class="video-home-section" style={{ "padding": "10px;"}}>
-        <div class="container-video-pgt">
-          <PhotoListHome /> 
-          
-          
-        </div>
-        <div className="more-news " style={{ margin: "23px 0 10px" }}>
-          <a href="/photos-stories" style={{ border: 'none' }}>More Photos</a>
-        </div>
-      </section>
+     
+       <PhotoListHome /> 
+     {/* End  */}
       <div className="devider" />
 
 
       {/* Our Cricket Teams */}
 
-      <Heading primaryHeading={'Our Cricket Teams'} ballImageLeftPercent={23} />
-
-      {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Our Cricket Teams</h2></div>*/}
-      <div className='bg-section' >
-
-        {/* <div className='d-flex justify-content-around '>
-          <div className='see-more-home'>{" "}</div>
-
-          
-          <Link>
-            <h3 className='see-more-home'>See More</h3>
-          </Link>
-        </div> */}
-        <div className='d-flex justify-content-around m-cr-team'>
-          <div className='team-img ourteam' style={{ width: '100%', height: '100%', marginTop: 10 }}>
-            <img src={teamI} width="100%" height="100%" style={{ objectFit: 'contain', }}></img>
-            <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10, color: "#fff" }}>Indian Cricket Team Players</h2>
-          </div>
-
-          <div className='team-img ourteam' style={{ width: '100%', height: '100%', marginTop: 10 }}>
-            <img src={teamSA} width="100%" height="100%" style={{ objectFit: 'contain', }} ></img>
-            <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10, color: "#fff" }}>South Africa Cricket Team Players</h2>
-          </div>
-          <div className='team-img ourteam' style={{ width: '100%', height: '100%', marginTop: 10 }}>
-            <img src={teamAus} width="100%" height="100%" style={{ objectFit: 'contain', }} ></img>
-            <h2 style={{ color: '#000', padding: 5, textAlign: 'center', paddingTop: 10, color: "#fff" }}>NewZeland Cricket Team Players</h2>
-          </div>
-
-        </div>
-        <div className="more-news">
-          <a href="/videos">More Cricket Team</a></div>
-        <noscript></noscript>
-
-      </div>
+        <Team />
+      {/* Team  */}
+      
       <div className="devider" />
 
       {/* world timeline  */}
-      <Heading primaryHeading={'ODI World Cup Timeline'} ballImageLeftPercent={15} />
+      
 
       {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>ODI World Cup Timeline</h2></div>*/}
-      <div className='bg-section-time-line' >
+      {/* <div className='bg-section-time-line' > */}
 
 
         <TimeLine />
 
-        <div className="more-news">
-          <a href="/videos">More TimeLine </a></div>
-      </div>
+      {/* </div> */}
       <div className="devider" />
       {/* End Other Game*/}
 
@@ -328,24 +281,16 @@ function Home() {
 
 
       {/* Other Games*/}
-      <Heading primaryHeading={'Others Game'} ballImageLeftPercent={32} />
-
-      {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Others Game</h2></div>*/}
-      <div className='bg-section' style={{
-        "background": '', backgroundSize: "cover", "height": "auto",
-        "max-width": "100%",
-        "max-height": "100%"
-      }}>
-
         <OtherGame />
-      </div>
+      {/* </div> */}
+
       <div className="devider" />
       {/* Latest News and Articles */}
-      <Heading primaryHeading={'Latest News and Articles'} ballImageLeftPercent={17} />
+      {/* <Heading primaryHeading={'Latest News and Articles'} ballImageLeftPercent={17} />
 
-      {/*<div class="section-title"><h2 style={{textAlign:"center",fontSize:"28px",fontWeight:"700", color:"#000"}}>Latest News and Articles</h2></div>*/}
+    
       <div className='bg-section' style={{ "background": 'linear-gradient(0deg, #000, #ff0000)', backgroundSize: "cover", marginBottom: "15px" }}>
-       
+        */}
         <AricleList 
           
         />
@@ -353,7 +298,7 @@ function Home() {
         <div className="more-news " style={{ margin: "23px 0 10px" }}>
           <a href="/articles" style={{ border: 'none' }}>More Articles</a></div>
 
-      </div>
+      {/* </div> */}
       <div className="devider" />
 
 

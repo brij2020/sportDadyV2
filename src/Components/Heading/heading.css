@@ -7,7 +7,7 @@ div .section-title {
 
 div .section-title > span img  {
   position: absolute;
-    bottom: -15px;
+    bottom: -19px;
     z-index: 2;
   -webkit-animation: section-animation 3s infinite;
   animation: section-animation 3s infinite;

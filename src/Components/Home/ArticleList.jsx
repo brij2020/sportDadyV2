@@ -4,6 +4,8 @@ import './ArticleList.css'
 
 import dayjs from 'dayjs';
 import { useSelector } from 'react-redux';
+import { useIntersectionObserver } from 'react-intersection-observer-hook';
+import Heading from "../../Components/Heading"
 
 const AricleList = (props) => {
     const homeData = useSelector(s => s?.homeReducer);
@@ -13,9 +15,16 @@ const AricleList = (props) => {
         list = homeData?.data?.sections?.sport_daday_news_article;
 
     }
-    
-    return (
+    const [divRef, { entry }] = useIntersectionObserver();
+    const isVisible = entry && entry.isIntersecting;
 
+    React.useEffect(() => {
+        console.log(`The component is ${isVisible ? 'visible' : 'not visible'}.`, isVisible);
+    }, [isVisible])
+    
+    return (<section className="video-home-section"> 
+    <Heading primaryHeading={'Latest News and Articles'} ballImageLeftPercent={5}  visibility={isVisible} />
+    <div className='bg-section' style={{ "background": 'linear-gradient(0deg, #000, #ff0000)', backgroundSize: "cover", marginBottom: "15px" }} ref={divRef}>
         <section class="content-hero " >
             <div class="constraint-wrapper">
                 <div class="content-hero__container">
@@ -96,7 +105,8 @@ const AricleList = (props) => {
                 </div>
             </div>
         </section>
-
+    </div>
+</section>
     )
 }
 
