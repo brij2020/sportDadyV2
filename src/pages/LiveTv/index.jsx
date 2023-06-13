@@ -14,7 +14,8 @@ import { makeAudio } from '../../util';
 const LiveTv = (props) => {
     const [liveTvOn, setLiveTive] = React.useState(false);
     let [ matchId, setMatchId] =  useGetQuery('matchId');
-    const liveData = useSelector(s => s?.liveScoreReducer )
+    const liveData = useSelector(s => s?.liveScoreReducer );
+    const [matchState, setMatchStatus] = React.useState('')
     let dispatch = useDispatch()
     const [isSocketConneted, setIsConnected] = React.useState(false)
     const onLiveScore = (e) => {
@@ -48,25 +49,29 @@ const LiveTv = (props) => {
     //   };
    let aud =  makeAudio(file);
    setTimeout(() => {
-    aud?.play()
+    // aud?.play()
    },1000)
   },[])
   
 
-const getData = async () => {
+const getData = async (matchId) => {
     try {
         console.log('matchId', matchId)
-    //   dispatch(liveScoreAction({matchId}));   
+        if(matchId) {
+            dispatch(liveScoreAction({matchId}));   
+        }
     } catch (e) {
       console.log(e);
     }
   };
 
  React.useEffect(() => {
-    getData();
+    let params = new URL(document.location).searchParams;
+    let queryValue = params?.get('matchId') ?? '';
+    getData(queryValue);
     const intervalCall = setInterval(() => {
-      getData();
-    }, 30000 );
+      getData(queryValue);
+    }, 20000 );
     
 
     return () => {
@@ -95,7 +100,7 @@ const getData = async () => {
 
   React.useEffect(() => {
     let commentryList = liveData?.data?.liveScoreData?.commentary;
-    console.log('rerender')
+    
     
     if(commentryList && Array.isArray(commentryList)) {
 
@@ -114,7 +119,8 @@ const getData = async () => {
     }
     
  },[liveData?.data?.liveScoreData?.commentary ])
-
+ let miniScore =liveData?.data?.liveScoreData?.miniscore;
+  
     return (<>
      
         <div class="fixture-tab-inner row  live-tv-page">
@@ -140,8 +146,9 @@ const getData = async () => {
                         liveTvOn ? (<>
                             <div class='blue-led'></div>
                             <div class='plastic-logo'>
-                                IND 571 |
-                                AUS 480 & 3/0 (6)
+                            {miniScore?.inningsScores?.[0]?.inningsScore?.[0]?.runs ?? 0 }/{miniScore?.inningsScores?.[0]?.inningsScore?.[0]?.wickets ?? 0} |
+
+                            ({ miniScore?.inningsScores?.[0]?.inningsScore?.[1]?.runs}/{miniScore?.inningsScores?.[0]?.inningsScore?.[1]?.wickets ?? 0})
                             </div>
                         </>
                         ) : (
@@ -161,7 +168,7 @@ const getData = async () => {
             />
             <LiveCommentry 
              miniScore={liveData?.data?.liveScoreData?.miniscore }
-             commentryList = { liveData?.data?.liveScoreData?.commentary
+             commentryList = { liveData?.data?.liveScoreData?.commentaryLines
              }
              getRunOnBall = { getRunOnBall }
             />

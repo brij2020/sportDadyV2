@@ -8,7 +8,7 @@ const ScoreCard = (props) => {
     if(Array.isArray(lastoverAr)) {
         lastoverAr = lastoverAr?.slice(-( lastoverAr.length - 1))
     }
-    
+
     return (<>
         <div class="fixture-card-main col-lg-3 col-md-6 col-sm-12 ng-scope" ng-repeat="(fixtureKey,list) in fixLiveList | orderBy:'timestamp' | limitTo:matchesListLimit" ng-if="list.MatchStatus == 'UpComing' || list.MatchStatus == 'Live'">
 
@@ -78,7 +78,7 @@ const ScoreCard = (props) => {
 
                             <h4 ng-if="list['2FallWickets'] != 10" class="ng-binding ng-scope">
                             {
-                                        miniScore?.inningsScores?.[0]?.inningsScore?.[0]?.runs}/{miniScore?.inningsScores?.[0]?.inningsScore?.[0]?.wickets}
+                                miniScore?.inningsScores?.[0]?.inningsScore?.[0]?.runs}/{miniScore?.inningsScores?.[0]?.inningsScore?.[0]?.wickets ?? 0}
                                 <span ng-if="list['2FallOvers'] != undefined &amp;&amp; list['2FallOvers'] != ''" class="ng-binding ng-scope">     
                                    &nbsp; ({(miniScore?.inningsScores?.[0]?.inningsScore?.[0]?.overs)
                                     })
@@ -105,7 +105,7 @@ const ScoreCard = (props) => {
                         <div class="match-score ng-scope" ng-if="list.CurrentInnings != undefined &amp;&amp; list.CurrentInnings != '' &amp;&amp; (list.AwayTeamID == list.FirstBattingTeamID)">
 
                             <h4 ng-if="list['1FallWickets'] == 10" class="ng-binding ng-scope">
-                            {miniScore?.inningsScores?.[0]?.inningsScore?.[1]?.runs}/{miniScore?.inningsScores?.[0]?.inningsScore?.[1]?.wickets}
+                            {miniScore?.inningsScores?.[0]?.inningsScore?.[1]?.runs}/{miniScore?.inningsScores?.[0]?.inningsScore?.[1]?.wickets ?? 0}
                            
                             <span class="ng-binding">
                             

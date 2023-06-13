@@ -12623,7 +12623,7 @@ ul.fixtureSquad-list li span.p11-fb img { width:12px; margin-left: 10px; }
 	select.innsFilter { background-color: #18184A; }
 	.mcRowData img.active { width: 40px; height: 40px; }
 	
-	#miniscoreCard .mcRowHead .tt, #miniscoreCard .mcGrid_2, #miniscoreCard .mcGrid_3 { font-size: 9px;  }
+	#miniscoreCard .mcRowHead .tt, #miniscoreCard .mcGrid_2, #miniscoreCard .mcGrid_3 { font-size: 11px;  }
 	#miniscoreCard .mcRowData img { width: 30px; height: 30px; margin: 0; }
 	#miniscoreCard .mcRowData .playerName { font-size:10px; }
 	#miniscoreCard .bowlingCardMC_mini .sc-pnam { display: flex; align-items: center; }

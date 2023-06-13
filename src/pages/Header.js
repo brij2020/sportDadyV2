@@ -57,7 +57,7 @@ const Header = (props) => {
         console.log("hello")
         setIsmWebOpen(!ismwebOpen)
     }
-    let _bottomNavItems = [{ link:"/",_class: '', isactive: true, label:'Home', icon: HomeIcon },{ link:"/live-score?matchId=65805",_class: '', isactive: false, label:'Live Score', icon:LiveScoreIcon },
+    let _bottomNavItems = [{ link:"/",_class: '', isactive: true, label:'Home', icon: HomeIcon },{ link:"/live-score?matchId=68854",_class: '', isactive: false, label:'Live Score', icon:LiveScoreIcon },
     { link:"/fixtures",_class: '', isactive: false, label:'Schedule', icon:ScheduleIcon },  { link:"/photos-stories",_class: '', isactive: false, label:'Schedule', icon:PhotoGallaryIcon }];
     React.useEffect(() => {
         let mf_btm_nav = _bottomNavItems.map(btmNav => {
